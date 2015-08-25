@@ -1,0 +1,2033 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C50ED686-6328-4A91-AC3D-02CF9E2DFD80}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SqlServerDataFeed</RootNamespace>
+    <AssemblyName>SqlServerDataFeed</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.5.6.4\lib\net40\Microsoft.Data.Services.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="COR_Basic_Demo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>COR_Basic_Demo.edmx</DependentUpon>
+      <LastGenOutput>COR_Basic_Demo.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="COR_Basic_Demo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>COR_Basic_Demo.edmx</DependentUpon>
+      <LastGenOutput>COR_Basic_Demo.cs</LastGenOutput>
+    </Content>
+    <Content Include="ExcelDataFeed.svc" />
+    <Content Include="SQL\Standortrechte.sql" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="COR_Basic_Demo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COR_Basic_Demo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COR_Basic_Demo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COR_Basic_Demo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COR_Basic_Demo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ELMAH_Error.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelDataFeed.svc.cs">
+      <DependentUpon>ExcelDataFeed.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T_Admin.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ALV_Ref_FilterAnzeige.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Anlage.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Anlage_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Anschluss.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Anschluss_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Arbeitsplatz.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Arbeitsplatz_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Aussenobjekt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Aussenobjekt_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Dokumente.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Dokumente_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Dokumente_Log.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Dose.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Dose_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_DWGSAVE.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_EmailVersand.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Fahrzeug.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Fotos.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Gebaeude.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Gebaeude_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Gebaeude_Reichle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Gebaeude_SwissLife.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Geschoss.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Geschoss_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Geschoss_Reichle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Grundstueck.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Grundstueck_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Informatik.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Informatik_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Kommunikation.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Kommunikation_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Kontakte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Kontakte_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Kunst.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Kunst_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Kunst_Ref_Technik.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Legenden.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_LinkDWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Mobiliar.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Mobiliar_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Parkplatz.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Parkplatz_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Raum.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Raum_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnlageBauform.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnlageBetriebsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnlageEnergietraeger.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnlageKaeltemittel.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnlageKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnlageKategorieSchema.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnlageKategorieVerfuegbarkeit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnlageRueckkuehlung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnlageWRG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnschlussKabelTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnschlussKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnschlussSwitch.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnschlussTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AnschlussVerteiler.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ArbeitsplatzKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AussenobjektAnschlagkastenMaterial.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AussenobjektAnschlagkastenSchliessung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AussenobjektAnschlagkastenTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AussenobjektAusbauten.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AussenobjektBeflaggungTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AussenobjektBodenbelag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AussenobjektKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_AussenobjektNutzungsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Bodenbelag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Dienstleistung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_DienstleistungDetail.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_DIN277.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_DokumentGrund.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_DokumentKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_DokumentMetadaten.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_DokumentStatus.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_DoseKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Eigentumsverhaeltnis.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_EmailAttachment.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Emaillink.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Emailtext.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_EmailtextKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Email_Placeholder.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Energiebezugsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ErschliessungFussweg.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ErschliessungStrasse.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_FahrzeugHersteller.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_FahrzeugTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Fluchtwegmarkierung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_FotoKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Freigabetyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_GebaeudeEinstufung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_GebaeudeKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_GebaeudeKlassifizierung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Geschosstyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Geschoss_Reichle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Haus.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_InformatikBetriebssystem.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_InformatikKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KommunikationAnbieter.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KommunikationKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KontakFunktion.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KontaktGeschlecht.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Kostenstelle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Kostenstelle_Raiffeisen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstAusleihanlass.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstAusleihart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstEntlassung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstInstitution.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstKuenstler.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstMandant.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstProvenienz.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstRahmenArt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstStatus.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstWerteKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Land.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Landesteile.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Layerset.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_LiegenschaftenStrategie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Mandant.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Mandant_Logo.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Mietobjekt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_MitarbeiterAusruestung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_MitarbeiterStatus.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_MobiliarBibliothek.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_MobiliarBibliothek_Raiffeisen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_MobiliarFarbe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_MobiliarHersteller.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_MobiliarKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_MobiliarMaterial.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Nutzungsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_NutzungsartGruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Nutzungsart_Raiffeisen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Organisationseinheit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Organisationseinheit_Raiffeisen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Ort.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ParkplatzKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ParkplatzLage.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ParkplatzPool.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ParkplatzSchutz.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ParkplatzTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_PersonalKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_PersonGeschlecht.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_RaumDeckenkonstruktion.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_RaumSicherheitszone.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_RaumTrakt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_RaumWandoberflaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Region.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Reinigungsprio.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_SchliessungAufbewahrung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_SchliessungMandant.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Schliessungstyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_SchluesselKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_SchluesselStatus.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_SchluesselTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_SicherheitKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_StandortKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Strasse_Reichle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_TuerBrandschutz.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_TuerFunktion.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_TuerMaterial.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_TuerTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ZaehlerKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ZoneKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_Zonenzuteilung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ZuschlagsflaechenTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ZylinderKasse.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ZylinderKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ZylinderSchliesssystem.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ZylinderStatus.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ZylinderTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Schluessel.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Schluesselgruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Schluesselgruppe_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Schluessel_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Schluessel_Protokoll.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_SHOW_BeilageMV.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Sicherheit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Sicherheit_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Standort.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Standort_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_StichtagVisualisierung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Trakt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Trakt_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Tuer.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Tuer_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Zaehler.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Zaehler_Staende.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Zone.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Zone_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Zylinder.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Zylinder_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AV_AdresseKontaktpersonen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AV_Adressen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AV_Adressen_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AV_Ref_AdresseAnrede.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AV_Ref_AdresseRollen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AV_Ref_Region.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Benutzer.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Benutzergruppen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Benutzerrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Benutzer_Benutzergruppen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_BO_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_BO_Menu.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_BO_Menu_CheckDelete.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_Checklist.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_Ref_Katalog.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_Cell.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_CheckBox.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_DropDown.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_Header.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_Image.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_Label.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_Table.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_TextBox.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_COR_Error.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_COR_Log.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_COR_Version.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Configuration.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_ConfigurationTest.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Dokument.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Dokument_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Dokument_Suche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Dokument_Version.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Fehlermeldungen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Folder.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Folder_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Hotlinks.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Log_UserData.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Navigation.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Process.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Projekt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Projekt_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Bauphase.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_DokumentArt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_DokumentGruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_DokumentGruppeGebaeude.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_DokumentStatus.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_DokumentTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_1.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_10.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_1_old.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_2.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_2_old.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_3.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_4.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_4_Old.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_5.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_6.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_7.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_8.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Metadaten_9.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_NodeType.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_Prozesse.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Ref_QualitaetspruefungDateityp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_Sessions.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_SYS_DokumentTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_SYS_FilterTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_SYS_FilterZeitraum.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_SYS_HistoryTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_SYS_MetaKataloge.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_SYS_MetaStruktur.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_SYS_NavEdit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_SYS_NodePicture.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_ZO_Berechtigungen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_ZO_Prozesse_Berechtigungen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DMS_ZO_Standort_Sprache.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Document.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EM_EnergiePositionen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EXPL_Funktion.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EXPL_FunktionKommando.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EXPL_Icon.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EXPL_Node.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EXPL_NodeHilfe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EXPL_Sprache.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EXPL_Text.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_EXPL_User.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Export_Raum.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Export_Raum_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_Configuration.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_Dashboard.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_Dashboard_27082014.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_Filter.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_Navigation.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_Reports.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_Translation.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_Translation_Export.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_ZO_Filter.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_ZO_Filter_Dependency.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_ZO_Navigation.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_FMS_ZO_Navigation_Benutzer.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Offerte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_Ansatz.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_GlasreinigungServiceLevel.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_InnenreinigungServiceLevel.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_Leistungsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_Oberflaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_OffertenTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_Raumgruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Tour.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Image.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Import_PLZ_Region.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_LOG_ERROR.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_LOG_ProzedurRun.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_LOG_SAML.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_AnmeldungEmpfaenger.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_AnmeldungTag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_Antrag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_Antrag_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_Antrag_Kommentar.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_AusfuehrungsZeit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_MDWochenBereich.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_Ref_LetzteEMailAusfuehrungsZeit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_Ref_ServiceAnbieter.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_Ref_Status.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_Ref_UmzugTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_StatusAusfuehrungsZeit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_Umzug.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_Umzug_Bestand.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_Umzug_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MM_WochenUmzugTag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Assignment.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Assignment_Attendee.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Assignment_Services.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Configuration.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Currency.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_EMail.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Error.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Ref_Assets.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Ref_General.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Services.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Service_Categories.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_Service_Options.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OR_ZO_Assets.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OV_Ref_Attribute_BO.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OV_Ref_BelegungArt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OV_Ref_ObjektTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OV_SEL_Attribute_BO.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PM_Buchungen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PM_Ref_ParkplatzBuchung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_POM_Mittelwert.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_POM_Ref_MittelwertGruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Ref_ValidDocuments.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Ref_ValidPictures.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_AnzahlTag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_Arbeitsgang.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_Arbeitsgang_Leistung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_Ausbau.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_Ausbau_Einheit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_BB_Beschaffenheit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_Bodenbelag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_Intervall.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_MaschineGeraet.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_RaumName.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_Reinigungsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_Tagesplan.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_TarifZeitnachweis.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_REM_Ref_Vorlagen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_RPT_LOG_ProzedurRun.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_RPT_Reports.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_RPT_Settings.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_RPT_Translations.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_RPT_Translations111.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SessionValues.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Slicklist.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Slicklist_Custom.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_AdresseRollenrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Anlagerechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_ApertureColorToHex.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Arbeitsplatzrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Aussenobjektrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_BackOfficeMenuerechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Backofficerechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Berechtigung_Felder.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Berechtigung_Tabellen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Dashboardrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Doserechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Fahrzeugrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_FilterHistory.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Form_Feld_Recht.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Form_Register_Recht.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Gebaeuderechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Geschossrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Grundstueckrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Informatikrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Kommunikationrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Kunstrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Language.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Language_Backup_22092014.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Language_DayNames.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Language_Forms.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Language_Forms_i18n.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Language_Forms_i18n_Cust.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Language_Log.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Language_MonthNames.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Layersetrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Legendenkonfiguration.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Mobiliarrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module_COR.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module_Demo.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module_Helsana.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module_Post.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module_Reichle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module_SRG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module_Sursee.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module_SwissLife.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module_Wincasa.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Navigationrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Parkplatzrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Raumrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_BackOfficeMenue.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_BackOfficeSubMenue.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_BelegungsTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Dashboard.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Datentyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Geschlecht.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Language.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Layerset.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_MimeTypes.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Monate.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_ObjectMarked.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_PapierFormat.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Register.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Tage.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Version.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Zeit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_ZeitEinheiten.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Registerrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Reportrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Schluesselgrupperechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Settings.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Settings_Benutzer.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Settings_System.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Sicherheitrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Standortrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Traktrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Tuerrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Version.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_VisualisierungStichtag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Zaehlerrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Zonerechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Zylinderrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Checklist_Value.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_Abteilung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_Checkliste.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_Checkliste_Absatz.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_Checkliste_Checkpoints.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_Checkliste_Details.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_Checkliste_Taetigkeit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_Checkliste_Wartung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_EmailText.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_FilterAnzeige.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_Periode.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_TaskArt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_TaskKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_TaskPrio.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_TaskStatus.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Ref_ZyklusPeriode.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Schedule.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Tasks.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Tasks_Checkpoints.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Tasks_Planung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_TM_Tasks_Planung_Checkpoints.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UM_Planung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UM_Ref_Status.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UM_Umzug.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UPS_BudgetPositionen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UPS_Rechnungskontrolle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UPS_Ref_Baukostenplan.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UPS_Ref_FilterPlanungsvariante.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UPS_Ref_Kontoplan.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UW_Ref_Bereich.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UW_Ref_Einheit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UW_Ref_Position.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_UW_Verbrauch.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_VAR_Projekt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_VAR_Variante.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_VM_Ref_KostenPeriode.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_VM_Ref_Vertragspartei.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_VM_Ref_Vertragstyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_VM_Ref_Vertragszustaendigkeit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_VM_Vertraege.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_VM_Vertraege_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_VWS_PortalTree.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_VWS_Ref_Auftragsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Anlage_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Anschluss_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Arbeitsplatz_AP_Belegung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Arbeitsplatz_AP_Ref_Kostenstelle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Arbeitsplatz_AP_Ref_Organisationseinheit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Arbeitsplatz_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Arbeitsplatz_Reservation.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Aussenobjekt_AP_Belegung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Aussenobjekt_AP_Ref_Anmietvertraege.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Aussenobjekt_AP_Ref_AussenobjektAusbauten.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Aussenobjekt_AP_Ref_Kostenstelle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Aussenobjekt_AP_Ref_Mietobjekt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Aussenobjekt_AP_Ref_Mietvertraege.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Aussenobjekt_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Aussenobjekt_Flaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Dokumente_AP_Ref_DokumentMetadaten.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Dose_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Fahrzeug_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Gebaeude_AP_Ref_AnlagaeKategorieSchema.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Gebaeude_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Gebaeude_Flaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Geschoss_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Geschoss_Flaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Grundstueck_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Grundstueck_Flaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Informatik_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kommunikation_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kontakte_AP_Ref_Funktionen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kontakte_AP_Ref_Kostenstelle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kontakte_AP_Ref_MitarbeiterAusruestung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kontakte_AP_Ref_Organisationseinheit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kontakte_AP_Ref_PersonalKategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kunst_AP_Ref_KunstKuenstler.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kunst_Ausleihe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kunst_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kunst_Kosten.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kunst_Werte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_MarkDWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Mobiliar_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Objekt_AP_Kontakte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Objekt_AP_Vertrag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Objekt_T_AV_Adressen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Parkplatz_AP_Belegung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Parkplatz_AP_Kontakte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Parkplatz_AP_Ref_Anmietvertraege.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Parkplatz_AP_Ref_Kostenstelle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Parkplatz_AP_Ref_Mietobjekt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Parkplatz_AP_Ref_Mietvertraege.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Parkplatz_AV_Adressen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Parkplatz_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Parkplatz_Flaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Parkplatz_Reservation.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Anmietvertraege.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Energiebezugsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Kostenstelle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Mietobjekt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Mietvertraege.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Nutzungsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Organisationseinheit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Zuschlagsflaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Zuschlagsflaeche_Geschoss.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Zuschlagsflaeche_Parkplatz.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_AP_Ref_Zuschlagsflaeche_Parkplatz_Geschoss.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_Flaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_OBJT_Kategorie.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Raum_Reservation.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Ref_AnlageKategorie_AP_Ref_AnlageKategorieSchema.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Ref_Arbeitsplatzkategorie_AP_Ref_MobiliarBibliothek.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Ref_Organisationseinheit_AP_Ref_Kostenstelle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Schluesselgruppe_AP_Ref_Funktionen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Schluesselgruppe_AP_Zylinder.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Schluessel_AP_Kontakte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_SHOW_Geschoss_Reinigungsplanung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Sicherheit_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Standort_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Trakt_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Tuer_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Tuer_Schliessung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Zaehler_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Zone_AP_Ref_Anmietvertraege.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Zone_AP_Ref_Kostenstelle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Zone_AP_Ref_Mietobjekt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Zone_AP_Ref_Mietvertraege.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Zone_AP_Ref_Organisationseinheit.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Zone_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Zone_Flaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Zylinder_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AV_Adresse_AV_Ref_AdresseRollen.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_Benutzer_Schedule.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_IGM_Offerte_Raum.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_IGM_Reinigungsfaktor.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_IGM_Tour_Raum.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_MM_Bestand_Umzug.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_MM_Standort_ServiceAnbieter.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_ObjektDefect.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_ObjektPolygon.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_ObjektSymbol.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_ObjektSymbol_Objekt.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_ObjektSymbol_T_SYS_Ref_Layerset.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_ObjektText.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_Objekttyp_AP_Ref_Mandant.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_Objekttyp_TM_Ref_Checkliste.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_Objekttyp_T_SYS_Ref_Register.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Gebaeude_Ref_Raumpfleger.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Planung_Ref_Raum.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Raum_Ausstattung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Raum_Ausstattung_Kalk.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Raum_Raumgruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Raum_Ref_Ausbau.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Raum_Ref_Ausbau_Kalk.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Raum_Ref_Reinigungsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Raum_Ref_Reinigungsart_Kalk.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Raum_Reinigung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Raum_Reinigung_Kalk.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_REM_AP_Standort_Planung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_Slickcolumn.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_Slickcolumn_Custom.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_DokumentKategorie_Benutzergruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_Language_Forms.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_Language_Forms_OV_Ref_ObjektTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_Metadatenrechte_Benutzergruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_Mimetyperechte_Benutzergruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_Module_AP_Ref_Mandant.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_Settings_AP_Ref_Mandant.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_Settings_Benutzer.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_TASK_Ref_Checkliste_Comment.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_TM_TSTA_TSK.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_T_AP_Standort_T_IGM_Ref_Leistungsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZZ_TIMESTAMPS.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="COR_Basic_Demo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>COR_Basic_Demo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="COR_Basic_Demo.edmx.diagram">
+      <DependentUpon>COR_Basic_Demo.edmx</DependentUpon>
+    </Content>
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5570</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5570/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
