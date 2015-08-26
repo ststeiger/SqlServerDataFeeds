@@ -124,6 +124,7 @@
     <Compile Include="ExcelDataFeed.svc.cs">
       <DependentUpon>ExcelDataFeed.svc</DependentUpon>
     </Compile>
+    <Compile Include="COR_Basic_DemoEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="T_Admin.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>

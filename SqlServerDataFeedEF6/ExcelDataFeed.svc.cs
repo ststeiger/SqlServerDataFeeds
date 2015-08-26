@@ -36,20 +36,6 @@ namespace SqlServerDataFeedEF6
     public class ExcelDataFeed : System.Data.Services.Providers.EntityFrameworkDataService<COR_Basic_DemoEntities>
     {
 
-        //// Unnecessary
-        //public static void ModifyEntityConnectionString()
-        //{
-        //    System.Data.SqlClient.SqlConnectionStringBuilder csb = new System.Data.SqlClient.SqlConnectionStringBuilder();
-        //    System.Data.EntityClient.EntityConnectionStringBuilder ecb = new System.Data.EntityClient.EntityConnectionStringBuilder();
-
-
-        //    ecb.Metadata = "res://*/Sample.csdl|res://*/Sample.ssdl|res://*/Sample.msl";
-        //    ecb.Provider = "System.Data.SqlClient";
-        //    ecb.ProviderConnectionString = csb.ConnectionString;
-
-        //    // COR_Basic_DemoEntities dataContext = new COR_Basic_DemoEntities(ecb.ConnectionString);
-        //}
-
 
         public static string GetConnectionString()
         {
@@ -68,12 +54,34 @@ namespace SqlServerDataFeedEF6
             return csb.ConnectionString;
         }
 
+        
+        public static string GetEntityConnectionString()
+        {
+            System.Data.SqlClient.SqlConnectionStringBuilder csb = new System.Data.SqlClient.SqlConnectionStringBuilder(GetConnectionString());
+            System.Data.EntityClient.EntityConnectionStringBuilder ecb = new System.Data.EntityClient.EntityConnectionStringBuilder();
+
+            // http://itstu.blogspot.ch/2008/07/to-load-specified-metadata-resource.html
+            // The standard metadata string looks like this:
+            // metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl
+            // However, in some (including mine) Entity Framework get confused and does not know which dll to look in. 
+            // Therefore, change the metadata string to:
+            // metadata=res://nameOfDll/Model.csdl|res://nameOfDll/Model.ssdl|res://nameOfDll/Model.msl
+
+            string ass = System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            ecb.Metadata = @"res://*/COR_Basic_Demo.csdl|res://*/COR_Basic_Demo.ssdl|res://*/COR_Basic_Demo.msl".Replace("*", ass);
+
+            ecb.Provider = "System.Data.SqlClient";
+            ecb.ProviderConnectionString = csb.ConnectionString;
+
+            return ecb.ConnectionString;
+        }
+
 
         protected override COR_Basic_DemoEntities CreateDataSource()
         {
-            //COR_Basic_DemoEntities ctx = new COR_Basic_DemoEntities(connectionString);
-            COR_Basic_DemoEntities ctx = new COR_Basic_DemoEntities();
-            ctx.Database.Connection.ConnectionString = GetConnectionString();
+            COR_Basic_DemoEntities ctx = new COR_Basic_DemoEntities(GetEntityConnectionString());
+            // COR_Basic_DemoEntities ctx = new COR_Basic_DemoEntities();
+            // ctx.Database.Connection.ConnectionString = GetConnectionString();
 
             return ctx;
         }
