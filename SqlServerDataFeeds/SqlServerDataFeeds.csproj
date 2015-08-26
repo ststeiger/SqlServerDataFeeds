@@ -58,6 +58,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataFeedConnection.png" />
+    <Content Include="PivotTabellen.png" />
+    <Content Include="FeedOverview.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

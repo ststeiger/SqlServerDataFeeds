@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service xml:base="http://localhost:53193/" xmlns="http://www.w3.org/2007/app" xmlns:atom="http://www.w3.org/2005/Atom">
+  <workspace>
+    <atom:title type="text">Default</atom:title>
+    <collection href="People">
+      <atom:title type="text">People</atom:title>
+    </collection>
+    <collection href="Trips">
+      <atom:title type="text">Trips</atom:title>
+    </collection>
+  </workspace>
+</service>
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+   <service xmlns:atom="http://www.w3.org/2005/Atom" xmlns="http://www.w3.org/2007/app" xml:base="http://localhost:5570/ExcelDataFeed.svc/">
+      <workspace>
+         <atom:title>Default</atom:title>
+
+
+<collection href="ELMAH_Error">
+     <atom:title>ELMAH_Error</atom:title>
+</collection>
+
+
+<collection href="T_Admin">
+    <atom:title>T_Admin</atom:title>
+</collection>
+
+
+<collection href="T_ALV_Ref_FilterAnzeige">
+   <atom:title>T_ALV_Ref_FilterAnzeige</atom:title>
+</collection>
+
+
+
