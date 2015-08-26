@@ -106,6 +106,7 @@
       <LastGenOutput>COR_Basic_Demo.cs</LastGenOutput>
     </Content>
     <Content Include="ExcelDataFeed.svc" />
+    <Content Include="SQL\Augen.sql" />
     <Content Include="SQL\Standortrechte.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
