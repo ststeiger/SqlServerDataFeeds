@@ -17,6 +17,7 @@ using System.ServiceModel;
 namespace SqlServerDataFeed
 {
 
+
     [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
     public class ExcelDataFeed : DataService<COR_Basic_DemoEntities>
     {
@@ -37,7 +38,7 @@ namespace SqlServerDataFeed
             }
 
             return csb.ConnectionString;
-        }
+        } // End Function GetConnectionString 
 
 
         public static string GetEntityConnectionString()
@@ -59,7 +60,7 @@ namespace SqlServerDataFeed
             ecb.ProviderConnectionString = csb.ConnectionString;
 
             return ecb.ConnectionString;
-        }
+        } // End Function GetEntityConnectionString 
 
 
         protected override COR_Basic_DemoEntities CreateDataSource()
@@ -69,7 +70,7 @@ namespace SqlServerDataFeed
             // ctx.Database.Connection.ConnectionString = GetConnectionString();
 
             return ctx;
-        }
+        } // End Method CreateDataSource 
 
 
         // This method is called only once to initialize service-wide policies.
@@ -84,8 +85,10 @@ namespace SqlServerDataFeed
             // config.SetEntitySetAccessRule("MyEntityset", EntitySetRights.AllRead);
             // config.SetServiceOperationAccessRule("MyServiceOperation", ServiceOperationRights.All);
             config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V3;
-        }
+        } // End Sub InitializeService 
 
 
-    }
-}
+    } // End Class ExcelDataFeed : DataService<COR_Basic_DemoEntities>
+
+
+} // End Namespace SqlServerDataFeed

@@ -52,7 +52,7 @@ namespace SqlServerDataFeedEF6
             }
 
             return csb.ConnectionString;
-        }
+        } // End Function GetConnectionString
 
         
         public static string GetEntityConnectionString()
@@ -74,7 +74,7 @@ namespace SqlServerDataFeedEF6
             ecb.ProviderConnectionString = csb.ConnectionString;
 
             return ecb.ConnectionString;
-        }
+        } // End Function GetEntityConnectionString
 
 
         protected override COR_Basic_DemoEntities CreateDataSource()
@@ -84,7 +84,7 @@ namespace SqlServerDataFeedEF6
             // ctx.Database.Connection.ConnectionString = GetConnectionString();
 
             return ctx;
-        }
+        } // End Method CreateDataSource
 
 
         // This method is called only once to initialize service-wide policies.
@@ -99,8 +99,10 @@ namespace SqlServerDataFeedEF6
             // config.SetEntitySetAccessRule("MyEntityset", EntitySetRights.AllRead);
             // config.SetServiceOperationAccessRule("MyServiceOperation", ServiceOperationRights.All);
             config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V3;
-        }
+        } // End Sub InitializeService
 
 
-    }
-}
+    } // End Class ExcelDataFeed : System.Data.Services.Providers.EntityFrameworkDataService<COR_Basic_DemoEntities>
+
+
+} // End Namespace SqlServerDataFeedEF6
