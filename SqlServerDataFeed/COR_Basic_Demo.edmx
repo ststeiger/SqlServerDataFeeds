@@ -11195,6 +11195,15 @@ Warnung 6002: Für Tabelle/Sicht 'COR_Basic_Demo.dbo.T_ZO_AP_MarkDWG' ist kein P
           <Property Name="TSTATSK_TSTA_UID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="TSTATSK_Date" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="ZZ_TIMESTAMPS">
+          <Key>
+            <PropertyRef Name="OBJ_TYPE" />
+            <PropertyRef Name="OBJ_NAME" />
+          </Key>
+          <Property Name="OBJ_TYPE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="OBJ_NAME" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="CTR" Type="float" Nullable="false" />
+        </EntityType>
         <Association Name="FK_T_ALV_Ref_FilterAnzeige_T_AP_Ref_Mandant">
           <End Role="T_AP_Ref_Mandant" Type="Self.T_AP_Ref_Mandant" Multiplicity="1" />
           <End Role="T_ALV_Ref_FilterAnzeige" Type="Self.T_ALV_Ref_FilterAnzeige" Multiplicity="*" />
@@ -21014,6 +21023,7 @@ Warnung 6002: Für Tabelle/Sicht 'COR_Basic_Demo.dbo.T_ZO_AP_MarkDWG' ist kein P
           <EntitySet Name="T_ZO_SYS_Settings_Benutzer" EntityType="Self.T_ZO_SYS_Settings_Benutzer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_ZO_TASK_Ref_Checkliste_Comment" EntityType="Self.T_ZO_TASK_Ref_Checkliste_Comment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_ZO_TM_TSTA_TSK" EntityType="Self.T_ZO_TM_TSTA_TSK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZZ_TIMESTAMPS" EntityType="Self.ZZ_TIMESTAMPS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_AP_Zaehler_Staende" EntityType="Self.T_AP_Zaehler_Staende" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [T_AP_Zaehler_Staende].[ZLS_UID] AS [ZLS_UID], 
@@ -36627,6 +36637,15 @@ FROM [dbo].[T_ZO_AP_MarkDWG] AS [T_ZO_AP_MarkDWG]</DefiningQuery>
           <NavigationProperty Name="T_TM_Ref_TaskStatus" Relationship="Self.FK_T_ZO_TM_TSTA_TSK_T_TM_Ref_TaskStatus" FromRole="T_ZO_TM_TSTA_TSK" ToRole="T_TM_Ref_TaskStatus" />
           <NavigationProperty Name="T_TM_Tasks" Relationship="Self.FK_T_ZO_TM_TSTA_TSK_T_TM_Tasks" FromRole="T_ZO_TM_TSTA_TSK" ToRole="T_TM_Tasks" />
         </EntityType>
+        <EntityType Name="ZZ_TIMESTAMPS">
+          <Key>
+            <PropertyRef Name="OBJ_TYPE" />
+            <PropertyRef Name="OBJ_NAME" />
+          </Key>
+          <Property Name="OBJ_TYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OBJ_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CTR" Type="Double" Nullable="false" />
+        </EntityType>
         <EntityType Name="T_AP_Zaehler_Staende">
           <Key>
             <PropertyRef Name="ZLS_UID" />
@@ -46542,6 +46561,7 @@ FROM [dbo].[T_ZO_AP_MarkDWG] AS [T_ZO_AP_MarkDWG]</DefiningQuery>
           <EntitySet Name="T_ZO_SYS_Settings_Benutzer" EntityType="Self.T_ZO_SYS_Settings_Benutzer" />
           <EntitySet Name="T_ZO_TASK_Ref_Checkliste_Comment" EntityType="Self.T_ZO_TASK_Ref_Checkliste_Comment" />
           <EntitySet Name="T_ZO_TM_TSTA_TSK" EntityType="Self.T_ZO_TM_TSTA_TSK" />
+          <EntitySet Name="ZZ_TIMESTAMPS" EntityType="Self.ZZ_TIMESTAMPS" />
           <EntitySet Name="T_AP_Zaehler_Staende" EntityType="Self.T_AP_Zaehler_Staende" />
           <EntitySet Name="T_COR_Log" EntityType="Self.T_COR_Log" />
           <EntitySet Name="T_FMS_Dashboard_27082014" EntityType="Self.T_FMS_Dashboard_27082014" />
@@ -60991,6 +61011,15 @@ FROM [dbo].[T_ZO_AP_MarkDWG] AS [T_ZO_AP_MarkDWG]</DefiningQuery>
                 <ScalarProperty Name="TSTATSK_TSK_UID" ColumnName="TSTATSK_TSK_UID" />
                 <ScalarProperty Name="TSTATSK_TSTA_UID" ColumnName="TSTATSK_TSTA_UID" />
                 <ScalarProperty Name="TSTATSK_Date" ColumnName="TSTATSK_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZZ_TIMESTAMPS">
+            <EntityTypeMapping TypeName="COR_Basic_DemoModel.ZZ_TIMESTAMPS">
+              <MappingFragment StoreEntitySet="ZZ_TIMESTAMPS">
+                <ScalarProperty Name="OBJ_TYPE" ColumnName="OBJ_TYPE" />
+                <ScalarProperty Name="OBJ_NAME" ColumnName="OBJ_NAME" />
+                <ScalarProperty Name="CTR" ColumnName="CTR" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

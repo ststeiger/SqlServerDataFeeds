@@ -552,6 +552,7 @@ namespace SqlServerDataFeed
         public DbSet<T_ZO_SYS_Settings_Benutzer> T_ZO_SYS_Settings_Benutzer { get; set; }
         public DbSet<T_ZO_TASK_Ref_Checkliste_Comment> T_ZO_TASK_Ref_Checkliste_Comment { get; set; }
         public DbSet<T_ZO_TM_TSTA_TSK> T_ZO_TM_TSTA_TSK { get; set; }
+        public DbSet<ZZ_TIMESTAMPS> ZZ_TIMESTAMPS { get; set; }
         public DbSet<T_AP_Zaehler_Staende> T_AP_Zaehler_Staende { get; set; }
         public DbSet<T_COR_Log> T_COR_Log { get; set; }
         public DbSet<T_FMS_Dashboard_27082014> T_FMS_Dashboard_27082014 { get; set; }

@@ -61,6 +61,11 @@
     <Content Include="DataFeedConnection.png" />
     <Content Include="PivotTabellen.png" />
     <Content Include="FeedOverview.txt" />
+    <Content Include="SQL\AllDataTypes.xml" />
+    <Content Include="SQL\Augen.sql" />
+    <Content Include="SQL\EdmMapping.sql" />
+    <Content Include="SQL\EntityTypesTable.sql" />
+    <Content Include="SQL\Standortrechte.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

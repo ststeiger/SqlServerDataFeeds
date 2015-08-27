@@ -28,6 +28,7 @@ namespace SqlServerDataFeed
             System.Data.SqlClient.SqlConnectionStringBuilder csb = new System.Data.SqlClient.SqlConnectionStringBuilder();
             csb.DataSource = Environment.MachineName;
             csb.InitialCatalog = "COR_Basic_Demo";
+            csb.InitialCatalog = "COR_Basic_Swisscom";
             csb.IntegratedSecurity = true;
             csb.ApplicationName = "SqlServerDataFeed";
 

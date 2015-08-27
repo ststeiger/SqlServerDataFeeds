@@ -88,8 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExcelDataFeed.svc" />
-    <Content Include="SQL\Augen.sql" />
-    <Content Include="SQL\Standortrechte.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1719,6 +1717,9 @@
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_ZO_TM_TSTA_TSK.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZZ_TIMESTAMPS.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
   </ItemGroup>
