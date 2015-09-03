@@ -27,11 +27,11 @@ namespace SqlServerDataFeed
             this.T_ZO_AP_Kontakte_AP_Ref_Kostenstelle = new HashSet<T_ZO_AP_Kontakte_AP_Ref_Kostenstelle>();
             this.T_ZO_AP_Parkplatz_AP_Ref_Kostenstelle = new HashSet<T_ZO_AP_Parkplatz_AP_Ref_Kostenstelle>();
             this.T_ZO_AP_Raum_AP_Ref_Kostenstelle = new HashSet<T_ZO_AP_Raum_AP_Ref_Kostenstelle>();
+            this.T_ZO_AP_Ref_Organisationseinheit_AP_Ref_Kostenstelle = new HashSet<T_ZO_AP_Ref_Organisationseinheit_AP_Ref_Kostenstelle>();
             this.T_ZO_AP_Zone_AP_Ref_Kostenstelle = new HashSet<T_ZO_AP_Zone_AP_Ref_Kostenstelle>();
         }
     
         public System.Guid KST_UID { get; set; }
-        public int KST_MDT_ID { get; set; }
         public string KST_Code { get; set; }
         public string KST_Kurz_DE { get; set; }
         public string KST_Kurz_FR { get; set; }
@@ -43,19 +43,20 @@ namespace SqlServerDataFeed
         public string KST_Lang_EN { get; set; }
         public int KST_Status { get; set; }
         public int KST_Sort { get; set; }
-        public Nullable<int> KST_StylizerFore { get; set; }
         public Nullable<int> KST_StylizerBack { get; set; }
         public Nullable<int> KST_StylizerPattern { get; set; }
         public Nullable<int> KST_StylizerLine { get; set; }
         public bool KST_IsDefault { get; set; }
         public Nullable<System.DateTime> KST_DatumMut { get; set; }
         public string KST_DatumUser { get; set; }
+        public Nullable<bool> KST_canHaveSL { get; set; }
     
         public virtual ICollection<T_AP_Informatik> T_AP_Informatik { get; set; }
         public virtual ICollection<T_AP_Kommunikation> T_AP_Kommunikation { get; set; }
         public virtual ICollection<T_AP_Kontakte> T_AP_Kontakte { get; set; }
         public virtual ICollection<T_AP_Ref_Kostenstelle_Raiffeisen> T_AP_Ref_Kostenstelle_Raiffeisen { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_UM_Planung> T_UM_Planung { get; set; }
         public virtual ICollection<T_UPS_BudgetPositionen> T_UPS_BudgetPositionen { get; set; }
         public virtual ICollection<T_ZO_AP_Arbeitsplatz_AP_Ref_Kostenstelle> T_ZO_AP_Arbeitsplatz_AP_Ref_Kostenstelle { get; set; }
@@ -63,6 +64,7 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_ZO_AP_Kontakte_AP_Ref_Kostenstelle> T_ZO_AP_Kontakte_AP_Ref_Kostenstelle { get; set; }
         public virtual ICollection<T_ZO_AP_Parkplatz_AP_Ref_Kostenstelle> T_ZO_AP_Parkplatz_AP_Ref_Kostenstelle { get; set; }
         public virtual ICollection<T_ZO_AP_Raum_AP_Ref_Kostenstelle> T_ZO_AP_Raum_AP_Ref_Kostenstelle { get; set; }
+        public virtual ICollection<T_ZO_AP_Ref_Organisationseinheit_AP_Ref_Kostenstelle> T_ZO_AP_Ref_Organisationseinheit_AP_Ref_Kostenstelle { get; set; }
         public virtual ICollection<T_ZO_AP_Zone_AP_Ref_Kostenstelle> T_ZO_AP_Zone_AP_Ref_Kostenstelle { get; set; }
     }
 }

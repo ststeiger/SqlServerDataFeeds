@@ -18,6 +18,33 @@ namespace SqlServerDataFeed
         {
             this.T_DMS_ZO_Prozesse_Berechtigungen = new HashSet<T_DMS_ZO_Prozesse_Berechtigungen>();
             this.T_DMS_ZO_Standort_Sprache = new HashSet<T_DMS_ZO_Standort_Sprache>();
+            this.T_SYS_AdresseRollenrechte = new HashSet<T_SYS_AdresseRollenrechte>();
+            this.T_SYS_Anlagerechte = new HashSet<T_SYS_Anlagerechte>();
+            this.T_SYS_Arbeitsplatzrechte = new HashSet<T_SYS_Arbeitsplatzrechte>();
+            this.T_SYS_Aussenobjektrechte = new HashSet<T_SYS_Aussenobjektrechte>();
+            this.T_SYS_Doserechte = new HashSet<T_SYS_Doserechte>();
+            this.T_SYS_Gebaeuderechte = new HashSet<T_SYS_Gebaeuderechte>();
+            this.T_SYS_Geschossrechte = new HashSet<T_SYS_Geschossrechte>();
+            this.T_SYS_Grundstueckrechte = new HashSet<T_SYS_Grundstueckrechte>();
+            this.T_SYS_Informatikrechte = new HashSet<T_SYS_Informatikrechte>();
+            this.T_SYS_Kommunikationrechte = new HashSet<T_SYS_Kommunikationrechte>();
+            this.T_SYS_Kunstrechte = new HashSet<T_SYS_Kunstrechte>();
+            this.T_SYS_Mobiliarrechte = new HashSet<T_SYS_Mobiliarrechte>();
+            this.T_SYS_Parkplatzrechte = new HashSet<T_SYS_Parkplatzrechte>();
+            this.T_SYS_Raumrechte = new HashSet<T_SYS_Raumrechte>();
+            this.T_SYS_Schluesselgrupperechte = new HashSet<T_SYS_Schluesselgrupperechte>();
+            this.T_SYS_Sicherheitrechte = new HashSet<T_SYS_Sicherheitrechte>();
+            this.T_SYS_Standortrechte = new HashSet<T_SYS_Standortrechte>();
+            this.T_SYS_Traktrechte = new HashSet<T_SYS_Traktrechte>();
+            this.T_SYS_Tuerrechte = new HashSet<T_SYS_Tuerrechte>();
+            this.T_SYS_Zaehlerrechte = new HashSet<T_SYS_Zaehlerrechte>();
+            this.T_SYS_Zonerechte = new HashSet<T_SYS_Zonerechte>();
+            this.T_SYS_Zylinderrechte = new HashSet<T_SYS_Zylinderrechte>();
+            this.T_TM_Tasks_Planung = new HashSet<T_TM_Tasks_Planung>();
+            this.T_TM_Tasks = new HashSet<T_TM_Tasks>();
+            this.T_ZO_SYS_DokumentKategorie_Benutzergruppe = new HashSet<T_ZO_SYS_DokumentKategorie_Benutzergruppe>();
+            this.T_ZO_SYS_Metadatenrechte_Benutzergruppe = new HashSet<T_ZO_SYS_Metadatenrechte_Benutzergruppe>();
+            this.T_ZO_SYS_Mimetyperechte_Benutzergruppe = new HashSet<T_ZO_SYS_Mimetyperechte_Benutzergruppe>();
         }
     
         public int ID { get; set; }
@@ -37,10 +64,39 @@ namespace SqlServerDataFeed
         public bool IsDMSMove { get; set; }
         public bool IsLDAPSync { get; set; }
         public bool IsPotfolioStd { get; set; }
+        public Nullable<bool> BG_m2 { get; set; }
         public bool IsBPAdmin { get; set; }
         public bool IsRKAdmin { get; set; }
+        public Nullable<bool> IsBackofficeAdmin { get; set; }
     
         public virtual ICollection<T_DMS_ZO_Prozesse_Berechtigungen> T_DMS_ZO_Prozesse_Berechtigungen { get; set; }
         public virtual ICollection<T_DMS_ZO_Standort_Sprache> T_DMS_ZO_Standort_Sprache { get; set; }
+        public virtual ICollection<T_SYS_AdresseRollenrechte> T_SYS_AdresseRollenrechte { get; set; }
+        public virtual ICollection<T_SYS_Anlagerechte> T_SYS_Anlagerechte { get; set; }
+        public virtual ICollection<T_SYS_Arbeitsplatzrechte> T_SYS_Arbeitsplatzrechte { get; set; }
+        public virtual ICollection<T_SYS_Aussenobjektrechte> T_SYS_Aussenobjektrechte { get; set; }
+        public virtual ICollection<T_SYS_Doserechte> T_SYS_Doserechte { get; set; }
+        public virtual ICollection<T_SYS_Gebaeuderechte> T_SYS_Gebaeuderechte { get; set; }
+        public virtual ICollection<T_SYS_Geschossrechte> T_SYS_Geschossrechte { get; set; }
+        public virtual ICollection<T_SYS_Grundstueckrechte> T_SYS_Grundstueckrechte { get; set; }
+        public virtual ICollection<T_SYS_Informatikrechte> T_SYS_Informatikrechte { get; set; }
+        public virtual ICollection<T_SYS_Kommunikationrechte> T_SYS_Kommunikationrechte { get; set; }
+        public virtual ICollection<T_SYS_Kunstrechte> T_SYS_Kunstrechte { get; set; }
+        public virtual ICollection<T_SYS_Mobiliarrechte> T_SYS_Mobiliarrechte { get; set; }
+        public virtual ICollection<T_SYS_Parkplatzrechte> T_SYS_Parkplatzrechte { get; set; }
+        public virtual ICollection<T_SYS_Raumrechte> T_SYS_Raumrechte { get; set; }
+        public virtual ICollection<T_SYS_Schluesselgrupperechte> T_SYS_Schluesselgrupperechte { get; set; }
+        public virtual ICollection<T_SYS_Sicherheitrechte> T_SYS_Sicherheitrechte { get; set; }
+        public virtual ICollection<T_SYS_Standortrechte> T_SYS_Standortrechte { get; set; }
+        public virtual ICollection<T_SYS_Traktrechte> T_SYS_Traktrechte { get; set; }
+        public virtual ICollection<T_SYS_Tuerrechte> T_SYS_Tuerrechte { get; set; }
+        public virtual ICollection<T_SYS_Zaehlerrechte> T_SYS_Zaehlerrechte { get; set; }
+        public virtual ICollection<T_SYS_Zonerechte> T_SYS_Zonerechte { get; set; }
+        public virtual ICollection<T_SYS_Zylinderrechte> T_SYS_Zylinderrechte { get; set; }
+        public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
+        public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
+        public virtual ICollection<T_ZO_SYS_DokumentKategorie_Benutzergruppe> T_ZO_SYS_DokumentKategorie_Benutzergruppe { get; set; }
+        public virtual ICollection<T_ZO_SYS_Metadatenrechte_Benutzergruppe> T_ZO_SYS_Metadatenrechte_Benutzergruppe { get; set; }
+        public virtual ICollection<T_ZO_SYS_Mimetyperechte_Benutzergruppe> T_ZO_SYS_Mimetyperechte_Benutzergruppe { get; set; }
     }
 }

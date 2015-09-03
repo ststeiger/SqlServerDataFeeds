@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_MobiliarBibliothek_Raiffeisen
     {
         public System.Guid MB_UID { get; set; }
-        public System.Guid MB_MB_UID { get; set; }
         public string MB_CADNummer { get; set; }
         public string MB_Ausfuehrung1 { get; set; }
         public string MB_Ausfuehrung2 { get; set; }

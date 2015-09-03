@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Raum_Reservation
     {
         public System.Guid ZO_RMRES_UID { get; set; }
-        public System.Guid ZO_RMRES_RM_UID { get; set; }
-        public int ZO_RMRES_BE_ID { get; set; }
         public System.DateTime ZO_RMRES_DatumVon { get; set; }
         public System.DateTime ZO_RMRES_DatumBis { get; set; }
         public System.DateTime ZO_RMRES_Created { get; set; }

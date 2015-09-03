@@ -22,15 +22,11 @@ namespace SqlServerDataFeed
         public System.Guid UMP_UID { get; set; }
         public int UMP_AntragID { get; set; }
         public string UMP_Beschreibung { get; set; }
-        public System.Guid UMP_UMST_UID { get; set; }
-        public Nullable<System.Guid> UMP_KT_UID { get; set; }
-        public Nullable<System.Guid> UMP_KST_UID { get; set; }
         public int UMP_Status { get; set; }
         public Nullable<System.DateTime> UMP_Datum_Erstellung { get; set; }
         public Nullable<System.DateTime> UMP_Datum_Aenderung { get; set; }
         public Nullable<System.DateTime> UMP_Datum_Eingereicht { get; set; }
         public bool UMP_IsMove { get; set; }
-        public Nullable<System.Guid> UMP_KST_Verantwortlich { get; set; }
     
         public virtual T_AP_Kontakte T_AP_Kontakte { get; set; }
         public virtual T_AP_Kontakte T_AP_Kontakte1 { get; set; }

@@ -22,7 +22,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid KF_UID { get; set; }
-        public int KF_MDT_ID { get; set; }
         public Nullable<int> KF_Code { get; set; }
         public string KF_Kurz_DE { get; set; }
         public string KF_Kurz_FR { get; set; }
@@ -34,15 +33,16 @@ namespace SqlServerDataFeed
         public string KF_Lang_EN { get; set; }
         public int KF_Status { get; set; }
         public int KF_Sort { get; set; }
-        public Nullable<int> KF_StylizerFore { get; set; }
         public Nullable<int> KF_StylizerBack { get; set; }
         public Nullable<int> KF_StylizerPattern { get; set; }
         public Nullable<int> KF_StylizerLine { get; set; }
         public bool KF_IsDefault { get; set; }
         public Nullable<System.DateTime> KF_DatumMut { get; set; }
         public string KF_DatumUser { get; set; }
+        public Nullable<bool> KF_showInDoku { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_AP_Kontakte_AP_Ref_Funktionen> T_ZO_AP_Kontakte_AP_Ref_Funktionen { get; set; }
         public virtual ICollection<T_ZO_AP_Objekt_AP_Kontakte> T_ZO_AP_Objekt_AP_Kontakte { get; set; }
         public virtual ICollection<T_ZO_AP_Schluesselgruppe_AP_Ref_Funktionen> T_ZO_AP_Schluesselgruppe_AP_Ref_Funktionen { get; set; }

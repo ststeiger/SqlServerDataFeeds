@@ -16,8 +16,10 @@ namespace SqlServerDataFeed
     {
         public T_AP_Parkplatz()
         {
+            this.T_AP_Fahrzeug = new HashSet<T_AP_Fahrzeug>();
             this.T_AP_Parkplatz_History = new HashSet<T_AP_Parkplatz_History>();
             this.T_PM_Buchungen = new HashSet<T_PM_Buchungen>();
+            this.T_SYS_Parkplatzrechte = new HashSet<T_SYS_Parkplatzrechte>();
             this.T_TM_Tasks_Planung = new HashSet<T_TM_Tasks_Planung>();
             this.T_TM_Tasks = new HashSet<T_TM_Tasks>();
             this.T_ZO_AP_Parkplatz_AP_Belegung = new HashSet<T_ZO_AP_Parkplatz_AP_Belegung>();
@@ -35,13 +37,7 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid PP_UID { get; set; }
-        public int PP_MDT_ID { get; set; }
-        public Nullable<System.Guid> PP_VAR_UID { get; set; }
         public string PP_ApertureKey { get; set; }
-        public Nullable<System.Guid> PP_SO_UID { get; set; }
-        public Nullable<System.Guid> PP_GR_UID { get; set; }
-        public Nullable<System.Guid> PP_GS_UID { get; set; }
-        public Nullable<System.Guid> PP_RM_UID { get; set; }
         public Nullable<System.Guid> PP_PK_UID { get; set; }
         public Nullable<System.Guid> PP_PT_UID { get; set; }
         public Nullable<System.Guid> PP_PS_UID { get; set; }
@@ -68,13 +64,14 @@ namespace SqlServerDataFeed
         public string C_UeberbauungNr { get; set; }
         public Nullable<int> C_NichtVermietbar { get; set; }
         public Nullable<int> C_Leerstand { get; set; }
-        public Nullable<System.Guid> PP_HS_UID { get; set; }
         public bool PP_IsVermietbar { get; set; }
         public bool PP_IsEBF { get; set; }
         public Nullable<decimal> PP_Price { get; set; }
         public string PP_ZF_Rank { get; set; }
     
+        public virtual ICollection<T_AP_Fahrzeug> T_AP_Fahrzeug { get; set; }
         public virtual T_AP_Geschoss T_AP_Geschoss { get; set; }
+        public virtual T_AP_Grundstueck T_AP_Grundstueck { get; set; }
         public virtual ICollection<T_AP_Parkplatz_History> T_AP_Parkplatz_History { get; set; }
         public virtual T_AP_Raum T_AP_Raum { get; set; }
         public virtual T_AP_Ref_Haus T_AP_Ref_Haus { get; set; }
@@ -82,6 +79,7 @@ namespace SqlServerDataFeed
         public virtual T_AP_Standort T_AP_Standort { get; set; }
         public virtual T_VAR_Variante T_VAR_Variante { get; set; }
         public virtual ICollection<T_PM_Buchungen> T_PM_Buchungen { get; set; }
+        public virtual ICollection<T_SYS_Parkplatzrechte> T_SYS_Parkplatzrechte { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
         public virtual ICollection<T_ZO_AP_Parkplatz_AP_Belegung> T_ZO_AP_Parkplatz_AP_Belegung { get; set; }

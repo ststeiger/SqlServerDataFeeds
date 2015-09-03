@@ -16,6 +16,7 @@ namespace SqlServerDataFeed
     {
         public T_AV_Ref_AdresseRollen()
         {
+            this.T_SYS_AdresseRollenrechte = new HashSet<T_SYS_AdresseRollenrechte>();
             this.T_ZO_AV_Adresse_AV_Ref_AdresseRollen = new HashSet<T_ZO_AV_Adresse_AV_Ref_AdresseRollen>();
         }
     
@@ -31,7 +32,6 @@ namespace SqlServerDataFeed
         public string AR_Lang_EN { get; set; }
         public int AR_Status { get; set; }
         public int AR_Sort { get; set; }
-        public Nullable<int> AR_StylizerFore { get; set; }
         public Nullable<int> AR_StylizerBack { get; set; }
         public Nullable<int> AR_StylizerPattern { get; set; }
         public Nullable<int> AR_StylizerLine { get; set; }
@@ -39,6 +39,8 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> AR_DatumMut { get; set; }
         public string AR_DatumUser { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
+        public virtual ICollection<T_SYS_AdresseRollenrechte> T_SYS_AdresseRollenrechte { get; set; }
         public virtual ICollection<T_ZO_AV_Adresse_AV_Ref_AdresseRollen> T_ZO_AV_Adresse_AV_Ref_AdresseRollen { get; set; }
     }
 }

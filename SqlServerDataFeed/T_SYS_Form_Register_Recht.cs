@@ -16,14 +16,12 @@ namespace SqlServerDataFeed
     {
         public System.Guid FRR_UID { get; set; }
         public int FRR_GRANTEE_ID { get; set; }
-        public Nullable<System.Guid> FRR_OBJT_UID { get; set; }
         public Nullable<System.Guid> FRR_LANG_UID { get; set; }
         public bool FRR_IsRead { get; set; }
         public bool FRR_IsWrite { get; set; }
         public bool FRR_IsInsert { get; set; }
         public bool FRR_IsDelete { get; set; }
         public int FRR_Status { get; set; }
-        public int FRR_MDT_ID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual T_OV_Ref_ObjektTyp T_OV_Ref_ObjektTyp { get; set; }

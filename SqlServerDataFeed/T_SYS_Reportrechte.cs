@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         public Nullable<System.Guid> RER_RE_UID { get; set; }
         public bool RER_IsRead { get; set; }
         public int RER_Status { get; set; }
-        public int RER_MDT_ID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
     }

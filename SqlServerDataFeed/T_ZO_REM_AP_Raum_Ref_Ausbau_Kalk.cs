@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_REM_AP_Raum_Ref_Ausbau_Kalk
     {
         public System.Guid ZO_RMREMAB_UID { get; set; }
-        public System.Guid ZO_RMREMAB_RM_UID { get; set; }
-        public Nullable<System.Guid> ZO_RMREMAB_REMAB_UID { get; set; }
         public Nullable<double> ZO_RMREMAB_Menge { get; set; }
         public Nullable<System.DateTime> ZO_RMREMAB_GueltigVon { get; set; }
         public Nullable<System.DateTime> ZO_RMREMAB_GueltigBis { get; set; }

@@ -24,6 +24,7 @@ namespace SqlServerDataFeed
             this.T_MM_Umzug_Bestand1 = new HashSet<T_MM_Umzug_Bestand>();
             this.T_MM_Umzug = new HashSet<T_MM_Umzug>();
             this.T_MM_Umzug1 = new HashSet<T_MM_Umzug>();
+            this.T_SYS_Arbeitsplatzrechte = new HashSet<T_SYS_Arbeitsplatzrechte>();
             this.T_TM_Tasks_Planung = new HashSet<T_TM_Tasks_Planung>();
             this.T_TM_Tasks = new HashSet<T_TM_Tasks>();
             this.T_UM_Umzug = new HashSet<T_UM_Umzug>();
@@ -35,8 +36,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AP_UID { get; set; }
-        public int AP_MDT_ID { get; set; }
-        public Nullable<System.Guid> AP_RM_UID { get; set; }
         public Nullable<System.Guid> AP_APK_UID { get; set; }
         public string AP_ApertureKey { get; set; }
         public string AP_Nr { get; set; }
@@ -59,6 +58,7 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_MM_Umzug_Bestand> T_MM_Umzug_Bestand1 { get; set; }
         public virtual ICollection<T_MM_Umzug> T_MM_Umzug { get; set; }
         public virtual ICollection<T_MM_Umzug> T_MM_Umzug1 { get; set; }
+        public virtual ICollection<T_SYS_Arbeitsplatzrechte> T_SYS_Arbeitsplatzrechte { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
         public virtual ICollection<T_UM_Umzug> T_UM_Umzug { get; set; }

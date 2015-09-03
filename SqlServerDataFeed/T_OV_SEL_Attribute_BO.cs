@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_OV_SEL_Attribute_BO
     {
         public System.Guid OVSEL_UID { get; set; }
-        public System.Guid OVSEL_OVBO_UID { get; set; }
         public string OVSEL_DatentypFeld { get; set; }
         public string OVSEL_Bezeichnung { get; set; }
         public int OVSEL_Status { get; set; }

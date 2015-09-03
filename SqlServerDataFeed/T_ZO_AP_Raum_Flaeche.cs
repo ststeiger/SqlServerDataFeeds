@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Raum_Flaeche
     {
         public System.Guid ZO_RMFlaeche_UID { get; set; }
-        public System.Guid ZO_RMFlaeche_RM_UID { get; set; }
         public Nullable<double> ZO_RMFlaeche_Flaeche { get; set; }
         public System.DateTime ZO_RMFlaeche_DatumVon { get; set; }
         public System.DateTime ZO_RMFlaeche_DatumBis { get; set; }

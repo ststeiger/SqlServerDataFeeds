@@ -17,10 +17,10 @@ namespace SqlServerDataFeed
         public T_AP_Ref_GebaeudeEinstufung()
         {
             this.T_AP_Gebaeude = new HashSet<T_AP_Gebaeude>();
+            this.T_AP_Trakt = new HashSet<T_AP_Trakt>();
         }
     
         public System.Guid GES_UID { get; set; }
-        public int GES_MDT_ID { get; set; }
         public Nullable<int> GES_Code { get; set; }
         public string GES_Kurz_DE { get; set; }
         public string GES_Kurz_FR { get; set; }
@@ -32,7 +32,6 @@ namespace SqlServerDataFeed
         public string GES_Lang_EN { get; set; }
         public int GES_Status { get; set; }
         public int GES_Sort { get; set; }
-        public Nullable<int> GES_StylizerFore { get; set; }
         public Nullable<int> GES_StylizerBack { get; set; }
         public Nullable<int> GES_StylizerPattern { get; set; }
         public Nullable<int> GES_StylizerLine { get; set; }
@@ -42,5 +41,7 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Gebaeude> T_AP_Gebaeude { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
+        public virtual ICollection<T_AP_Trakt> T_AP_Trakt { get; set; }
     }
 }

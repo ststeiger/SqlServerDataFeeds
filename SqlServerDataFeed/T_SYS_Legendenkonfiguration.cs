@@ -17,7 +17,6 @@ namespace SqlServerDataFeed
         public System.Guid LCONF_UID { get; set; }
         public Nullable<int> LCONF_MDT_ID { get; set; }
         public string LCONF_MDT_Lang_DE { get; set; }
-        public Nullable<System.Guid> LCONF_PF_UID { get; set; }
         public string LCONF_LegendItem { get; set; }
         public string LCONF_FormatString { get; set; }
         public string LCONF_CustomHtml { get; set; }
@@ -37,6 +36,10 @@ namespace SqlServerDataFeed
         public string LCONF_OutlineColor { get; set; }
         public Nullable<int> LCONF_Sort { get; set; }
         public Nullable<int> LCONF_Status { get; set; }
+        public string LCONF_FormatString_DE { get; set; }
+        public string LCONF_FormatString_FR { get; set; }
+        public string LCONF_FormatString_IT { get; set; }
+        public string LCONF_FormatString_EN { get; set; }
     
         public virtual T_SYS_Ref_PapierFormat T_SYS_Ref_PapierFormat { get; set; }
     }

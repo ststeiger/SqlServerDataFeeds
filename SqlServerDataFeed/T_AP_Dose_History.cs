@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Dose_History
     {
         public System.Guid HIDO_UID { get; set; }
-        public System.Guid HIDO_DO_UID { get; set; }
         public System.Guid HIDO_Entry_UID { get; set; }
         public System.DateTime HIDO_Datum { get; set; }
         public string HIDO_User { get; set; }

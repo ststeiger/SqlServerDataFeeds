@@ -20,15 +20,11 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid MMUB_UID { get; set; }
-        public System.Guid MMUB_MMA_UID { get; set; }
         public string MMUB_Bezeichnung { get; set; }
         public string MMUB_UmzugID { get; set; }
-        public System.Guid MMUB_MMST_UID { get; set; }
         public Nullable<int> MMUB_BevorzugtUmzugWoche { get; set; }
         public Nullable<System.DateTime> MMUB_UmzugDatum { get; set; }
         public int MMUB_UmzugKartons { get; set; }
-        public Nullable<System.Guid> MMUB_AP_UID_Alt { get; set; }
-        public Nullable<System.Guid> MMUB_AP_UID_Neu { get; set; }
         public int MMUB_Status { get; set; }
         public Nullable<System.DateTime> MMUB_Datum_Erstellung { get; set; }
         public Nullable<System.DateTime> MMUB_Datum_Aenderung { get; set; }

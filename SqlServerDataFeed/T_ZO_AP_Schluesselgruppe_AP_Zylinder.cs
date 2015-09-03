@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Schluesselgruppe_AP_Zylinder
     {
         public System.Guid ZO_SLGZYL_UID { get; set; }
-        public System.Guid ZO_SLGZYL_SLG_UID { get; set; }
-        public System.Guid ZO_SLGZYL_ZYL_UID { get; set; }
         public int ZO_SLGZYL_Status { get; set; }
     
         public virtual T_AP_Schluesselgruppe T_AP_Schluesselgruppe { get; set; }

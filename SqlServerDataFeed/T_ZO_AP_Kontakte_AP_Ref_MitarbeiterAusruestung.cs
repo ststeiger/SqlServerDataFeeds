@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Kontakte_AP_Ref_MitarbeiterAusruestung
     {
         public System.Guid ZO_KTMAA_UID { get; set; }
-        public System.Guid ZO_KTMAA_KT_UID { get; set; }
         public System.Guid ZO_KTMAA_MAA_UID { get; set; }
         public string ZO_KTMAA_Bezeichnung { get; set; }
         public string ZO_KTMAA_SerienNummer { get; set; }

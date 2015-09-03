@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_TM_TSTA_TSK
     {
         public System.Guid TSTATSK_UID { get; set; }
-        public System.Guid TSTATSK_TSK_UID { get; set; }
-        public System.Guid TSTATSK_TSTA_UID { get; set; }
         public System.DateTime TSTATSK_Date { get; set; }
     
         public virtual T_TM_Ref_TaskStatus T_TM_Ref_TaskStatus { get; set; }

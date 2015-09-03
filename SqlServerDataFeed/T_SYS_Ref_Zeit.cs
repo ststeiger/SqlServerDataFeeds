@@ -21,7 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ZT_UID { get; set; }
-        public int ZT_MDT_ID { get; set; }
         public Nullable<int> ZT_Code { get; set; }
         public string ZT_Kurz_DE { get; set; }
         public string ZT_Kurz_FR { get; set; }
@@ -33,7 +32,6 @@ namespace SqlServerDataFeed
         public string ZT_Lang_EN { get; set; }
         public int ZT_Status { get; set; }
         public int ZT_Sort { get; set; }
-        public Nullable<int> ZT_StylizerFore { get; set; }
         public Nullable<int> ZT_StylizerBack { get; set; }
         public Nullable<int> ZT_StylizerPattern { get; set; }
         public Nullable<int> ZT_StylizerLine { get; set; }
@@ -44,5 +42,6 @@ namespace SqlServerDataFeed
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual ICollection<T_PM_Buchungen> T_PM_Buchungen { get; set; }
         public virtual ICollection<T_PM_Buchungen> T_PM_Buchungen1 { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

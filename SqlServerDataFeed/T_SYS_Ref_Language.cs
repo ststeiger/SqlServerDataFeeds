@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_SYS_Ref_Language
     {
         public System.Guid LANG_UID { get; set; }
-        public int LANG_MDT_ID { get; set; }
         public Nullable<int> LANG_Code { get; set; }
         public string LANG_Kurz_DE { get; set; }
         public string LANG_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string LANG_Lang_EN { get; set; }
         public int LANG_Status { get; set; }
         public int LANG_Sort { get; set; }
-        public Nullable<int> LANG_StylizerFore { get; set; }
         public Nullable<int> LANG_StylizerBack { get; set; }
         public Nullable<int> LANG_StylizerPattern { get; set; }
         public Nullable<int> LANG_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string LANG_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

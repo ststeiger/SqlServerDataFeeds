@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_AnlageBetriebsart
     {
         public System.Guid ABA_UID { get; set; }
-        public int ABA_MDT_ID { get; set; }
         public Nullable<int> ABA_Code { get; set; }
         public string ABA_Kurz_DE { get; set; }
         public string ABA_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string ABA_Lang_EN { get; set; }
         public int ABA_Status { get; set; }
         public int ABA_Sort { get; set; }
-        public Nullable<int> ABA_StylizerFore { get; set; }
         public Nullable<int> ABA_StylizerBack { get; set; }
         public Nullable<int> ABA_StylizerPattern { get; set; }
         public Nullable<int> ABA_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string ABA_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

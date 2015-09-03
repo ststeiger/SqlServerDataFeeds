@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ERF_UID { get; set; }
-        public int ERF_MDT_ID { get; set; }
         public Nullable<int> ERF_Code { get; set; }
         public string ERF_Kurz_DE { get; set; }
         public string ERF_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string ERF_Lang_EN { get; set; }
         public int ERF_Status { get; set; }
         public int ERF_Sort { get; set; }
-        public Nullable<int> ERF_StylizerFore { get; set; }
         public Nullable<int> ERF_StylizerBack { get; set; }
         public Nullable<int> ERF_StylizerPattern { get; set; }
         public Nullable<int> ERF_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Gebaeude> T_AP_Gebaeude { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

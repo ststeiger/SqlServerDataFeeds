@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Grundstueck_Flaeche
     {
         public System.Guid ZO_GRUFlaeche_UID { get; set; }
-        public System.Guid ZO_GRUFlaeche_GRU_UID { get; set; }
         public Nullable<double> ZO_GRUFlaeche_Flaeche { get; set; }
         public System.DateTime ZO_GRUFlaeche_DatumVon { get; set; }
         public System.DateTime ZO_GRUFlaeche_DatumBis { get; set; }

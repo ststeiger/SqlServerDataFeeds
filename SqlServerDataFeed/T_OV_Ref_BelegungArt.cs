@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_OV_Ref_BelegungArt
     {
         public System.Guid BELA_UID { get; set; }
-        public int BELA_MDT_ID { get; set; }
         public Nullable<int> BELA_Code { get; set; }
         public string BELA_Kurz_DE { get; set; }
         public string BELA_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string BELA_Lang_EN { get; set; }
         public int BELA_Status { get; set; }
         public int BELA_Sort { get; set; }
-        public Nullable<int> BELA_StylizerFore { get; set; }
         public Nullable<int> BELA_StylizerBack { get; set; }
         public Nullable<int> BELA_StylizerPattern { get; set; }
         public Nullable<int> BELA_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string BELA_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

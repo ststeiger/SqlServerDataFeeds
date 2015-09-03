@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C50ED686-6328-4A91-AC3D-02CF9E2DFD80}</ProjectGuid>
+    <ProjectGuid>{4BA14FF9-A310-4D13-B509-BDED3DC733C1}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -19,7 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,55 +39,52 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+    <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Data.Services, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Services.5.6.4\lib\net40\Microsoft.Data.Services.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Data.Services, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.5.6.0\lib\net40\Microsoft.Data.Services.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
-    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
     <Content Include="ExcelDataFeed.svc" />
+    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -106,13 +103,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COR_Basic_Demo.edmx</DependentUpon>
     </Compile>
+    <Compile Include="COR_Basic_DemoEntities.cs" />
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ELMAH_Error.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="ExcelDataFeed.svc.cs">
       <DependentUpon>ExcelDataFeed.svc</DependentUpon>
     </Compile>
-    <Compile Include="COR_Basic_DemoEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="T_Admin.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
@@ -147,6 +151,12 @@
     <Compile Include="T_AP_Dokumente.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_AP_Dokumente_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Dokumente_Log.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_AP_Dose.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
@@ -157,6 +167,12 @@
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_EmailVersand.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Fahrzeug.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Fahrzeug_History.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_Fotos.cs">
@@ -210,7 +226,16 @@
     <Compile Include="T_AP_Kunst.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_AP_Kunst2.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Kunst3.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_AP_Kunst_History.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Kunst_Ref_Technik.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_Legenden.cs">
@@ -318,10 +343,16 @@
     <Compile Include="T_AP_Ref_DIN277.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_AP_Ref_DokumentGrund.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_AP_Ref_DokumentKategorie.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_Ref_DokumentMetadaten.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_DokumentStatus.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_Ref_DoseKategorie.cs">
@@ -352,6 +383,12 @@
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_Ref_ErschliessungStrasse.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_FahrzeugHersteller.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_FahrzeugTyp.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_Ref_Fluchtwegmarkierung.cs">
@@ -405,6 +442,18 @@
     <Compile Include="T_AP_Ref_Kostenstelle_Raiffeisen.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_AP_Ref_KunstAusleihanlass.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstAusleihart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstEntlassung.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstInstitution.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_AP_Ref_KunstKategorie.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
@@ -414,10 +463,16 @@
     <Compile Include="T_AP_Ref_KunstMandant.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_AP_Ref_KunstProvenienz.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_AP_Ref_KunstRahmenArt.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_Ref_KunstStatus.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_KunstWerteKategorie.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_Ref_Land.cs">
@@ -573,10 +628,16 @@
     <Compile Include="T_AP_Ref_ZuschlagsflaechenTyp.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_AP_Ref_ZylinderKasse.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_AP_Ref_ZylinderKategorie.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_Ref_ZylinderSchliesssystem.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AP_Ref_ZylinderStatus.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_AP_Ref_ZylinderTyp.cs">
@@ -684,10 +745,43 @@
     <Compile Include="T_BO_Menu_CheckDelete.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_CL_Checklist.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_Ref_Katalog.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_Cell.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_CheckBox.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_DropDown.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_Header.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_Image.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_Label.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_Table.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CL_ZO_TextBox.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_COR_Error.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_COR_Log.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_COR_Version.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_DMS_Configuration.cs">
@@ -909,6 +1003,33 @@
     <Compile Include="T_FMS_ZO_Navigation_Benutzer.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_IGM_Offerte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_Ansatz.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_GlasreinigungServiceLevel.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_InnenreinigungServiceLevel.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_Leistungsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_Oberflaeche.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_OffertenTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Ref_Raumgruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_IGM_Tour.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_Image.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
@@ -919,6 +1040,9 @@
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_LOG_ProzedurRun.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_LOG_SAML.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_MM_AnmeldungEmpfaenger.cs">
@@ -1098,7 +1222,25 @@
     <Compile Include="T_SessionValues.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_Slicklist.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Slicklist_Custom.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_AdresseRollenrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Anlagerechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_SYS_ApertureColorToHex.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Arbeitsplatzrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Aussenobjektrechte.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_BackOfficeMenuerechte.cs">
@@ -1116,6 +1258,12 @@
     <Compile Include="T_SYS_Dashboardrechte.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_SYS_Doserechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Fahrzeugrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_SYS_FilterHistory.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
@@ -1129,6 +1277,18 @@
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_Geschossrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Grundstueckrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Informatikrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Kommunikationrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Kunstrechte.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_Language.cs">
@@ -1149,6 +1309,9 @@
     <Compile Include="T_SYS_Language_Forms_i18n_Cust.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_SYS_Language_Log.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_SYS_Language_MonthNames.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
@@ -1156,6 +1319,9 @@
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_Legendenkonfiguration.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Mobiliarrechte.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_Module.cs">
@@ -1168,6 +1334,9 @@
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_Module_Helsana.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Module_Post.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_Module_Reichle.cs">
@@ -1188,6 +1357,12 @@
     <Compile Include="T_SYS_Navigationrechte.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_SYS_Parkplatzrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Raumrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_SYS_Ref_BackOfficeMenue.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
@@ -1198,6 +1373,12 @@
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_Ref_Dashboard.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Datentyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Ref_Geschlecht.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_Ref_Language.cs">
@@ -1239,6 +1420,9 @@
     <Compile Include="T_SYS_Reportrechte.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_SYS_Schluesselgrupperechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_SYS_Settings.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
@@ -1248,13 +1432,31 @@
     <Compile Include="T_SYS_Settings_System.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_SYS_Sicherheitrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_SYS_Standortrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Traktrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Tuerrechte.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_Version.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SYS_VisualisierungStichtag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Zaehlerrechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Zonerechte.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SYS_Zylinderrechte.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_TM_Checklist_Value.cs">
@@ -1437,6 +1639,9 @@
     <Compile Include="T_ZO_AP_Dose_DWG.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_ZO_AP_Fahrzeug_DWG.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_ZO_AP_Gebaeude_AP_Ref_AnlagaeKategorieSchema.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
@@ -1479,10 +1684,22 @@
     <Compile Include="T_ZO_AP_Kontakte_AP_Ref_PersonalKategorie.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_ZO_AP_Kunst_AP_Ref_KunstKuenstler.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kunst_Ausleihe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_ZO_AP_Kunst_DWG.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_ZO_AP_Kunst_Kosten.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kunst_Kosten2.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Kunst_Werte.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_ZO_AP_MarkDWG.cs">
@@ -1495,6 +1712,9 @@
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_ZO_AP_Objekt_AP_Vertrag.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_AP_Objekt_T_AV_Adressen.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_ZO_AP_Parkplatz_AP_Belegung.cs">
@@ -1578,6 +1798,9 @@
     <Compile Include="T_ZO_AP_Ref_Arbeitsplatzkategorie_AP_Ref_MobiliarBibliothek.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_ZO_AP_Ref_Organisationseinheit_AP_Ref_Kostenstelle.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_ZO_AP_Schluesselgruppe_AP_Ref_Funktionen.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
@@ -1629,6 +1852,9 @@
     <Compile Include="T_ZO_AP_Zone_Flaeche.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_ZO_AP_Zylinder_DWG.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
@@ -1638,10 +1864,25 @@
     <Compile Include="T_ZO_Benutzer_Schedule.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_ZO_IGM_Offerte_Raum.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_IGM_Reinigungsfaktor.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_IGM_Tour_Raum.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_ZO_MM_Bestand_Umzug.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_ZO_MM_Standort_ServiceAnbieter.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_ObjektDefect.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_OV_Ref_ObjektPolygon.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_ZO_OV_Ref_ObjektSymbol.cs">
@@ -1701,7 +1942,25 @@
     <Compile Include="T_ZO_REM_AP_Standort_Planung.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_ZO_Slickcolumn.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_Slickcolumn_Custom.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_DokumentKategorie_Benutzergruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_Language_Forms.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="T_ZO_SYS_Language_Forms_OV_Ref_ObjektTyp.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_Metadatenrechte_Benutzergruppe.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ZO_SYS_Mimetyperechte_Benutzergruppe.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_ZO_SYS_Module_AP_Ref_Mandant.cs">
@@ -1719,12 +1978,17 @@
     <Compile Include="T_ZO_TM_TSTA_TSK.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
+    <Compile Include="T_ZO_T_AP_Standort_T_IGM_Ref_Leistungsart.cs">
+      <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
+    </Compile>
     <Compile Include="ZZ_TIMESTAMPS.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
     <EntityDeploy Include="COR_Basic_Demo.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>COR_Basic_Demo.Designer.cs</LastGenOutput>
@@ -1742,6 +2006,7 @@
       <DependentUpon>COR_Basic_Demo.edmx</DependentUpon>
       <LastGenOutput>COR_Basic_Demo.cs</LastGenOutput>
     </Content>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1765,9 +2030,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>5570</DevelopmentServerPort>
+          <DevelopmentServerPort>53114</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:5570/</IISUrl>
+          <IISUrl>http://localhost:5570/Virt_X</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

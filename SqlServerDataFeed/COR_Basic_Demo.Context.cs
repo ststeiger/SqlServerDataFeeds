@@ -13,10 +13,10 @@ namespace SqlServerDataFeed
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class COR_Basic_DemoEntities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public COR_Basic_DemoEntities()
+            : base("name=COR_Basic_DemoEntities")
         {
         }
     
@@ -37,10 +37,14 @@ namespace SqlServerDataFeed
         public DbSet<T_AP_Aussenobjekt> T_AP_Aussenobjekt { get; set; }
         public DbSet<T_AP_Aussenobjekt_History> T_AP_Aussenobjekt_History { get; set; }
         public DbSet<T_AP_Dokumente> T_AP_Dokumente { get; set; }
+        public DbSet<T_AP_Dokumente_History> T_AP_Dokumente_History { get; set; }
+        public DbSet<T_AP_Dokumente_Log> T_AP_Dokumente_Log { get; set; }
         public DbSet<T_AP_Dose> T_AP_Dose { get; set; }
         public DbSet<T_AP_Dose_History> T_AP_Dose_History { get; set; }
         public DbSet<T_AP_DWGSAVE> T_AP_DWGSAVE { get; set; }
         public DbSet<T_AP_EmailVersand> T_AP_EmailVersand { get; set; }
+        public DbSet<T_AP_Fahrzeug> T_AP_Fahrzeug { get; set; }
+        public DbSet<T_AP_Fahrzeug_History> T_AP_Fahrzeug_History { get; set; }
         public DbSet<T_AP_Fotos> T_AP_Fotos { get; set; }
         public DbSet<T_AP_Gebaeude> T_AP_Gebaeude { get; set; }
         public DbSet<T_AP_Gebaeude_History> T_AP_Gebaeude_History { get; set; }
@@ -59,6 +63,9 @@ namespace SqlServerDataFeed
         public DbSet<T_AP_Kontakte_History> T_AP_Kontakte_History { get; set; }
         public DbSet<T_AP_Kunst> T_AP_Kunst { get; set; }
         public DbSet<T_AP_Kunst_History> T_AP_Kunst_History { get; set; }
+        public DbSet<T_AP_Kunst_Ref_Technik> T_AP_Kunst_Ref_Technik { get; set; }
+        public DbSet<T_AP_Kunst2> T_AP_Kunst2 { get; set; }
+        public DbSet<T_AP_Kunst3> T_AP_Kunst3 { get; set; }
         public DbSet<T_AP_Legenden> T_AP_Legenden { get; set; }
         public DbSet<T_AP_LinkDWG> T_AP_LinkDWG { get; set; }
         public DbSet<T_AP_Mobiliar> T_AP_Mobiliar { get; set; }
@@ -94,8 +101,10 @@ namespace SqlServerDataFeed
         public DbSet<T_AP_Ref_Dienstleistung> T_AP_Ref_Dienstleistung { get; set; }
         public DbSet<T_AP_Ref_DienstleistungDetail> T_AP_Ref_DienstleistungDetail { get; set; }
         public DbSet<T_AP_Ref_DIN277> T_AP_Ref_DIN277 { get; set; }
+        public DbSet<T_AP_Ref_DokumentGrund> T_AP_Ref_DokumentGrund { get; set; }
         public DbSet<T_AP_Ref_DokumentKategorie> T_AP_Ref_DokumentKategorie { get; set; }
         public DbSet<T_AP_Ref_DokumentMetadaten> T_AP_Ref_DokumentMetadaten { get; set; }
+        public DbSet<T_AP_Ref_DokumentStatus> T_AP_Ref_DokumentStatus { get; set; }
         public DbSet<T_AP_Ref_DoseKategorie> T_AP_Ref_DoseKategorie { get; set; }
         public DbSet<T_AP_Ref_Eigentumsverhaeltnis> T_AP_Ref_Eigentumsverhaeltnis { get; set; }
         public DbSet<T_AP_Ref_Email_Placeholder> T_AP_Ref_Email_Placeholder { get; set; }
@@ -106,6 +115,8 @@ namespace SqlServerDataFeed
         public DbSet<T_AP_Ref_Energiebezugsart> T_AP_Ref_Energiebezugsart { get; set; }
         public DbSet<T_AP_Ref_ErschliessungFussweg> T_AP_Ref_ErschliessungFussweg { get; set; }
         public DbSet<T_AP_Ref_ErschliessungStrasse> T_AP_Ref_ErschliessungStrasse { get; set; }
+        public DbSet<T_AP_Ref_FahrzeugHersteller> T_AP_Ref_FahrzeugHersteller { get; set; }
+        public DbSet<T_AP_Ref_FahrzeugTyp> T_AP_Ref_FahrzeugTyp { get; set; }
         public DbSet<T_AP_Ref_Fluchtwegmarkierung> T_AP_Ref_Fluchtwegmarkierung { get; set; }
         public DbSet<T_AP_Ref_FotoKategorie> T_AP_Ref_FotoKategorie { get; set; }
         public DbSet<T_AP_Ref_Freigabetyp> T_AP_Ref_Freigabetyp { get; set; }
@@ -123,11 +134,17 @@ namespace SqlServerDataFeed
         public DbSet<T_AP_Ref_KontaktGeschlecht> T_AP_Ref_KontaktGeschlecht { get; set; }
         public DbSet<T_AP_Ref_Kostenstelle> T_AP_Ref_Kostenstelle { get; set; }
         public DbSet<T_AP_Ref_Kostenstelle_Raiffeisen> T_AP_Ref_Kostenstelle_Raiffeisen { get; set; }
+        public DbSet<T_AP_Ref_KunstAusleihanlass> T_AP_Ref_KunstAusleihanlass { get; set; }
+        public DbSet<T_AP_Ref_KunstAusleihart> T_AP_Ref_KunstAusleihart { get; set; }
+        public DbSet<T_AP_Ref_KunstEntlassung> T_AP_Ref_KunstEntlassung { get; set; }
+        public DbSet<T_AP_Ref_KunstInstitution> T_AP_Ref_KunstInstitution { get; set; }
         public DbSet<T_AP_Ref_KunstKategorie> T_AP_Ref_KunstKategorie { get; set; }
         public DbSet<T_AP_Ref_KunstKuenstler> T_AP_Ref_KunstKuenstler { get; set; }
         public DbSet<T_AP_Ref_KunstMandant> T_AP_Ref_KunstMandant { get; set; }
+        public DbSet<T_AP_Ref_KunstProvenienz> T_AP_Ref_KunstProvenienz { get; set; }
         public DbSet<T_AP_Ref_KunstRahmenArt> T_AP_Ref_KunstRahmenArt { get; set; }
         public DbSet<T_AP_Ref_KunstStatus> T_AP_Ref_KunstStatus { get; set; }
+        public DbSet<T_AP_Ref_KunstWerteKategorie> T_AP_Ref_KunstWerteKategorie { get; set; }
         public DbSet<T_AP_Ref_Land> T_AP_Ref_Land { get; set; }
         public DbSet<T_AP_Ref_Landesteile> T_AP_Ref_Landesteile { get; set; }
         public DbSet<T_AP_Ref_Layerset> T_AP_Ref_Layerset { get; set; }
@@ -179,8 +196,10 @@ namespace SqlServerDataFeed
         public DbSet<T_AP_Ref_ZoneKategorie> T_AP_Ref_ZoneKategorie { get; set; }
         public DbSet<T_AP_Ref_Zonenzuteilung> T_AP_Ref_Zonenzuteilung { get; set; }
         public DbSet<T_AP_Ref_ZuschlagsflaechenTyp> T_AP_Ref_ZuschlagsflaechenTyp { get; set; }
+        public DbSet<T_AP_Ref_ZylinderKasse> T_AP_Ref_ZylinderKasse { get; set; }
         public DbSet<T_AP_Ref_ZylinderKategorie> T_AP_Ref_ZylinderKategorie { get; set; }
         public DbSet<T_AP_Ref_ZylinderSchliesssystem> T_AP_Ref_ZylinderSchliesssystem { get; set; }
+        public DbSet<T_AP_Ref_ZylinderStatus> T_AP_Ref_ZylinderStatus { get; set; }
         public DbSet<T_AP_Ref_ZylinderTyp> T_AP_Ref_ZylinderTyp { get; set; }
         public DbSet<T_AP_Schluessel> T_AP_Schluessel { get; set; }
         public DbSet<T_AP_Schluessel_History> T_AP_Schluessel_History { get; set; }
@@ -215,7 +234,18 @@ namespace SqlServerDataFeed
         public DbSet<T_BO_History> T_BO_History { get; set; }
         public DbSet<T_BO_Menu> T_BO_Menu { get; set; }
         public DbSet<T_BO_Menu_CheckDelete> T_BO_Menu_CheckDelete { get; set; }
+        public DbSet<T_CL_Checklist> T_CL_Checklist { get; set; }
+        public DbSet<T_CL_Ref_Katalog> T_CL_Ref_Katalog { get; set; }
+        public DbSet<T_CL_ZO_Cell> T_CL_ZO_Cell { get; set; }
+        public DbSet<T_CL_ZO_CheckBox> T_CL_ZO_CheckBox { get; set; }
+        public DbSet<T_CL_ZO_DropDown> T_CL_ZO_DropDown { get; set; }
+        public DbSet<T_CL_ZO_Header> T_CL_ZO_Header { get; set; }
+        public DbSet<T_CL_ZO_Image> T_CL_ZO_Image { get; set; }
+        public DbSet<T_CL_ZO_Label> T_CL_ZO_Label { get; set; }
+        public DbSet<T_CL_ZO_Table> T_CL_ZO_Table { get; set; }
+        public DbSet<T_CL_ZO_TextBox> T_CL_ZO_TextBox { get; set; }
         public DbSet<T_COR_Error> T_COR_Error { get; set; }
+        public DbSet<T_COR_Version> T_COR_Version { get; set; }
         public DbSet<T_DMS_Configuration> T_DMS_Configuration { get; set; }
         public DbSet<T_DMS_ConfigurationTest> T_DMS_ConfigurationTest { get; set; }
         public DbSet<T_DMS_Dokument> T_DMS_Dokument { get; set; }
@@ -287,6 +317,15 @@ namespace SqlServerDataFeed
         public DbSet<T_FMS_ZO_Filter_Dependency> T_FMS_ZO_Filter_Dependency { get; set; }
         public DbSet<T_FMS_ZO_Navigation> T_FMS_ZO_Navigation { get; set; }
         public DbSet<T_FMS_ZO_Navigation_Benutzer> T_FMS_ZO_Navigation_Benutzer { get; set; }
+        public DbSet<T_IGM_Offerte> T_IGM_Offerte { get; set; }
+        public DbSet<T_IGM_Ref_Ansatz> T_IGM_Ref_Ansatz { get; set; }
+        public DbSet<T_IGM_Ref_GlasreinigungServiceLevel> T_IGM_Ref_GlasreinigungServiceLevel { get; set; }
+        public DbSet<T_IGM_Ref_InnenreinigungServiceLevel> T_IGM_Ref_InnenreinigungServiceLevel { get; set; }
+        public DbSet<T_IGM_Ref_Leistungsart> T_IGM_Ref_Leistungsart { get; set; }
+        public DbSet<T_IGM_Ref_Oberflaeche> T_IGM_Ref_Oberflaeche { get; set; }
+        public DbSet<T_IGM_Ref_OffertenTyp> T_IGM_Ref_OffertenTyp { get; set; }
+        public DbSet<T_IGM_Ref_Raumgruppe> T_IGM_Ref_Raumgruppe { get; set; }
+        public DbSet<T_IGM_Tour> T_IGM_Tour { get; set; }
         public DbSet<T_Image> T_Image { get; set; }
         public DbSet<T_LOG_ERROR> T_LOG_ERROR { get; set; }
         public DbSet<T_LOG_ProzedurRun> T_LOG_ProzedurRun { get; set; }
@@ -348,39 +387,58 @@ namespace SqlServerDataFeed
         public DbSet<T_RPT_Settings> T_RPT_Settings { get; set; }
         public DbSet<T_RPT_Translations> T_RPT_Translations { get; set; }
         public DbSet<T_SessionValues> T_SessionValues { get; set; }
+        public DbSet<T_Slicklist> T_Slicklist { get; set; }
+        public DbSet<T_Slicklist_Custom> T_Slicklist_Custom { get; set; }
+        public DbSet<T_SYS_AdresseRollenrechte> T_SYS_AdresseRollenrechte { get; set; }
+        public DbSet<T_SYS_Anlagerechte> T_SYS_Anlagerechte { get; set; }
         public DbSet<T_SYS_ApertureColorToHex> T_SYS_ApertureColorToHex { get; set; }
+        public DbSet<T_SYS_Arbeitsplatzrechte> T_SYS_Arbeitsplatzrechte { get; set; }
+        public DbSet<T_SYS_Aussenobjektrechte> T_SYS_Aussenobjektrechte { get; set; }
         public DbSet<T_SYS_BackOfficeMenuerechte> T_SYS_BackOfficeMenuerechte { get; set; }
         public DbSet<T_SYS_Backofficerechte> T_SYS_Backofficerechte { get; set; }
         public DbSet<T_SYS_Berechtigung_Felder> T_SYS_Berechtigung_Felder { get; set; }
         public DbSet<T_SYS_Berechtigung_Tabellen> T_SYS_Berechtigung_Tabellen { get; set; }
         public DbSet<T_SYS_Dashboardrechte> T_SYS_Dashboardrechte { get; set; }
+        public DbSet<T_SYS_Doserechte> T_SYS_Doserechte { get; set; }
+        public DbSet<T_SYS_Fahrzeugrechte> T_SYS_Fahrzeugrechte { get; set; }
         public DbSet<T_SYS_FilterHistory> T_SYS_FilterHistory { get; set; }
         public DbSet<T_SYS_Form_Feld_Recht> T_SYS_Form_Feld_Recht { get; set; }
         public DbSet<T_SYS_Form_Register_Recht> T_SYS_Form_Register_Recht { get; set; }
         public DbSet<T_SYS_Gebaeuderechte> T_SYS_Gebaeuderechte { get; set; }
         public DbSet<T_SYS_Geschossrechte> T_SYS_Geschossrechte { get; set; }
+        public DbSet<T_SYS_Grundstueckrechte> T_SYS_Grundstueckrechte { get; set; }
+        public DbSet<T_SYS_Informatikrechte> T_SYS_Informatikrechte { get; set; }
+        public DbSet<T_SYS_Kommunikationrechte> T_SYS_Kommunikationrechte { get; set; }
+        public DbSet<T_SYS_Kunstrechte> T_SYS_Kunstrechte { get; set; }
         public DbSet<T_SYS_Language> T_SYS_Language { get; set; }
         public DbSet<T_SYS_Language_DayNames> T_SYS_Language_DayNames { get; set; }
         public DbSet<T_SYS_Language_Forms> T_SYS_Language_Forms { get; set; }
         public DbSet<T_SYS_Language_Forms_i18n> T_SYS_Language_Forms_i18n { get; set; }
         public DbSet<T_SYS_Language_Forms_i18n_Cust> T_SYS_Language_Forms_i18n_Cust { get; set; }
+        public DbSet<T_SYS_Language_Log> T_SYS_Language_Log { get; set; }
         public DbSet<T_SYS_Language_MonthNames> T_SYS_Language_MonthNames { get; set; }
         public DbSet<T_SYS_Layersetrechte> T_SYS_Layersetrechte { get; set; }
         public DbSet<T_SYS_Legendenkonfiguration> T_SYS_Legendenkonfiguration { get; set; }
+        public DbSet<T_SYS_Mobiliarrechte> T_SYS_Mobiliarrechte { get; set; }
         public DbSet<T_SYS_Module> T_SYS_Module { get; set; }
         public DbSet<T_SYS_Module_COR> T_SYS_Module_COR { get; set; }
         public DbSet<T_SYS_Module_Demo> T_SYS_Module_Demo { get; set; }
         public DbSet<T_SYS_Module_Helsana> T_SYS_Module_Helsana { get; set; }
+        public DbSet<T_SYS_Module_Post> T_SYS_Module_Post { get; set; }
         public DbSet<T_SYS_Module_Reichle> T_SYS_Module_Reichle { get; set; }
         public DbSet<T_SYS_Module_SRG> T_SYS_Module_SRG { get; set; }
         public DbSet<T_SYS_Module_Sursee> T_SYS_Module_Sursee { get; set; }
         public DbSet<T_SYS_Module_SwissLife> T_SYS_Module_SwissLife { get; set; }
         public DbSet<T_SYS_Module_Wincasa> T_SYS_Module_Wincasa { get; set; }
         public DbSet<T_SYS_Navigationrechte> T_SYS_Navigationrechte { get; set; }
+        public DbSet<T_SYS_Parkplatzrechte> T_SYS_Parkplatzrechte { get; set; }
+        public DbSet<T_SYS_Raumrechte> T_SYS_Raumrechte { get; set; }
         public DbSet<T_SYS_Ref_BackOfficeMenue> T_SYS_Ref_BackOfficeMenue { get; set; }
         public DbSet<T_SYS_Ref_BackOfficeSubMenue> T_SYS_Ref_BackOfficeSubMenue { get; set; }
         public DbSet<T_SYS_Ref_BelegungsTyp> T_SYS_Ref_BelegungsTyp { get; set; }
         public DbSet<T_SYS_Ref_Dashboard> T_SYS_Ref_Dashboard { get; set; }
+        public DbSet<T_SYS_Ref_Datentyp> T_SYS_Ref_Datentyp { get; set; }
+        public DbSet<T_SYS_Ref_Geschlecht> T_SYS_Ref_Geschlecht { get; set; }
         public DbSet<T_SYS_Ref_Language> T_SYS_Ref_Language { get; set; }
         public DbSet<T_SYS_Ref_Layerset> T_SYS_Ref_Layerset { get; set; }
         public DbSet<T_SYS_Ref_MimeTypes> T_SYS_Ref_MimeTypes { get; set; }
@@ -394,12 +452,19 @@ namespace SqlServerDataFeed
         public DbSet<T_SYS_Ref_ZeitEinheiten> T_SYS_Ref_ZeitEinheiten { get; set; }
         public DbSet<T_SYS_Registerrechte> T_SYS_Registerrechte { get; set; }
         public DbSet<T_SYS_Reportrechte> T_SYS_Reportrechte { get; set; }
+        public DbSet<T_SYS_Schluesselgrupperechte> T_SYS_Schluesselgrupperechte { get; set; }
         public DbSet<T_SYS_Settings> T_SYS_Settings { get; set; }
         public DbSet<T_SYS_Settings_Benutzer> T_SYS_Settings_Benutzer { get; set; }
         public DbSet<T_SYS_Settings_System> T_SYS_Settings_System { get; set; }
+        public DbSet<T_SYS_Sicherheitrechte> T_SYS_Sicherheitrechte { get; set; }
         public DbSet<T_SYS_Standortrechte> T_SYS_Standortrechte { get; set; }
+        public DbSet<T_SYS_Traktrechte> T_SYS_Traktrechte { get; set; }
+        public DbSet<T_SYS_Tuerrechte> T_SYS_Tuerrechte { get; set; }
         public DbSet<T_SYS_Version> T_SYS_Version { get; set; }
         public DbSet<T_SYS_VisualisierungStichtag> T_SYS_VisualisierungStichtag { get; set; }
+        public DbSet<T_SYS_Zaehlerrechte> T_SYS_Zaehlerrechte { get; set; }
+        public DbSet<T_SYS_Zonerechte> T_SYS_Zonerechte { get; set; }
+        public DbSet<T_SYS_Zylinderrechte> T_SYS_Zylinderrechte { get; set; }
         public DbSet<T_TM_Checklist_Value> T_TM_Checklist_Value { get; set; }
         public DbSet<T_TM_Ref_Abteilung> T_TM_Ref_Abteilung { get; set; }
         public DbSet<T_TM_Ref_Checkliste> T_TM_Ref_Checkliste { get; set; }
@@ -459,6 +524,7 @@ namespace SqlServerDataFeed
         public DbSet<T_ZO_AP_Aussenobjekt_Flaeche> T_ZO_AP_Aussenobjekt_Flaeche { get; set; }
         public DbSet<T_ZO_AP_Dokumente_AP_Ref_DokumentMetadaten> T_ZO_AP_Dokumente_AP_Ref_DokumentMetadaten { get; set; }
         public DbSet<T_ZO_AP_Dose_DWG> T_ZO_AP_Dose_DWG { get; set; }
+        public DbSet<T_ZO_AP_Fahrzeug_DWG> T_ZO_AP_Fahrzeug_DWG { get; set; }
         public DbSet<T_ZO_AP_Gebaeude_AP_Ref_AnlagaeKategorieSchema> T_ZO_AP_Gebaeude_AP_Ref_AnlagaeKategorieSchema { get; set; }
         public DbSet<T_ZO_AP_Gebaeude_DWG> T_ZO_AP_Gebaeude_DWG { get; set; }
         public DbSet<T_ZO_AP_Gebaeude_Flaeche> T_ZO_AP_Gebaeude_Flaeche { get; set; }
@@ -473,11 +539,15 @@ namespace SqlServerDataFeed
         public DbSet<T_ZO_AP_Kontakte_AP_Ref_MitarbeiterAusruestung> T_ZO_AP_Kontakte_AP_Ref_MitarbeiterAusruestung { get; set; }
         public DbSet<T_ZO_AP_Kontakte_AP_Ref_Organisationseinheit> T_ZO_AP_Kontakte_AP_Ref_Organisationseinheit { get; set; }
         public DbSet<T_ZO_AP_Kontakte_AP_Ref_PersonalKategorie> T_ZO_AP_Kontakte_AP_Ref_PersonalKategorie { get; set; }
+        public DbSet<T_ZO_AP_Kunst_AP_Ref_KunstKuenstler> T_ZO_AP_Kunst_AP_Ref_KunstKuenstler { get; set; }
+        public DbSet<T_ZO_AP_Kunst_Ausleihe> T_ZO_AP_Kunst_Ausleihe { get; set; }
         public DbSet<T_ZO_AP_Kunst_DWG> T_ZO_AP_Kunst_DWG { get; set; }
         public DbSet<T_ZO_AP_Kunst_Kosten> T_ZO_AP_Kunst_Kosten { get; set; }
+        public DbSet<T_ZO_AP_Kunst_Werte> T_ZO_AP_Kunst_Werte { get; set; }
         public DbSet<T_ZO_AP_Mobiliar_DWG> T_ZO_AP_Mobiliar_DWG { get; set; }
         public DbSet<T_ZO_AP_Objekt_AP_Kontakte> T_ZO_AP_Objekt_AP_Kontakte { get; set; }
         public DbSet<T_ZO_AP_Objekt_AP_Vertrag> T_ZO_AP_Objekt_AP_Vertrag { get; set; }
+        public DbSet<T_ZO_AP_Objekt_T_AV_Adressen> T_ZO_AP_Objekt_T_AV_Adressen { get; set; }
         public DbSet<T_ZO_AP_Parkplatz_AP_Belegung> T_ZO_AP_Parkplatz_AP_Belegung { get; set; }
         public DbSet<T_ZO_AP_Parkplatz_AP_Kontakte> T_ZO_AP_Parkplatz_AP_Kontakte { get; set; }
         public DbSet<T_ZO_AP_Parkplatz_AP_Ref_Anmietvertraege> T_ZO_AP_Parkplatz_AP_Ref_Anmietvertraege { get; set; }
@@ -505,6 +575,7 @@ namespace SqlServerDataFeed
         public DbSet<T_ZO_AP_Raum_Reservation> T_ZO_AP_Raum_Reservation { get; set; }
         public DbSet<T_ZO_AP_Ref_AnlageKategorie_AP_Ref_AnlageKategorieSchema> T_ZO_AP_Ref_AnlageKategorie_AP_Ref_AnlageKategorieSchema { get; set; }
         public DbSet<T_ZO_AP_Ref_Arbeitsplatzkategorie_AP_Ref_MobiliarBibliothek> T_ZO_AP_Ref_Arbeitsplatzkategorie_AP_Ref_MobiliarBibliothek { get; set; }
+        public DbSet<T_ZO_AP_Ref_Organisationseinheit_AP_Ref_Kostenstelle> T_ZO_AP_Ref_Organisationseinheit_AP_Ref_Kostenstelle { get; set; }
         public DbSet<T_ZO_AP_Schluessel_AP_Kontakte> T_ZO_AP_Schluessel_AP_Kontakte { get; set; }
         public DbSet<T_ZO_AP_Schluesselgruppe_AP_Ref_Funktionen> T_ZO_AP_Schluesselgruppe_AP_Ref_Funktionen { get; set; }
         public DbSet<T_ZO_AP_Schluesselgruppe_AP_Zylinder> T_ZO_AP_Schluesselgruppe_AP_Zylinder { get; set; }
@@ -522,11 +593,17 @@ namespace SqlServerDataFeed
         public DbSet<T_ZO_AP_Zone_AP_Ref_Organisationseinheit> T_ZO_AP_Zone_AP_Ref_Organisationseinheit { get; set; }
         public DbSet<T_ZO_AP_Zone_DWG> T_ZO_AP_Zone_DWG { get; set; }
         public DbSet<T_ZO_AP_Zone_Flaeche> T_ZO_AP_Zone_Flaeche { get; set; }
+        public DbSet<T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer> T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer { get; set; }
         public DbSet<T_ZO_AP_Zylinder_DWG> T_ZO_AP_Zylinder_DWG { get; set; }
         public DbSet<T_ZO_AV_Adresse_AV_Ref_AdresseRollen> T_ZO_AV_Adresse_AV_Ref_AdresseRollen { get; set; }
         public DbSet<T_ZO_Benutzer_Schedule> T_ZO_Benutzer_Schedule { get; set; }
+        public DbSet<T_ZO_IGM_Offerte_Raum> T_ZO_IGM_Offerte_Raum { get; set; }
+        public DbSet<T_ZO_IGM_Reinigungsfaktor> T_ZO_IGM_Reinigungsfaktor { get; set; }
+        public DbSet<T_ZO_IGM_Tour_Raum> T_ZO_IGM_Tour_Raum { get; set; }
         public DbSet<T_ZO_MM_Bestand_Umzug> T_ZO_MM_Bestand_Umzug { get; set; }
         public DbSet<T_ZO_MM_Standort_ServiceAnbieter> T_ZO_MM_Standort_ServiceAnbieter { get; set; }
+        public DbSet<T_ZO_OV_Ref_ObjektDefect> T_ZO_OV_Ref_ObjektDefect { get; set; }
+        public DbSet<T_ZO_OV_Ref_ObjektPolygon> T_ZO_OV_Ref_ObjektPolygon { get; set; }
         public DbSet<T_ZO_OV_Ref_ObjektSymbol> T_ZO_OV_Ref_ObjektSymbol { get; set; }
         public DbSet<T_ZO_OV_Ref_ObjektSymbol_Objekt> T_ZO_OV_Ref_ObjektSymbol_Objekt { get; set; }
         public DbSet<T_ZO_OV_Ref_ObjektSymbol_T_SYS_Ref_Layerset> T_ZO_OV_Ref_ObjektSymbol_T_SYS_Ref_Layerset { get; set; }
@@ -546,10 +623,14 @@ namespace SqlServerDataFeed
         public DbSet<T_ZO_REM_AP_Raum_Reinigung> T_ZO_REM_AP_Raum_Reinigung { get; set; }
         public DbSet<T_ZO_REM_AP_Raum_Reinigung_Kalk> T_ZO_REM_AP_Raum_Reinigung_Kalk { get; set; }
         public DbSet<T_ZO_REM_AP_Standort_Planung> T_ZO_REM_AP_Standort_Planung { get; set; }
+        public DbSet<T_ZO_Slickcolumn> T_ZO_Slickcolumn { get; set; }
+        public DbSet<T_ZO_Slickcolumn_Custom> T_ZO_Slickcolumn_Custom { get; set; }
+        public DbSet<T_ZO_SYS_Language_Forms> T_ZO_SYS_Language_Forms { get; set; }
         public DbSet<T_ZO_SYS_Language_Forms_OV_Ref_ObjektTyp> T_ZO_SYS_Language_Forms_OV_Ref_ObjektTyp { get; set; }
         public DbSet<T_ZO_SYS_Module_AP_Ref_Mandant> T_ZO_SYS_Module_AP_Ref_Mandant { get; set; }
         public DbSet<T_ZO_SYS_Settings_AP_Ref_Mandant> T_ZO_SYS_Settings_AP_Ref_Mandant { get; set; }
         public DbSet<T_ZO_SYS_Settings_Benutzer> T_ZO_SYS_Settings_Benutzer { get; set; }
+        public DbSet<T_ZO_T_AP_Standort_T_IGM_Ref_Leistungsart> T_ZO_T_AP_Standort_T_IGM_Ref_Leistungsart { get; set; }
         public DbSet<T_ZO_TASK_Ref_Checkliste_Comment> T_ZO_TASK_Ref_Checkliste_Comment { get; set; }
         public DbSet<T_ZO_TM_TSTA_TSK> T_ZO_TM_TSTA_TSK { get; set; }
         public DbSet<ZZ_TIMESTAMPS> ZZ_TIMESTAMPS { get; set; }
@@ -558,9 +639,14 @@ namespace SqlServerDataFeed
         public DbSet<T_FMS_Dashboard_27082014> T_FMS_Dashboard_27082014 { get; set; }
         public DbSet<T_FMS_Translation_Export> T_FMS_Translation_Export { get; set; }
         public DbSet<T_Import_PLZ_Region> T_Import_PLZ_Region { get; set; }
+        public DbSet<T_LOG_SAML> T_LOG_SAML { get; set; }
         public DbSet<T_RPT_Translations111> T_RPT_Translations111 { get; set; }
         public DbSet<T_SYS_Language_Backup_22092014> T_SYS_Language_Backup_22092014 { get; set; }
         public DbSet<T_TM_Schedule> T_TM_Schedule { get; set; }
+        public DbSet<T_ZO_AP_Kunst_Kosten2> T_ZO_AP_Kunst_Kosten2 { get; set; }
         public DbSet<T_ZO_AP_MarkDWG> T_ZO_AP_MarkDWG { get; set; }
+        public DbSet<T_ZO_SYS_DokumentKategorie_Benutzergruppe> T_ZO_SYS_DokumentKategorie_Benutzergruppe { get; set; }
+        public DbSet<T_ZO_SYS_Metadatenrechte_Benutzergruppe> T_ZO_SYS_Metadatenrechte_Benutzergruppe { get; set; }
+        public DbSet<T_ZO_SYS_Mimetyperechte_Benutzergruppe> T_ZO_SYS_Mimetyperechte_Benutzergruppe { get; set; }
     }
 }

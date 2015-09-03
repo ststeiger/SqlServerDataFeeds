@@ -40,12 +40,13 @@ namespace SqlServerDataFeed
         public System.DateTime LOGO_DatumBis { get; set; }
         public int LOGO_Status { get; set; }
         public int LOGO_Sort { get; set; }
-        public Nullable<int> LOGO_StylizerFore { get; set; }
         public Nullable<int> LOGO_StylizerBack { get; set; }
         public Nullable<int> LOGO_StylizerPattern { get; set; }
         public Nullable<int> LOGO_StylizerLine { get; set; }
         public bool LOGO_IsDefault { get; set; }
         public Nullable<System.DateTime> LOGO_DatumMut { get; set; }
         public string LOGO_DatumUser { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

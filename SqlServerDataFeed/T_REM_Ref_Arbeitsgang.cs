@@ -22,10 +22,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid REMAG_UID { get; set; }
-        public System.Guid REMAG_REMRA_UID { get; set; }
-        public Nullable<System.Guid> REMAG_REMTZ_UID { get; set; }
-        public Nullable<System.Guid> REMAG_REMAB_UID { get; set; }
-        public Nullable<System.Guid> REMAG_REMMG_UID { get; set; }
         public Nullable<bool> REMAG_Raumflaeche { get; set; }
         public Nullable<int> REMAG_Code { get; set; }
         public string REMAG_Kurz_de { get; set; }
@@ -39,12 +35,12 @@ namespace SqlServerDataFeed
         public int REMAG_Status { get; set; }
         public int REMAG_Sort { get; set; }
         public bool REMAG_IsDefault { get; set; }
-        public Nullable<int> REMAG_StylizerBack { get; set; }
         public Nullable<int> REMAG_StylizerFore { get; set; }
         public Nullable<int> REMAG_StylizerPattern { get; set; }
         public int REMAG_StylizerLine { get; set; }
         public bool REMAG_IsTime { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual T_REM_Ref_Ausbau T_REM_Ref_Ausbau { get; set; }
         public virtual T_REM_Ref_MaschineGeraet T_REM_Ref_MaschineGeraet { get; set; }
         public virtual T_REM_Ref_Reinigungsart T_REM_Ref_Reinigungsart { get; set; }

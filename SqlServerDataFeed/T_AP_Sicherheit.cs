@@ -17,6 +17,7 @@ namespace SqlServerDataFeed
         public T_AP_Sicherheit()
         {
             this.T_AP_Sicherheit_History = new HashSet<T_AP_Sicherheit_History>();
+            this.T_SYS_Sicherheitrechte = new HashSet<T_SYS_Sicherheitrechte>();
             this.T_TM_Tasks_Planung = new HashSet<T_TM_Tasks_Planung>();
             this.T_TM_Tasks = new HashSet<T_TM_Tasks>();
             this.T_UPS_Rechnungskontrolle = new HashSet<T_UPS_Rechnungskontrolle>();
@@ -24,11 +25,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid SH_UID { get; set; }
-        public int SH_MDT_ID { get; set; }
-        public Nullable<System.Guid> SH_SO_UID { get; set; }
-        public Nullable<System.Guid> SH_GB_UID { get; set; }
-        public Nullable<System.Guid> SH_GS_UID { get; set; }
-        public Nullable<System.Guid> SH_RM_UID { get; set; }
         public Nullable<System.Guid> SH_SKAT_UID { get; set; }
         public string SH_ApertureKey { get; set; }
         public string SH_Nr { get; set; }
@@ -43,8 +39,6 @@ namespace SqlServerDataFeed
         public string SH_TypenNr { get; set; }
         public Nullable<int> SH_Baujahr { get; set; }
         public string SH_Beschreibung { get; set; }
-        public Nullable<System.Guid> SH_ADR_UID { get; set; }
-        public Nullable<System.Guid> SH_BKP_UID { get; set; }
     
         public virtual T_AP_Gebaeude T_AP_Gebaeude { get; set; }
         public virtual T_AP_Geschoss T_AP_Geschoss { get; set; }
@@ -54,6 +48,7 @@ namespace SqlServerDataFeed
         public virtual T_AP_Standort T_AP_Standort { get; set; }
         public virtual T_AV_Adressen T_AV_Adressen { get; set; }
         public virtual T_UPS_Ref_Baukostenplan T_UPS_Ref_Baukostenplan { get; set; }
+        public virtual ICollection<T_SYS_Sicherheitrechte> T_SYS_Sicherheitrechte { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
         public virtual ICollection<T_UPS_Rechnungskontrolle> T_UPS_Rechnungskontrolle { get; set; }

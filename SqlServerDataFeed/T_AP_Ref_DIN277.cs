@@ -30,12 +30,13 @@ namespace SqlServerDataFeed
         public string DIN277_Lang_EN { get; set; }
         public int DIN277_Status { get; set; }
         public int DIN277_Sort { get; set; }
-        public Nullable<int> DIN277_StylizerFore { get; set; }
         public Nullable<int> DIN277_StylizerBack { get; set; }
         public Nullable<int> DIN277_StylizerPattern { get; set; }
         public Nullable<int> DIN277_StylizerLine { get; set; }
         public bool DIN277_IsDefault { get; set; }
         public Nullable<System.DateTime> DIN277_DatumMut { get; set; }
         public string DIN277_DatumUser { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

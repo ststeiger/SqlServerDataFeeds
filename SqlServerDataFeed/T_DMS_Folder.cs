@@ -21,7 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid FO_UID { get; set; }
-        public Nullable<System.Guid> FO_NT_UID { get; set; }
         public string FO_Bezeichnung { get; set; }
         public string FO_Beschreibung { get; set; }
         public string FO_Bemerkung { get; set; }

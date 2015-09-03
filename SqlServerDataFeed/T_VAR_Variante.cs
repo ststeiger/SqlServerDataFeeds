@@ -23,7 +23,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid VAR_UID { get; set; }
-        public System.Guid VAR_PRJ_UID { get; set; }
         public string VAR_Nr { get; set; }
         public string VAR_Bezeichnung { get; set; }
         public string VAR_Bemerkung { get; set; }

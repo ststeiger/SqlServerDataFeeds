@@ -22,13 +22,9 @@ namespace SqlServerDataFeed
     
         public System.Guid MB_UID { get; set; }
         public int MB_MDT_ID { get; set; }
-        public Nullable<System.Guid> MB_MKAT_UID { get; set; }
-        public Nullable<System.Guid> MB_MM_UID { get; set; }
-        public Nullable<System.Guid> MB_MH_UID { get; set; }
         public string MB_Bezeichnung { get; set; }
         public string MB_Abmessung { get; set; }
         public string MB_Bemerkung { get; set; }
-        public int MB_StylizerFore { get; set; }
         public int MB_StylizerBack { get; set; }
         public int MB_StylizerPattern { get; set; }
         public int MB_StylizerLine { get; set; }
@@ -43,5 +39,6 @@ namespace SqlServerDataFeed
         public virtual T_AP_Ref_MobiliarHersteller T_AP_Ref_MobiliarHersteller { get; set; }
         public virtual T_AP_Ref_MobiliarKategorie T_AP_Ref_MobiliarKategorie { get; set; }
         public virtual T_AP_Ref_MobiliarMaterial T_AP_Ref_MobiliarMaterial { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

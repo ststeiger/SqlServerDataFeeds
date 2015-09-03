@@ -22,8 +22,6 @@ namespace SqlServerDataFeed
     
         public System.Guid BP_UID { get; set; }
         public Nullable<System.Guid> BP_Objekt_UID { get; set; }
-        public Nullable<System.Guid> BP_KP_UID { get; set; }
-        public Nullable<System.Guid> BP_BKP_UID { get; set; }
         public int BP_Mandant { get; set; }
         public Nullable<int> BP_Jahr { get; set; }
         public string BP_Bezeichnung { get; set; }
@@ -34,8 +32,6 @@ namespace SqlServerDataFeed
         public int BP_Status { get; set; }
         public int BP_Sort { get; set; }
         public bool BP_IsDefault { get; set; }
-        public Nullable<System.Guid> BP_FPV_UID { get; set; }
-        public Nullable<System.Guid> BP_KST_UID { get; set; }
         public int BP_BE_ID { get; set; }
         public Nullable<int> BP_Intervall { get; set; }
         public Nullable<double> BP_Vertragssumme { get; set; }

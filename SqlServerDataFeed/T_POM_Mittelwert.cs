@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_POM_Mittelwert
     {
         public System.Guid MW_UID { get; set; }
-        public int MW_MDT_ID { get; set; }
-        public System.Guid MW_MWG_UID { get; set; }
         public int MW_Jahr { get; set; }
         public double MW_Wert { get; set; }
         public int MW_Status { get; set; }

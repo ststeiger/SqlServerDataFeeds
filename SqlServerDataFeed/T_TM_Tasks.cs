@@ -18,13 +18,12 @@ namespace SqlServerDataFeed
         {
             this.T_TM_Tasks_Checkpoints = new HashSet<T_TM_Tasks_Checkpoints>();
             this.T_UPS_Rechnungskontrolle = new HashSet<T_UPS_Rechnungskontrolle>();
+            this.T_ZO_OV_Ref_ObjektDefect = new HashSet<T_ZO_OV_Ref_ObjektDefect>();
             this.T_ZO_TASK_Ref_Checkliste_Comment = new HashSet<T_ZO_TASK_Ref_Checkliste_Comment>();
             this.T_ZO_TM_TSTA_TSK = new HashSet<T_ZO_TM_TSTA_TSK>();
         }
     
         public System.Guid TSK_UID { get; set; }
-        public Nullable<int> TSK_MDT_ID { get; set; }
-        public Nullable<System.Guid> TSK_OBJT_UID { get; set; }
         public string TSK_Nr { get; set; }
         public string TSK_Beschreibung { get; set; }
         public Nullable<System.DateTime> TSK_TerminVon { get; set; }
@@ -35,50 +34,20 @@ namespace SqlServerDataFeed
         public System.DateTime TSK_ErfDate { get; set; }
         public string TSK_MutUser { get; set; }
         public Nullable<System.DateTime> TSK_MutDate { get; set; }
-        public System.Guid TSK_TPRI_UID { get; set; }
-        public System.Guid TSK_TART_UID { get; set; }
-        public Nullable<System.Guid> TSK_TSTA_UID { get; set; }
-        public Nullable<System.Guid> TSK_ADR_UID_zustaendig { get; set; }
-        public Nullable<System.Guid> TSK_TPL_UID { get; set; }
         public Nullable<System.DateTime> TSK_TPL_PlanungVon { get; set; }
         public Nullable<System.DateTime> TSK_TPL_PlanungBis { get; set; }
         public bool TSK_VWS_IsVWS { get; set; }
         public string TSK_VWS_FormID { get; set; }
-        public Nullable<System.Guid> TSK_SO_UID { get; set; }
-        public Nullable<System.Guid> TSK_GB_UID { get; set; }
-        public Nullable<System.Guid> TSK_TK_UID { get; set; }
-        public Nullable<System.Guid> TSK_GS_UID { get; set; }
-        public Nullable<System.Guid> TSK_RM_UID { get; set; }
-        public Nullable<System.Guid> TSK_TR_UID { get; set; }
-        public Nullable<System.Guid> TSK_AL_UID { get; set; }
         public Nullable<System.Guid> TSK_KU_UID { get; set; }
-        public Nullable<System.Guid> TSK_MO_UID { get; set; }
-        public Nullable<System.Guid> TSK_PP_UID { get; set; }
-        public Nullable<System.Guid> TSK_AP_UID { get; set; }
-        public Nullable<System.Guid> TSK_SH_UID { get; set; }
-        public Nullable<System.Guid> TSK_ADR_UID { get; set; }
-        public Nullable<System.Guid> TSK_VTR_UID { get; set; }
-        public Nullable<System.Guid> TSK_KT_UID { get; set; }
-        public Nullable<int> TSK_BE_ID_erfasser { get; set; }
-        public Nullable<int> TSK_BE_ID_verantwortlich { get; set; }
         public Nullable<System.DateTime> TSK_ErledigtAm { get; set; }
-        public Nullable<System.Guid> TSK_DO_UID { get; set; }
-        public Nullable<System.Guid> TSK_IN_UID { get; set; }
-        public Nullable<System.Guid> TSK_KM_UID { get; set; }
-        public Nullable<System.Guid> TSK_TCL_UID { get; set; }
-        public Nullable<System.Guid> TSK_AO_UID { get; set; }
         public Nullable<System.Guid> TSK_TSK_UID { get; set; }
-        public Nullable<System.Guid> TSK_ZYL_UID { get; set; }
-        public Nullable<System.Guid> TSK_SLG_UID { get; set; }
-        public Nullable<System.Guid> TSK_BP_UID { get; set; }
-        public Nullable<System.Guid> TSK_ABT_UID { get; set; }
         public bool TSK_IsStoerung { get; set; }
         public string TSK_SM_Erfasser_Name { get; set; }
         public string TSK_SM_Erfasser_Vorname { get; set; }
         public string TSK_SM_Erfasser_Tel { get; set; }
         public string TSK_SM_Erfasser_Email { get; set; }
-        public Nullable<System.Guid> TSK_ZN_UID { get; set; }
         public Nullable<int> TSK_Sort { get; set; }
+        public Nullable<System.Guid> TSK_FZ_UID { get; set; }
     
         public virtual T_AP_Anlage T_AP_Anlage { get; set; }
         public virtual T_AP_Arbeitsplatz T_AP_Arbeitsplatz { get; set; }
@@ -89,7 +58,6 @@ namespace SqlServerDataFeed
         public virtual T_AP_Informatik T_AP_Informatik { get; set; }
         public virtual T_AP_Kommunikation T_AP_Kommunikation { get; set; }
         public virtual T_AP_Kontakte T_AP_Kontakte { get; set; }
-        public virtual T_AP_Kunst T_AP_Kunst { get; set; }
         public virtual T_AP_Mobiliar T_AP_Mobiliar { get; set; }
         public virtual T_AP_Parkplatz T_AP_Parkplatz { get; set; }
         public virtual T_AP_Raum T_AP_Raum { get; set; }
@@ -105,6 +73,7 @@ namespace SqlServerDataFeed
         public virtual T_AV_Adressen T_AV_Adressen1 { get; set; }
         public virtual T_Benutzer T_Benutzer { get; set; }
         public virtual T_Benutzer T_Benutzer1 { get; set; }
+        public virtual T_Benutzergruppen T_Benutzergruppen { get; set; }
         public virtual T_OV_Ref_ObjektTyp T_OV_Ref_ObjektTyp { get; set; }
         public virtual T_TM_Ref_Abteilung T_TM_Ref_Abteilung { get; set; }
         public virtual T_TM_Ref_Checkliste T_TM_Ref_Checkliste { get; set; }
@@ -116,6 +85,7 @@ namespace SqlServerDataFeed
         public virtual T_UPS_BudgetPositionen T_UPS_BudgetPositionen { get; set; }
         public virtual T_VM_Vertraege T_VM_Vertraege { get; set; }
         public virtual ICollection<T_UPS_Rechnungskontrolle> T_UPS_Rechnungskontrolle { get; set; }
+        public virtual ICollection<T_ZO_OV_Ref_ObjektDefect> T_ZO_OV_Ref_ObjektDefect { get; set; }
         public virtual ICollection<T_ZO_TASK_Ref_Checkliste_Comment> T_ZO_TASK_Ref_Checkliste_Comment { get; set; }
         public virtual ICollection<T_ZO_TM_TSTA_TSK> T_ZO_TM_TSTA_TSK { get; set; }
     }

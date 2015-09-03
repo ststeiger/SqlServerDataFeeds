@@ -21,8 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid RG_UID { get; set; }
-        public int RG_MDT_ID { get; set; }
-        public Nullable<System.Guid> RG_LD_UID { get; set; }
         public string RG_Code { get; set; }
         public string RG_Kurz_DE { get; set; }
         public string RG_Kurz_FR { get; set; }
@@ -34,7 +32,6 @@ namespace SqlServerDataFeed
         public string RG_Lang_EN { get; set; }
         public int RG_Status { get; set; }
         public int RG_Sort { get; set; }
-        public Nullable<int> RG_StylizerBack { get; set; }
         public Nullable<int> RG_StylizerFore { get; set; }
         public Nullable<int> RG_StylizerPattern { get; set; }
         public Nullable<int> RG_StylizerLine { get; set; }
@@ -47,6 +44,7 @@ namespace SqlServerDataFeed
         public virtual T_AP_Ref_Land T_AP_Ref_Land { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual ICollection<T_AP_Ref_Ort> T_AP_Ref_Ort { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AV_Adressen> T_AV_Adressen { get; set; }
     }
 }

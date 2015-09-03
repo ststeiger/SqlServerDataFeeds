@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ABFT_UID { get; set; }
-        public int ABFT_MDT_ID { get; set; }
         public Nullable<int> ABFT_Code { get; set; }
         public string ABFT_Kurz_DE { get; set; }
         public string ABFT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string ABFT_Lang_EN { get; set; }
         public int ABFT_Status { get; set; }
         public int ABFT_Sort { get; set; }
-        public Nullable<int> ABFT_StylizerFore { get; set; }
         public Nullable<int> ABFT_StylizerBack { get; set; }
         public Nullable<int> ABFT_StylizerPattern { get; set; }
         public Nullable<int> ABFT_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Aussenobjekt> T_AP_Aussenobjekt { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

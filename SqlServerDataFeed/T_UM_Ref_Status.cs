@@ -32,12 +32,12 @@ namespace SqlServerDataFeed
         public int UMST_Status { get; set; }
         public int UMST_Sort { get; set; }
         public bool UMST_IsDefault { get; set; }
-        public Nullable<int> UMST_StylizerBack { get; set; }
         public Nullable<int> UMST_StylizerFore { get; set; }
         public Nullable<int> UMST_StylizerPattern { get; set; }
         public Nullable<int> UMST_StylizerLine { get; set; }
         public int UMST_MDT_ID { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_UM_Planung> T_UM_Planung { get; set; }
     }
 }

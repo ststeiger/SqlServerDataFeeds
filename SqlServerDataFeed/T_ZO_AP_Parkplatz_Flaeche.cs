@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Parkplatz_Flaeche
     {
         public System.Guid ZO_PPFlaeche_UID { get; set; }
-        public System.Guid ZO_PPFlaeche_PP_UID { get; set; }
         public Nullable<double> ZO_PPFlaeche_Flaeche { get; set; }
         public System.DateTime ZO_PPFlaeche_DatumVon { get; set; }
         public System.DateTime ZO_PPFlaeche_DatumBis { get; set; }

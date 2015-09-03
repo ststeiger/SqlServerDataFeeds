@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AKP_UID { get; set; }
-        public Nullable<System.Guid> AKP_ADR_UID { get; set; }
         public string AKP_Name { get; set; }
         public string AKP_Vorname { get; set; }
         public string AKP_Telefon { get; set; }

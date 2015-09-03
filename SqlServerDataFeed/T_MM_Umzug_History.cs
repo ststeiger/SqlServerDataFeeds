@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_MM_Umzug_History
     {
         public System.Guid HIMMU_UID { get; set; }
-        public System.Guid HIMMU_MMU_UID { get; set; }
         public Nullable<System.Guid> HIMMU_Entry_UID { get; set; }
         public System.DateTime HIMMU_Datum { get; set; }
         public string HIMMU_User { get; set; }

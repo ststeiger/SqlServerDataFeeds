@@ -35,13 +35,13 @@ namespace SqlServerDataFeed
         public int REMRA_Status { get; set; }
         public int REMRA_Sort { get; set; }
         public bool REMRA_IsDefault { get; set; }
-        public Nullable<int> REMRA_StylizerBack { get; set; }
         public Nullable<int> REMRA_StylizerFore { get; set; }
         public Nullable<int> REMRA_StylizerPattern { get; set; }
         public Nullable<int> REMRA_StylizerLine { get; set; }
         public int REMRA_MDT_ID { get; set; }
     
         public virtual ICollection<T_REM_Ref_Arbeitsgang> T_REM_Ref_Arbeitsgang { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_REM_Ref_Vorlagen> T_REM_Ref_Vorlagen { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Ref_Reinigungsart_Kalk> T_ZO_REM_AP_Raum_Ref_Reinigungsart_Kalk { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Ref_Reinigungsart> T_ZO_REM_AP_Raum_Ref_Reinigungsart { get; set; }

@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Gebaeude_AP_Ref_AnlagaeKategorieSchema
     {
         public System.Guid ZO_GBAKS_UID { get; set; }
-        public System.Guid ZO_GBAKS_GB_UID { get; set; }
-        public System.Guid ZO_GBAKS_AKS_UID { get; set; }
         public int ZO_GBAKS_Status { get; set; }
         public int ZO_GBAKS_RangeVon { get; set; }
         public int ZO_GBAKS_RangeBis { get; set; }

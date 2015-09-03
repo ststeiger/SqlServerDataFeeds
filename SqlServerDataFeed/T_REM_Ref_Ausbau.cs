@@ -22,7 +22,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid REMAB_UID { get; set; }
-        public Nullable<System.Guid> REMAB_REMAE_UID { get; set; }
         public Nullable<int> REMAB_Code { get; set; }
         public string REMAB_Kurz_de { get; set; }
         public string REMAB_Kurz_fr { get; set; }
@@ -35,12 +34,12 @@ namespace SqlServerDataFeed
         public int REMAB_Status { get; set; }
         public int REMAB_Sort { get; set; }
         public bool REMAB_IsDefault { get; set; }
-        public Nullable<int> REMAB_StylizerBack { get; set; }
         public Nullable<int> REMAB_StylizerFore { get; set; }
         public Nullable<int> REMAB_StylizerPattern { get; set; }
         public Nullable<int> REMAB_StylizerLine { get; set; }
     
         public virtual ICollection<T_REM_Ref_Arbeitsgang> T_REM_Ref_Arbeitsgang { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual T_REM_Ref_Ausbau_Einheit T_REM_Ref_Ausbau_Einheit { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Ref_Ausbau_Kalk> T_ZO_REM_AP_Raum_Ref_Ausbau_Kalk { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Ref_Ausbau> T_ZO_REM_AP_Raum_Ref_Ausbau { get; set; }

@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TPRI_UID { get; set; }
-        public int TPRI_MDT_ID { get; set; }
         public Nullable<int> TPRI_Code { get; set; }
         public string TPRI_Kurz_DE { get; set; }
         public string TPRI_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string TPRI_Lang_EN { get; set; }
         public int TPRI_Status { get; set; }
         public int TPRI_Sort { get; set; }
-        public Nullable<int> TPRI_StylizerFore { get; set; }
         public Nullable<int> TPRI_StylizerBack { get; set; }
         public Nullable<int> TPRI_StylizerPattern { get; set; }
         public Nullable<int> TPRI_StylizerLine { get; set; }
@@ -41,6 +39,7 @@ namespace SqlServerDataFeed
         public string TPRI_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
     }
 }

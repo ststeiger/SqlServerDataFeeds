@@ -32,11 +32,11 @@ namespace SqlServerDataFeed
         public int REMBS_Status { get; set; }
         public int REMBS_Sort { get; set; }
         public bool REMBS_IsDefault { get; set; }
-        public Nullable<int> REMBS_StylizerBack { get; set; }
         public Nullable<int> REMBS_StylizerFore { get; set; }
         public Nullable<int> REMBS_StylizerPattern { get; set; }
         public Nullable<int> REMBS_StylizerLine { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_REM_Ref_Bodenbelag> T_REM_Ref_Bodenbelag { get; set; }
     }
 }

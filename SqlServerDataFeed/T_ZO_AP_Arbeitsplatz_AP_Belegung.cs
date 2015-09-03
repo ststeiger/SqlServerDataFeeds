@@ -20,8 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ZO_APBEL_UID { get; set; }
-        public System.Guid ZO_APBEL_AP_UID { get; set; }
-        public System.Guid ZO_APBEL_KT_UID { get; set; }
         public System.DateTime ZO_APBEL_DatumVon { get; set; }
         public System.DateTime ZO_APBEL_DatumBis { get; set; }
         public int ZO_APBEL_Status { get; set; }

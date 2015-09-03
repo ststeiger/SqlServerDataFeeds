@@ -16,15 +16,451 @@ namespace SqlServerDataFeed
     {
         public T_SYS_ApertureColorToHex()
         {
+            this.T_ALV_Ref_FilterAnzeige = new HashSet<T_ALV_Ref_FilterAnzeige>();
+            this.T_AP_Kunst_Ref_Technik = new HashSet<T_AP_Kunst_Ref_Technik>();
+            this.T_AP_Ref_AnlageBauform = new HashSet<T_AP_Ref_AnlageBauform>();
+            this.T_AP_Ref_AnlageBetriebsart = new HashSet<T_AP_Ref_AnlageBetriebsart>();
+            this.T_AP_Ref_AnlageEnergietraeger = new HashSet<T_AP_Ref_AnlageEnergietraeger>();
+            this.T_AP_Ref_AnlageKaeltemittel = new HashSet<T_AP_Ref_AnlageKaeltemittel>();
+            this.T_AP_Ref_AnlageKategorie = new HashSet<T_AP_Ref_AnlageKategorie>();
+            this.T_AP_Ref_AnlageKategorieSchema = new HashSet<T_AP_Ref_AnlageKategorieSchema>();
+            this.T_AP_Ref_AnlageKategorieVerfuegbarkeit = new HashSet<T_AP_Ref_AnlageKategorieVerfuegbarkeit>();
+            this.T_AP_Ref_AnlageRueckkuehlung = new HashSet<T_AP_Ref_AnlageRueckkuehlung>();
+            this.T_AP_Ref_AnlageWRG = new HashSet<T_AP_Ref_AnlageWRG>();
+            this.T_AP_Ref_AnschlussKabelTyp = new HashSet<T_AP_Ref_AnschlussKabelTyp>();
+            this.T_AP_Ref_AnschlussKategorie = new HashSet<T_AP_Ref_AnschlussKategorie>();
+            this.T_AP_Ref_AnschlussSwitch = new HashSet<T_AP_Ref_AnschlussSwitch>();
+            this.T_AP_Ref_AnschlussTyp = new HashSet<T_AP_Ref_AnschlussTyp>();
+            this.T_AP_Ref_AnschlussVerteiler = new HashSet<T_AP_Ref_AnschlussVerteiler>();
+            this.T_AP_Ref_ArbeitsplatzKategorie = new HashSet<T_AP_Ref_ArbeitsplatzKategorie>();
+            this.T_AP_Ref_AussenobjektAnschlagkastenMaterial = new HashSet<T_AP_Ref_AussenobjektAnschlagkastenMaterial>();
+            this.T_AP_Ref_AussenobjektAnschlagkastenSchliessung = new HashSet<T_AP_Ref_AussenobjektAnschlagkastenSchliessung>();
+            this.T_AP_Ref_AussenobjektAnschlagkastenTyp = new HashSet<T_AP_Ref_AussenobjektAnschlagkastenTyp>();
+            this.T_AP_Ref_AussenobjektAusbauten = new HashSet<T_AP_Ref_AussenobjektAusbauten>();
+            this.T_AP_Ref_AussenobjektBeflaggungTyp = new HashSet<T_AP_Ref_AussenobjektBeflaggungTyp>();
+            this.T_AP_Ref_AussenobjektBodenbelag = new HashSet<T_AP_Ref_AussenobjektBodenbelag>();
+            this.T_AP_Ref_AussenobjektKategorie = new HashSet<T_AP_Ref_AussenobjektKategorie>();
+            this.T_AP_Ref_AussenobjektNutzungsart = new HashSet<T_AP_Ref_AussenobjektNutzungsart>();
+            this.T_AP_Ref_Bodenbelag = new HashSet<T_AP_Ref_Bodenbelag>();
+            this.T_AP_Ref_Dienstleistung = new HashSet<T_AP_Ref_Dienstleistung>();
+            this.T_AP_Ref_DienstleistungDetail = new HashSet<T_AP_Ref_DienstleistungDetail>();
+            this.T_AP_Ref_DIN277 = new HashSet<T_AP_Ref_DIN277>();
+            this.T_AP_Ref_DokumentGrund = new HashSet<T_AP_Ref_DokumentGrund>();
+            this.T_AP_Ref_DokumentKategorie = new HashSet<T_AP_Ref_DokumentKategorie>();
+            this.T_AP_Ref_DokumentMetadaten = new HashSet<T_AP_Ref_DokumentMetadaten>();
+            this.T_AP_Ref_DokumentStatus = new HashSet<T_AP_Ref_DokumentStatus>();
+            this.T_AP_Ref_DoseKategorie = new HashSet<T_AP_Ref_DoseKategorie>();
+            this.T_AP_Ref_Eigentumsverhaeltnis = new HashSet<T_AP_Ref_Eigentumsverhaeltnis>();
+            this.T_AP_Ref_Emaillink = new HashSet<T_AP_Ref_Emaillink>();
+            this.T_AP_Ref_Emailtext = new HashSet<T_AP_Ref_Emailtext>();
+            this.T_AP_Ref_EmailtextKategorie = new HashSet<T_AP_Ref_EmailtextKategorie>();
+            this.T_AP_Ref_Energiebezugsart = new HashSet<T_AP_Ref_Energiebezugsart>();
+            this.T_AP_Ref_ErschliessungFussweg = new HashSet<T_AP_Ref_ErschliessungFussweg>();
+            this.T_AP_Ref_ErschliessungStrasse = new HashSet<T_AP_Ref_ErschliessungStrasse>();
+            this.T_AP_Ref_FahrzeugHersteller = new HashSet<T_AP_Ref_FahrzeugHersteller>();
+            this.T_AP_Ref_FahrzeugTyp = new HashSet<T_AP_Ref_FahrzeugTyp>();
+            this.T_AP_Ref_Fluchtwegmarkierung = new HashSet<T_AP_Ref_Fluchtwegmarkierung>();
+            this.T_AP_Ref_FotoKategorie = new HashSet<T_AP_Ref_FotoKategorie>();
+            this.T_AP_Ref_Freigabetyp = new HashSet<T_AP_Ref_Freigabetyp>();
+            this.T_AP_Ref_GebaeudeEinstufung = new HashSet<T_AP_Ref_GebaeudeEinstufung>();
+            this.T_AP_Ref_GebaeudeKategorie = new HashSet<T_AP_Ref_GebaeudeKategorie>();
+            this.T_AP_Ref_GebaeudeKlassifizierung = new HashSet<T_AP_Ref_GebaeudeKlassifizierung>();
+            this.T_AP_Ref_Geschoss_Reichle = new HashSet<T_AP_Ref_Geschoss_Reichle>();
+            this.T_AP_Ref_Geschosstyp = new HashSet<T_AP_Ref_Geschosstyp>();
+            this.T_AP_Ref_Haus = new HashSet<T_AP_Ref_Haus>();
+            this.T_AP_Ref_InformatikBetriebssystem = new HashSet<T_AP_Ref_InformatikBetriebssystem>();
+            this.T_AP_Ref_InformatikKategorie = new HashSet<T_AP_Ref_InformatikKategorie>();
+            this.T_AP_Ref_KommunikationAnbieter = new HashSet<T_AP_Ref_KommunikationAnbieter>();
+            this.T_AP_Ref_KommunikationKategorie = new HashSet<T_AP_Ref_KommunikationKategorie>();
+            this.T_AP_Ref_KontakFunktion = new HashSet<T_AP_Ref_KontakFunktion>();
+            this.T_AP_Ref_KontaktGeschlecht = new HashSet<T_AP_Ref_KontaktGeschlecht>();
+            this.T_AP_Ref_Kostenstelle = new HashSet<T_AP_Ref_Kostenstelle>();
+            this.T_AP_Ref_KunstAusleihanlass = new HashSet<T_AP_Ref_KunstAusleihanlass>();
+            this.T_AP_Ref_KunstAusleihart = new HashSet<T_AP_Ref_KunstAusleihart>();
+            this.T_AP_Ref_KunstInstitution = new HashSet<T_AP_Ref_KunstInstitution>();
+            this.T_AP_Ref_KunstKategorie = new HashSet<T_AP_Ref_KunstKategorie>();
+            this.T_AP_Ref_KunstKuenstler = new HashSet<T_AP_Ref_KunstKuenstler>();
+            this.T_AP_Ref_KunstMandant = new HashSet<T_AP_Ref_KunstMandant>();
+            this.T_AP_Ref_KunstRahmenArt = new HashSet<T_AP_Ref_KunstRahmenArt>();
+            this.T_AP_Ref_KunstStatus = new HashSet<T_AP_Ref_KunstStatus>();
+            this.T_AP_Ref_KunstWerteKategorie = new HashSet<T_AP_Ref_KunstWerteKategorie>();
+            this.T_AP_Ref_Land = new HashSet<T_AP_Ref_Land>();
+            this.T_AP_Ref_Landesteile = new HashSet<T_AP_Ref_Landesteile>();
+            this.T_AP_Ref_Layerset = new HashSet<T_AP_Ref_Layerset>();
+            this.T_AP_Ref_LiegenschaftenStrategie = new HashSet<T_AP_Ref_LiegenschaftenStrategie>();
+            this.T_AP_Ref_Mandant = new HashSet<T_AP_Ref_Mandant>();
+            this.T_AP_Ref_Mandant_Logo = new HashSet<T_AP_Ref_Mandant_Logo>();
+            this.T_AP_Ref_Mietobjekt = new HashSet<T_AP_Ref_Mietobjekt>();
+            this.T_AP_Ref_MitarbeiterAusruestung = new HashSet<T_AP_Ref_MitarbeiterAusruestung>();
+            this.T_AP_Ref_MitarbeiterStatus = new HashSet<T_AP_Ref_MitarbeiterStatus>();
+            this.T_AP_Ref_MobiliarBibliothek = new HashSet<T_AP_Ref_MobiliarBibliothek>();
+            this.T_AP_Ref_MobiliarFarbe = new HashSet<T_AP_Ref_MobiliarFarbe>();
+            this.T_AP_Ref_MobiliarHersteller = new HashSet<T_AP_Ref_MobiliarHersteller>();
+            this.T_AP_Ref_MobiliarKategorie = new HashSet<T_AP_Ref_MobiliarKategorie>();
+            this.T_AP_Ref_MobiliarMaterial = new HashSet<T_AP_Ref_MobiliarMaterial>();
+            this.T_AP_Ref_Nutzungsart = new HashSet<T_AP_Ref_Nutzungsart>();
+            this.T_AP_Ref_NutzungsartGruppe = new HashSet<T_AP_Ref_NutzungsartGruppe>();
+            this.T_AP_Ref_Organisationseinheit = new HashSet<T_AP_Ref_Organisationseinheit>();
+            this.T_AP_Ref_Ort = new HashSet<T_AP_Ref_Ort>();
+            this.T_AP_Ref_ParkplatzKategorie = new HashSet<T_AP_Ref_ParkplatzKategorie>();
+            this.T_AP_Ref_ParkplatzLage = new HashSet<T_AP_Ref_ParkplatzLage>();
+            this.T_AP_Ref_ParkplatzPool = new HashSet<T_AP_Ref_ParkplatzPool>();
+            this.T_AP_Ref_ParkplatzSchutz = new HashSet<T_AP_Ref_ParkplatzSchutz>();
+            this.T_AP_Ref_ParkplatzTyp = new HashSet<T_AP_Ref_ParkplatzTyp>();
+            this.T_AP_Ref_PersonalKategorie = new HashSet<T_AP_Ref_PersonalKategorie>();
+            this.T_AP_Ref_PersonGeschlecht = new HashSet<T_AP_Ref_PersonGeschlecht>();
+            this.T_AP_Ref_RaumDeckenkonstruktion = new HashSet<T_AP_Ref_RaumDeckenkonstruktion>();
+            this.T_AP_Ref_RaumSicherheitszone = new HashSet<T_AP_Ref_RaumSicherheitszone>();
+            this.T_AP_Ref_RaumTrakt = new HashSet<T_AP_Ref_RaumTrakt>();
+            this.T_AP_Ref_RaumWandoberflaeche = new HashSet<T_AP_Ref_RaumWandoberflaeche>();
+            this.T_AP_Ref_Region = new HashSet<T_AP_Ref_Region>();
+            this.T_AP_Ref_Reinigungsprio = new HashSet<T_AP_Ref_Reinigungsprio>();
+            this.T_AP_Ref_SchliessungAufbewahrung = new HashSet<T_AP_Ref_SchliessungAufbewahrung>();
+            this.T_AP_Ref_SchliessungMandant = new HashSet<T_AP_Ref_SchliessungMandant>();
+            this.T_AP_Ref_Schliessungstyp = new HashSet<T_AP_Ref_Schliessungstyp>();
+            this.T_AP_Ref_SchluesselKategorie = new HashSet<T_AP_Ref_SchluesselKategorie>();
+            this.T_AP_Ref_SchluesselStatus = new HashSet<T_AP_Ref_SchluesselStatus>();
+            this.T_AP_Ref_SchluesselTyp = new HashSet<T_AP_Ref_SchluesselTyp>();
+            this.T_AP_Ref_SicherheitKategorie = new HashSet<T_AP_Ref_SicherheitKategorie>();
+            this.T_AP_Ref_StandortKategorie = new HashSet<T_AP_Ref_StandortKategorie>();
+            this.T_AP_Ref_Strasse_Reichle = new HashSet<T_AP_Ref_Strasse_Reichle>();
+            this.T_AP_Ref_TuerBrandschutz = new HashSet<T_AP_Ref_TuerBrandschutz>();
+            this.T_AP_Ref_TuerFunktion = new HashSet<T_AP_Ref_TuerFunktion>();
+            this.T_AP_Ref_TuerMaterial = new HashSet<T_AP_Ref_TuerMaterial>();
+            this.T_AP_Ref_TuerTyp = new HashSet<T_AP_Ref_TuerTyp>();
+            this.T_AP_Ref_ZaehlerKategorie = new HashSet<T_AP_Ref_ZaehlerKategorie>();
+            this.T_AP_Ref_ZoneKategorie = new HashSet<T_AP_Ref_ZoneKategorie>();
+            this.T_AP_Ref_Zonenzuteilung = new HashSet<T_AP_Ref_Zonenzuteilung>();
+            this.T_AP_Ref_ZuschlagsflaechenTyp = new HashSet<T_AP_Ref_ZuschlagsflaechenTyp>();
+            this.T_AP_Ref_ZylinderKategorie = new HashSet<T_AP_Ref_ZylinderKategorie>();
+            this.T_AP_Ref_ZylinderSchliesssystem = new HashSet<T_AP_Ref_ZylinderSchliesssystem>();
+            this.T_AP_Ref_ZylinderTyp = new HashSet<T_AP_Ref_ZylinderTyp>();
+            this.T_AP_Trakt = new HashSet<T_AP_Trakt>();
+            this.T_AV_Adressen = new HashSet<T_AV_Adressen>();
+            this.T_AV_Ref_AdresseAnrede = new HashSet<T_AV_Ref_AdresseAnrede>();
+            this.T_AV_Ref_AdresseRollen = new HashSet<T_AV_Ref_AdresseRollen>();
+            this.T_AV_Ref_Region = new HashSet<T_AV_Ref_Region>();
+            this.T_DMS_Ref_Bauphase = new HashSet<T_DMS_Ref_Bauphase>();
+            this.T_DMS_Ref_DokumentArt = new HashSet<T_DMS_Ref_DokumentArt>();
+            this.T_DMS_Ref_DokumentGruppe = new HashSet<T_DMS_Ref_DokumentGruppe>();
+            this.T_DMS_Ref_DokumentGruppeGebaeude = new HashSet<T_DMS_Ref_DokumentGruppeGebaeude>();
+            this.T_DMS_Ref_DokumentStatus = new HashSet<T_DMS_Ref_DokumentStatus>();
+            this.T_DMS_Ref_DokumentTyp = new HashSet<T_DMS_Ref_DokumentTyp>();
+            this.T_DMS_Ref_Metadaten_1 = new HashSet<T_DMS_Ref_Metadaten_1>();
+            this.T_DMS_Ref_Metadaten_1_old = new HashSet<T_DMS_Ref_Metadaten_1_old>();
+            this.T_DMS_Ref_Metadaten_10 = new HashSet<T_DMS_Ref_Metadaten_10>();
+            this.T_DMS_Ref_Metadaten_2 = new HashSet<T_DMS_Ref_Metadaten_2>();
+            this.T_DMS_Ref_Metadaten_2_old = new HashSet<T_DMS_Ref_Metadaten_2_old>();
+            this.T_DMS_Ref_Metadaten_3 = new HashSet<T_DMS_Ref_Metadaten_3>();
+            this.T_DMS_Ref_Metadaten_4 = new HashSet<T_DMS_Ref_Metadaten_4>();
+            this.T_DMS_Ref_Metadaten_4_Old = new HashSet<T_DMS_Ref_Metadaten_4_Old>();
+            this.T_DMS_Ref_Metadaten_5 = new HashSet<T_DMS_Ref_Metadaten_5>();
+            this.T_DMS_Ref_Metadaten_6 = new HashSet<T_DMS_Ref_Metadaten_6>();
+            this.T_DMS_Ref_Metadaten_7 = new HashSet<T_DMS_Ref_Metadaten_7>();
+            this.T_DMS_Ref_Metadaten_8 = new HashSet<T_DMS_Ref_Metadaten_8>();
+            this.T_DMS_Ref_Metadaten_9 = new HashSet<T_DMS_Ref_Metadaten_9>();
+            this.T_DMS_Ref_NodeType = new HashSet<T_DMS_Ref_NodeType>();
+            this.T_DMS_Ref_Prozesse = new HashSet<T_DMS_Ref_Prozesse>();
+            this.T_DMS_Ref_QualitaetspruefungDateityp = new HashSet<T_DMS_Ref_QualitaetspruefungDateityp>();
+            this.T_DMS_SYS_FilterTyp = new HashSet<T_DMS_SYS_FilterTyp>();
+            this.T_DMS_SYS_FilterZeitraum = new HashSet<T_DMS_SYS_FilterZeitraum>();
+            this.T_DMS_SYS_HistoryTyp = new HashSet<T_DMS_SYS_HistoryTyp>();
+            this.T_IGM_Ref_GlasreinigungServiceLevel = new HashSet<T_IGM_Ref_GlasreinigungServiceLevel>();
+            this.T_IGM_Ref_InnenreinigungServiceLevel = new HashSet<T_IGM_Ref_InnenreinigungServiceLevel>();
+            this.T_IGM_Ref_Leistungsart = new HashSet<T_IGM_Ref_Leistungsart>();
+            this.T_IGM_Ref_Oberflaeche = new HashSet<T_IGM_Ref_Oberflaeche>();
+            this.T_IGM_Ref_OffertenTyp = new HashSet<T_IGM_Ref_OffertenTyp>();
+            this.T_IGM_Ref_Raumgruppe = new HashSet<T_IGM_Ref_Raumgruppe>();
+            this.T_MM_Ref_ServiceAnbieter = new HashSet<T_MM_Ref_ServiceAnbieter>();
+            this.T_MM_Ref_Status = new HashSet<T_MM_Ref_Status>();
+            this.T_MM_Ref_UmzugTyp = new HashSet<T_MM_Ref_UmzugTyp>();
+            this.T_OV_Ref_BelegungArt = new HashSet<T_OV_Ref_BelegungArt>();
+            this.T_OV_Ref_ObjektTyp = new HashSet<T_OV_Ref_ObjektTyp>();
+            this.T_PM_Ref_ParkplatzBuchung = new HashSet<T_PM_Ref_ParkplatzBuchung>();
+            this.T_POM_Ref_MittelwertGruppe = new HashSet<T_POM_Ref_MittelwertGruppe>();
+            this.T_Ref_ValidDocuments = new HashSet<T_Ref_ValidDocuments>();
+            this.T_Ref_ValidPictures = new HashSet<T_Ref_ValidPictures>();
+            this.T_REM_Ref_AnzahlTag = new HashSet<T_REM_Ref_AnzahlTag>();
+            this.T_REM_Ref_Arbeitsgang = new HashSet<T_REM_Ref_Arbeitsgang>();
+            this.T_REM_Ref_Arbeitsgang_Leistung = new HashSet<T_REM_Ref_Arbeitsgang_Leistung>();
+            this.T_REM_Ref_Ausbau = new HashSet<T_REM_Ref_Ausbau>();
+            this.T_REM_Ref_Ausbau_Einheit = new HashSet<T_REM_Ref_Ausbau_Einheit>();
+            this.T_REM_Ref_BB_Beschaffenheit = new HashSet<T_REM_Ref_BB_Beschaffenheit>();
+            this.T_REM_Ref_Bodenbelag = new HashSet<T_REM_Ref_Bodenbelag>();
+            this.T_REM_Ref_Intervall = new HashSet<T_REM_Ref_Intervall>();
+            this.T_REM_Ref_MaschineGeraet = new HashSet<T_REM_Ref_MaschineGeraet>();
+            this.T_REM_Ref_RaumName = new HashSet<T_REM_Ref_RaumName>();
+            this.T_REM_Ref_Reinigungsart = new HashSet<T_REM_Ref_Reinigungsart>();
+            this.T_REM_Ref_Tagesplan = new HashSet<T_REM_Ref_Tagesplan>();
+            this.T_REM_Ref_TarifZeitnachweis = new HashSet<T_REM_Ref_TarifZeitnachweis>();
+            this.T_REM_Ref_Vorlagen = new HashSet<T_REM_Ref_Vorlagen>();
+            this.T_SYS_Ref_BackOfficeMenue = new HashSet<T_SYS_Ref_BackOfficeMenue>();
+            this.T_SYS_Ref_BackOfficeSubMenue = new HashSet<T_SYS_Ref_BackOfficeSubMenue>();
+            this.T_SYS_Ref_BelegungsTyp = new HashSet<T_SYS_Ref_BelegungsTyp>();
+            this.T_SYS_Ref_Datentyp = new HashSet<T_SYS_Ref_Datentyp>();
+            this.T_SYS_Ref_Language = new HashSet<T_SYS_Ref_Language>();
+            this.T_SYS_Ref_Layerset = new HashSet<T_SYS_Ref_Layerset>();
+            this.T_SYS_Ref_Monate = new HashSet<T_SYS_Ref_Monate>();
+            this.T_SYS_Ref_ObjectMarked = new HashSet<T_SYS_Ref_ObjectMarked>();
+            this.T_SYS_Ref_Tage = new HashSet<T_SYS_Ref_Tage>();
+            this.T_SYS_Ref_Zeit = new HashSet<T_SYS_Ref_Zeit>();
+            this.T_SYS_Ref_ZeitEinheiten = new HashSet<T_SYS_Ref_ZeitEinheiten>();
+            this.T_TM_Ref_Abteilung = new HashSet<T_TM_Ref_Abteilung>();
+            this.T_TM_Ref_Checkliste_Absatz = new HashSet<T_TM_Ref_Checkliste_Absatz>();
+            this.T_TM_Ref_Checkliste_Checkpoints = new HashSet<T_TM_Ref_Checkliste_Checkpoints>();
+            this.T_TM_Ref_Checkliste_Details = new HashSet<T_TM_Ref_Checkliste_Details>();
+            this.T_TM_Ref_Checkliste = new HashSet<T_TM_Ref_Checkliste>();
+            this.T_TM_Ref_Checkliste_Taetigkeit = new HashSet<T_TM_Ref_Checkliste_Taetigkeit>();
+            this.T_TM_Ref_Checkliste_Wartung = new HashSet<T_TM_Ref_Checkliste_Wartung>();
+            this.T_TM_Ref_EmailText = new HashSet<T_TM_Ref_EmailText>();
+            this.T_TM_Ref_FilterAnzeige = new HashSet<T_TM_Ref_FilterAnzeige>();
+            this.T_TM_Ref_Periode = new HashSet<T_TM_Ref_Periode>();
+            this.T_TM_Ref_TaskArt = new HashSet<T_TM_Ref_TaskArt>();
+            this.T_TM_Ref_TaskKategorie = new HashSet<T_TM_Ref_TaskKategorie>();
+            this.T_TM_Ref_TaskPrio = new HashSet<T_TM_Ref_TaskPrio>();
+            this.T_TM_Ref_TaskStatus = new HashSet<T_TM_Ref_TaskStatus>();
+            this.T_TM_Ref_ZyklusPeriode = new HashSet<T_TM_Ref_ZyklusPeriode>();
+            this.T_UM_Ref_Status = new HashSet<T_UM_Ref_Status>();
+            this.T_UPS_Ref_Baukostenplan = new HashSet<T_UPS_Ref_Baukostenplan>();
+            this.T_UPS_Ref_FilterPlanungsvariante = new HashSet<T_UPS_Ref_FilterPlanungsvariante>();
+            this.T_UPS_Ref_Kontoplan = new HashSet<T_UPS_Ref_Kontoplan>();
+            this.T_UW_Ref_Bereich = new HashSet<T_UW_Ref_Bereich>();
+            this.T_UW_Ref_Einheit = new HashSet<T_UW_Ref_Einheit>();
+            this.T_UW_Ref_Position = new HashSet<T_UW_Ref_Position>();
+            this.T_VM_Ref_KostenPeriode = new HashSet<T_VM_Ref_KostenPeriode>();
+            this.T_VM_Ref_Vertragspartei = new HashSet<T_VM_Ref_Vertragspartei>();
+            this.T_VM_Ref_Vertragstyp = new HashSet<T_VM_Ref_Vertragstyp>();
+            this.T_VM_Ref_Vertragszustaendigkeit = new HashSet<T_VM_Ref_Vertragszustaendigkeit>();
+            this.T_VM_Vertraege = new HashSet<T_VM_Vertraege>();
+            this.T_VWS_Ref_Auftragsart = new HashSet<T_VWS_Ref_Auftragsart>();
             this.T_ZO_OV_Ref_ObjektText = new HashSet<T_ZO_OV_Ref_ObjektText>();
             this.T_ZO_OV_Ref_ObjektText1 = new HashSet<T_ZO_OV_Ref_ObjektText>();
+            this.T_ZO_REM_AP_Gebaeude_Ref_Raumpfleger = new HashSet<T_ZO_REM_AP_Gebaeude_Ref_Raumpfleger>();
         }
     
         public int COL_Aperture { get; set; }
         public string COL_Hex { get; set; }
         public int COL_Status { get; set; }
     
+        public virtual ICollection<T_ALV_Ref_FilterAnzeige> T_ALV_Ref_FilterAnzeige { get; set; }
+        public virtual ICollection<T_AP_Kunst_Ref_Technik> T_AP_Kunst_Ref_Technik { get; set; }
+        public virtual ICollection<T_AP_Ref_AnlageBauform> T_AP_Ref_AnlageBauform { get; set; }
+        public virtual ICollection<T_AP_Ref_AnlageBetriebsart> T_AP_Ref_AnlageBetriebsart { get; set; }
+        public virtual ICollection<T_AP_Ref_AnlageEnergietraeger> T_AP_Ref_AnlageEnergietraeger { get; set; }
+        public virtual ICollection<T_AP_Ref_AnlageKaeltemittel> T_AP_Ref_AnlageKaeltemittel { get; set; }
+        public virtual ICollection<T_AP_Ref_AnlageKategorie> T_AP_Ref_AnlageKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_AnlageKategorieSchema> T_AP_Ref_AnlageKategorieSchema { get; set; }
+        public virtual ICollection<T_AP_Ref_AnlageKategorieVerfuegbarkeit> T_AP_Ref_AnlageKategorieVerfuegbarkeit { get; set; }
+        public virtual ICollection<T_AP_Ref_AnlageRueckkuehlung> T_AP_Ref_AnlageRueckkuehlung { get; set; }
+        public virtual ICollection<T_AP_Ref_AnlageWRG> T_AP_Ref_AnlageWRG { get; set; }
+        public virtual ICollection<T_AP_Ref_AnschlussKabelTyp> T_AP_Ref_AnschlussKabelTyp { get; set; }
+        public virtual ICollection<T_AP_Ref_AnschlussKategorie> T_AP_Ref_AnschlussKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_AnschlussSwitch> T_AP_Ref_AnschlussSwitch { get; set; }
+        public virtual ICollection<T_AP_Ref_AnschlussTyp> T_AP_Ref_AnschlussTyp { get; set; }
+        public virtual ICollection<T_AP_Ref_AnschlussVerteiler> T_AP_Ref_AnschlussVerteiler { get; set; }
+        public virtual ICollection<T_AP_Ref_ArbeitsplatzKategorie> T_AP_Ref_ArbeitsplatzKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_AussenobjektAnschlagkastenMaterial> T_AP_Ref_AussenobjektAnschlagkastenMaterial { get; set; }
+        public virtual ICollection<T_AP_Ref_AussenobjektAnschlagkastenSchliessung> T_AP_Ref_AussenobjektAnschlagkastenSchliessung { get; set; }
+        public virtual ICollection<T_AP_Ref_AussenobjektAnschlagkastenTyp> T_AP_Ref_AussenobjektAnschlagkastenTyp { get; set; }
+        public virtual ICollection<T_AP_Ref_AussenobjektAusbauten> T_AP_Ref_AussenobjektAusbauten { get; set; }
+        public virtual ICollection<T_AP_Ref_AussenobjektBeflaggungTyp> T_AP_Ref_AussenobjektBeflaggungTyp { get; set; }
+        public virtual ICollection<T_AP_Ref_AussenobjektBodenbelag> T_AP_Ref_AussenobjektBodenbelag { get; set; }
+        public virtual ICollection<T_AP_Ref_AussenobjektKategorie> T_AP_Ref_AussenobjektKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_AussenobjektNutzungsart> T_AP_Ref_AussenobjektNutzungsart { get; set; }
+        public virtual ICollection<T_AP_Ref_Bodenbelag> T_AP_Ref_Bodenbelag { get; set; }
+        public virtual ICollection<T_AP_Ref_Dienstleistung> T_AP_Ref_Dienstleistung { get; set; }
+        public virtual ICollection<T_AP_Ref_DienstleistungDetail> T_AP_Ref_DienstleistungDetail { get; set; }
+        public virtual ICollection<T_AP_Ref_DIN277> T_AP_Ref_DIN277 { get; set; }
+        public virtual ICollection<T_AP_Ref_DokumentGrund> T_AP_Ref_DokumentGrund { get; set; }
+        public virtual ICollection<T_AP_Ref_DokumentKategorie> T_AP_Ref_DokumentKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_DokumentMetadaten> T_AP_Ref_DokumentMetadaten { get; set; }
+        public virtual ICollection<T_AP_Ref_DokumentStatus> T_AP_Ref_DokumentStatus { get; set; }
+        public virtual ICollection<T_AP_Ref_DoseKategorie> T_AP_Ref_DoseKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_Eigentumsverhaeltnis> T_AP_Ref_Eigentumsverhaeltnis { get; set; }
+        public virtual ICollection<T_AP_Ref_Emaillink> T_AP_Ref_Emaillink { get; set; }
+        public virtual ICollection<T_AP_Ref_Emailtext> T_AP_Ref_Emailtext { get; set; }
+        public virtual ICollection<T_AP_Ref_EmailtextKategorie> T_AP_Ref_EmailtextKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_Energiebezugsart> T_AP_Ref_Energiebezugsart { get; set; }
+        public virtual ICollection<T_AP_Ref_ErschliessungFussweg> T_AP_Ref_ErschliessungFussweg { get; set; }
+        public virtual ICollection<T_AP_Ref_ErschliessungStrasse> T_AP_Ref_ErschliessungStrasse { get; set; }
+        public virtual ICollection<T_AP_Ref_FahrzeugHersteller> T_AP_Ref_FahrzeugHersteller { get; set; }
+        public virtual ICollection<T_AP_Ref_FahrzeugTyp> T_AP_Ref_FahrzeugTyp { get; set; }
+        public virtual ICollection<T_AP_Ref_Fluchtwegmarkierung> T_AP_Ref_Fluchtwegmarkierung { get; set; }
+        public virtual ICollection<T_AP_Ref_FotoKategorie> T_AP_Ref_FotoKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_Freigabetyp> T_AP_Ref_Freigabetyp { get; set; }
+        public virtual ICollection<T_AP_Ref_GebaeudeEinstufung> T_AP_Ref_GebaeudeEinstufung { get; set; }
+        public virtual ICollection<T_AP_Ref_GebaeudeKategorie> T_AP_Ref_GebaeudeKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_GebaeudeKlassifizierung> T_AP_Ref_GebaeudeKlassifizierung { get; set; }
+        public virtual ICollection<T_AP_Ref_Geschoss_Reichle> T_AP_Ref_Geschoss_Reichle { get; set; }
+        public virtual ICollection<T_AP_Ref_Geschosstyp> T_AP_Ref_Geschosstyp { get; set; }
+        public virtual ICollection<T_AP_Ref_Haus> T_AP_Ref_Haus { get; set; }
+        public virtual ICollection<T_AP_Ref_InformatikBetriebssystem> T_AP_Ref_InformatikBetriebssystem { get; set; }
+        public virtual ICollection<T_AP_Ref_InformatikKategorie> T_AP_Ref_InformatikKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_KommunikationAnbieter> T_AP_Ref_KommunikationAnbieter { get; set; }
+        public virtual ICollection<T_AP_Ref_KommunikationKategorie> T_AP_Ref_KommunikationKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_KontakFunktion> T_AP_Ref_KontakFunktion { get; set; }
+        public virtual ICollection<T_AP_Ref_KontaktGeschlecht> T_AP_Ref_KontaktGeschlecht { get; set; }
+        public virtual ICollection<T_AP_Ref_Kostenstelle> T_AP_Ref_Kostenstelle { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstAusleihanlass> T_AP_Ref_KunstAusleihanlass { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstAusleihart> T_AP_Ref_KunstAusleihart { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstInstitution> T_AP_Ref_KunstInstitution { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstKategorie> T_AP_Ref_KunstKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstKuenstler> T_AP_Ref_KunstKuenstler { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstMandant> T_AP_Ref_KunstMandant { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstRahmenArt> T_AP_Ref_KunstRahmenArt { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstStatus> T_AP_Ref_KunstStatus { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstWerteKategorie> T_AP_Ref_KunstWerteKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_Land> T_AP_Ref_Land { get; set; }
+        public virtual ICollection<T_AP_Ref_Landesteile> T_AP_Ref_Landesteile { get; set; }
+        public virtual ICollection<T_AP_Ref_Layerset> T_AP_Ref_Layerset { get; set; }
+        public virtual ICollection<T_AP_Ref_LiegenschaftenStrategie> T_AP_Ref_LiegenschaftenStrategie { get; set; }
+        public virtual ICollection<T_AP_Ref_Mandant> T_AP_Ref_Mandant { get; set; }
+        public virtual ICollection<T_AP_Ref_Mandant_Logo> T_AP_Ref_Mandant_Logo { get; set; }
+        public virtual ICollection<T_AP_Ref_Mietobjekt> T_AP_Ref_Mietobjekt { get; set; }
+        public virtual ICollection<T_AP_Ref_MitarbeiterAusruestung> T_AP_Ref_MitarbeiterAusruestung { get; set; }
+        public virtual ICollection<T_AP_Ref_MitarbeiterStatus> T_AP_Ref_MitarbeiterStatus { get; set; }
+        public virtual ICollection<T_AP_Ref_MobiliarBibliothek> T_AP_Ref_MobiliarBibliothek { get; set; }
+        public virtual ICollection<T_AP_Ref_MobiliarFarbe> T_AP_Ref_MobiliarFarbe { get; set; }
+        public virtual ICollection<T_AP_Ref_MobiliarHersteller> T_AP_Ref_MobiliarHersteller { get; set; }
+        public virtual ICollection<T_AP_Ref_MobiliarKategorie> T_AP_Ref_MobiliarKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_MobiliarMaterial> T_AP_Ref_MobiliarMaterial { get; set; }
+        public virtual ICollection<T_AP_Ref_Nutzungsart> T_AP_Ref_Nutzungsart { get; set; }
+        public virtual ICollection<T_AP_Ref_NutzungsartGruppe> T_AP_Ref_NutzungsartGruppe { get; set; }
+        public virtual ICollection<T_AP_Ref_Organisationseinheit> T_AP_Ref_Organisationseinheit { get; set; }
+        public virtual ICollection<T_AP_Ref_Ort> T_AP_Ref_Ort { get; set; }
+        public virtual ICollection<T_AP_Ref_ParkplatzKategorie> T_AP_Ref_ParkplatzKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_ParkplatzLage> T_AP_Ref_ParkplatzLage { get; set; }
+        public virtual ICollection<T_AP_Ref_ParkplatzPool> T_AP_Ref_ParkplatzPool { get; set; }
+        public virtual ICollection<T_AP_Ref_ParkplatzSchutz> T_AP_Ref_ParkplatzSchutz { get; set; }
+        public virtual ICollection<T_AP_Ref_ParkplatzTyp> T_AP_Ref_ParkplatzTyp { get; set; }
+        public virtual ICollection<T_AP_Ref_PersonalKategorie> T_AP_Ref_PersonalKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_PersonGeschlecht> T_AP_Ref_PersonGeschlecht { get; set; }
+        public virtual ICollection<T_AP_Ref_RaumDeckenkonstruktion> T_AP_Ref_RaumDeckenkonstruktion { get; set; }
+        public virtual ICollection<T_AP_Ref_RaumSicherheitszone> T_AP_Ref_RaumSicherheitszone { get; set; }
+        public virtual ICollection<T_AP_Ref_RaumTrakt> T_AP_Ref_RaumTrakt { get; set; }
+        public virtual ICollection<T_AP_Ref_RaumWandoberflaeche> T_AP_Ref_RaumWandoberflaeche { get; set; }
+        public virtual ICollection<T_AP_Ref_Region> T_AP_Ref_Region { get; set; }
+        public virtual ICollection<T_AP_Ref_Reinigungsprio> T_AP_Ref_Reinigungsprio { get; set; }
+        public virtual ICollection<T_AP_Ref_SchliessungAufbewahrung> T_AP_Ref_SchliessungAufbewahrung { get; set; }
+        public virtual ICollection<T_AP_Ref_SchliessungMandant> T_AP_Ref_SchliessungMandant { get; set; }
+        public virtual ICollection<T_AP_Ref_Schliessungstyp> T_AP_Ref_Schliessungstyp { get; set; }
+        public virtual ICollection<T_AP_Ref_SchluesselKategorie> T_AP_Ref_SchluesselKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_SchluesselStatus> T_AP_Ref_SchluesselStatus { get; set; }
+        public virtual ICollection<T_AP_Ref_SchluesselTyp> T_AP_Ref_SchluesselTyp { get; set; }
+        public virtual ICollection<T_AP_Ref_SicherheitKategorie> T_AP_Ref_SicherheitKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_StandortKategorie> T_AP_Ref_StandortKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_Strasse_Reichle> T_AP_Ref_Strasse_Reichle { get; set; }
+        public virtual ICollection<T_AP_Ref_TuerBrandschutz> T_AP_Ref_TuerBrandschutz { get; set; }
+        public virtual ICollection<T_AP_Ref_TuerFunktion> T_AP_Ref_TuerFunktion { get; set; }
+        public virtual ICollection<T_AP_Ref_TuerMaterial> T_AP_Ref_TuerMaterial { get; set; }
+        public virtual ICollection<T_AP_Ref_TuerTyp> T_AP_Ref_TuerTyp { get; set; }
+        public virtual ICollection<T_AP_Ref_ZaehlerKategorie> T_AP_Ref_ZaehlerKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_ZoneKategorie> T_AP_Ref_ZoneKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_Zonenzuteilung> T_AP_Ref_Zonenzuteilung { get; set; }
+        public virtual ICollection<T_AP_Ref_ZuschlagsflaechenTyp> T_AP_Ref_ZuschlagsflaechenTyp { get; set; }
+        public virtual ICollection<T_AP_Ref_ZylinderKategorie> T_AP_Ref_ZylinderKategorie { get; set; }
+        public virtual ICollection<T_AP_Ref_ZylinderSchliesssystem> T_AP_Ref_ZylinderSchliesssystem { get; set; }
+        public virtual ICollection<T_AP_Ref_ZylinderTyp> T_AP_Ref_ZylinderTyp { get; set; }
+        public virtual ICollection<T_AP_Trakt> T_AP_Trakt { get; set; }
+        public virtual ICollection<T_AV_Adressen> T_AV_Adressen { get; set; }
+        public virtual ICollection<T_AV_Ref_AdresseAnrede> T_AV_Ref_AdresseAnrede { get; set; }
+        public virtual ICollection<T_AV_Ref_AdresseRollen> T_AV_Ref_AdresseRollen { get; set; }
+        public virtual ICollection<T_AV_Ref_Region> T_AV_Ref_Region { get; set; }
+        public virtual ICollection<T_DMS_Ref_Bauphase> T_DMS_Ref_Bauphase { get; set; }
+        public virtual ICollection<T_DMS_Ref_DokumentArt> T_DMS_Ref_DokumentArt { get; set; }
+        public virtual ICollection<T_DMS_Ref_DokumentGruppe> T_DMS_Ref_DokumentGruppe { get; set; }
+        public virtual ICollection<T_DMS_Ref_DokumentGruppeGebaeude> T_DMS_Ref_DokumentGruppeGebaeude { get; set; }
+        public virtual ICollection<T_DMS_Ref_DokumentStatus> T_DMS_Ref_DokumentStatus { get; set; }
+        public virtual ICollection<T_DMS_Ref_DokumentTyp> T_DMS_Ref_DokumentTyp { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_1> T_DMS_Ref_Metadaten_1 { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_1_old> T_DMS_Ref_Metadaten_1_old { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_10> T_DMS_Ref_Metadaten_10 { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_2> T_DMS_Ref_Metadaten_2 { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_2_old> T_DMS_Ref_Metadaten_2_old { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_3> T_DMS_Ref_Metadaten_3 { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_4> T_DMS_Ref_Metadaten_4 { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_4_Old> T_DMS_Ref_Metadaten_4_Old { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_5> T_DMS_Ref_Metadaten_5 { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_6> T_DMS_Ref_Metadaten_6 { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_7> T_DMS_Ref_Metadaten_7 { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_8> T_DMS_Ref_Metadaten_8 { get; set; }
+        public virtual ICollection<T_DMS_Ref_Metadaten_9> T_DMS_Ref_Metadaten_9 { get; set; }
+        public virtual ICollection<T_DMS_Ref_NodeType> T_DMS_Ref_NodeType { get; set; }
+        public virtual ICollection<T_DMS_Ref_Prozesse> T_DMS_Ref_Prozesse { get; set; }
+        public virtual ICollection<T_DMS_Ref_QualitaetspruefungDateityp> T_DMS_Ref_QualitaetspruefungDateityp { get; set; }
+        public virtual ICollection<T_DMS_SYS_FilterTyp> T_DMS_SYS_FilterTyp { get; set; }
+        public virtual ICollection<T_DMS_SYS_FilterZeitraum> T_DMS_SYS_FilterZeitraum { get; set; }
+        public virtual ICollection<T_DMS_SYS_HistoryTyp> T_DMS_SYS_HistoryTyp { get; set; }
+        public virtual ICollection<T_IGM_Ref_GlasreinigungServiceLevel> T_IGM_Ref_GlasreinigungServiceLevel { get; set; }
+        public virtual ICollection<T_IGM_Ref_InnenreinigungServiceLevel> T_IGM_Ref_InnenreinigungServiceLevel { get; set; }
+        public virtual ICollection<T_IGM_Ref_Leistungsart> T_IGM_Ref_Leistungsart { get; set; }
+        public virtual ICollection<T_IGM_Ref_Oberflaeche> T_IGM_Ref_Oberflaeche { get; set; }
+        public virtual ICollection<T_IGM_Ref_OffertenTyp> T_IGM_Ref_OffertenTyp { get; set; }
+        public virtual ICollection<T_IGM_Ref_Raumgruppe> T_IGM_Ref_Raumgruppe { get; set; }
+        public virtual ICollection<T_MM_Ref_ServiceAnbieter> T_MM_Ref_ServiceAnbieter { get; set; }
+        public virtual ICollection<T_MM_Ref_Status> T_MM_Ref_Status { get; set; }
+        public virtual ICollection<T_MM_Ref_UmzugTyp> T_MM_Ref_UmzugTyp { get; set; }
+        public virtual ICollection<T_OV_Ref_BelegungArt> T_OV_Ref_BelegungArt { get; set; }
+        public virtual ICollection<T_OV_Ref_ObjektTyp> T_OV_Ref_ObjektTyp { get; set; }
+        public virtual ICollection<T_PM_Ref_ParkplatzBuchung> T_PM_Ref_ParkplatzBuchung { get; set; }
+        public virtual ICollection<T_POM_Ref_MittelwertGruppe> T_POM_Ref_MittelwertGruppe { get; set; }
+        public virtual ICollection<T_Ref_ValidDocuments> T_Ref_ValidDocuments { get; set; }
+        public virtual ICollection<T_Ref_ValidPictures> T_Ref_ValidPictures { get; set; }
+        public virtual ICollection<T_REM_Ref_AnzahlTag> T_REM_Ref_AnzahlTag { get; set; }
+        public virtual ICollection<T_REM_Ref_Arbeitsgang> T_REM_Ref_Arbeitsgang { get; set; }
+        public virtual ICollection<T_REM_Ref_Arbeitsgang_Leistung> T_REM_Ref_Arbeitsgang_Leistung { get; set; }
+        public virtual ICollection<T_REM_Ref_Ausbau> T_REM_Ref_Ausbau { get; set; }
+        public virtual ICollection<T_REM_Ref_Ausbau_Einheit> T_REM_Ref_Ausbau_Einheit { get; set; }
+        public virtual ICollection<T_REM_Ref_BB_Beschaffenheit> T_REM_Ref_BB_Beschaffenheit { get; set; }
+        public virtual ICollection<T_REM_Ref_Bodenbelag> T_REM_Ref_Bodenbelag { get; set; }
+        public virtual ICollection<T_REM_Ref_Intervall> T_REM_Ref_Intervall { get; set; }
+        public virtual ICollection<T_REM_Ref_MaschineGeraet> T_REM_Ref_MaschineGeraet { get; set; }
+        public virtual ICollection<T_REM_Ref_RaumName> T_REM_Ref_RaumName { get; set; }
+        public virtual ICollection<T_REM_Ref_Reinigungsart> T_REM_Ref_Reinigungsart { get; set; }
+        public virtual ICollection<T_REM_Ref_Tagesplan> T_REM_Ref_Tagesplan { get; set; }
+        public virtual ICollection<T_REM_Ref_TarifZeitnachweis> T_REM_Ref_TarifZeitnachweis { get; set; }
+        public virtual ICollection<T_REM_Ref_Vorlagen> T_REM_Ref_Vorlagen { get; set; }
+        public virtual ICollection<T_SYS_Ref_BackOfficeMenue> T_SYS_Ref_BackOfficeMenue { get; set; }
+        public virtual ICollection<T_SYS_Ref_BackOfficeSubMenue> T_SYS_Ref_BackOfficeSubMenue { get; set; }
+        public virtual ICollection<T_SYS_Ref_BelegungsTyp> T_SYS_Ref_BelegungsTyp { get; set; }
+        public virtual ICollection<T_SYS_Ref_Datentyp> T_SYS_Ref_Datentyp { get; set; }
+        public virtual ICollection<T_SYS_Ref_Language> T_SYS_Ref_Language { get; set; }
+        public virtual ICollection<T_SYS_Ref_Layerset> T_SYS_Ref_Layerset { get; set; }
+        public virtual ICollection<T_SYS_Ref_Monate> T_SYS_Ref_Monate { get; set; }
+        public virtual ICollection<T_SYS_Ref_ObjectMarked> T_SYS_Ref_ObjectMarked { get; set; }
+        public virtual ICollection<T_SYS_Ref_Tage> T_SYS_Ref_Tage { get; set; }
+        public virtual ICollection<T_SYS_Ref_Zeit> T_SYS_Ref_Zeit { get; set; }
+        public virtual ICollection<T_SYS_Ref_ZeitEinheiten> T_SYS_Ref_ZeitEinheiten { get; set; }
+        public virtual ICollection<T_TM_Ref_Abteilung> T_TM_Ref_Abteilung { get; set; }
+        public virtual ICollection<T_TM_Ref_Checkliste_Absatz> T_TM_Ref_Checkliste_Absatz { get; set; }
+        public virtual ICollection<T_TM_Ref_Checkliste_Checkpoints> T_TM_Ref_Checkliste_Checkpoints { get; set; }
+        public virtual ICollection<T_TM_Ref_Checkliste_Details> T_TM_Ref_Checkliste_Details { get; set; }
+        public virtual ICollection<T_TM_Ref_Checkliste> T_TM_Ref_Checkliste { get; set; }
+        public virtual ICollection<T_TM_Ref_Checkliste_Taetigkeit> T_TM_Ref_Checkliste_Taetigkeit { get; set; }
+        public virtual ICollection<T_TM_Ref_Checkliste_Wartung> T_TM_Ref_Checkliste_Wartung { get; set; }
+        public virtual ICollection<T_TM_Ref_EmailText> T_TM_Ref_EmailText { get; set; }
+        public virtual ICollection<T_TM_Ref_FilterAnzeige> T_TM_Ref_FilterAnzeige { get; set; }
+        public virtual ICollection<T_TM_Ref_Periode> T_TM_Ref_Periode { get; set; }
+        public virtual ICollection<T_TM_Ref_TaskArt> T_TM_Ref_TaskArt { get; set; }
+        public virtual ICollection<T_TM_Ref_TaskKategorie> T_TM_Ref_TaskKategorie { get; set; }
+        public virtual ICollection<T_TM_Ref_TaskPrio> T_TM_Ref_TaskPrio { get; set; }
+        public virtual ICollection<T_TM_Ref_TaskStatus> T_TM_Ref_TaskStatus { get; set; }
+        public virtual ICollection<T_TM_Ref_ZyklusPeriode> T_TM_Ref_ZyklusPeriode { get; set; }
+        public virtual ICollection<T_UM_Ref_Status> T_UM_Ref_Status { get; set; }
+        public virtual ICollection<T_UPS_Ref_Baukostenplan> T_UPS_Ref_Baukostenplan { get; set; }
+        public virtual ICollection<T_UPS_Ref_FilterPlanungsvariante> T_UPS_Ref_FilterPlanungsvariante { get; set; }
+        public virtual ICollection<T_UPS_Ref_Kontoplan> T_UPS_Ref_Kontoplan { get; set; }
+        public virtual ICollection<T_UW_Ref_Bereich> T_UW_Ref_Bereich { get; set; }
+        public virtual ICollection<T_UW_Ref_Einheit> T_UW_Ref_Einheit { get; set; }
+        public virtual ICollection<T_UW_Ref_Position> T_UW_Ref_Position { get; set; }
+        public virtual ICollection<T_VM_Ref_KostenPeriode> T_VM_Ref_KostenPeriode { get; set; }
+        public virtual ICollection<T_VM_Ref_Vertragspartei> T_VM_Ref_Vertragspartei { get; set; }
+        public virtual ICollection<T_VM_Ref_Vertragstyp> T_VM_Ref_Vertragstyp { get; set; }
+        public virtual ICollection<T_VM_Ref_Vertragszustaendigkeit> T_VM_Ref_Vertragszustaendigkeit { get; set; }
+        public virtual ICollection<T_VM_Vertraege> T_VM_Vertraege { get; set; }
+        public virtual ICollection<T_VWS_Ref_Auftragsart> T_VWS_Ref_Auftragsart { get; set; }
         public virtual ICollection<T_ZO_OV_Ref_ObjektText> T_ZO_OV_Ref_ObjektText { get; set; }
         public virtual ICollection<T_ZO_OV_Ref_ObjektText> T_ZO_OV_Ref_ObjektText1 { get; set; }
+        public virtual ICollection<T_ZO_REM_AP_Gebaeude_Ref_Raumpfleger> T_ZO_REM_AP_Gebaeude_Ref_Raumpfleger { get; set; }
     }
 }

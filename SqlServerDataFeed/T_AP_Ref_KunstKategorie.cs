@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_KunstKategorie
     {
         public System.Guid KKAT_UID { get; set; }
-        public int KKAT_MDT_ID { get; set; }
         public Nullable<int> KKAT_Code { get; set; }
         public string KKAT_Kurz_DE { get; set; }
         public string KKAT_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string KKAT_Lang_EN { get; set; }
         public int KKAT_Status { get; set; }
         public int KKAT_Sort { get; set; }
-        public Nullable<int> KKAT_StylizerFore { get; set; }
         public Nullable<int> KKAT_StylizerBack { get; set; }
         public Nullable<int> KKAT_StylizerPattern { get; set; }
         public Nullable<int> KKAT_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string KKAT_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

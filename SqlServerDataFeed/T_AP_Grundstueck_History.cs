@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Grundstueck_History
     {
         public System.Guid HIGRU_UID { get; set; }
-        public System.Guid HIGRU_GRU_UID { get; set; }
         public System.Guid HIGRU_Entry_UID { get; set; }
         public System.DateTime HIGRU_Datum { get; set; }
         public string HIGRU_User { get; set; }

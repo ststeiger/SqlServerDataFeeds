@@ -20,8 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid LD_UID { get; set; }
-        public int LD_MDT_ID { get; set; }
-        public Nullable<System.Guid> LD_LT_UID { get; set; }
         public string LD_Code { get; set; }
         public string LD_Kurz_DE { get; set; }
         public string LD_Kurz_FR { get; set; }
@@ -33,7 +31,6 @@ namespace SqlServerDataFeed
         public string LD_Lang_EN { get; set; }
         public int LD_Status { get; set; }
         public int LD_Sort { get; set; }
-        public Nullable<int> LD_StylizerFore { get; set; }
         public Nullable<int> LD_StylizerBack { get; set; }
         public Nullable<int> LD_StylizerPattern { get; set; }
         public Nullable<int> LD_StylizerLine { get; set; }
@@ -43,6 +40,7 @@ namespace SqlServerDataFeed
     
         public virtual T_AP_Ref_Landesteile T_AP_Ref_Landesteile { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AP_Ref_Region> T_AP_Ref_Region { get; set; }
     }
 }

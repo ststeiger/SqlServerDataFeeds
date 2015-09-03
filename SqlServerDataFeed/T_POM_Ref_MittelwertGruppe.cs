@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid MWG_UID { get; set; }
-        public int MWG_MDT_ID { get; set; }
         public string MWG_Code { get; set; }
         public Nullable<int> MWG_ReportKey { get; set; }
         public string MWG_Kurz_DE { get; set; }
@@ -33,7 +32,6 @@ namespace SqlServerDataFeed
         public string MWG_Lang_EN { get; set; }
         public int MWG_Status { get; set; }
         public int MWG_Sort { get; set; }
-        public Nullable<int> MWG_StylizerFore { get; set; }
         public Nullable<int> MWG_StylizerBack { get; set; }
         public Nullable<int> MWG_StylizerPattern { get; set; }
         public Nullable<int> MWG_StylizerLine { get; set; }
@@ -43,5 +41,6 @@ namespace SqlServerDataFeed
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual ICollection<T_POM_Mittelwert> T_POM_Mittelwert { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

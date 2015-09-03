@@ -33,13 +33,12 @@ namespace SqlServerDataFeed
         public int REMBB_Status { get; set; }
         public int REMBB_Sort { get; set; }
         public bool REMBB_IsDefault { get; set; }
-        public Nullable<int> REMBB_StylizerBack { get; set; }
         public Nullable<int> REMBB_StylizerFore { get; set; }
         public Nullable<int> REMBB_StylizerPattern { get; set; }
         public Nullable<int> REMBB_StylizerLine { get; set; }
-        public Nullable<System.Guid> REMBB_REMBS_UID { get; set; }
     
         public virtual T_REM_Ref_BB_Beschaffenheit T_REM_Ref_BB_Beschaffenheit { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Ausstattung_Kalk> T_ZO_REM_AP_Raum_Ausstattung_Kalk { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Ausstattung> T_ZO_REM_AP_Raum_Ausstattung { get; set; }
     }

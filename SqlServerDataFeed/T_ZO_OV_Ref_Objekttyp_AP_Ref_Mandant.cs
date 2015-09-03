@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_OV_Ref_Objekttyp_AP_Ref_Mandant
     {
         public System.Guid ZO_OBJTMDT_UID { get; set; }
-        public System.Guid ZO_OBJTMDT_OBJT_UID { get; set; }
-        public int ZO_OBJTMDT_MDT_ID { get; set; }
         public bool ZO_OBJTMDT_isSO { get; set; }
         public bool ZO_OBJTMDT_isGB { get; set; }
         public bool ZO_OBJTMDT_isGS { get; set; }

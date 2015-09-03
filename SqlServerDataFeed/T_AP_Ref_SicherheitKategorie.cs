@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_SicherheitKategorie
     {
         public System.Guid SKAT_UID { get; set; }
-        public int SKAT_MDT_ID { get; set; }
         public Nullable<int> SKAT_Code { get; set; }
         public string SKAT_Kurz_DE { get; set; }
         public string SKAT_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string SKAT_Lang_EN { get; set; }
         public int SKAT_Status { get; set; }
         public int SKAT_Sort { get; set; }
-        public Nullable<int> SKAT_StylizerFore { get; set; }
         public Nullable<int> SKAT_StylizerBack { get; set; }
         public Nullable<int> SKAT_StylizerPattern { get; set; }
         public Nullable<int> SKAT_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string SKAT_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

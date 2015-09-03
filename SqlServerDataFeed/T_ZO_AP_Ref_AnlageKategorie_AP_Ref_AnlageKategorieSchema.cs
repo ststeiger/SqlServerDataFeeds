@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Ref_AnlageKategorie_AP_Ref_AnlageKategorieSchema
     {
         public System.Guid ZO_AKAKS_UID { get; set; }
-        public Nullable<System.Guid> ZO_AKAKS_AK_UID { get; set; }
-        public System.Guid ZO_AKAKS_AKS_UID { get; set; }
         public int ZO_AKAKS_Status { get; set; }
     
         public virtual T_AP_Ref_AnlageKategorie T_AP_Ref_AnlageKategorie { get; set; }

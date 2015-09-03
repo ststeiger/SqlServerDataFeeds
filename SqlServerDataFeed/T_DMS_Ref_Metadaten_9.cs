@@ -26,12 +26,13 @@ namespace SqlServerDataFeed
         public string MD9_Lang_EN { get; set; }
         public int MD9_Status { get; set; }
         public int MD9_Sort { get; set; }
-        public Nullable<int> MD9_StylizerFore { get; set; }
         public Nullable<int> MD9_StylizerBack { get; set; }
         public Nullable<int> MD9_StylizerPattern { get; set; }
         public Nullable<int> MD9_StylizerLine { get; set; }
         public bool MD9_IsDefault { get; set; }
         public Nullable<System.DateTime> MD9_DatumMut { get; set; }
         public string MD9_DatumUser { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TCLWA_UID { get; set; }
-        public int TCLWA_MDT_ID { get; set; }
         public string TCLWA_Code { get; set; }
         public string TCLWA_Kurz_DE { get; set; }
         public string TCLWA_Kurz_FR { get; set; }
@@ -32,16 +31,13 @@ namespace SqlServerDataFeed
         public string TCLWA_Lang_EN { get; set; }
         public int TCLWA_Status { get; set; }
         public int TCLWA_Sort { get; set; }
-        public Nullable<int> TCLWA_StylizerFore { get; set; }
         public Nullable<int> TCLWA_StylizerBack { get; set; }
         public Nullable<int> TCLWA_StylizerPattern { get; set; }
         public Nullable<int> TCLWA_StylizerLine { get; set; }
         public bool TCLWA_IsDefault { get; set; }
-        public Nullable<System.Guid> TCLWA_TCL_UID { get; set; }
-        public Nullable<System.Guid> TCLWA_TCLA_UID { get; set; }
-        public Nullable<System.Guid> TCLWA_TPL_UID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual T_TM_Ref_Checkliste T_TM_Ref_Checkliste { get; set; }
         public virtual T_TM_Ref_Checkliste_Absatz T_TM_Ref_Checkliste_Absatz { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste_Details> T_TM_Ref_Checkliste_Details { get; set; }

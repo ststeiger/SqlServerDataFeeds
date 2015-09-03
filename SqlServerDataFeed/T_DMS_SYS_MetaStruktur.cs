@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_DMS_SYS_MetaStruktur
     {
         public System.Guid MDS_UID { get; set; }
-        public Nullable<System.Guid> MDS_DT_UID { get; set; }
         public Nullable<int> MDS_Position { get; set; }
         public string MDS_Name_de { get; set; }
         public string MDS_Name_fr { get; set; }

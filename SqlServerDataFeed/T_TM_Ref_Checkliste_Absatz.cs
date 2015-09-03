@@ -23,7 +23,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TCLA_UID { get; set; }
-        public int TCLA_MDT_ID { get; set; }
         public Nullable<int> TCLA_Code { get; set; }
         public string TCLA_Kurz_DE { get; set; }
         public string TCLA_Kurz_FR { get; set; }
@@ -35,16 +34,15 @@ namespace SqlServerDataFeed
         public string TCLA_Lang_EN { get; set; }
         public int TCLA_Status { get; set; }
         public int TCLA_Sort { get; set; }
-        public Nullable<int> TCLA_StylizerFore { get; set; }
         public Nullable<int> TCLA_StylizerBack { get; set; }
         public Nullable<int> TCLA_StylizerPattern { get; set; }
         public Nullable<int> TCLA_StylizerLine { get; set; }
         public bool TCLA_IsDefault { get; set; }
         public Nullable<System.DateTime> TCLA_DatumMut { get; set; }
         public string TCLA_DatumUser { get; set; }
-        public Nullable<System.Guid> TCLA_TCL_UID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual T_TM_Ref_Checkliste T_TM_Ref_Checkliste { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste_Checkpoints> T_TM_Ref_Checkliste_Checkpoints { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste_Details> T_TM_Ref_Checkliste_Details { get; set; }

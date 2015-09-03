@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Gebaeude_History
     {
         public System.Guid HIGB_UID { get; set; }
-        public System.Guid HIGB_GB_UID { get; set; }
         public System.Guid HIGB_Entry_UID { get; set; }
         public System.DateTime HIGB_Datum { get; set; }
         public string HIGB_User { get; set; }

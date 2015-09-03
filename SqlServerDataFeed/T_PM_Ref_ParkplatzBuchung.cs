@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_PM_Ref_ParkplatzBuchung
     {
         public System.Guid PB_UID { get; set; }
-        public int PB_MDT_ID { get; set; }
         public Nullable<int> PB_Code { get; set; }
         public string PB_Kurz_DE { get; set; }
         public string PB_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string PB_Lang_EN { get; set; }
         public int PB_Status { get; set; }
         public int PB_Sort { get; set; }
-        public Nullable<int> PB_StylizerFore { get; set; }
         public Nullable<int> PB_StylizerBack { get; set; }
         public Nullable<int> PB_StylizerPattern { get; set; }
         public Nullable<int> PB_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string PB_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

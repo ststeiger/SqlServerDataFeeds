@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Raum_AP_Ref_Nutzungsart
     {
         public System.Guid ZO_RMNA_UID { get; set; }
-        public Nullable<System.Guid> ZO_RMNA_RM_UID { get; set; }
-        public Nullable<System.Guid> ZO_RMNA_NA_UID { get; set; }
         public System.DateTime ZO_RMNA_DatumVon { get; set; }
         public System.DateTime ZO_RMNA_DatumBis { get; set; }
         public int ZO_RMNA_Status { get; set; }

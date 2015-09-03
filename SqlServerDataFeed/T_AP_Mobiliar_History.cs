@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Mobiliar_History
     {
         public System.Guid HIMO_UID { get; set; }
-        public System.Guid HIMO_MO_UID { get; set; }
         public System.Guid HIMO_Entry_UID { get; set; }
         public System.DateTime HIMO_Datum { get; set; }
         public string HIMO_User { get; set; }

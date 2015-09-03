@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid SMDT_UID { get; set; }
-        public int SMDT_MDT_ID { get; set; }
         public Nullable<int> SMDT_Code { get; set; }
         public string SMDT_Kurz_DE { get; set; }
         public string SMDT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string SMDT_Lang_EN { get; set; }
         public int SMDT_Status { get; set; }
         public int SMDT_Sort { get; set; }
-        public Nullable<int> SMDT_StylizerFore { get; set; }
         public Nullable<int> SMDT_StylizerBack { get; set; }
         public Nullable<int> SMDT_StylizerPattern { get; set; }
         public Nullable<int> SMDT_StylizerLine { get; set; }
@@ -41,6 +39,7 @@ namespace SqlServerDataFeed
         public string SMDT_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AP_Zylinder> T_AP_Zylinder { get; set; }
     }
 }

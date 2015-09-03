@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AKBT_UID { get; set; }
-        public int AKBT_MDT_ID { get; set; }
         public Nullable<int> AKBT_Code { get; set; }
         public string AKBT_Kurz_DE { get; set; }
         public string AKBT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string AKBT_Lang_EN { get; set; }
         public int AKBT_Status { get; set; }
         public int AKBT_Sort { get; set; }
-        public Nullable<int> AKBT_StylizerFore { get; set; }
         public Nullable<int> AKBT_StylizerBack { get; set; }
         public Nullable<int> AKBT_StylizerPattern { get; set; }
         public Nullable<int> AKBT_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Anschluss> T_AP_Anschluss { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

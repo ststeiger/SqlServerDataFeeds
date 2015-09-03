@@ -14,6 +14,11 @@ namespace SqlServerDataFeed
     
     public partial class T_SYS_Language_Forms
     {
+        public T_SYS_Language_Forms()
+        {
+            this.T_ZO_SYS_Language_Forms = new HashSet<T_ZO_SYS_Language_Forms>();
+        }
+    
         public System.Guid LANG_UID { get; set; }
         public string LANG_Modul { get; set; }
         public string LANG_Object { get; set; }
@@ -32,5 +37,7 @@ namespace SqlServerDataFeed
         public bool LANG_IsValidity { get; set; }
         public Nullable<System.DateTime> LANG_ErfDate { get; set; }
         public int LANG_Status { get; set; }
+    
+        public virtual ICollection<T_ZO_SYS_Language_Forms> T_ZO_SYS_Language_Forms { get; set; }
     }
 }

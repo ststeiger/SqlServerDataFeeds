@@ -26,7 +26,6 @@ namespace SqlServerDataFeed
         public int ETC_Status { get; set; }
         public int ETC_Sort { get; set; }
         public bool ETC_IsDefault { get; set; }
-        public Nullable<int> ETC_StylizerBack { get; set; }
         public Nullable<int> ETC_StylizerFore { get; set; }
         public Nullable<int> ETC_StylizerPattern { get; set; }
         public int ETC_MDT_ID { get; set; }
@@ -45,5 +44,6 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_AP_EmailVersand> T_AP_EmailVersand { get; set; }
         public virtual ICollection<T_AP_Ref_Email_Placeholder> T_AP_Ref_Email_Placeholder { get; set; }
         public virtual ICollection<T_AP_Ref_Emailtext> T_AP_Ref_Emailtext { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

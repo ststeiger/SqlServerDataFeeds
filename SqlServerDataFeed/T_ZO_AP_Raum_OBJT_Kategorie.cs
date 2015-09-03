@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Raum_OBJT_Kategorie
     {
         public System.Guid ZO_RMOBJTKAT_UID { get; set; }
-        public System.Guid ZO_RMOBJTKAT_RM_UID { get; set; }
         public System.Guid ZO_RMOBJTKAT_OBJTKAT_UID { get; set; }
         public int ZO_RMOBJTKAT_Status { get; set; }
         public string ZO_RMOBJTKAT_Nr { get; set; }

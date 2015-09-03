@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Geschoss_History
     {
         public System.Guid HIGS_UID { get; set; }
-        public System.Guid HIGS_GS_UID { get; set; }
         public System.Guid HIGS_Entry_UID { get; set; }
         public System.DateTime HIGS_Datum { get; set; }
         public string HIGS_User { get; set; }

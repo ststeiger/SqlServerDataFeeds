@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid APK_UID { get; set; }
-        public int APK_MDT_ID { get; set; }
         public Nullable<int> APK_Code { get; set; }
         public string APK_Kurz_DE { get; set; }
         public string APK_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string APK_Lang_EN { get; set; }
         public int APK_Status { get; set; }
         public int APK_Sort { get; set; }
-        public Nullable<int> APK_StylizerFore { get; set; }
         public Nullable<int> APK_StylizerBack { get; set; }
         public Nullable<int> APK_StylizerPattern { get; set; }
         public Nullable<int> APK_StylizerLine { get; set; }
@@ -44,6 +42,7 @@ namespace SqlServerDataFeed
         public bool APK_Occupied { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_AP_Ref_Arbeitsplatzkategorie_AP_Ref_MobiliarBibliothek> T_ZO_AP_Ref_Arbeitsplatzkategorie_AP_Ref_MobiliarBibliothek { get; set; }
     }
 }

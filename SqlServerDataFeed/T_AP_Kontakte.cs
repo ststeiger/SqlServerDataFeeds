@@ -40,10 +40,6 @@ namespace SqlServerDataFeed
     
         public System.Guid KT_UID { get; set; }
         public int KT_MDT_ID { get; set; }
-        public Nullable<System.Guid> KT_KOE_UID { get; set; }
-        public Nullable<System.Guid> KT_KST_UID { get; set; }
-        public Nullable<System.Guid> KT_KG_UID { get; set; }
-        public Nullable<System.Guid> KT_PK_UID { get; set; }
         public string KT_Nummer { get; set; }
         public string KT_Name { get; set; }
         public string KT_Vorname { get; set; }
@@ -73,7 +69,6 @@ namespace SqlServerDataFeed
         public string KT_Arbeitsgeber { get; set; }
         public string KT_Funktionsstufe { get; set; }
         public string KT_AHV_Nummer { get; set; }
-        public Nullable<System.Guid> KT_MS_UID { get; set; }
         public string KT_Strasse { get; set; }
         public string KT_Adresszusatz { get; set; }
         public string KT_PLZ { get; set; }

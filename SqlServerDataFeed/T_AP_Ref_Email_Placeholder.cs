@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_Email_Placeholder
     {
         public System.Guid EP_UID { get; set; }
-        public System.Guid EP_ETC_UID { get; set; }
         public string EP_Code { get; set; }
         public int EP_Status { get; set; }
         public int EP_Sort { get; set; }

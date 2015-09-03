@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_SYS_Ref_ObjectMarked
     {
         public System.Guid OM_UID { get; set; }
-        public int OM_MDT_ID { get; set; }
         public Nullable<int> OM_Code { get; set; }
         public string OM_Kurz_DE { get; set; }
         public string OM_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string OM_Lang_EN { get; set; }
         public int OM_Status { get; set; }
         public int OM_Sort { get; set; }
-        public Nullable<int> OM_StylizerFore { get; set; }
         public Nullable<int> OM_StylizerBack { get; set; }
         public Nullable<int> OM_StylizerPattern { get; set; }
         public Nullable<int> OM_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string OM_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

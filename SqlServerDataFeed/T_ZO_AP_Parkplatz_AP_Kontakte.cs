@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Parkplatz_AP_Kontakte
     {
         public System.Guid ZO_PPKT_UID { get; set; }
-        public System.Guid ZO_PPKT_PP_UID { get; set; }
-        public System.Guid ZO_PPKT_KT_UID { get; set; }
         public System.DateTime ZO_PPKT_DatumVon { get; set; }
         public System.DateTime ZO_PPKT_DatumBis { get; set; }
         public int ZO_PPKT_Status { get; set; }

@@ -17,15 +17,15 @@ namespace SqlServerDataFeed
         public T_AP_Ref_Nutzungsart()
         {
             this.T_AP_Raum = new HashSet<T_AP_Raum>();
+            this.T_AP_Raum1 = new HashSet<T_AP_Raum>();
             this.T_AP_Ref_Nutzungsart_Raiffeisen = new HashSet<T_AP_Ref_Nutzungsart_Raiffeisen>();
             this.T_REM_Ref_Vorlagen = new HashSet<T_REM_Ref_Vorlagen>();
             this.T_ZO_AP_Raum_AP_Ref_Nutzungsart = new HashSet<T_ZO_AP_Raum_AP_Ref_Nutzungsart>();
+            this.T_ZO_IGM_Reinigungsfaktor = new HashSet<T_ZO_IGM_Reinigungsfaktor>();
             this.T_ZO_REM_AP_Raum_Raumgruppe = new HashSet<T_ZO_REM_AP_Raum_Raumgruppe>();
         }
     
         public System.Guid NA_UID { get; set; }
-        public int NA_MDT_ID { get; set; }
-        public System.Guid NA_NAG_UID { get; set; }
         public string NA_Code { get; set; }
         public string NA_Kurz_DE { get; set; }
         public string NA_Kurz_FR { get; set; }
@@ -37,7 +37,6 @@ namespace SqlServerDataFeed
         public string NA_Lang_EN { get; set; }
         public int NA_Status { get; set; }
         public int NA_Sort { get; set; }
-        public Nullable<int> NA_StylizerFore { get; set; }
         public Nullable<int> NA_StylizerBack { get; set; }
         public Nullable<int> NA_StylizerPattern { get; set; }
         public Nullable<int> NA_StylizerLine { get; set; }
@@ -50,13 +49,17 @@ namespace SqlServerDataFeed
         public Nullable<bool> NA_canBook { get; set; }
         public string NA_Bemerkung { get; set; }
         public bool NA_IsNetto { get; set; }
+        public Nullable<decimal> NA_UmrechnungsFaktor { get; set; }
     
         public virtual ICollection<T_AP_Raum> T_AP_Raum { get; set; }
+        public virtual ICollection<T_AP_Raum> T_AP_Raum1 { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual ICollection<T_AP_Ref_Nutzungsart_Raiffeisen> T_AP_Ref_Nutzungsart_Raiffeisen { get; set; }
         public virtual T_AP_Ref_NutzungsartGruppe T_AP_Ref_NutzungsartGruppe { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_REM_Ref_Vorlagen> T_REM_Ref_Vorlagen { get; set; }
         public virtual ICollection<T_ZO_AP_Raum_AP_Ref_Nutzungsart> T_ZO_AP_Raum_AP_Ref_Nutzungsart { get; set; }
+        public virtual ICollection<T_ZO_IGM_Reinigungsfaktor> T_ZO_IGM_Reinigungsfaktor { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Raumgruppe> T_ZO_REM_AP_Raum_Raumgruppe { get; set; }
     }
 }

@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Arbeitsplatz_Reservation
     {
         public System.Guid ZO_APRES_UID { get; set; }
-        public System.Guid ZO_APRES_AP_UID { get; set; }
-        public int ZO_APRES_BE_ID { get; set; }
         public System.DateTime ZO_APRES_DatumVon { get; set; }
         public System.DateTime ZO_APRES_DatumBis { get; set; }
         public System.DateTime ZO_APRES_Created { get; set; }

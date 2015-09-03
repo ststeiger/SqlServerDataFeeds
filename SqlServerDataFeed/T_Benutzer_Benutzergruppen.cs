@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_Benutzer_Benutzergruppen
     {
         public System.Guid BEBG_ID { get; set; }
-        public Nullable<int> BEBG_BE { get; set; }
         public Nullable<int> BEBG_BG { get; set; }
     
         public virtual T_Benutzer T_Benutzer { get; set; }

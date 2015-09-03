@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Anschluss_History
     {
         public System.Guid HIAN_UID { get; set; }
-        public System.Guid HIAN_AN_UID { get; set; }
         public System.Guid HIAN_Entry_UID { get; set; }
         public System.DateTime HIAN_Datum { get; set; }
         public string HIAN_User { get; set; }

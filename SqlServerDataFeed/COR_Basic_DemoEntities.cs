@@ -11,9 +11,7 @@ namespace SqlServerDataFeed
     {
         public COR_Basic_DemoEntities(string connectionString)
             : base(connectionString)
-        {
-
-        }
+        { } 
     }
 
 }

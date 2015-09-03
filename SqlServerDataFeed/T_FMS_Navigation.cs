@@ -23,7 +23,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid NA_UID { get; set; }
-        public Nullable<System.Guid> NA_NA_UID { get; set; }
         public Nullable<System.Guid> NA_FT_UID { get; set; }
         public string NA_Color { get; set; }
         public string NA_Frame { get; set; }

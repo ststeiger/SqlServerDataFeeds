@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid OVBO_UID { get; set; }
-        public System.Guid OVBO_OBJT_UID { get; set; }
         public string OVBO_Feld { get; set; }
         public string OVBO_DatentypFeld { get; set; }
         public bool OVBO_IsML { get; set; }

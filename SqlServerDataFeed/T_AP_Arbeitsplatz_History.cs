@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Arbeitsplatz_History
     {
         public System.Guid HIAP_UID { get; set; }
-        public System.Guid HIAP_AP_UID { get; set; }
         public System.Guid HIAP_Entry_UID { get; set; }
         public System.DateTime HIAP_Datum { get; set; }
         public string HIAP_User { get; set; }

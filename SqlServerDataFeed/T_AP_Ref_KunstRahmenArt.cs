@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid KR_UID { get; set; }
-        public int KR_MDT_ID { get; set; }
         public Nullable<int> KR_Code { get; set; }
         public string KR_Kurz_DE { get; set; }
         public string KR_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string KR_Lang_EN { get; set; }
         public int KR_Status { get; set; }
         public int KR_Sort { get; set; }
-        public Nullable<int> KR_StylizerFore { get; set; }
         public Nullable<int> KR_StylizerBack { get; set; }
         public Nullable<int> KR_StylizerPattern { get; set; }
         public Nullable<int> KR_StylizerLine { get; set; }
@@ -43,5 +41,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Kunst> T_AP_Kunst { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

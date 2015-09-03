@@ -19,7 +19,6 @@ namespace SqlServerDataFeed
         public int VP_Status { get; set; }
         public int VP_Sort { get; set; }
         public bool VP_IsDefault { get; set; }
-        public Nullable<int> VP_StylizerBack { get; set; }
         public Nullable<int> VP_StylizerFore { get; set; }
         public Nullable<int> VP_StylizerPattern { get; set; }
         public int VP_MDT_ID { get; set; }
@@ -32,5 +31,7 @@ namespace SqlServerDataFeed
         public string VP_Lang_it { get; set; }
         public string VP_Lang_en { get; set; }
         public Nullable<int> VP_StylizerLine { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

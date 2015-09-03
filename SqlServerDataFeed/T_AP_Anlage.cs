@@ -17,6 +17,7 @@ namespace SqlServerDataFeed
         public T_AP_Anlage()
         {
             this.T_AP_Anlage_History = new HashSet<T_AP_Anlage_History>();
+            this.T_SYS_Anlagerechte = new HashSet<T_SYS_Anlagerechte>();
             this.T_TM_Tasks_Planung = new HashSet<T_TM_Tasks_Planung>();
             this.T_TM_Tasks = new HashSet<T_TM_Tasks>();
             this.T_UPS_Rechnungskontrolle = new HashSet<T_UPS_Rechnungskontrolle>();
@@ -24,11 +25,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AL_UID { get; set; }
-        public int AL_MDT_ID { get; set; }
-        public Nullable<System.Guid> AL_VAR_UID { get; set; }
-        public Nullable<System.Guid> AL_RM_UID { get; set; }
-        public Nullable<System.Guid> AL_ADR_UID { get; set; }
-        public System.Guid AL_AK_UID { get; set; }
         public string AL_ApertureKey { get; set; }
         public string AL_Nr { get; set; }
         public string AL_Hersteller { get; set; }
@@ -69,9 +65,6 @@ namespace SqlServerDataFeed
         public Nullable<System.Guid> AL_DETAIL_ABF_UID { get; set; }
         public Nullable<double> AL_DETAIL_Abluft { get; set; }
         public Nullable<double> AL_DETAIL_Wasser { get; set; }
-        public Nullable<System.Guid> AL_SO_UID { get; set; }
-        public Nullable<System.Guid> AL_GB_UID { get; set; }
-        public Nullable<System.Guid> AL_GS_UID { get; set; }
         public Nullable<double> AL_DETAIL_Uwert_Fenster { get; set; }
         public Nullable<double> AL_DETAIL_Uwert_Aussenwand { get; set; }
         public Nullable<double> AL_DETAIL_Uwert_Dach { get; set; }
@@ -84,7 +77,6 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> AL_GarantieBis { get; set; }
         public int AL_Lebensdauer { get; set; }
         public int AL_Anschaffungspreis { get; set; }
-        public Nullable<System.Guid> AL_AKV_UID { get; set; }
         public int AL_BE_ID { get; set; }
         public bool AL_IsPraeventiv { get; set; }
         public bool AL_IsInstandhaltung { get; set; }
@@ -102,6 +94,7 @@ namespace SqlServerDataFeed
         public virtual T_AP_Standort T_AP_Standort { get; set; }
         public virtual T_AV_Adressen T_AV_Adressen { get; set; }
         public virtual T_VAR_Variante T_VAR_Variante { get; set; }
+        public virtual ICollection<T_SYS_Anlagerechte> T_SYS_Anlagerechte { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
         public virtual ICollection<T_UPS_Rechnungskontrolle> T_UPS_Rechnungskontrolle { get; set; }

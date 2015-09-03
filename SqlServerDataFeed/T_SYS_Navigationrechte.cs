@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         public Nullable<System.Guid> NAR_NA_UID { get; set; }
         public bool NAR_IsRead { get; set; }
         public int NAR_Status { get; set; }
-        public int NAR_MDT_ID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
     }

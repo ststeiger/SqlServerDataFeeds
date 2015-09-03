@@ -27,9 +27,10 @@ namespace SqlServerDataFeed
         public int REMTP_Status { get; set; }
         public int REMTP_Sort { get; set; }
         public bool REMTP_IsDefault { get; set; }
-        public Nullable<int> REMTP_StylizerBack { get; set; }
         public Nullable<int> REMTP_StylizerFore { get; set; }
         public Nullable<int> REMTP_StylizerPattern { get; set; }
         public Nullable<int> REMTP_StylizerLine { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

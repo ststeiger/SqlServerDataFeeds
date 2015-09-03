@@ -25,45 +25,15 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TPL_UID { get; set; }
-        public int TPL_MDT_ID { get; set; }
-        public Nullable<System.Guid> TPL_OBJT_UID { get; set; }
-        public Nullable<System.Guid> TPL_TART_UID { get; set; }
-        public Nullable<System.Guid> TPL_ADR_UID_zustaendig { get; set; }
         public string TPL_Beschreibung { get; set; }
         public Nullable<System.DateTime> TPL_PlanungVon { get; set; }
         public Nullable<System.DateTime> TPL_PlanungBis { get; set; }
         public int TPL_Zyklus { get; set; }
-        public Nullable<System.Guid> TPL_ZYP_UID { get; set; }
         public string TPL_Bemerkung { get; set; }
         public Nullable<System.DateTime> TPL_MutDate { get; set; }
         public string TPL_MutUser { get; set; }
         public int TPL_Status { get; set; }
-        public Nullable<System.Guid> TPL_SO_UID { get; set; }
-        public Nullable<System.Guid> TPL_GB_UID { get; set; }
-        public Nullable<System.Guid> TPL_TK_UID { get; set; }
-        public Nullable<System.Guid> TPL_GS_UID { get; set; }
-        public Nullable<System.Guid> TPL_RM_UID { get; set; }
-        public Nullable<System.Guid> TPL_TR_UID { get; set; }
-        public Nullable<System.Guid> TPL_AL_UID { get; set; }
-        public Nullable<System.Guid> TPL_KU_UID { get; set; }
-        public Nullable<System.Guid> TPL_MO_UID { get; set; }
-        public Nullable<System.Guid> TPL_PP_UID { get; set; }
-        public Nullable<System.Guid> TPL_AP_UID { get; set; }
-        public Nullable<System.Guid> TPL_SH_UID { get; set; }
-        public Nullable<System.Guid> TPL_ADR_UID { get; set; }
-        public Nullable<System.Guid> TPL_VTR_UID { get; set; }
-        public Nullable<System.Guid> TPL_KT_UID { get; set; }
-        public Nullable<int> TPL_BE_ID_erfasser { get; set; }
-        public Nullable<int> TPL_BE_ID_verantwortlich { get; set; }
-        public Nullable<System.Guid> TPL_DO_UID { get; set; }
-        public Nullable<System.Guid> TPL_IN_UID { get; set; }
-        public Nullable<System.Guid> TPL_KM_UID { get; set; }
-        public Nullable<System.Guid> TPL_TCL_UID { get; set; }
-        public Nullable<System.Guid> TPL_AO_UID { get; set; }
-        public Nullable<System.Guid> TPL_ZYL_UID { get; set; }
-        public Nullable<System.Guid> TPL_SLG_UID { get; set; }
         public int TPL_Vorwarnzeit { get; set; }
-        public Nullable<System.Guid> TPL_ZYP_Vorwarnzeit_UID { get; set; }
         public bool TPL_IsPeriodisch { get; set; }
         public Nullable<System.Guid> TPL_PER_UID { get; set; }
         public int TPL_Dauer { get; set; }
@@ -76,14 +46,13 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> TPL_Terminierung_Erstmals { get; set; }
         public int TPL_Terminierung_Zyklus { get; set; }
         public Nullable<System.Guid> TPL_Terminierung_ZYP_UID { get; set; }
-        public Nullable<System.Guid> TPL_ZN_UID { get; set; }
         public Nullable<int> TPL_Sort { get; set; }
-        public Nullable<System.Guid> TPL_ABT_UID { get; set; }
     
         public virtual T_AP_Anlage T_AP_Anlage { get; set; }
         public virtual T_AP_Arbeitsplatz T_AP_Arbeitsplatz { get; set; }
         public virtual T_AP_Aussenobjekt T_AP_Aussenobjekt { get; set; }
         public virtual T_AP_Dose T_AP_Dose { get; set; }
+        public virtual T_AP_Fahrzeug T_AP_Fahrzeug { get; set; }
         public virtual T_AP_Gebaeude T_AP_Gebaeude { get; set; }
         public virtual T_AP_Geschoss T_AP_Geschoss { get; set; }
         public virtual T_AP_Informatik T_AP_Informatik { get; set; }
@@ -105,6 +74,7 @@ namespace SqlServerDataFeed
         public virtual T_AV_Adressen T_AV_Adressen1 { get; set; }
         public virtual T_Benutzer T_Benutzer { get; set; }
         public virtual T_Benutzer T_Benutzer1 { get; set; }
+        public virtual T_Benutzergruppen T_Benutzergruppen { get; set; }
         public virtual T_OV_Ref_ObjektTyp T_OV_Ref_ObjektTyp { get; set; }
         public virtual T_TM_Ref_Abteilung T_TM_Ref_Abteilung { get; set; }
         public virtual T_TM_Ref_Checkliste T_TM_Ref_Checkliste { get; set; }

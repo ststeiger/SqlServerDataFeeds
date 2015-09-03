@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Zylinder_History
     {
         public System.Guid HIZYL_UID { get; set; }
-        public System.Guid HIZYL_ZYL_UID { get; set; }
         public System.Guid HIZYL_Entry_UID { get; set; }
         public System.DateTime HIZYL_Datum { get; set; }
         public string HIZYL_User { get; set; }

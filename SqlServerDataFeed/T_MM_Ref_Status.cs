@@ -34,13 +34,13 @@ namespace SqlServerDataFeed
         public int MMST_Status { get; set; }
         public int MMST_Sort { get; set; }
         public bool MMST_IsDefault { get; set; }
-        public Nullable<int> MMST_StylizerBack { get; set; }
         public Nullable<int> MMST_StylizerFore { get; set; }
         public Nullable<int> MMST_StylizerPattern { get; set; }
         public Nullable<int> MMST_StylizerLine { get; set; }
         public int MMST_MDT_ID { get; set; }
     
         public virtual ICollection<T_MM_Antrag> T_MM_Antrag { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_MM_Umzug_Bestand> T_MM_Umzug_Bestand { get; set; }
         public virtual ICollection<T_MM_Umzug> T_MM_Umzug { get; set; }
     }

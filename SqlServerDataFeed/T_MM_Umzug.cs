@@ -21,14 +21,9 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid MMU_UID { get; set; }
-        public System.Guid MMU_MMA_UID { get; set; }
-        public System.Guid MMU_KT_UID { get; set; }
         public string MMU_UmzugID { get; set; }
-        public System.Guid MMU_MMST_UID { get; set; }
         public Nullable<System.DateTime> MMU_UmzugDatum { get; set; }
         public int MMU_UmzugKartons { get; set; }
-        public Nullable<System.Guid> MMU_AP_UID_Alt { get; set; }
-        public Nullable<System.Guid> MMU_AP_UID_Neu { get; set; }
         public int MMU_Status { get; set; }
         public Nullable<System.DateTime> MMU_Datum_Erstellung { get; set; }
         public Nullable<System.DateTime> MMU_Datum_Aenderung { get; set; }

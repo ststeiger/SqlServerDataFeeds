@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Informatik_History
     {
         public System.Guid HIIN_UID { get; set; }
-        public System.Guid HIIN_IN_UID { get; set; }
         public System.Guid HIIN_Entry_UID { get; set; }
         public System.DateTime HIIN_Datum { get; set; }
         public string HIIN_User { get; set; }

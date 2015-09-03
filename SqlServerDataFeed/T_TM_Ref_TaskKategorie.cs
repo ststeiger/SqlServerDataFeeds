@@ -21,7 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TKAT_UID { get; set; }
-        public int TKAT_MDT_ID { get; set; }
         public Nullable<int> TKAT_Code { get; set; }
         public string TKAT_Kurz_DE { get; set; }
         public string TKAT_Kurz_FR { get; set; }
@@ -33,7 +32,6 @@ namespace SqlServerDataFeed
         public string TKAT_Lang_EN { get; set; }
         public int TKAT_Status { get; set; }
         public int TKAT_Sort { get; set; }
-        public Nullable<int> TKAT_StylizerFore { get; set; }
         public Nullable<int> TKAT_StylizerBack { get; set; }
         public Nullable<int> TKAT_StylizerPattern { get; set; }
         public Nullable<int> TKAT_StylizerLine { get; set; }
@@ -42,6 +40,7 @@ namespace SqlServerDataFeed
         public string TKAT_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste> T_TM_Ref_Checkliste { get; set; }
         public virtual ICollection<T_TM_Ref_TaskArt> T_TM_Ref_TaskArt { get; set; }
     }

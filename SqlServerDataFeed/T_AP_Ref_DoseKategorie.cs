@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid DKAT_UID { get; set; }
-        public int DKAT_MDT_ID { get; set; }
         public Nullable<int> DKAT_Code { get; set; }
         public string DKAT_Kurz_DE { get; set; }
         public string DKAT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string DKAT_Lang_EN { get; set; }
         public int DKAT_Status { get; set; }
         public int DKAT_Sort { get; set; }
-        public Nullable<int> DKAT_StylizerFore { get; set; }
         public Nullable<int> DKAT_StylizerBack { get; set; }
         public Nullable<int> DKAT_StylizerPattern { get; set; }
         public Nullable<int> DKAT_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Dose> T_AP_Dose { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

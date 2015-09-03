@@ -16,10 +16,8 @@ namespace SqlServerDataFeed
     {
         public System.Guid REGR_UID { get; set; }
         public int REGR_GRANTEE_ID { get; set; }
-        public Nullable<System.Guid> REGR_REG_UID { get; set; }
         public bool REGR_IsRead { get; set; }
         public int REGR_Status { get; set; }
-        public int REGR_MDT_ID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual T_SYS_Ref_Register T_SYS_Ref_Register { get; set; }

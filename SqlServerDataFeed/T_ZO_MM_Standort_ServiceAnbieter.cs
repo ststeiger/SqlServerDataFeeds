@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_MM_Standort_ServiceAnbieter
     {
         public System.Guid ZO_SOMMSA_UID { get; set; }
-        public Nullable<System.Guid> ZO_SOMMSA_SO_UID { get; set; }
-        public Nullable<System.Guid> ZO_SOMMSA_MMSA_UID { get; set; }
         public int ZO_SOMMSA_Status { get; set; }
     
         public virtual T_AP_Standort T_AP_Standort { get; set; }

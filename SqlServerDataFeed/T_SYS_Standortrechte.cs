@@ -15,17 +15,15 @@ namespace SqlServerDataFeed
     public partial class T_SYS_Standortrechte
     {
         public System.Guid SOR_UID { get; set; }
-        public int SOR_GRANTEE_ID { get; set; }
         public string SOR_GRANTEE { get; set; }
-        public Nullable<System.Guid> SOR_SO_UID { get; set; }
         public bool SOR_IsRead { get; set; }
         public bool SOR_IsWrite { get; set; }
         public bool SOR_IsInsert { get; set; }
         public bool SOR_IsDelete { get; set; }
         public int SOR_Status { get; set; }
-        public int SOR_MDT_ID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual T_AP_Standort T_AP_Standort { get; set; }
+        public virtual T_Benutzergruppen T_Benutzergruppen { get; set; }
     }
 }

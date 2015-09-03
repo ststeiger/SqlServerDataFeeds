@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Ref_Arbeitsplatzkategorie_AP_Ref_MobiliarBibliothek
     {
         public System.Guid ZO_APKMB_UID { get; set; }
-        public Nullable<System.Guid> ZO_APKMB_APK_UID { get; set; }
         public Nullable<System.Guid> ZO_APKMB_MB_UID { get; set; }
         public Nullable<System.Guid> ZO_APKMB_MF_UID { get; set; }
         public int ZO_APKMB_Anzahl { get; set; }

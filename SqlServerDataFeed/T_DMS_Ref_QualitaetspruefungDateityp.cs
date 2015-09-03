@@ -26,12 +26,13 @@ namespace SqlServerDataFeed
         public string QPDT_Lang_EN { get; set; }
         public int QPDT_Status { get; set; }
         public int QPDT_Sort { get; set; }
-        public Nullable<int> QPDT_StylizerFore { get; set; }
         public Nullable<int> QPDT_StylizerBack { get; set; }
         public Nullable<int> QPDT_StylizerPattern { get; set; }
         public Nullable<int> QPDT_StylizerLine { get; set; }
         public bool QPDT_IsDefault { get; set; }
         public Nullable<System.DateTime> QPDT_DatumMut { get; set; }
         public string QPDT_DatumUser { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

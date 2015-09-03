@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ZF_UID { get; set; }
-        public int ZF_MDT_ID { get; set; }
         public Nullable<int> ZF_Code { get; set; }
         public string ZF_Kurz_DE { get; set; }
         public string ZF_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string ZF_Lang_EN { get; set; }
         public int ZF_Status { get; set; }
         public int ZF_Sort { get; set; }
-        public Nullable<int> ZF_StylizerFore { get; set; }
         public Nullable<int> ZF_StylizerBack { get; set; }
         public Nullable<int> ZF_StylizerPattern { get; set; }
         public Nullable<int> ZF_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Raum> T_AP_Raum { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

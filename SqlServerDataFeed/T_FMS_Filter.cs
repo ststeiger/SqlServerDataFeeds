@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid FI_UID { get; set; }
-        public Nullable<System.Guid> FI_FT_UID { get; set; }
         public bool FI_useCookie { get; set; }
         public bool FI_isReadonly { get; set; }
         public bool FI_useDatepicker { get; set; }

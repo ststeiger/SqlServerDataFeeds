@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_UW_Verbrauch
     {
         public System.Guid UWVB_UID { get; set; }
-        public Nullable<int> UWVB_MDT_ID { get; set; }
-        public Nullable<System.Guid> UWVB_GB_UID { get; set; }
         public System.Guid UWVB_UWBR_UID { get; set; }
         public System.Guid UWVB_UWPOS_UID { get; set; }
         public double UWVB_Wert { get; set; }

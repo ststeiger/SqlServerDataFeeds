@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_TM_Tasks_Planung_Checkpoints
     {
         public System.Guid TPLCP_UID { get; set; }
-        public System.Guid TPLCP_TPL_UID { get; set; }
-        public System.Guid TPLCP_TCLD_UID { get; set; }
         public bool TPLCP_Check01 { get; set; }
         public bool TPLCP_Check02 { get; set; }
         public bool TPLCP_Check03 { get; set; }

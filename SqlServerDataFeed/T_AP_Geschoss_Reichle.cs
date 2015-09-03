@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Geschoss_Reichle
     {
         public System.Guid GS_UID { get; set; }
-        public System.Guid GS_GS_UID { get; set; }
-        public Nullable<System.Guid> GS_GSR_UID { get; set; }
         public int GS_Status { get; set; }
     
         public virtual T_AP_Geschoss T_AP_Geschoss { get; set; }

@@ -18,15 +18,13 @@ namespace SqlServerDataFeed
         {
             this.T_AP_Anschluss = new HashSet<T_AP_Anschluss>();
             this.T_AP_Dose_History = new HashSet<T_AP_Dose_History>();
+            this.T_SYS_Doserechte = new HashSet<T_SYS_Doserechte>();
             this.T_TM_Tasks_Planung = new HashSet<T_TM_Tasks_Planung>();
             this.T_TM_Tasks = new HashSet<T_TM_Tasks>();
             this.T_ZO_AP_Dose_DWG = new HashSet<T_ZO_AP_Dose_DWG>();
         }
     
         public System.Guid DO_UID { get; set; }
-        public int DO_MDT_ID { get; set; }
-        public Nullable<System.Guid> DO_RM_UID { get; set; }
-        public Nullable<System.Guid> DO_DKAT_UID { get; set; }
         public string DO_ApertureKey { get; set; }
         public string DO_Nr { get; set; }
         public string DO_Bezeichnung { get; set; }
@@ -40,6 +38,7 @@ namespace SqlServerDataFeed
         public virtual T_AP_Raum T_AP_Raum { get; set; }
         public virtual T_AP_Ref_DoseKategorie T_AP_Ref_DoseKategorie { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual ICollection<T_SYS_Doserechte> T_SYS_Doserechte { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
         public virtual ICollection<T_ZO_AP_Dose_DWG> T_ZO_AP_Dose_DWG { get; set; }

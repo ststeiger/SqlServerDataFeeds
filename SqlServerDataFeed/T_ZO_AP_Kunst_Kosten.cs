@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Kunst_Kosten
     {
         public System.Guid ZO_KUKO_UID { get; set; }
-        public System.Guid ZO_KUKO_KU_UID { get; set; }
         public System.DateTime ZO_KUKO_Datum { get; set; }
         public double ZO_KUKO_Kosten { get; set; }
         public string ZO_KUKO_Bemerkung { get; set; }

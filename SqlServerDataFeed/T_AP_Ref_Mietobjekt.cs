@@ -23,7 +23,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid MIO_UID { get; set; }
-        public int MIO_MDT_ID { get; set; }
         public string MIO_Code { get; set; }
         public string MIO_Kurz_DE { get; set; }
         public string MIO_Kurz_FR { get; set; }
@@ -35,7 +34,6 @@ namespace SqlServerDataFeed
         public string MIO_Lang_EN { get; set; }
         public int MIO_Status { get; set; }
         public int MIO_Sort { get; set; }
-        public Nullable<int> MIO_StylizerFore { get; set; }
         public Nullable<int> MIO_StylizerBack { get; set; }
         public Nullable<int> MIO_StylizerPattern { get; set; }
         public Nullable<int> MIO_StylizerLine { get; set; }
@@ -46,6 +44,7 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> MIO_DatumBis { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_AP_Aussenobjekt_AP_Ref_Mietobjekt> T_ZO_AP_Aussenobjekt_AP_Ref_Mietobjekt { get; set; }
         public virtual ICollection<T_ZO_AP_Parkplatz_AP_Ref_Mietobjekt> T_ZO_AP_Parkplatz_AP_Ref_Mietobjekt { get; set; }
         public virtual ICollection<T_ZO_AP_Raum_AP_Ref_Mietobjekt> T_ZO_AP_Raum_AP_Ref_Mietobjekt { get; set; }

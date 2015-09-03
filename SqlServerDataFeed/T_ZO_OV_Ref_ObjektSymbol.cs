@@ -21,9 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid OBJS_UID { get; set; }
-        public System.Guid OBJS_DK_UID { get; set; }
-        public System.Guid OBJS_OBJT_UID { get; set; }
-        public int OBJS_MDT_ID { get; set; }
         public int OBJS_Height { get; set; }
         public int OBJS_Width { get; set; }
         public int OBJS_Status { get; set; }

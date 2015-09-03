@@ -16,7 +16,6 @@ namespace SqlServerDataFeed
     {
         public System.Guid ZO_LANGOBJT_UID { get; set; }
         public Nullable<System.Guid> ZO_LANGOBJT_LANG_UID { get; set; }
-        public Nullable<System.Guid> ZO_LANGOBJT_OBJT_UID { get; set; }
         public int ZO_LANGOBJT_Sort { get; set; }
         public string ZO_LANGOBJT_LANG_Object { get; set; }
         public string ZO_LANGOBJT_LANG_Register { get; set; }

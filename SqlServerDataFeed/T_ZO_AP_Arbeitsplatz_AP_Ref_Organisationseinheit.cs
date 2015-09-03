@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Arbeitsplatz_AP_Ref_Organisationseinheit
     {
         public System.Guid ZO_APKOE_UID { get; set; }
-        public System.Guid ZO_APKOE_AP_UID { get; set; }
-        public System.Guid ZO_APKOE_KOE_UID { get; set; }
         public System.DateTime ZO_APKOE_DatumVon { get; set; }
         public System.DateTime ZO_APKOE_DatumBis { get; set; }
         public int ZO_APKOE_Status { get; set; }

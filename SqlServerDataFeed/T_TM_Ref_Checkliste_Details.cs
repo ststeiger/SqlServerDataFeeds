@@ -21,7 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TCLD_UID { get; set; }
-        public int TCLD_MDT_ID { get; set; }
         public Nullable<int> TCLD_Code { get; set; }
         public string TCLD_Kurz_DE { get; set; }
         public string TCLD_Kurz_FR { get; set; }
@@ -33,20 +32,14 @@ namespace SqlServerDataFeed
         public string TCLD_Lang_EN { get; set; }
         public int TCLD_Status { get; set; }
         public int TCLD_Sort { get; set; }
-        public Nullable<int> TCLD_StylizerFore { get; set; }
         public Nullable<int> TCLD_StylizerBack { get; set; }
         public Nullable<int> TCLD_StylizerPattern { get; set; }
         public Nullable<int> TCLD_StylizerLine { get; set; }
         public bool TCLD_IsDefault { get; set; }
         public Nullable<System.DateTime> TCLD_DatumMut { get; set; }
         public string TCLD_DatumUser { get; set; }
-        public Nullable<System.Guid> TCLD_TCL_UID { get; set; }
         public bool TCLD_isCheckbox { get; set; }
         public bool TCLD_isTextbox { get; set; }
-        public Nullable<System.Guid> TCLD_TCLA_UID { get; set; }
-        public Nullable<System.Guid> TCLD_TPL_UID { get; set; }
-        public Nullable<System.Guid> TCLD_TCLWA_UID { get; set; }
-        public Nullable<System.Guid> TCLD_TCLTA_UID { get; set; }
         public Nullable<bool> TCLD_isLabel { get; set; }
         public Nullable<int> TCLD_Colspan { get; set; }
         public Nullable<bool> TCLD_isTaskbox { get; set; }
@@ -54,6 +47,7 @@ namespace SqlServerDataFeed
         public string TCLD_cssClass { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual T_TM_Ref_Checkliste T_TM_Ref_Checkliste { get; set; }
         public virtual T_TM_Ref_Checkliste_Absatz T_TM_Ref_Checkliste_Absatz { get; set; }
         public virtual T_TM_Ref_Checkliste_Taetigkeit T_TM_Ref_Checkliste_Taetigkeit { get; set; }

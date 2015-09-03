@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AVER_UID { get; set; }
-        public int AVER_MDT_ID { get; set; }
         public Nullable<int> AVER_Code { get; set; }
         public string AVER_Kurz_DE { get; set; }
         public string AVER_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string AVER_Lang_EN { get; set; }
         public int AVER_Status { get; set; }
         public int AVER_Sort { get; set; }
-        public Nullable<int> AVER_StylizerFore { get; set; }
         public Nullable<int> AVER_StylizerBack { get; set; }
         public Nullable<int> AVER_StylizerPattern { get; set; }
         public Nullable<int> AVER_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Anschluss> T_AP_Anschluss { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

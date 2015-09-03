@@ -21,8 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid FI_UID { get; set; }
-        public System.Guid FI_FI_UID { get; set; }
-        public System.Guid FI_NA_UID { get; set; }
         public bool FI_isReadonly { get; set; }
         public Nullable<int> FI_Sort { get; set; }
         public string FI_SQLFilename { get; set; }

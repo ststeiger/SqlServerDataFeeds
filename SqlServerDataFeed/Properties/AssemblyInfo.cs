@@ -2,34 +2,34 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
+// Allgemeine Informationen über eine Assembly werden über die folgenden 
+// Attribute gesteuert. Ändern Sie diese Attributwerte, um die
+// Assemblyinformationen zu ändern.
 [assembly: AssemblyTitle("SqlServerDataFeed")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Hewlett-Packard")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SqlServerDataFeed")]
-[assembly: AssemblyCopyright("Copyright © Hewlett-Packard 2015")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type.
+// Durch Festlegen von ComVisible auf "false" werden die Typen in dieser Assembly unsichtbar 
+// für COM-Komponenten. Wenn Sie auf einen Typ in dieser Assembly von 
+// COM aus zugreifen müssen, legen Sie das ComVisible-Attribut für diesen Typ auf "true" fest.
 [assembly: ComVisible(false)]
 
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c50ed686-6328-4a91-ac3d-02cf9e2dfd80")]
+// Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird.
+[assembly: Guid("007fed22-a605-45c1-aa06-219954120e32")]
 
-// Version information for an assembly consists of the following four values:
+// Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //
-//      Major Version
-//      Minor Version 
-//      Build Number
+//      Hauptversion
+//      Nebenversion 
+//      Buildnummer
 //      Revision
 //
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-[assembly: AssemblyVersion("2015.8.27.1635")]
-[assembly: AssemblyFileVersion("2015.8.27.1635")]
+// Sie können alle Werte angeben oder die standardmäßigen Revisions- und Buildnummern 
+// übernehmen, indem Sie "*" wie folgt verwenden:
+[assembly: AssemblyVersion("2015.8.31.1328")]
+[assembly: AssemblyFileVersion("2015.8.31.1328")]

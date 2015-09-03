@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid KP_UID { get; set; }
-        public int KP_MDT_ID { get; set; }
         public Nullable<int> KP_Code { get; set; }
         public string KP_Kurz_DE { get; set; }
         public string KP_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string KP_Lang_EN { get; set; }
         public int KP_Status { get; set; }
         public int KP_Sort { get; set; }
-        public Nullable<int> KP_StylizerFore { get; set; }
         public Nullable<int> KP_StylizerBack { get; set; }
         public Nullable<int> KP_StylizerPattern { get; set; }
         public Nullable<int> KP_StylizerLine { get; set; }
@@ -41,6 +39,7 @@ namespace SqlServerDataFeed
         public string KP_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_VM_Vertraege> T_VM_Vertraege { get; set; }
     }
 }

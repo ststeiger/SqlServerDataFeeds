@@ -20,8 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ZO_REMGR_UID { get; set; }
-        public Nullable<System.Guid> ZO_REMGR_KT_UID { get; set; }
-        public Nullable<System.Guid> ZO_REMGR_GB_UID { get; set; }
         public Nullable<int> ZO_REMGR_Stunden { get; set; }
         public Nullable<int> ZO_REMGR_Code { get; set; }
         public string ZO_REMGR_Kurz_de { get; set; }
@@ -35,7 +33,6 @@ namespace SqlServerDataFeed
         public int ZO_REMGR_Status { get; set; }
         public int ZO_REMGR_Sort { get; set; }
         public bool ZO_REMGR_IsDefault { get; set; }
-        public Nullable<int> ZO_REMGR_StylizerBack { get; set; }
         public Nullable<int> ZO_REMGR_StylizerFore { get; set; }
         public Nullable<int> ZO_REMGR_StylizerPattern { get; set; }
         public Nullable<int> ZO_REMGR_StylizerLine { get; set; }
@@ -49,6 +46,7 @@ namespace SqlServerDataFeed
     
         public virtual T_AP_Gebaeude T_AP_Gebaeude { get; set; }
         public virtual T_AP_Kontakte T_AP_Kontakte { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Standort_Planung> T_ZO_REM_AP_Standort_Planung { get; set; }
     }
 }

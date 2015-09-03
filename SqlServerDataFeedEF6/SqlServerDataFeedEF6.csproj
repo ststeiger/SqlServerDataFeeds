@@ -105,6 +105,7 @@
       <DependentUpon>COR_Basic_Demo.edmx</DependentUpon>
       <LastGenOutput>COR_Basic_Demo.cs</LastGenOutput>
     </Content>
+    <Content Include="Default.aspx" />
     <Content Include="ExcelDataFeed.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -123,6 +124,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>COR_Basic_Demo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="ELMAH_Error.cs">
       <DependentUpon>COR_Basic_Demo.tt</DependentUpon>

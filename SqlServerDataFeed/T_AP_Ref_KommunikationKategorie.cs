@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid KMKAT_UID { get; set; }
-        public int KMKAT_MDT_ID { get; set; }
         public Nullable<int> KMKAT_Code { get; set; }
         public string KMKAT_Kurz_DE { get; set; }
         public string KMKAT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string KMKAT_Lang_EN { get; set; }
         public int KMKAT_Status { get; set; }
         public int KMKAT_Sort { get; set; }
-        public Nullable<int> KMKAT_StylizerFore { get; set; }
         public Nullable<int> KMKAT_StylizerBack { get; set; }
         public Nullable<int> KMKAT_StylizerPattern { get; set; }
         public Nullable<int> KMKAT_StylizerLine { get; set; }
@@ -43,5 +41,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Kommunikation> T_AP_Kommunikation { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

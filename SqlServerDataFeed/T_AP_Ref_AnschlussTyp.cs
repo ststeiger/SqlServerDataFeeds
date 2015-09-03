@@ -20,8 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ANT_UID { get; set; }
-        public int ANT_MDT_ID { get; set; }
-        public Nullable<System.Guid> ANT_ANKAT_UID { get; set; }
         public Nullable<int> ANT_Code { get; set; }
         public string ANT_Kurz_DE { get; set; }
         public string ANT_Kurz_FR { get; set; }
@@ -33,7 +31,6 @@ namespace SqlServerDataFeed
         public string ANT_Lang_EN { get; set; }
         public int ANT_Status { get; set; }
         public int ANT_Sort { get; set; }
-        public Nullable<int> ANT_StylizerFore { get; set; }
         public Nullable<int> ANT_StylizerBack { get; set; }
         public Nullable<int> ANT_StylizerPattern { get; set; }
         public Nullable<int> ANT_StylizerLine { get; set; }
@@ -44,5 +41,6 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_AP_Anschluss> T_AP_Anschluss { get; set; }
         public virtual T_AP_Ref_AnschlussKategorie T_AP_Ref_AnschlussKategorie { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

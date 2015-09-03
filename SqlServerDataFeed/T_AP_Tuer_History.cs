@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Tuer_History
     {
         public System.Guid HITR_UID { get; set; }
-        public System.Guid HITR_TR_UID { get; set; }
         public System.Guid HITR_Entry_UID { get; set; }
         public System.DateTime HITR_Datum { get; set; }
         public string HITR_User { get; set; }

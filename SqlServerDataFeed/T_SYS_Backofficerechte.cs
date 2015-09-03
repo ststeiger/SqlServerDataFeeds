@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         public Nullable<System.Guid> BOR_ME_UID { get; set; }
         public bool BOR_IsRead { get; set; }
         public int BOR_Status { get; set; }
-        public int BOR_MDT_ID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
     }

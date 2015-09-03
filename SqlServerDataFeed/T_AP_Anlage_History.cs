@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Anlage_History
     {
         public System.Guid HIAL_UID { get; set; }
-        public System.Guid HIAL_AL_UID { get; set; }
         public System.Guid HIAL_Entry_UID { get; set; }
         public System.DateTime HIAL_Datum { get; set; }
         public string HIAL_User { get; set; }

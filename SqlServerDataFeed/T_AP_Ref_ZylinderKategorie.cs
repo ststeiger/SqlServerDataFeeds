@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ZKAT_UID { get; set; }
-        public int ZKAT_MDT_ID { get; set; }
         public Nullable<int> ZKAT_Code { get; set; }
         public string ZKAT_Kurz_DE { get; set; }
         public string ZKAT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string ZKAT_Lang_EN { get; set; }
         public int ZKAT_Status { get; set; }
         public int ZKAT_Sort { get; set; }
-        public Nullable<int> ZKAT_StylizerFore { get; set; }
         public Nullable<int> ZKAT_StylizerBack { get; set; }
         public Nullable<int> ZKAT_StylizerPattern { get; set; }
         public Nullable<int> ZKAT_StylizerLine { get; set; }
@@ -41,6 +39,7 @@ namespace SqlServerDataFeed
         public string ZKAT_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AP_Zylinder> T_AP_Zylinder { get; set; }
     }
 }

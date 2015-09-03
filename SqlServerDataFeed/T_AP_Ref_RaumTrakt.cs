@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid RT_UID { get; set; }
-        public int RT_MDT_ID { get; set; }
         public string RT_Code { get; set; }
         public string RT_Kurz_DE { get; set; }
         public string RT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string RT_Lang_EN { get; set; }
         public int RT_Status { get; set; }
         public int RT_Sort { get; set; }
-        public Nullable<int> RT_StylizerFore { get; set; }
         public Nullable<int> RT_StylizerBack { get; set; }
         public Nullable<int> RT_StylizerPattern { get; set; }
         public Nullable<int> RT_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Raum> T_AP_Raum { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

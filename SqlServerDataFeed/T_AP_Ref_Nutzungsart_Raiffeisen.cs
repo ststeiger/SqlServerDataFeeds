@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_Nutzungsart_Raiffeisen
     {
         public System.Guid NA_UID { get; set; }
-        public System.Guid NA_NA_UID { get; set; }
         public Nullable<double> NA_AP_Faktor { get; set; }
         public Nullable<double> NA_Gewichtung_Faktor { get; set; }
         public int NA_Status { get; set; }

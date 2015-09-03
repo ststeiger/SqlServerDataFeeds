@@ -31,7 +31,6 @@ namespace SqlServerDataFeed
         public string KP_Lang_EN { get; set; }
         public int KP_Status { get; set; }
         public int KP_Sort { get; set; }
-        public Nullable<int> KP_StylizerFore { get; set; }
         public Nullable<int> KP_StylizerBack { get; set; }
         public Nullable<int> KP_StylizerPattern { get; set; }
         public Nullable<int> KP_StylizerLine { get; set; }
@@ -39,6 +38,7 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> KP_DatumMut { get; set; }
         public string KP_DatumUser { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_UPS_BudgetPositionen> T_UPS_BudgetPositionen { get; set; }
     }
 }

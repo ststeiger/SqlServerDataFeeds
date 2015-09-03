@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_TM_Ref_Checkliste_Checkpoints
     {
         public System.Guid TCLC_UID { get; set; }
-        public int TCLC_MDT_ID { get; set; }
         public Nullable<int> TCLC_Code { get; set; }
         public string TCLC_Kurz_DE { get; set; }
         public string TCLC_Kurz_FR { get; set; }
@@ -27,17 +26,15 @@ namespace SqlServerDataFeed
         public string TCLC_Lang_EN { get; set; }
         public int TCLC_Status { get; set; }
         public int TCLC_Sort { get; set; }
-        public Nullable<int> TCLC_StylizerFore { get; set; }
         public Nullable<int> TCLC_StylizerBack { get; set; }
         public Nullable<int> TCLC_StylizerPattern { get; set; }
         public Nullable<int> TCLC_StylizerLine { get; set; }
         public bool TCLC_IsDefault { get; set; }
         public Nullable<System.DateTime> TCLC_DatumMut { get; set; }
         public string TCLC_DatumUser { get; set; }
-        public Nullable<System.Guid> TCLC_TCL_UID { get; set; }
-        public Nullable<System.Guid> TCLC_TCLA_UID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual T_TM_Ref_Checkliste T_TM_Ref_Checkliste { get; set; }
         public virtual T_TM_Ref_Checkliste_Absatz T_TM_Ref_Checkliste_Absatz { get; set; }
     }

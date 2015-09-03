@@ -17,6 +17,7 @@ namespace SqlServerDataFeed
         public T_AP_Gebaeude()
         {
             this.T_AP_Anlage = new HashSet<T_AP_Anlage>();
+            this.T_AP_Fahrzeug = new HashSet<T_AP_Fahrzeug>();
             this.T_AP_Gebaeude_History = new HashSet<T_AP_Gebaeude_History>();
             this.T_AP_Gebaeude_Reichle = new HashSet<T_AP_Gebaeude_Reichle>();
             this.T_AP_Gebaeude_SwissLife = new HashSet<T_AP_Gebaeude_SwissLife>();
@@ -37,10 +38,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid GB_UID { get; set; }
-        public int GB_MDT_ID { get; set; }
-        public System.Guid GB_SO_UID { get; set; }
-        public Nullable<System.Guid> GB_EV_UID { get; set; }
-        public Nullable<System.Guid> GB_GK_UID { get; set; }
         public string GB_ApertureKey { get; set; }
         public string GB_Nr { get; set; }
         public string GB_Strasse { get; set; }
@@ -56,11 +53,8 @@ namespace SqlServerDataFeed
         public string GB_DETAIL_Bauzone { get; set; }
         public Nullable<double> GB_DETAIL_Buchwert { get; set; }
         public string GB_DETAIL_EntsorgungsamtKundenNr { get; set; }
-        public Nullable<System.Guid> GB_DETAIL_ERF_UID { get; set; }
-        public Nullable<System.Guid> GB_DETAIL_ERS_UID { get; set; }
         public Nullable<double> GB_DETAIL_Ertragswert { get; set; }
         public Nullable<int> GB_DETAIL_Erwerbsjahr { get; set; }
-        public Nullable<System.Guid> GB_DETAIL_GES_UID { get; set; }
         public string GB_DETAIL_GewSchutzzone { get; set; }
         public bool GB_DETAIL_IsSchutzraumpflicht { get; set; }
         public string GB_DETAIL_GrundstückNr { get; set; }
@@ -68,19 +62,15 @@ namespace SqlServerDataFeed
         public Nullable<double> GB_DETAIL_Landwert { get; set; }
         public Nullable<System.DateTime> GB_DETAIL_LetzteRenovation { get; set; }
         public Nullable<System.DateTime> GB_DETAIL_LetzteSanierung { get; set; }
-        public Nullable<System.Guid> GB_DETAIL_LS_UID { get; set; }
         public Nullable<double> GB_DETAIL_Realwert { get; set; }
         public string GB_DETAIL_SpezReVerhaeltnisse { get; set; }
         public string GB_DETAIL_Umnutzung { get; set; }
         public Nullable<double> GB_DETAIL_Verkehrswert { get; set; }
-        public Nullable<System.Guid> GB_DETAIL_ZZT_UID { get; set; }
         public System.DateTime GB_DatumVon { get; set; }
         public System.DateTime GB_DatumBis { get; set; }
         public int GB_Status { get; set; }
         public Nullable<System.DateTime> GB_MutDate { get; set; }
         public string GB_MutUser { get; set; }
-        public Nullable<System.Guid> GB_ADR_UID { get; set; }
-        public Nullable<System.Guid> GB_SK_UID { get; set; }
         public Nullable<double> GB_Lage_Faktor { get; set; }
         public Nullable<double> GB_Nebenkosten { get; set; }
         public string GB_Kundennummer { get; set; }
@@ -100,13 +90,13 @@ namespace SqlServerDataFeed
         public string GB_Adresszusatz { get; set; }
         public string GB_EGID { get; set; }
         public string GB_Sammelplatz { get; set; }
-        public Nullable<System.Guid> GB_KL_UID { get; set; }
         public Nullable<decimal> GB_GM_Lat { get; set; }
         public Nullable<decimal> GB_GM_Lng { get; set; }
         public Nullable<decimal> GB_GM_SVLat { get; set; }
         public Nullable<decimal> GB_GM_SVLng { get; set; }
     
         public virtual ICollection<T_AP_Anlage> T_AP_Anlage { get; set; }
+        public virtual ICollection<T_AP_Fahrzeug> T_AP_Fahrzeug { get; set; }
         public virtual ICollection<T_AP_Gebaeude_History> T_AP_Gebaeude_History { get; set; }
         public virtual ICollection<T_AP_Gebaeude_Reichle> T_AP_Gebaeude_Reichle { get; set; }
         public virtual ICollection<T_AP_Gebaeude_SwissLife> T_AP_Gebaeude_SwissLife { get; set; }

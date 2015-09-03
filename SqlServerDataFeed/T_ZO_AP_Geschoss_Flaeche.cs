@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Geschoss_Flaeche
     {
         public System.Guid ZO_GSFlaeche_UID { get; set; }
-        public System.Guid ZO_GSFlaeche_GS_UID { get; set; }
         public Nullable<double> ZO_GSFlaeche_Flaeche { get; set; }
         public System.DateTime ZO_GSFlaeche_DatumVon { get; set; }
         public System.DateTime ZO_GSFlaeche_DatumBis { get; set; }

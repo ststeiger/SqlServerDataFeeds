@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_Organisationseinheit_Raiffeisen
     {
         public System.Guid KOE_UID { get; set; }
-        public System.Guid KOE_KOE_UID { get; set; }
         public string KOE_Department_DE { get; set; }
         public string KOE_Department_FR { get; set; }
         public string KOE_Department_IT { get; set; }

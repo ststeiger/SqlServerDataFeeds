@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_AnlageEnergietraeger
     {
         public System.Guid AET_UID { get; set; }
-        public int AET_MDT_ID { get; set; }
         public Nullable<int> AET_Code { get; set; }
         public string AET_Kurz_DE { get; set; }
         public string AET_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string AET_Lang_EN { get; set; }
         public int AET_Status { get; set; }
         public int AET_Sort { get; set; }
-        public Nullable<int> AET_StylizerFore { get; set; }
         public Nullable<int> AET_StylizerBack { get; set; }
         public Nullable<int> AET_StylizerPattern { get; set; }
         public Nullable<int> AET_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string AET_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

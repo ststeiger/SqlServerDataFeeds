@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Tuer_Schliessung
     {
         public System.Guid ZO_TRSC_UID { get; set; }
-        public System.Guid ZO_TRSC_TR_UID { get; set; }
-        public Nullable<System.Guid> ZO_TRSC_ST_UID { get; set; }
         public string ZO_TRSC_Zylinder_Nr { get; set; }
         public System.DateTime ZO_TRSC_DatumVon { get; set; }
         public System.DateTime ZO_TRSC_DatumBis { get; set; }

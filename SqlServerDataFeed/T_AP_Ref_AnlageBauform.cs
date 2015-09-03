@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_AnlageBauform
     {
         public System.Guid ABF_UID { get; set; }
-        public int ABF_MDT_ID { get; set; }
         public Nullable<int> ABF_Code { get; set; }
         public string ABF_Kurz_DE { get; set; }
         public string ABF_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string ABF_Lang_EN { get; set; }
         public int ABF_Status { get; set; }
         public int ABF_Sort { get; set; }
-        public Nullable<int> ABF_StylizerFore { get; set; }
         public Nullable<int> ABF_StylizerBack { get; set; }
         public Nullable<int> ABF_StylizerPattern { get; set; }
         public Nullable<int> ABF_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string ABF_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

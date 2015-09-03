@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid RWO_UID { get; set; }
-        public int RWO_MDT_ID { get; set; }
         public Nullable<int> RWO_Code { get; set; }
         public string RWO_Kurz_DE { get; set; }
         public string RWO_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string RWO_Lang_EN { get; set; }
         public int RWO_Status { get; set; }
         public int RWO_Sort { get; set; }
-        public Nullable<int> RWO_StylizerFore { get; set; }
         public Nullable<int> RWO_StylizerBack { get; set; }
         public Nullable<int> RWO_StylizerPattern { get; set; }
         public Nullable<int> RWO_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Raum> T_AP_Raum { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

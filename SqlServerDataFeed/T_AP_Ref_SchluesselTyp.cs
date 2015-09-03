@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid STYP_UID { get; set; }
-        public int STYP_MDT_ID { get; set; }
         public Nullable<int> STYP_Code { get; set; }
         public string STYP_Kurz_DE { get; set; }
         public string STYP_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string STYP_Lang_EN { get; set; }
         public int STYP_Status { get; set; }
         public int STYP_Sort { get; set; }
-        public Nullable<int> STYP_StylizerFore { get; set; }
         public Nullable<int> STYP_StylizerBack { get; set; }
         public Nullable<int> STYP_StylizerPattern { get; set; }
         public Nullable<int> STYP_StylizerLine { get; set; }
@@ -42,6 +40,7 @@ namespace SqlServerDataFeed
         public Nullable<int> STYP_FixKeyAmount { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AP_Schluesselgruppe> T_AP_Schluesselgruppe { get; set; }
     }
 }

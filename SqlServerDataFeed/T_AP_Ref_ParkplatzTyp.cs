@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_ParkplatzTyp
     {
         public System.Guid PT_UID { get; set; }
-        public int PT_MDT_ID { get; set; }
         public Nullable<int> PT_Code { get; set; }
         public string PT_Kurz_DE { get; set; }
         public string PT_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string PT_Lang_EN { get; set; }
         public int PT_Status { get; set; }
         public int PT_Sort { get; set; }
-        public Nullable<int> PT_StylizerFore { get; set; }
         public Nullable<int> PT_StylizerBack { get; set; }
         public Nullable<int> PT_StylizerPattern { get; set; }
         public Nullable<int> PT_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string PT_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

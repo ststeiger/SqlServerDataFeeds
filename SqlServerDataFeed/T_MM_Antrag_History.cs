@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_MM_Antrag_History
     {
         public System.Guid HIMMA_UID { get; set; }
-        public System.Guid HIMMA_MMA_UID { get; set; }
         public Nullable<System.Guid> HIMMA_Entry_UID { get; set; }
         public System.DateTime HIMMA_Datum { get; set; }
         public string HIMMA_User { get; set; }

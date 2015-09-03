@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AAKT_UID { get; set; }
-        public int AAKT_MDT_ID { get; set; }
         public Nullable<int> AAKT_Code { get; set; }
         public string AAKT_Kurz_DE { get; set; }
         public string AAKT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string AAKT_Lang_EN { get; set; }
         public int AAKT_Status { get; set; }
         public int AAKT_Sort { get; set; }
-        public Nullable<int> AAKT_StylizerFore { get; set; }
         public Nullable<int> AAKT_StylizerBack { get; set; }
         public Nullable<int> AAKT_StylizerPattern { get; set; }
         public Nullable<int> AAKT_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Aussenobjekt> T_AP_Aussenobjekt { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

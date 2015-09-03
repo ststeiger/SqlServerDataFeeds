@@ -18,11 +18,11 @@ namespace SqlServerDataFeed
         {
             this.T_AP_Raum = new HashSet<T_AP_Raum>();
             this.T_REM_Ref_Vorlagen = new HashSet<T_REM_Ref_Vorlagen>();
+            this.T_ZO_IGM_Reinigungsfaktor = new HashSet<T_ZO_IGM_Reinigungsfaktor>();
             this.T_ZO_REM_AP_Raum_Raumgruppe = new HashSet<T_ZO_REM_AP_Raum_Raumgruppe>();
         }
     
         public System.Guid BB_UID { get; set; }
-        public int BB_MDT_ID { get; set; }
         public Nullable<int> BB_Code { get; set; }
         public string BB_Kurz_DE { get; set; }
         public string BB_Kurz_FR { get; set; }
@@ -34,17 +34,19 @@ namespace SqlServerDataFeed
         public string BB_Lang_EN { get; set; }
         public int BB_Status { get; set; }
         public int BB_Sort { get; set; }
-        public Nullable<int> BB_StylizerFore { get; set; }
         public Nullable<int> BB_StylizerBack { get; set; }
         public Nullable<int> BB_StylizerPattern { get; set; }
         public Nullable<int> BB_StylizerLine { get; set; }
         public bool BB_IsDefault { get; set; }
         public Nullable<System.DateTime> BB_DatumMut { get; set; }
         public string BB_DatumUser { get; set; }
+        public Nullable<decimal> BB_UmrechnungsFaktor { get; set; }
     
         public virtual ICollection<T_AP_Raum> T_AP_Raum { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_REM_Ref_Vorlagen> T_REM_Ref_Vorlagen { get; set; }
+        public virtual ICollection<T_ZO_IGM_Reinigungsfaktor> T_ZO_IGM_Reinigungsfaktor { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Raumgruppe> T_ZO_REM_AP_Raum_Raumgruppe { get; set; }
     }
 }

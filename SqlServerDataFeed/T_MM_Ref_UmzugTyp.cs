@@ -32,12 +32,12 @@ namespace SqlServerDataFeed
         public int MMUT_Status { get; set; }
         public int MMUT_Sort { get; set; }
         public bool MMUT_IsDefault { get; set; }
-        public Nullable<int> MMUT_StylizerBack { get; set; }
         public Nullable<int> MMUT_StylizerFore { get; set; }
         public Nullable<int> MMUT_StylizerPattern { get; set; }
         public Nullable<int> MMUT_StylizerLine { get; set; }
         public int MMUT_MDT_ID { get; set; }
     
         public virtual ICollection<T_MM_Antrag> T_MM_Antrag { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

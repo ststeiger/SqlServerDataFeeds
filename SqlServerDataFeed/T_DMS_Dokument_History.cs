@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_DMS_Dokument_History
     {
         public System.Guid HIDOC_UID { get; set; }
-        public System.Guid HIDOC_DOC_UID { get; set; }
         public System.DateTime HIDOC_Datum { get; set; }
         public string HIDOC_User { get; set; }
         public string HIDOC_Text_DE { get; set; }

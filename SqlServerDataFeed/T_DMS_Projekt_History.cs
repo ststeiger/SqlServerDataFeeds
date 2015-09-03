@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_DMS_Projekt_History
     {
         public System.Guid HIPJ_UID { get; set; }
-        public System.Guid HIPJ_PJ_UID { get; set; }
         public System.DateTime HIPJ_Datum { get; set; }
         public string HIPJ_User { get; set; }
         public string HIPJ_Text_DE { get; set; }

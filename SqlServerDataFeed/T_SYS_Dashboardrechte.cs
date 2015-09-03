@@ -17,11 +17,10 @@ namespace SqlServerDataFeed
         public System.Guid DBR_UID { get; set; }
         public int DBR_GRANTEE_ID { get; set; }
         public string DBR_GRANTEE { get; set; }
-        public Nullable<System.Guid> DBR_DB_UID { get; set; }
         public bool DBR_IsRead { get; set; }
         public int DBR_Status { get; set; }
-        public int DBR_MDT_ID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_FMS_Dashboard T_FMS_Dashboard { get; set; }
     }
 }

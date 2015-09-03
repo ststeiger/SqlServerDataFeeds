@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid PROC_UID { get; set; }
-        public Nullable<int> PROC_MDT_ID { get; set; }
         public Nullable<int> PROC_Code { get; set; }
         public string PROC_Kurz_DE { get; set; }
         public string PROC_Kurz_FR { get; set; }
@@ -41,7 +40,6 @@ namespace SqlServerDataFeed
         public Nullable<System.Guid> PROC_SetDocStatus { get; set; }
         public int PROC_Status { get; set; }
         public int PROC_Sort { get; set; }
-        public Nullable<int> PROC_StylizerFore { get; set; }
         public Nullable<int> PROC_StylizerBack { get; set; }
         public Nullable<int> PROC_StylizerPattern { get; set; }
         public Nullable<int> PROC_StylizerLine { get; set; }
@@ -51,6 +49,7 @@ namespace SqlServerDataFeed
         public bool PROC_ShowVerantwortlicher { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_DMS_ZO_Prozesse_Berechtigungen> T_DMS_ZO_Prozesse_Berechtigungen { get; set; }
     }
 }

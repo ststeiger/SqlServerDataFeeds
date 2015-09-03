@@ -25,7 +25,6 @@ namespace SqlServerDataFeed
         public System.Guid MMA_UID { get; set; }
         public int MMA_AntragID { get; set; }
         public string MMA_Beschreibung { get; set; }
-        public System.Guid MMA_MMST_UID { get; set; }
         public Nullable<int> MMA_BE_ID_Antragsteller { get; set; }
         public Nullable<int> MMA_BE_ID_UmzugManager { get; set; }
         public Nullable<bool> MMA_IsBestandUmzug { get; set; }
@@ -33,7 +32,6 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> MMA_Datum_Erstellung { get; set; }
         public Nullable<System.DateTime> MMA_Datum_Aenderung { get; set; }
         public Nullable<System.DateTime> MMA_Datum_Eingereicht { get; set; }
-        public Nullable<System.Guid> MMA_MMUT_UID { get; set; }
     
         public virtual ICollection<T_MM_Antrag_History> T_MM_Antrag_History { get; set; }
         public virtual ICollection<T_MM_Antrag_Kommentar> T_MM_Antrag_Kommentar { get; set; }

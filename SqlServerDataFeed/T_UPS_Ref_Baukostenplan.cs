@@ -34,7 +34,6 @@ namespace SqlServerDataFeed
         public string BKP_Lang_EN { get; set; }
         public int BKP_Status { get; set; }
         public double BKP_Sort { get; set; }
-        public Nullable<int> BKP_StylizerFore { get; set; }
         public Nullable<int> BKP_StylizerBack { get; set; }
         public Nullable<int> BKP_StylizerPattern { get; set; }
         public Nullable<int> BKP_StylizerLine { get; set; }
@@ -47,6 +46,7 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Sicherheit> T_AP_Sicherheit { get; set; }
         public virtual ICollection<T_AP_Zaehler> T_AP_Zaehler { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_UPS_BudgetPositionen> T_UPS_BudgetPositionen { get; set; }
         public virtual ICollection<T_UPS_Rechnungskontrolle> T_UPS_Rechnungskontrolle { get; set; }
     }

@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid IKAT_UID { get; set; }
-        public int IKAT_MDT_ID { get; set; }
         public Nullable<int> IKAT_Code { get; set; }
         public string IKAT_Kurz_DE { get; set; }
         public string IKAT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string IKAT_Lang_EN { get; set; }
         public int IKAT_Status { get; set; }
         public int IKAT_Sort { get; set; }
-        public Nullable<int> IKAT_StylizerFore { get; set; }
         public Nullable<int> IKAT_StylizerBack { get; set; }
         public Nullable<int> IKAT_StylizerPattern { get; set; }
         public Nullable<int> IKAT_StylizerLine { get; set; }
@@ -43,5 +41,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Informatik> T_AP_Informatik { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

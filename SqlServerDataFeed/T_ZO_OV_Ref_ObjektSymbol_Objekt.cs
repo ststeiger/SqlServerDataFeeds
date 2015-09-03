@@ -15,9 +15,7 @@ namespace SqlServerDataFeed
     public partial class T_ZO_OV_Ref_ObjektSymbol_Objekt
     {
         public System.Guid OBJO_UID { get; set; }
-        public System.Guid OBJO_OBJS_UID { get; set; }
         public Nullable<System.Guid> OBJO_OBJ_UID { get; set; }
-        public int OBJO_MDT_ID { get; set; }
         public double OBJO_Left { get; set; }
         public double OBJO_Top { get; set; }
         public int OBJO_Width { get; set; }

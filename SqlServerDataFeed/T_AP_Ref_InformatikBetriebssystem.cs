@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid IBS_UID { get; set; }
-        public int IBS_MDT_ID { get; set; }
         public Nullable<int> IBS_Code { get; set; }
         public string IBS_Kurz_DE { get; set; }
         public string IBS_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string IBS_Lang_EN { get; set; }
         public int IBS_Status { get; set; }
         public int IBS_Sort { get; set; }
-        public Nullable<int> IBS_StylizerFore { get; set; }
         public Nullable<int> IBS_StylizerBack { get; set; }
         public Nullable<int> IBS_StylizerPattern { get; set; }
         public Nullable<int> IBS_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Informatik> T_AP_Informatik { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

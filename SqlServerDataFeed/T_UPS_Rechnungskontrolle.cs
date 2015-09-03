@@ -15,19 +15,11 @@ namespace SqlServerDataFeed
     public partial class T_UPS_Rechnungskontrolle
     {
         public System.Guid RK_UID { get; set; }
-        public Nullable<System.Guid> RK_BP_UID { get; set; }
-        public Nullable<System.Guid> RK_ADR_UID { get; set; }
         public string RK_Beleg { get; set; }
         public Nullable<double> RK_Betrag { get; set; }
         public Nullable<System.DateTime> RK_Datum { get; set; }
         public int RK_Status { get; set; }
-        public Nullable<System.Guid> RK_TSK_UID { get; set; }
         public string RK_Betreff { get; set; }
-        public Nullable<System.Guid> RK_AL_UID { get; set; }
-        public Nullable<System.Guid> RK_SH_UID { get; set; }
-        public Nullable<System.Guid> RK_BKP_UID { get; set; }
-        public Nullable<System.Guid> RK_GB_UID { get; set; }
-        public Nullable<int> RK_BE_ID { get; set; }
     
         public virtual T_AP_Anlage T_AP_Anlage { get; set; }
         public virtual T_AP_Gebaeude T_AP_Gebaeude { get; set; }

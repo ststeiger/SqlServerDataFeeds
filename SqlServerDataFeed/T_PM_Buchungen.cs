@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_PM_Buchungen
     {
         public System.Guid BU_UID { get; set; }
-        public Nullable<System.Guid> BU_PP_UID { get; set; }
         public Nullable<System.DateTime> BU_DatumVon { get; set; }
         public Nullable<System.DateTime> BU_DatumBis { get; set; }
         public string BU_Name { get; set; }
@@ -23,12 +22,9 @@ namespace SqlServerDataFeed
         public string BU_Firma { get; set; }
         public string BU_Autokennzeichen { get; set; }
         public string BU_Bemerkungen { get; set; }
-        public Nullable<System.Guid> BU_ZT_UID_ZeitVon { get; set; }
-        public Nullable<System.Guid> BU_ZT_UID_ZeitBis { get; set; }
         public int BU_Status { get; set; }
         public Nullable<System.DateTime> BU_MutDate { get; set; }
         public string BU_MutUser { get; set; }
-        public int BU_MDT_ID { get; set; }
     
         public virtual T_AP_Parkplatz T_AP_Parkplatz { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }

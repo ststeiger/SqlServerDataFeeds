@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid MS_UID { get; set; }
-        public int MS_MDT_ID { get; set; }
         public Nullable<int> MS_Code { get; set; }
         public string MS_Kurz_DE { get; set; }
         public string MS_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string MS_Lang_EN { get; set; }
         public int MS_Status { get; set; }
         public int MS_Sort { get; set; }
-        public Nullable<int> MS_StylizerFore { get; set; }
         public Nullable<int> MS_StylizerBack { get; set; }
         public Nullable<int> MS_StylizerPattern { get; set; }
         public Nullable<int> MS_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Kontakte> T_AP_Kontakte { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AV_Adressen_History
     {
         public System.Guid HIADR_UID { get; set; }
-        public System.Guid HIADR_ADR_UID { get; set; }
         public System.Guid HIADR_Entry_UID { get; set; }
         public System.DateTime HIADR_Datum { get; set; }
         public string HIADR_User { get; set; }

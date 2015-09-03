@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Schluesselgruppe_AP_Ref_Funktionen
     {
         public System.Guid ZO_SLGKF_UID { get; set; }
-        public Nullable<System.Guid> ZO_SLGKF_SLG_UID { get; set; }
-        public Nullable<System.Guid> ZO_SLGKF_KF_UID { get; set; }
         public int ZO_SLGKF_Status { get; set; }
     
         public virtual T_AP_Ref_KontakFunktion T_AP_Ref_KontakFunktion { get; set; }

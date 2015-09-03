@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AV_Adresse_AV_Ref_AdresseRollen
     {
         public System.Guid ZO_ADRAR_UID { get; set; }
-        public Nullable<System.Guid> ZO_ADRAR_ADR_UID { get; set; }
-        public Nullable<System.Guid> ZO_ADRAR_AR_UID { get; set; }
         public int ZO_ADRAR_Status { get; set; }
     
         public virtual T_AV_Adressen T_AV_Adressen { get; set; }

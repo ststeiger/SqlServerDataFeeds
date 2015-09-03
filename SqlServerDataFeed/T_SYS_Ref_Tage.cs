@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_SYS_Ref_Tage
     {
         public System.Guid TAG_UID { get; set; }
-        public int TAG_MDT_ID { get; set; }
         public Nullable<int> TAG_Code { get; set; }
         public string TAG_Kurz_DE { get; set; }
         public string TAG_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string TAG_Lang_EN { get; set; }
         public int TAG_Status { get; set; }
         public int TAG_Sort { get; set; }
-        public Nullable<int> TAG_StylizerFore { get; set; }
         public Nullable<int> TAG_StylizerBack { get; set; }
         public Nullable<int> TAG_StylizerPattern { get; set; }
         public Nullable<int> TAG_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string TAG_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

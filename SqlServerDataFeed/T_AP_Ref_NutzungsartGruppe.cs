@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid NAG_UID { get; set; }
-        public int NAG_MDT_ID { get; set; }
         public Nullable<int> NAG_Code { get; set; }
         public string NAG_Kurz_DE { get; set; }
         public string NAG_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string NAG_Lang_EN { get; set; }
         public int NAG_Status { get; set; }
         public int NAG_Sort { get; set; }
-        public Nullable<int> NAG_StylizerFore { get; set; }
         public Nullable<int> NAG_StylizerBack { get; set; }
         public Nullable<int> NAG_StylizerPattern { get; set; }
         public Nullable<int> NAG_StylizerLine { get; set; }
@@ -43,5 +41,6 @@ namespace SqlServerDataFeed
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual ICollection<T_AP_Ref_Nutzungsart> T_AP_Ref_Nutzungsart { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

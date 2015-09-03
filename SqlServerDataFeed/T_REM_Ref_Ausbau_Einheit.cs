@@ -32,11 +32,11 @@ namespace SqlServerDataFeed
         public int REMAE_Status { get; set; }
         public int REMAE_Sort { get; set; }
         public bool REMAE_IsDefault { get; set; }
-        public Nullable<int> REMAE_StylizerBack { get; set; }
         public Nullable<int> REMAE_StylizerFore { get; set; }
         public Nullable<int> REMAE_StylizerPattern { get; set; }
         public Nullable<int> REMAE_StylizerLine { get; set; }
     
         public virtual ICollection<T_REM_Ref_Ausbau> T_REM_Ref_Ausbau { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

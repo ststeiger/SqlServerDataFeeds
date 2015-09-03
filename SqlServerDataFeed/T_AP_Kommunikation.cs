@@ -17,6 +17,7 @@ namespace SqlServerDataFeed
         public T_AP_Kommunikation()
         {
             this.T_AP_Kommunikation_History = new HashSet<T_AP_Kommunikation_History>();
+            this.T_SYS_Kommunikationrechte = new HashSet<T_SYS_Kommunikationrechte>();
             this.T_TM_Tasks_Planung = new HashSet<T_TM_Tasks_Planung>();
             this.T_TM_Tasks = new HashSet<T_TM_Tasks>();
             this.T_ZO_AP_Kommunikation_DWG = new HashSet<T_ZO_AP_Kommunikation_DWG>();
@@ -24,12 +25,6 @@ namespace SqlServerDataFeed
     
         public System.Guid KM_UID { get; set; }
         public string KM_ApertureKey { get; set; }
-        public int KM_MDT_ID { get; set; }
-        public Nullable<System.Guid> KM_RM_UID { get; set; }
-        public Nullable<System.Guid> KM_KMKAT_UID { get; set; }
-        public Nullable<System.Guid> KM_KMA_UID { get; set; }
-        public Nullable<System.Guid> KM_ADR_UID { get; set; }
-        public Nullable<System.Guid> KM_KST_UID { get; set; }
         public string KM_Nr { get; set; }
         public string KM_Hersteller { get; set; }
         public string KM_Modell { get; set; }
@@ -43,7 +38,6 @@ namespace SqlServerDataFeed
         public System.DateTime KM_DatumVon { get; set; }
         public System.DateTime KM_DatumBis { get; set; }
         public int KM_Status { get; set; }
-        public Nullable<System.Guid> KM_AP_UID { get; set; }
     
         public virtual T_AP_Arbeitsplatz T_AP_Arbeitsplatz { get; set; }
         public virtual ICollection<T_AP_Kommunikation_History> T_AP_Kommunikation_History { get; set; }
@@ -53,6 +47,7 @@ namespace SqlServerDataFeed
         public virtual T_AP_Ref_Kostenstelle T_AP_Ref_Kostenstelle { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual T_AV_Adressen T_AV_Adressen { get; set; }
+        public virtual ICollection<T_SYS_Kommunikationrechte> T_SYS_Kommunikationrechte { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
         public virtual ICollection<T_ZO_AP_Kommunikation_DWG> T_ZO_AP_Kommunikation_DWG { get; set; }

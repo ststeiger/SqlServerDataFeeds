@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Schluessel_AP_Kontakte
     {
         public System.Guid ZO_SLKT_UID { get; set; }
-        public System.Guid ZO_SLKT_KT_UID { get; set; }
-        public System.Guid ZO_SLKT_SL_UID { get; set; }
         public int ZO_SLKT_Status { get; set; }
     
         public virtual T_AP_Kontakte T_AP_Kontakte { get; set; }

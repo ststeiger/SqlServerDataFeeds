@@ -16,7 +16,6 @@ namespace SqlServerDataFeed
     {
         public System.Guid FK_UID { get; set; }
         public Nullable<System.Guid> FK_Objekt_UID { get; set; }
-        public Nullable<System.Guid> FK_FKAT_UID { get; set; }
         public string FK_Bezeichnung { get; set; }
         public string FK_Datei { get; set; }
         public int FK_Breite { get; set; }

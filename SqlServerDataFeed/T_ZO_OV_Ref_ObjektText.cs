@@ -15,13 +15,9 @@ namespace SqlServerDataFeed
     public partial class T_ZO_OV_Ref_ObjektText
     {
         public System.Guid ZO_OBJT_UID { get; set; }
-        public System.Guid ZO_OBJT_LY_UID { get; set; }
-        public int ZO_OBJT_MDT_ID { get; set; }
         public string ZO_OBJT_Text { get; set; }
         public string ZO_OBJT_Font_Family { get; set; }
         public Nullable<int> ZO_OBJT_Font_Size { get; set; }
-        public Nullable<int> ZO_OBJT_Font_COL_Aperture { get; set; }
-        public Nullable<int> ZO_OBJT_Back_COL_Aperture { get; set; }
         public double ZO_OBJT_Left { get; set; }
         public double ZO_OBJT_Top { get; set; }
         public int ZO_OBJT_Width { get; set; }

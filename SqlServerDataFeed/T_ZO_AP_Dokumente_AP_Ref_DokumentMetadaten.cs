@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Dokumente_AP_Ref_DokumentMetadaten
     {
         public System.Guid ZO_DKDMET_UID { get; set; }
-        public Nullable<System.Guid> ZO_DKDMET_DK_UID { get; set; }
-        public Nullable<System.Guid> ZO_DKDMET_DMET_UID { get; set; }
         public string ZO_DKDMET_FreeText { get; set; }
         public System.DateTime ZO_DKDMET_DatumVon { get; set; }
         public System.DateTime ZO_DKDMET_DatumBis { get; set; }

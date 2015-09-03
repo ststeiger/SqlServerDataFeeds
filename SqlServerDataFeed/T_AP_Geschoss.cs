@@ -17,6 +17,7 @@ namespace SqlServerDataFeed
         public T_AP_Geschoss()
         {
             this.T_AP_Anlage = new HashSet<T_AP_Anlage>();
+            this.T_AP_Fahrzeug = new HashSet<T_AP_Fahrzeug>();
             this.T_AP_Geschoss_History = new HashSet<T_AP_Geschoss_History>();
             this.T_AP_Geschoss_Reichle = new HashSet<T_AP_Geschoss_Reichle>();
             this.T_AP_Parkplatz = new HashSet<T_AP_Parkplatz>();
@@ -33,9 +34,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid GS_UID { get; set; }
-        public int GS_MDT_ID { get; set; }
-        public System.Guid GS_GB_UID { get; set; }
-        public System.Guid GS_GST_UID { get; set; }
         public string GS_ApertureKey { get; set; }
         public string GS_Nr { get; set; }
         public string GS_Bezeichnung { get; set; }
@@ -58,6 +56,7 @@ namespace SqlServerDataFeed
         public string GS_Planseite { get; set; }
     
         public virtual ICollection<T_AP_Anlage> T_AP_Anlage { get; set; }
+        public virtual ICollection<T_AP_Fahrzeug> T_AP_Fahrzeug { get; set; }
         public virtual T_AP_Gebaeude T_AP_Gebaeude { get; set; }
         public virtual ICollection<T_AP_Geschoss_History> T_AP_Geschoss_History { get; set; }
         public virtual ICollection<T_AP_Geschoss_Reichle> T_AP_Geschoss_Reichle { get; set; }

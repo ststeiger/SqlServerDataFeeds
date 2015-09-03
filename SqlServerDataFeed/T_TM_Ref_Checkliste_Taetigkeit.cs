@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TCLTA_UID { get; set; }
-        public int TCLTA_MDT_ID { get; set; }
         public string TCLTA_Code { get; set; }
         public string TCLTA_Kurz_DE { get; set; }
         public string TCLTA_Kurz_FR { get; set; }
@@ -32,16 +31,13 @@ namespace SqlServerDataFeed
         public string TCLTA_Lang_EN { get; set; }
         public int TCLTA_Status { get; set; }
         public int TCLTA_Sort { get; set; }
-        public Nullable<int> TCLTA_StylizerFore { get; set; }
         public Nullable<int> TCLTA_StylizerBack { get; set; }
         public Nullable<int> TCLTA_StylizerPattern { get; set; }
         public Nullable<int> TCLTA_StylizerLine { get; set; }
         public bool TCLTA_IsDefault { get; set; }
-        public Nullable<System.Guid> TCLTA_TCL_UID { get; set; }
-        public Nullable<System.Guid> TCLTA_TCLA_UID { get; set; }
-        public Nullable<System.Guid> TCLTA_TPL_UID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual T_TM_Ref_Checkliste T_TM_Ref_Checkliste { get; set; }
         public virtual T_TM_Ref_Checkliste_Absatz T_TM_Ref_Checkliste_Absatz { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste_Details> T_TM_Ref_Checkliste_Details { get; set; }

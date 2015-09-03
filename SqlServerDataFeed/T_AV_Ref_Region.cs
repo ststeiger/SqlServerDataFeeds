@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ARE_UID { get; set; }
-        public int ARE_MDT_ID { get; set; }
         public Nullable<int> ARE_Code { get; set; }
         public string ARE_Kurz_DE { get; set; }
         public string ARE_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string ARE_Lang_EN { get; set; }
         public int ARE_Status { get; set; }
         public int ARE_Sort { get; set; }
-        public Nullable<int> ARE_StylizerFore { get; set; }
         public Nullable<int> ARE_StylizerBack { get; set; }
         public Nullable<int> ARE_StylizerPattern { get; set; }
         public Nullable<int> ARE_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual ICollection<T_AV_Adressen> T_AV_Adressen { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

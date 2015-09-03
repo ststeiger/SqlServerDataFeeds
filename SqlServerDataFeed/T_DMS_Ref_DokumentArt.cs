@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid DA_UID { get; set; }
-        public Nullable<System.Guid> DA_DG_UID { get; set; }
         public string DA_Code { get; set; }
         public string DA_Kurz_DE { get; set; }
         public string DA_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string DA_Lang_EN { get; set; }
         public int DA_Status { get; set; }
         public int DA_Sort { get; set; }
-        public Nullable<int> DA_StylizerFore { get; set; }
         public Nullable<int> DA_StylizerBack { get; set; }
         public Nullable<int> DA_StylizerPattern { get; set; }
         public Nullable<int> DA_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_DMS_Dokument> T_DMS_Dokument { get; set; }
         public virtual T_DMS_Ref_DokumentGruppe T_DMS_Ref_DokumentGruppe { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

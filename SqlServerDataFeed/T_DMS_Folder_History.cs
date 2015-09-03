@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_DMS_Folder_History
     {
         public System.Guid HIFO_UID { get; set; }
-        public System.Guid HIFO_FO_UID { get; set; }
         public System.DateTime HIFO_Datum { get; set; }
         public string HIFO_User { get; set; }
         public string HIFO_Text_DE { get; set; }

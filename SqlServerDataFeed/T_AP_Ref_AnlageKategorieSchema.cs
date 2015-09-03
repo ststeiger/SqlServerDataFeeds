@@ -21,7 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AKS_UID { get; set; }
-        public int AKS_MDT_ID { get; set; }
         public Nullable<int> AKS_Code { get; set; }
         public string AKS_Kurz_DE { get; set; }
         public string AKS_Kurz_FR { get; set; }
@@ -33,7 +32,6 @@ namespace SqlServerDataFeed
         public string AKS_Lang_EN { get; set; }
         public int AKS_Status { get; set; }
         public int AKS_Sort { get; set; }
-        public Nullable<int> AKS_StylizerFore { get; set; }
         public Nullable<int> AKS_StylizerBack { get; set; }
         public Nullable<int> AKS_StylizerPattern { get; set; }
         public Nullable<int> AKS_StylizerLine { get; set; }
@@ -42,6 +40,7 @@ namespace SqlServerDataFeed
         public string AKS_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_AP_Gebaeude_AP_Ref_AnlagaeKategorieSchema> T_ZO_AP_Gebaeude_AP_Ref_AnlagaeKategorieSchema { get; set; }
         public virtual ICollection<T_ZO_AP_Ref_AnlageKategorie_AP_Ref_AnlageKategorieSchema> T_ZO_AP_Ref_AnlageKategorie_AP_Ref_AnlageKategorieSchema { get; set; }
     }

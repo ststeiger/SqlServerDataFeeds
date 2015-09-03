@@ -21,7 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ANKAT_UID { get; set; }
-        public int ANKAT_MDT_ID { get; set; }
         public Nullable<int> ANKAT_Code { get; set; }
         public string ANKAT_Kurz_DE { get; set; }
         public string ANKAT_Kurz_FR { get; set; }
@@ -33,7 +32,6 @@ namespace SqlServerDataFeed
         public string ANKAT_Lang_EN { get; set; }
         public int ANKAT_Status { get; set; }
         public int ANKAT_Sort { get; set; }
-        public Nullable<int> ANKAT_StylizerFore { get; set; }
         public Nullable<int> ANKAT_StylizerBack { get; set; }
         public Nullable<int> ANKAT_StylizerPattern { get; set; }
         public Nullable<int> ANKAT_StylizerLine { get; set; }
@@ -43,6 +41,7 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Anschluss> T_AP_Anschluss { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AP_Ref_AnschlussTyp> T_AP_Ref_AnschlussTyp { get; set; }
     }
 }

@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_AnlageWRG
     {
         public System.Guid AWRG_UID { get; set; }
-        public int AWRG_MDT_ID { get; set; }
         public Nullable<int> AWRG_Code { get; set; }
         public string AWRG_Kurz_DE { get; set; }
         public string AWRG_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string AWRG_Lang_EN { get; set; }
         public int AWRG_Status { get; set; }
         public int AWRG_Sort { get; set; }
-        public Nullable<int> AWRG_StylizerFore { get; set; }
         public Nullable<int> AWRG_StylizerBack { get; set; }
         public Nullable<int> AWRG_StylizerPattern { get; set; }
         public Nullable<int> AWRG_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string AWRG_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

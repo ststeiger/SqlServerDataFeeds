@@ -16,12 +16,12 @@ namespace SqlServerDataFeed
     {
         public T_AP_Ref_Ort()
         {
+            this.T_AP_Ref_KunstKuenstler = new HashSet<T_AP_Ref_KunstKuenstler>();
+            this.T_AP_Ref_KunstKuenstler1 = new HashSet<T_AP_Ref_KunstKuenstler>();
             this.T_AP_Standort = new HashSet<T_AP_Standort>();
         }
     
         public System.Guid ORT_UID { get; set; }
-        public int ORT_MDT_ID { get; set; }
-        public Nullable<System.Guid> ORT_RG_UID { get; set; }
         public Nullable<int> ORT_Code { get; set; }
         public string ORT_Kurz_DE { get; set; }
         public string ORT_Kurz_FR { get; set; }
@@ -33,7 +33,6 @@ namespace SqlServerDataFeed
         public string ORT_Lang_EN { get; set; }
         public int ORT_Status { get; set; }
         public int ORT_Sort { get; set; }
-        public Nullable<int> ORT_StylizerFore { get; set; }
         public Nullable<int> ORT_StylizerBack { get; set; }
         public Nullable<int> ORT_StylizerPattern { get; set; }
         public Nullable<int> ORT_StylizerLine { get; set; }
@@ -43,8 +42,11 @@ namespace SqlServerDataFeed
         public Nullable<decimal> ORT_GM_Lat { get; set; }
         public Nullable<decimal> ORT_GM_Lng { get; set; }
     
+        public virtual ICollection<T_AP_Ref_KunstKuenstler> T_AP_Ref_KunstKuenstler { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstKuenstler> T_AP_Ref_KunstKuenstler1 { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual T_AP_Ref_Region T_AP_Ref_Region { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AP_Standort> T_AP_Standort { get; set; }
     }
 }

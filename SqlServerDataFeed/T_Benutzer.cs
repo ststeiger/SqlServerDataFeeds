@@ -17,6 +17,7 @@ namespace SqlServerDataFeed
         public T_Benutzer()
         {
             this.T_AP_Dokumente = new HashSet<T_AP_Dokumente>();
+            this.T_AP_Dokumente_Log = new HashSet<T_AP_Dokumente_Log>();
             this.T_Benutzer_Benutzergruppen = new HashSet<T_Benutzer_Benutzergruppen>();
             this.T_FMS_ZO_Navigation_Benutzer = new HashSet<T_FMS_ZO_Navigation_Benutzer>();
             this.T_FMS_ZO_Navigation = new HashSet<T_FMS_ZO_Navigation>();
@@ -30,6 +31,7 @@ namespace SqlServerDataFeed
             this.T_ZO_AP_MarkDWG = new HashSet<T_ZO_AP_MarkDWG>();
             this.T_ZO_AP_Parkplatz_Reservation = new HashSet<T_ZO_AP_Parkplatz_Reservation>();
             this.T_ZO_AP_Raum_Reservation = new HashSet<T_ZO_AP_Raum_Reservation>();
+            this.T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer = new HashSet<T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer>();
             this.T_ZO_SYS_Settings_Benutzer = new HashSet<T_ZO_SYS_Settings_Benutzer>();
             this.T_AP_Ref_Mandant = new HashSet<T_AP_Ref_Mandant>();
         }
@@ -54,6 +56,7 @@ namespace SqlServerDataFeed
         public Nullable<int> BE_Augen { get; set; }
     
         public virtual ICollection<T_AP_Dokumente> T_AP_Dokumente { get; set; }
+        public virtual ICollection<T_AP_Dokumente_Log> T_AP_Dokumente_Log { get; set; }
         public virtual ICollection<T_Benutzer_Benutzergruppen> T_Benutzer_Benutzergruppen { get; set; }
         public virtual ICollection<T_FMS_ZO_Navigation_Benutzer> T_FMS_ZO_Navigation_Benutzer { get; set; }
         public virtual ICollection<T_FMS_ZO_Navigation> T_FMS_ZO_Navigation { get; set; }
@@ -67,6 +70,7 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_ZO_AP_MarkDWG> T_ZO_AP_MarkDWG { get; set; }
         public virtual ICollection<T_ZO_AP_Parkplatz_Reservation> T_ZO_AP_Parkplatz_Reservation { get; set; }
         public virtual ICollection<T_ZO_AP_Raum_Reservation> T_ZO_AP_Raum_Reservation { get; set; }
+        public virtual ICollection<T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer> T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer { get; set; }
         public virtual T_ZO_Benutzer_Schedule T_ZO_Benutzer_Schedule { get; set; }
         public virtual ICollection<T_ZO_SYS_Settings_Benutzer> T_ZO_SYS_Settings_Benutzer { get; set; }
         public virtual ICollection<T_AP_Ref_Mandant> T_AP_Ref_Mandant { get; set; }

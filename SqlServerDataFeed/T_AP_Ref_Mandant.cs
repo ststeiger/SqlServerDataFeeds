@@ -22,14 +22,15 @@ namespace SqlServerDataFeed
             this.T_AP_Arbeitsplatz = new HashSet<T_AP_Arbeitsplatz>();
             this.T_AP_Aussenobjekt = new HashSet<T_AP_Aussenobjekt>();
             this.T_AP_Dose = new HashSet<T_AP_Dose>();
+            this.T_AP_Fahrzeug = new HashSet<T_AP_Fahrzeug>();
             this.T_AP_Gebaeude = new HashSet<T_AP_Gebaeude>();
             this.T_AP_Geschoss = new HashSet<T_AP_Geschoss>();
             this.T_AP_Grundstueck = new HashSet<T_AP_Grundstueck>();
             this.T_AP_Informatik = new HashSet<T_AP_Informatik>();
             this.T_AP_Kommunikation = new HashSet<T_AP_Kommunikation>();
             this.T_AP_Kunst = new HashSet<T_AP_Kunst>();
+            this.T_AP_Kunst_Ref_Technik = new HashSet<T_AP_Kunst_Ref_Technik>();
             this.T_AP_Mobiliar = new HashSet<T_AP_Mobiliar>();
-            this.T_AP_Mobiliar1 = new HashSet<T_AP_Mobiliar>();
             this.T_AP_Parkplatz = new HashSet<T_AP_Parkplatz>();
             this.T_AP_Raum = new HashSet<T_AP_Raum>();
             this.T_AP_Ref_AnlageBauform = new HashSet<T_AP_Ref_AnlageBauform>();
@@ -56,12 +57,16 @@ namespace SqlServerDataFeed
             this.T_AP_Ref_AussenobjektKategorie = new HashSet<T_AP_Ref_AussenobjektKategorie>();
             this.T_AP_Ref_AussenobjektNutzungsart = new HashSet<T_AP_Ref_AussenobjektNutzungsart>();
             this.T_AP_Ref_Bodenbelag = new HashSet<T_AP_Ref_Bodenbelag>();
+            this.T_AP_Ref_DokumentGrund = new HashSet<T_AP_Ref_DokumentGrund>();
             this.T_AP_Ref_DokumentMetadaten = new HashSet<T_AP_Ref_DokumentMetadaten>();
+            this.T_AP_Ref_DokumentStatus = new HashSet<T_AP_Ref_DokumentStatus>();
             this.T_AP_Ref_DoseKategorie = new HashSet<T_AP_Ref_DoseKategorie>();
             this.T_AP_Ref_Eigentumsverhaeltnis = new HashSet<T_AP_Ref_Eigentumsverhaeltnis>();
             this.T_AP_Ref_Energiebezugsart = new HashSet<T_AP_Ref_Energiebezugsart>();
             this.T_AP_Ref_ErschliessungFussweg = new HashSet<T_AP_Ref_ErschliessungFussweg>();
             this.T_AP_Ref_ErschliessungStrasse = new HashSet<T_AP_Ref_ErschliessungStrasse>();
+            this.T_AP_Ref_FahrzeugHersteller = new HashSet<T_AP_Ref_FahrzeugHersteller>();
+            this.T_AP_Ref_FahrzeugTyp = new HashSet<T_AP_Ref_FahrzeugTyp>();
             this.T_AP_Ref_Fluchtwegmarkierung = new HashSet<T_AP_Ref_Fluchtwegmarkierung>();
             this.T_AP_Ref_FotoKategorie = new HashSet<T_AP_Ref_FotoKategorie>();
             this.T_AP_Ref_Freigabetyp = new HashSet<T_AP_Ref_Freigabetyp>();
@@ -78,11 +83,17 @@ namespace SqlServerDataFeed
             this.T_AP_Ref_KontakFunktion = new HashSet<T_AP_Ref_KontakFunktion>();
             this.T_AP_Ref_KontaktGeschlecht = new HashSet<T_AP_Ref_KontaktGeschlecht>();
             this.T_AP_Ref_Kostenstelle = new HashSet<T_AP_Ref_Kostenstelle>();
+            this.T_AP_Ref_KunstAusleihanlass = new HashSet<T_AP_Ref_KunstAusleihanlass>();
+            this.T_AP_Ref_KunstAusleihart = new HashSet<T_AP_Ref_KunstAusleihart>();
+            this.T_AP_Ref_KunstEntlassung = new HashSet<T_AP_Ref_KunstEntlassung>();
+            this.T_AP_Ref_KunstInstitution = new HashSet<T_AP_Ref_KunstInstitution>();
             this.T_AP_Ref_KunstKategorie = new HashSet<T_AP_Ref_KunstKategorie>();
             this.T_AP_Ref_KunstKuenstler = new HashSet<T_AP_Ref_KunstKuenstler>();
             this.T_AP_Ref_KunstMandant = new HashSet<T_AP_Ref_KunstMandant>();
+            this.T_AP_Ref_KunstProvenienz = new HashSet<T_AP_Ref_KunstProvenienz>();
             this.T_AP_Ref_KunstRahmenArt = new HashSet<T_AP_Ref_KunstRahmenArt>();
             this.T_AP_Ref_KunstStatus = new HashSet<T_AP_Ref_KunstStatus>();
+            this.T_AP_Ref_KunstWerteKategorie = new HashSet<T_AP_Ref_KunstWerteKategorie>();
             this.T_AP_Ref_Land = new HashSet<T_AP_Ref_Land>();
             this.T_AP_Ref_Landesteile = new HashSet<T_AP_Ref_Landesteile>();
             this.T_AP_Ref_Layerset = new HashSet<T_AP_Ref_Layerset>();
@@ -129,8 +140,10 @@ namespace SqlServerDataFeed
             this.T_AP_Ref_ZoneKategorie = new HashSet<T_AP_Ref_ZoneKategorie>();
             this.T_AP_Ref_Zonenzuteilung = new HashSet<T_AP_Ref_Zonenzuteilung>();
             this.T_AP_Ref_ZuschlagsflaechenTyp = new HashSet<T_AP_Ref_ZuschlagsflaechenTyp>();
+            this.T_AP_Ref_ZylinderKasse = new HashSet<T_AP_Ref_ZylinderKasse>();
             this.T_AP_Ref_ZylinderKategorie = new HashSet<T_AP_Ref_ZylinderKategorie>();
             this.T_AP_Ref_ZylinderSchliesssystem = new HashSet<T_AP_Ref_ZylinderSchliesssystem>();
+            this.T_AP_Ref_ZylinderStatus = new HashSet<T_AP_Ref_ZylinderStatus>();
             this.T_AP_Ref_ZylinderTyp = new HashSet<T_AP_Ref_ZylinderTyp>();
             this.T_AP_Sicherheit = new HashSet<T_AP_Sicherheit>();
             this.T_AP_Standort = new HashSet<T_AP_Standort>();
@@ -141,22 +154,53 @@ namespace SqlServerDataFeed
             this.T_AP_Zylinder = new HashSet<T_AP_Zylinder>();
             this.T_AV_Adressen = new HashSet<T_AV_Adressen>();
             this.T_AV_Ref_Region = new HashSet<T_AV_Ref_Region>();
+            this.T_CL_Checklist = new HashSet<T_CL_Checklist>();
+            this.T_CL_Ref_Katalog = new HashSet<T_CL_Ref_Katalog>();
+            this.T_CL_ZO_Cell = new HashSet<T_CL_ZO_Cell>();
+            this.T_CL_ZO_CheckBox = new HashSet<T_CL_ZO_CheckBox>();
+            this.T_CL_ZO_DropDown = new HashSet<T_CL_ZO_DropDown>();
+            this.T_CL_ZO_Header = new HashSet<T_CL_ZO_Header>();
+            this.T_CL_ZO_Image = new HashSet<T_CL_ZO_Image>();
+            this.T_CL_ZO_Label = new HashSet<T_CL_ZO_Label>();
+            this.T_CL_ZO_Table = new HashSet<T_CL_ZO_Table>();
+            this.T_CL_ZO_TextBox = new HashSet<T_CL_ZO_TextBox>();
             this.T_DMS_Ref_Prozesse = new HashSet<T_DMS_Ref_Prozesse>();
+            this.T_IGM_Ref_GlasreinigungServiceLevel = new HashSet<T_IGM_Ref_GlasreinigungServiceLevel>();
+            this.T_IGM_Ref_InnenreinigungServiceLevel = new HashSet<T_IGM_Ref_InnenreinigungServiceLevel>();
+            this.T_IGM_Ref_Leistungsart = new HashSet<T_IGM_Ref_Leistungsart>();
+            this.T_IGM_Ref_Oberflaeche = new HashSet<T_IGM_Ref_Oberflaeche>();
+            this.T_IGM_Ref_OffertenTyp = new HashSet<T_IGM_Ref_OffertenTyp>();
+            this.T_IGM_Ref_Raumgruppe = new HashSet<T_IGM_Ref_Raumgruppe>();
             this.T_OV_Ref_BelegungArt = new HashSet<T_OV_Ref_BelegungArt>();
             this.T_OV_Ref_ObjektTyp = new HashSet<T_OV_Ref_ObjektTyp>();
             this.T_PM_Buchungen = new HashSet<T_PM_Buchungen>();
             this.T_PM_Ref_ParkplatzBuchung = new HashSet<T_PM_Ref_ParkplatzBuchung>();
             this.T_POM_Mittelwert = new HashSet<T_POM_Mittelwert>();
             this.T_POM_Ref_MittelwertGruppe = new HashSet<T_POM_Ref_MittelwertGruppe>();
+            this.T_SYS_AdresseRollenrechte = new HashSet<T_SYS_AdresseRollenrechte>();
+            this.T_SYS_Anlagerechte = new HashSet<T_SYS_Anlagerechte>();
+            this.T_SYS_Arbeitsplatzrechte = new HashSet<T_SYS_Arbeitsplatzrechte>();
+            this.T_SYS_Aussenobjektrechte = new HashSet<T_SYS_Aussenobjektrechte>();
             this.T_SYS_BackOfficeMenuerechte = new HashSet<T_SYS_BackOfficeMenuerechte>();
             this.T_SYS_Backofficerechte = new HashSet<T_SYS_Backofficerechte>();
             this.T_SYS_Dashboardrechte = new HashSet<T_SYS_Dashboardrechte>();
+            this.T_SYS_Doserechte = new HashSet<T_SYS_Doserechte>();
             this.T_SYS_Form_Feld_Recht = new HashSet<T_SYS_Form_Feld_Recht>();
             this.T_SYS_Form_Register_Recht = new HashSet<T_SYS_Form_Register_Recht>();
             this.T_SYS_Gebaeuderechte = new HashSet<T_SYS_Gebaeuderechte>();
             this.T_SYS_Geschossrechte = new HashSet<T_SYS_Geschossrechte>();
+            this.T_SYS_Grundstueckrechte = new HashSet<T_SYS_Grundstueckrechte>();
+            this.T_SYS_Informatikrechte = new HashSet<T_SYS_Informatikrechte>();
+            this.T_SYS_Kommunikationrechte = new HashSet<T_SYS_Kommunikationrechte>();
+            this.T_SYS_Kunstrechte = new HashSet<T_SYS_Kunstrechte>();
+            this.T_SYS_Language_Log = new HashSet<T_SYS_Language_Log>();
             this.T_SYS_Layersetrechte = new HashSet<T_SYS_Layersetrechte>();
+            this.T_SYS_Mobiliarrechte = new HashSet<T_SYS_Mobiliarrechte>();
             this.T_SYS_Navigationrechte = new HashSet<T_SYS_Navigationrechte>();
+            this.T_SYS_Parkplatzrechte = new HashSet<T_SYS_Parkplatzrechte>();
+            this.T_SYS_Raumrechte = new HashSet<T_SYS_Raumrechte>();
+            this.T_SYS_Ref_Datentyp = new HashSet<T_SYS_Ref_Datentyp>();
+            this.T_SYS_Ref_Geschlecht = new HashSet<T_SYS_Ref_Geschlecht>();
             this.T_SYS_Ref_Language = new HashSet<T_SYS_Ref_Language>();
             this.T_SYS_Ref_Layerset = new HashSet<T_SYS_Ref_Layerset>();
             this.T_SYS_Ref_Monate = new HashSet<T_SYS_Ref_Monate>();
@@ -167,7 +211,14 @@ namespace SqlServerDataFeed
             this.T_SYS_Ref_ZeitEinheiten = new HashSet<T_SYS_Ref_ZeitEinheiten>();
             this.T_SYS_Registerrechte = new HashSet<T_SYS_Registerrechte>();
             this.T_SYS_Reportrechte = new HashSet<T_SYS_Reportrechte>();
+            this.T_SYS_Schluesselgrupperechte = new HashSet<T_SYS_Schluesselgrupperechte>();
+            this.T_SYS_Sicherheitrechte = new HashSet<T_SYS_Sicherheitrechte>();
             this.T_SYS_Standortrechte = new HashSet<T_SYS_Standortrechte>();
+            this.T_SYS_Traktrechte = new HashSet<T_SYS_Traktrechte>();
+            this.T_SYS_Tuerrechte = new HashSet<T_SYS_Tuerrechte>();
+            this.T_SYS_Zaehlerrechte = new HashSet<T_SYS_Zaehlerrechte>();
+            this.T_SYS_Zonerechte = new HashSet<T_SYS_Zonerechte>();
+            this.T_SYS_Zylinderrechte = new HashSet<T_SYS_Zylinderrechte>();
             this.T_TM_Ref_Checkliste_Absatz = new HashSet<T_TM_Ref_Checkliste_Absatz>();
             this.T_TM_Ref_Checkliste_Checkpoints = new HashSet<T_TM_Ref_Checkliste_Checkpoints>();
             this.T_TM_Ref_Checkliste_Details = new HashSet<T_TM_Ref_Checkliste_Details>();
@@ -190,6 +241,11 @@ namespace SqlServerDataFeed
             this.T_VM_Ref_KostenPeriode = new HashSet<T_VM_Ref_KostenPeriode>();
             this.T_VM_Ref_Vertragszustaendigkeit = new HashSet<T_VM_Ref_Vertragszustaendigkeit>();
             this.T_VM_Vertraege = new HashSet<T_VM_Vertraege>();
+            this.T_ZO_AP_Kunst_Ausleihe = new HashSet<T_ZO_AP_Kunst_Ausleihe>();
+            this.T_ZO_AP_Kunst_Werte = new HashSet<T_ZO_AP_Kunst_Werte>();
+            this.T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer = new HashSet<T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer>();
+            this.T_ZO_OV_Ref_ObjektDefect = new HashSet<T_ZO_OV_Ref_ObjektDefect>();
+            this.T_ZO_OV_Ref_ObjektPolygon = new HashSet<T_ZO_OV_Ref_ObjektPolygon>();
             this.T_ZO_OV_Ref_ObjektSymbol_Objekt = new HashSet<T_ZO_OV_Ref_ObjektSymbol_Objekt>();
             this.T_ZO_OV_Ref_ObjektSymbol = new HashSet<T_ZO_OV_Ref_ObjektSymbol>();
             this.T_ZO_OV_Ref_ObjektText = new HashSet<T_ZO_OV_Ref_ObjektText>();
@@ -213,7 +269,6 @@ namespace SqlServerDataFeed
         public string MDT_Lang_EN { get; set; }
         public int MDT_Status { get; set; }
         public int MDT_Sort { get; set; }
-        public Nullable<int> MDT_StylizerFore { get; set; }
         public Nullable<int> MDT_StylizerBack { get; set; }
         public Nullable<int> MDT_StylizerPattern { get; set; }
         public Nullable<int> MDT_StylizerLine { get; set; }
@@ -221,7 +276,6 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> MDT_DatumMut { get; set; }
         public string MDT_DatumUser { get; set; }
         public string MDT_Logofile { get; set; }
-        public Nullable<int> MDT_MDT_ID { get; set; }
     
         public virtual ICollection<T_ALV_Ref_FilterAnzeige> T_ALV_Ref_FilterAnzeige { get; set; }
         public virtual ICollection<T_AP_Anlage> T_AP_Anlage { get; set; }
@@ -229,14 +283,15 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_AP_Arbeitsplatz> T_AP_Arbeitsplatz { get; set; }
         public virtual ICollection<T_AP_Aussenobjekt> T_AP_Aussenobjekt { get; set; }
         public virtual ICollection<T_AP_Dose> T_AP_Dose { get; set; }
+        public virtual ICollection<T_AP_Fahrzeug> T_AP_Fahrzeug { get; set; }
         public virtual ICollection<T_AP_Gebaeude> T_AP_Gebaeude { get; set; }
         public virtual ICollection<T_AP_Geschoss> T_AP_Geschoss { get; set; }
         public virtual ICollection<T_AP_Grundstueck> T_AP_Grundstueck { get; set; }
         public virtual ICollection<T_AP_Informatik> T_AP_Informatik { get; set; }
         public virtual ICollection<T_AP_Kommunikation> T_AP_Kommunikation { get; set; }
         public virtual ICollection<T_AP_Kunst> T_AP_Kunst { get; set; }
+        public virtual ICollection<T_AP_Kunst_Ref_Technik> T_AP_Kunst_Ref_Technik { get; set; }
         public virtual ICollection<T_AP_Mobiliar> T_AP_Mobiliar { get; set; }
-        public virtual ICollection<T_AP_Mobiliar> T_AP_Mobiliar1 { get; set; }
         public virtual ICollection<T_AP_Parkplatz> T_AP_Parkplatz { get; set; }
         public virtual ICollection<T_AP_Raum> T_AP_Raum { get; set; }
         public virtual ICollection<T_AP_Ref_AnlageBauform> T_AP_Ref_AnlageBauform { get; set; }
@@ -263,12 +318,16 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_AP_Ref_AussenobjektKategorie> T_AP_Ref_AussenobjektKategorie { get; set; }
         public virtual ICollection<T_AP_Ref_AussenobjektNutzungsart> T_AP_Ref_AussenobjektNutzungsart { get; set; }
         public virtual ICollection<T_AP_Ref_Bodenbelag> T_AP_Ref_Bodenbelag { get; set; }
+        public virtual ICollection<T_AP_Ref_DokumentGrund> T_AP_Ref_DokumentGrund { get; set; }
         public virtual ICollection<T_AP_Ref_DokumentMetadaten> T_AP_Ref_DokumentMetadaten { get; set; }
+        public virtual ICollection<T_AP_Ref_DokumentStatus> T_AP_Ref_DokumentStatus { get; set; }
         public virtual ICollection<T_AP_Ref_DoseKategorie> T_AP_Ref_DoseKategorie { get; set; }
         public virtual ICollection<T_AP_Ref_Eigentumsverhaeltnis> T_AP_Ref_Eigentumsverhaeltnis { get; set; }
         public virtual ICollection<T_AP_Ref_Energiebezugsart> T_AP_Ref_Energiebezugsart { get; set; }
         public virtual ICollection<T_AP_Ref_ErschliessungFussweg> T_AP_Ref_ErschliessungFussweg { get; set; }
         public virtual ICollection<T_AP_Ref_ErschliessungStrasse> T_AP_Ref_ErschliessungStrasse { get; set; }
+        public virtual ICollection<T_AP_Ref_FahrzeugHersteller> T_AP_Ref_FahrzeugHersteller { get; set; }
+        public virtual ICollection<T_AP_Ref_FahrzeugTyp> T_AP_Ref_FahrzeugTyp { get; set; }
         public virtual ICollection<T_AP_Ref_Fluchtwegmarkierung> T_AP_Ref_Fluchtwegmarkierung { get; set; }
         public virtual ICollection<T_AP_Ref_FotoKategorie> T_AP_Ref_FotoKategorie { get; set; }
         public virtual ICollection<T_AP_Ref_Freigabetyp> T_AP_Ref_Freigabetyp { get; set; }
@@ -285,11 +344,17 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_AP_Ref_KontakFunktion> T_AP_Ref_KontakFunktion { get; set; }
         public virtual ICollection<T_AP_Ref_KontaktGeschlecht> T_AP_Ref_KontaktGeschlecht { get; set; }
         public virtual ICollection<T_AP_Ref_Kostenstelle> T_AP_Ref_Kostenstelle { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstAusleihanlass> T_AP_Ref_KunstAusleihanlass { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstAusleihart> T_AP_Ref_KunstAusleihart { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstEntlassung> T_AP_Ref_KunstEntlassung { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstInstitution> T_AP_Ref_KunstInstitution { get; set; }
         public virtual ICollection<T_AP_Ref_KunstKategorie> T_AP_Ref_KunstKategorie { get; set; }
         public virtual ICollection<T_AP_Ref_KunstKuenstler> T_AP_Ref_KunstKuenstler { get; set; }
         public virtual ICollection<T_AP_Ref_KunstMandant> T_AP_Ref_KunstMandant { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstProvenienz> T_AP_Ref_KunstProvenienz { get; set; }
         public virtual ICollection<T_AP_Ref_KunstRahmenArt> T_AP_Ref_KunstRahmenArt { get; set; }
         public virtual ICollection<T_AP_Ref_KunstStatus> T_AP_Ref_KunstStatus { get; set; }
+        public virtual ICollection<T_AP_Ref_KunstWerteKategorie> T_AP_Ref_KunstWerteKategorie { get; set; }
         public virtual ICollection<T_AP_Ref_Land> T_AP_Ref_Land { get; set; }
         public virtual ICollection<T_AP_Ref_Landesteile> T_AP_Ref_Landesteile { get; set; }
         public virtual ICollection<T_AP_Ref_Layerset> T_AP_Ref_Layerset { get; set; }
@@ -297,6 +362,7 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_AP_Ref_Organisationseinheit> T_AP_Ref_Organisationseinheit { get; set; }
         public virtual ICollection<T_AP_Ref_Mandant> T_AP_Ref_Mandant1 { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant2 { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AP_Ref_Mietobjekt> T_AP_Ref_Mietobjekt { get; set; }
         public virtual ICollection<T_AP_Ref_MitarbeiterAusruestung> T_AP_Ref_MitarbeiterAusruestung { get; set; }
         public virtual ICollection<T_AP_Ref_MitarbeiterStatus> T_AP_Ref_MitarbeiterStatus { get; set; }
@@ -337,8 +403,10 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_AP_Ref_ZoneKategorie> T_AP_Ref_ZoneKategorie { get; set; }
         public virtual ICollection<T_AP_Ref_Zonenzuteilung> T_AP_Ref_Zonenzuteilung { get; set; }
         public virtual ICollection<T_AP_Ref_ZuschlagsflaechenTyp> T_AP_Ref_ZuschlagsflaechenTyp { get; set; }
+        public virtual ICollection<T_AP_Ref_ZylinderKasse> T_AP_Ref_ZylinderKasse { get; set; }
         public virtual ICollection<T_AP_Ref_ZylinderKategorie> T_AP_Ref_ZylinderKategorie { get; set; }
         public virtual ICollection<T_AP_Ref_ZylinderSchliesssystem> T_AP_Ref_ZylinderSchliesssystem { get; set; }
+        public virtual ICollection<T_AP_Ref_ZylinderStatus> T_AP_Ref_ZylinderStatus { get; set; }
         public virtual ICollection<T_AP_Ref_ZylinderTyp> T_AP_Ref_ZylinderTyp { get; set; }
         public virtual ICollection<T_AP_Sicherheit> T_AP_Sicherheit { get; set; }
         public virtual ICollection<T_AP_Standort> T_AP_Standort { get; set; }
@@ -349,22 +417,53 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_AP_Zylinder> T_AP_Zylinder { get; set; }
         public virtual ICollection<T_AV_Adressen> T_AV_Adressen { get; set; }
         public virtual ICollection<T_AV_Ref_Region> T_AV_Ref_Region { get; set; }
+        public virtual ICollection<T_CL_Checklist> T_CL_Checklist { get; set; }
+        public virtual ICollection<T_CL_Ref_Katalog> T_CL_Ref_Katalog { get; set; }
+        public virtual ICollection<T_CL_ZO_Cell> T_CL_ZO_Cell { get; set; }
+        public virtual ICollection<T_CL_ZO_CheckBox> T_CL_ZO_CheckBox { get; set; }
+        public virtual ICollection<T_CL_ZO_DropDown> T_CL_ZO_DropDown { get; set; }
+        public virtual ICollection<T_CL_ZO_Header> T_CL_ZO_Header { get; set; }
+        public virtual ICollection<T_CL_ZO_Image> T_CL_ZO_Image { get; set; }
+        public virtual ICollection<T_CL_ZO_Label> T_CL_ZO_Label { get; set; }
+        public virtual ICollection<T_CL_ZO_Table> T_CL_ZO_Table { get; set; }
+        public virtual ICollection<T_CL_ZO_TextBox> T_CL_ZO_TextBox { get; set; }
         public virtual ICollection<T_DMS_Ref_Prozesse> T_DMS_Ref_Prozesse { get; set; }
+        public virtual ICollection<T_IGM_Ref_GlasreinigungServiceLevel> T_IGM_Ref_GlasreinigungServiceLevel { get; set; }
+        public virtual ICollection<T_IGM_Ref_InnenreinigungServiceLevel> T_IGM_Ref_InnenreinigungServiceLevel { get; set; }
+        public virtual ICollection<T_IGM_Ref_Leistungsart> T_IGM_Ref_Leistungsart { get; set; }
+        public virtual ICollection<T_IGM_Ref_Oberflaeche> T_IGM_Ref_Oberflaeche { get; set; }
+        public virtual ICollection<T_IGM_Ref_OffertenTyp> T_IGM_Ref_OffertenTyp { get; set; }
+        public virtual ICollection<T_IGM_Ref_Raumgruppe> T_IGM_Ref_Raumgruppe { get; set; }
         public virtual ICollection<T_OV_Ref_BelegungArt> T_OV_Ref_BelegungArt { get; set; }
         public virtual ICollection<T_OV_Ref_ObjektTyp> T_OV_Ref_ObjektTyp { get; set; }
         public virtual ICollection<T_PM_Buchungen> T_PM_Buchungen { get; set; }
         public virtual ICollection<T_PM_Ref_ParkplatzBuchung> T_PM_Ref_ParkplatzBuchung { get; set; }
         public virtual ICollection<T_POM_Mittelwert> T_POM_Mittelwert { get; set; }
         public virtual ICollection<T_POM_Ref_MittelwertGruppe> T_POM_Ref_MittelwertGruppe { get; set; }
+        public virtual ICollection<T_SYS_AdresseRollenrechte> T_SYS_AdresseRollenrechte { get; set; }
+        public virtual ICollection<T_SYS_Anlagerechte> T_SYS_Anlagerechte { get; set; }
+        public virtual ICollection<T_SYS_Arbeitsplatzrechte> T_SYS_Arbeitsplatzrechte { get; set; }
+        public virtual ICollection<T_SYS_Aussenobjektrechte> T_SYS_Aussenobjektrechte { get; set; }
         public virtual ICollection<T_SYS_BackOfficeMenuerechte> T_SYS_BackOfficeMenuerechte { get; set; }
         public virtual ICollection<T_SYS_Backofficerechte> T_SYS_Backofficerechte { get; set; }
         public virtual ICollection<T_SYS_Dashboardrechte> T_SYS_Dashboardrechte { get; set; }
+        public virtual ICollection<T_SYS_Doserechte> T_SYS_Doserechte { get; set; }
         public virtual ICollection<T_SYS_Form_Feld_Recht> T_SYS_Form_Feld_Recht { get; set; }
         public virtual ICollection<T_SYS_Form_Register_Recht> T_SYS_Form_Register_Recht { get; set; }
         public virtual ICollection<T_SYS_Gebaeuderechte> T_SYS_Gebaeuderechte { get; set; }
         public virtual ICollection<T_SYS_Geschossrechte> T_SYS_Geschossrechte { get; set; }
+        public virtual ICollection<T_SYS_Grundstueckrechte> T_SYS_Grundstueckrechte { get; set; }
+        public virtual ICollection<T_SYS_Informatikrechte> T_SYS_Informatikrechte { get; set; }
+        public virtual ICollection<T_SYS_Kommunikationrechte> T_SYS_Kommunikationrechte { get; set; }
+        public virtual ICollection<T_SYS_Kunstrechte> T_SYS_Kunstrechte { get; set; }
+        public virtual ICollection<T_SYS_Language_Log> T_SYS_Language_Log { get; set; }
         public virtual ICollection<T_SYS_Layersetrechte> T_SYS_Layersetrechte { get; set; }
+        public virtual ICollection<T_SYS_Mobiliarrechte> T_SYS_Mobiliarrechte { get; set; }
         public virtual ICollection<T_SYS_Navigationrechte> T_SYS_Navigationrechte { get; set; }
+        public virtual ICollection<T_SYS_Parkplatzrechte> T_SYS_Parkplatzrechte { get; set; }
+        public virtual ICollection<T_SYS_Raumrechte> T_SYS_Raumrechte { get; set; }
+        public virtual ICollection<T_SYS_Ref_Datentyp> T_SYS_Ref_Datentyp { get; set; }
+        public virtual ICollection<T_SYS_Ref_Geschlecht> T_SYS_Ref_Geschlecht { get; set; }
         public virtual ICollection<T_SYS_Ref_Language> T_SYS_Ref_Language { get; set; }
         public virtual ICollection<T_SYS_Ref_Layerset> T_SYS_Ref_Layerset { get; set; }
         public virtual ICollection<T_SYS_Ref_Monate> T_SYS_Ref_Monate { get; set; }
@@ -375,7 +474,14 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_SYS_Ref_ZeitEinheiten> T_SYS_Ref_ZeitEinheiten { get; set; }
         public virtual ICollection<T_SYS_Registerrechte> T_SYS_Registerrechte { get; set; }
         public virtual ICollection<T_SYS_Reportrechte> T_SYS_Reportrechte { get; set; }
+        public virtual ICollection<T_SYS_Schluesselgrupperechte> T_SYS_Schluesselgrupperechte { get; set; }
+        public virtual ICollection<T_SYS_Sicherheitrechte> T_SYS_Sicherheitrechte { get; set; }
         public virtual ICollection<T_SYS_Standortrechte> T_SYS_Standortrechte { get; set; }
+        public virtual ICollection<T_SYS_Traktrechte> T_SYS_Traktrechte { get; set; }
+        public virtual ICollection<T_SYS_Tuerrechte> T_SYS_Tuerrechte { get; set; }
+        public virtual ICollection<T_SYS_Zaehlerrechte> T_SYS_Zaehlerrechte { get; set; }
+        public virtual ICollection<T_SYS_Zonerechte> T_SYS_Zonerechte { get; set; }
+        public virtual ICollection<T_SYS_Zylinderrechte> T_SYS_Zylinderrechte { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste_Absatz> T_TM_Ref_Checkliste_Absatz { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste_Checkpoints> T_TM_Ref_Checkliste_Checkpoints { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste_Details> T_TM_Ref_Checkliste_Details { get; set; }
@@ -398,6 +504,11 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_VM_Ref_KostenPeriode> T_VM_Ref_KostenPeriode { get; set; }
         public virtual ICollection<T_VM_Ref_Vertragszustaendigkeit> T_VM_Ref_Vertragszustaendigkeit { get; set; }
         public virtual ICollection<T_VM_Vertraege> T_VM_Vertraege { get; set; }
+        public virtual ICollection<T_ZO_AP_Kunst_Ausleihe> T_ZO_AP_Kunst_Ausleihe { get; set; }
+        public virtual ICollection<T_ZO_AP_Kunst_Werte> T_ZO_AP_Kunst_Werte { get; set; }
+        public virtual ICollection<T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer> T_ZO_AP_Zylinder_AP_Schluesselgruppe_Benutzer { get; set; }
+        public virtual ICollection<T_ZO_OV_Ref_ObjektDefect> T_ZO_OV_Ref_ObjektDefect { get; set; }
+        public virtual ICollection<T_ZO_OV_Ref_ObjektPolygon> T_ZO_OV_Ref_ObjektPolygon { get; set; }
         public virtual ICollection<T_ZO_OV_Ref_ObjektSymbol_Objekt> T_ZO_OV_Ref_ObjektSymbol_Objekt { get; set; }
         public virtual ICollection<T_ZO_OV_Ref_ObjektSymbol> T_ZO_OV_Ref_ObjektSymbol { get; set; }
         public virtual ICollection<T_ZO_OV_Ref_ObjektText> T_ZO_OV_Ref_ObjektText { get; set; }

@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_OV_Ref_Objekttyp_T_SYS_Ref_Register
     {
         public System.Guid ZO_OBJTREG_UID { get; set; }
-        public Nullable<System.Guid> ZO_OBJTREG_OBJT_UID { get; set; }
-        public System.Guid ZO_OBJTREG_REG_UID { get; set; }
         public int ZO_OBJTREG_Status { get; set; }
     
         public virtual T_OV_Ref_ObjektTyp T_OV_Ref_ObjektTyp { get; set; }

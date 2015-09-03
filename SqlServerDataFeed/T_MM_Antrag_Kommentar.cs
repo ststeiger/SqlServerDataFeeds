@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_MM_Antrag_Kommentar
     {
         public System.Guid MMAKM_UID { get; set; }
-        public Nullable<System.Guid> MMAKM_MMA_UID { get; set; }
         public string MMAKM_Kommentar { get; set; }
         public string MMAKM_User { get; set; }
         public System.DateTime MMAKM_Datum { get; set; }

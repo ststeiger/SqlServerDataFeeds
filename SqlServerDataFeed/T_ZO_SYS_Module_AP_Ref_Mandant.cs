@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_SYS_Module_AP_Ref_Mandant
     {
         public System.Guid ZO_MODMDT_UID { get; set; }
-        public Nullable<System.Guid> ZO_MODMDT_MOD_UID { get; set; }
-        public int ZO_MODMDT_MDT_ID { get; set; }
         public string ZO_MODMDT_ActivationKey { get; set; }
         public int ZO_MODMDT_Status { get; set; }
     

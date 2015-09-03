@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid GSR_UID { get; set; }
-        public int GSR_MDT_ID { get; set; }
         public string GSR_Code { get; set; }
         public string GSR_Kurz_DE { get; set; }
         public string GSR_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string GSR_Lang_EN { get; set; }
         public int GSR_Status { get; set; }
         public int GSR_Sort { get; set; }
-        public Nullable<int> GSR_StylizerFore { get; set; }
         public Nullable<int> GSR_StylizerBack { get; set; }
         public Nullable<int> GSR_StylizerPattern { get; set; }
         public Nullable<int> GSR_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Geschoss_Reichle> T_AP_Geschoss_Reichle { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

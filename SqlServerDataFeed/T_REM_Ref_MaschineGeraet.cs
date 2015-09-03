@@ -32,7 +32,6 @@ namespace SqlServerDataFeed
         public int REMMG_Status { get; set; }
         public int REMMG_Sort { get; set; }
         public bool REMMG_IsDefault { get; set; }
-        public Nullable<int> REMMG_StylizerBack { get; set; }
         public Nullable<int> REMMG_StylizerFore { get; set; }
         public Nullable<int> REMMG_StylizerPattern { get; set; }
         public Nullable<int> REMMG_StylizerLine { get; set; }
@@ -41,5 +40,6 @@ namespace SqlServerDataFeed
         public Nullable<int> REMMG_BildHeight { get; set; }
     
         public virtual ICollection<T_REM_Ref_Arbeitsgang> T_REM_Ref_Arbeitsgang { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

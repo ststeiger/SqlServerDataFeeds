@@ -31,13 +31,12 @@ namespace SqlServerDataFeed
         public string BOSM_Lang_EN { get; set; }
         public int BOSM_Status { get; set; }
         public int BOSM_Sort { get; set; }
-        public Nullable<int> BOSM_StylizerFore { get; set; }
         public Nullable<int> BOSM_StylizerBack { get; set; }
         public Nullable<int> BOSM_StylizerPattern { get; set; }
         public Nullable<int> BOSM_StylizerLine { get; set; }
         public bool BOSM_IsDefault { get; set; }
-        public Nullable<System.Guid> BOSM_BOM_UID { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_SYS_BackOfficeMenuerechte> T_SYS_BackOfficeMenuerechte { get; set; }
         public virtual T_SYS_Ref_BackOfficeMenue T_SYS_Ref_BackOfficeMenue { get; set; }
     }

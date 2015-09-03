@@ -22,10 +22,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid DOC_UID { get; set; }
-        public Nullable<System.Guid> DOC_NT_UID { get; set; }
-        public Nullable<System.Guid> DOC_DT_UID { get; set; }
-        public Nullable<System.Guid> DOC_DG_UID { get; set; }
-        public Nullable<System.Guid> DOC_DA_UID { get; set; }
         public Nullable<System.Guid> DOC_DS_UID { get; set; }
         public string DOC_ApertureKey { get; set; }
         public string DOC_Nr { get; set; }

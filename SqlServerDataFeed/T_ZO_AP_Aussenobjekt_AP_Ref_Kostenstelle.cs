@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Aussenobjekt_AP_Ref_Kostenstelle
     {
         public System.Guid ZO_AOKST_UID { get; set; }
-        public System.Guid ZO_AOKST_AO_UID { get; set; }
-        public System.Guid ZO_AOKST_KST_UID { get; set; }
         public System.DateTime ZO_AOKST_DatumVon { get; set; }
         public System.DateTime ZO_AOKST_DatumBis { get; set; }
         public int ZO_AOKST_Status { get; set; }

@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_FMS_ZO_Navigation_Benutzer
     {
         public System.Guid NABE_UID { get; set; }
-        public int NABE_BE_ID { get; set; }
-        public System.Guid NABE_NA_UID { get; set; }
         public bool NABE_Show { get; set; }
         public int NABE_Status { get; set; }
     

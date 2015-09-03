@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Kunst_History
     {
         public System.Guid HIKU_UID { get; set; }
-        public System.Guid HIKU_KU_UID { get; set; }
         public System.Guid HIKU_Entry_UID { get; set; }
         public System.DateTime HIKU_Datum { get; set; }
         public string HIKU_User { get; set; }

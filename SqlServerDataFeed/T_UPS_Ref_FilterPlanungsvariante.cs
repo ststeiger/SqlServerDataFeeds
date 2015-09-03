@@ -31,7 +31,6 @@ namespace SqlServerDataFeed
         public string FPV_Lang_EN { get; set; }
         public int FPV_Status { get; set; }
         public int FPV_Sort { get; set; }
-        public Nullable<int> FPV_StylizerFore { get; set; }
         public Nullable<int> FPV_StylizerBack { get; set; }
         public Nullable<int> FPV_StylizerPattern { get; set; }
         public Nullable<int> FPV_StylizerLine { get; set; }
@@ -39,6 +38,7 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> FPV_DatumMut { get; set; }
         public string FPV_DatumUser { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_UPS_BudgetPositionen> T_UPS_BudgetPositionen { get; set; }
     }
 }

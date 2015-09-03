@@ -26,12 +26,13 @@ namespace SqlServerDataFeed
         public string BP_Lang_EN { get; set; }
         public int BP_Status { get; set; }
         public int BP_Sort { get; set; }
-        public Nullable<int> BP_StylizerFore { get; set; }
         public Nullable<int> BP_StylizerBack { get; set; }
         public Nullable<int> BP_StylizerPattern { get; set; }
         public Nullable<int> BP_StylizerLine { get; set; }
         public bool BP_IsDefault { get; set; }
         public Nullable<System.DateTime> BP_DatumMut { get; set; }
         public string BP_DatumUser { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

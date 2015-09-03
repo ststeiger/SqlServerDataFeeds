@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_FMS_ZO_Filter_Dependency
     {
         public System.Guid FD_UID { get; set; }
-        public System.Guid FD_FI_UID_Parent { get; set; }
-        public System.Guid FD_FI_UID_Child { get; set; }
         public Nullable<int> FD_Sort { get; set; }
     
         public virtual T_FMS_ZO_Filter T_FMS_ZO_Filter { get; set; }

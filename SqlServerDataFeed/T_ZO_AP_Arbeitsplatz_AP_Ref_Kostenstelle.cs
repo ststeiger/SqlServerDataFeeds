@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Arbeitsplatz_AP_Ref_Kostenstelle
     {
         public System.Guid ZO_APKST_UID { get; set; }
-        public System.Guid ZO_APKST_AP_UID { get; set; }
-        public System.Guid ZO_APKST_KST_UID { get; set; }
         public System.DateTime ZO_APKST_DatumVon { get; set; }
         public System.DateTime ZO_APKST_DatumBis { get; set; }
         public int ZO_APKST_Status { get; set; }

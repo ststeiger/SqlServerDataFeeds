@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_SYS_Ref_Monate
     {
         public System.Guid MT_UID { get; set; }
-        public int MT_MDT_ID { get; set; }
         public Nullable<int> MT_Code { get; set; }
         public string MT_Kurz_DE { get; set; }
         public string MT_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string MT_Lang_EN { get; set; }
         public int MT_Status { get; set; }
         public int MT_Sort { get; set; }
-        public Nullable<int> MT_StylizerFore { get; set; }
         public Nullable<int> MT_StylizerBack { get; set; }
         public Nullable<int> MT_StylizerPattern { get; set; }
         public Nullable<int> MT_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string MT_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

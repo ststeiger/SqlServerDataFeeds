@@ -21,7 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid PJ_UID { get; set; }
-        public Nullable<System.Guid> PJ_NT_UID { get; set; }
         public string PJ_Nr { get; set; }
         public string PJ_Bezeichnung { get; set; }
         public string PJ_Beschreibung { get; set; }

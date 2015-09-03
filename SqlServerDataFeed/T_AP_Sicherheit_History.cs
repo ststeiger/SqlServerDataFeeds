@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Sicherheit_History
     {
         public System.Guid HISH_UID { get; set; }
-        public System.Guid HISH_SH_UID { get; set; }
         public System.Guid HISH_Entry_UID { get; set; }
         public System.DateTime HISH_Datum { get; set; }
         public string HISH_User { get; set; }

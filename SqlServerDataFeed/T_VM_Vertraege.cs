@@ -33,10 +33,7 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid VTR_UID { get; set; }
-        public int VTR_MDT_ID { get; set; }
-        public Nullable<System.Guid> VTR_VTP_UID { get; set; }
         public string VTR_Nr { get; set; }
-        public Nullable<System.Guid> VTR_VT_UID { get; set; }
         public Nullable<System.Guid> VTR_KT_UID { get; set; }
         public string VTR_Bezeichnung { get; set; }
         public string VTR_Bemerkung { get; set; }
@@ -46,8 +43,6 @@ namespace SqlServerDataFeed
         public Nullable<int> VTR_Kuendigungsfrist { get; set; }
         public Nullable<System.DateTime> VTR_Kundigungsdatum { get; set; }
         public bool VTR_IsAutoVerlaengerung { get; set; }
-        public Nullable<System.Guid> VTR_ADR_UID { get; set; }
-        public Nullable<System.Guid> VTR_AKP_UID { get; set; }
         public string VTR_Stoerung { get; set; }
         public System.DateTime VTR_WartungLetzte { get; set; }
         public string VTR_WartungTaetigkeit { get; set; }
@@ -58,14 +53,9 @@ namespace SqlServerDataFeed
         public Nullable<double> VTR_Nebenkosten { get; set; }
         public string VTR_Mietobjekt { get; set; }
         public Nullable<double> VTR_Kosten { get; set; }
-        public Nullable<System.Guid> VTR_KP_UID { get; set; }
         public Nullable<int> VTR_Laufzeit { get; set; }
-        public Nullable<System.Guid> VTR_ZYP_UID_Laufzeit { get; set; }
         public Nullable<int> VTR_Verlaengerung { get; set; }
-        public Nullable<System.Guid> VTR_ZYP_UID_Verlaengerung { get; set; }
         public Nullable<int> VTR_BE_ID_verantwortlich { get; set; }
-        public Nullable<System.Guid> VTR_VZ_UID { get; set; }
-        public Nullable<int> VTR_StylizerFore { get; set; }
         public Nullable<int> VTR_StylizerBack { get; set; }
         public Nullable<int> VTR_StylizerPattern { get; set; }
         public Nullable<int> VTR_StylizerLine { get; set; }
@@ -77,6 +67,7 @@ namespace SqlServerDataFeed
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual T_AV_AdresseKontaktpersonen T_AV_AdresseKontaktpersonen { get; set; }
         public virtual T_AV_Adressen T_AV_Adressen { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual T_TM_Ref_ZyklusPeriode T_TM_Ref_ZyklusPeriode { get; set; }
         public virtual T_TM_Ref_ZyklusPeriode T_TM_Ref_ZyklusPeriode1 { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }

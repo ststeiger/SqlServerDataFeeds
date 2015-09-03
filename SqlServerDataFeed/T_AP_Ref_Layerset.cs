@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_Layerset
     {
         public System.Guid LY_UID { get; set; }
-        public int LY_MDT_ID { get; set; }
         public Nullable<int> LY_Code { get; set; }
         public string LY_Kurz_DE { get; set; }
         public string LY_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string LY_Lang_EN { get; set; }
         public int LY_Status { get; set; }
         public int LY_Sort { get; set; }
-        public Nullable<int> LY_StylizerFore { get; set; }
         public Nullable<int> LY_StylizerBack { get; set; }
         public Nullable<int> LY_StylizerPattern { get; set; }
         public Nullable<int> LY_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string LY_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

@@ -26,12 +26,13 @@ namespace SqlServerDataFeed
         public string DGG_Lang_EN { get; set; }
         public int DGG_Status { get; set; }
         public int DGG_Sort { get; set; }
-        public Nullable<int> DGG_StylizerFore { get; set; }
         public Nullable<int> DGG_StylizerBack { get; set; }
         public Nullable<int> DGG_StylizerPattern { get; set; }
         public Nullable<int> DGG_StylizerLine { get; set; }
         public bool DGG_IsDefault { get; set; }
         public Nullable<System.DateTime> DGG_DatumMut { get; set; }
         public string DGG_DatumUser { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

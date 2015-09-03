@@ -15,10 +15,7 @@ namespace SqlServerDataFeed
     public partial class T_ZO_TASK_Ref_Checkliste_Comment
     {
         public System.Guid ZO_TSKTCLCOMMENT_UID { get; set; }
-        public Nullable<System.Guid> ZO_TSKTCLCOMMENT_TSK_UID { get; set; }
-        public Nullable<System.Guid> ZO_TSKTCLCOMMENT_TCL_UID { get; set; }
         public string ZO_TSKTCLCOMMENT_Comment { get; set; }
-        public Nullable<System.Guid> ZO_TSKTCLCOMMENT_TPL_UID { get; set; }
         public int ZO_TSKTCLCOMMENT_Status { get; set; }
     
         public virtual T_TM_Ref_Checkliste T_TM_Ref_Checkliste { get; set; }

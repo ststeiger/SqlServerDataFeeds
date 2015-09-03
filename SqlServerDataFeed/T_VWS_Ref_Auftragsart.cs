@@ -27,12 +27,13 @@ namespace SqlServerDataFeed
         public string VWS_AA_Lang_EN { get; set; }
         public int VWS_AA_Status { get; set; }
         public int VWS_AA_Sort { get; set; }
-        public Nullable<int> VWS_AA_StylizerFore { get; set; }
         public Nullable<int> VWS_AA_StylizerBack { get; set; }
         public Nullable<int> VWS_AA_StylizerPattern { get; set; }
         public Nullable<int> VWS_AA_StylizerLine { get; set; }
         public bool VWS_AA_IsDefault { get; set; }
         public Nullable<System.DateTime> VWS_AA_DatumMut { get; set; }
         public string VWS_AA_DatumUser { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

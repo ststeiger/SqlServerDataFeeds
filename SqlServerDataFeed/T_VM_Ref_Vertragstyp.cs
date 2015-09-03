@@ -31,7 +31,6 @@ namespace SqlServerDataFeed
         public string VT_Lang_EN { get; set; }
         public int VT_Status { get; set; }
         public int VT_Sort { get; set; }
-        public Nullable<int> VT_StylizerFore { get; set; }
         public Nullable<int> VT_StylizerBack { get; set; }
         public Nullable<int> VT_StylizerPattern { get; set; }
         public Nullable<int> VT_StylizerLine { get; set; }
@@ -39,6 +38,7 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> VT_DatumMut { get; set; }
         public string VT_DatumUser { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_VM_Vertraege> T_VM_Vertraege { get; set; }
     }
 }

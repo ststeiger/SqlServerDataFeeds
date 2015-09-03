@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_OV_Ref_Objekttyp_TM_Ref_Checkliste
     {
         public System.Guid ZO_OBJTCL_UID { get; set; }
-        public Nullable<System.Guid> ZO_OBJTCL_OBJT_UID { get; set; }
-        public System.Guid ZO_OBJTCL_TCL_UID { get; set; }
         public int ZO_OBJTCL_Status { get; set; }
     
         public virtual T_OV_Ref_ObjektTyp T_OV_Ref_ObjektTyp { get; set; }

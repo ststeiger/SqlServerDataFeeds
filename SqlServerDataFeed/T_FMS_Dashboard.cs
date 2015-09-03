@@ -17,10 +17,10 @@ namespace SqlServerDataFeed
         public T_FMS_Dashboard()
         {
             this.T_FMS_Dashboard1 = new HashSet<T_FMS_Dashboard>();
+            this.T_SYS_Dashboardrechte = new HashSet<T_SYS_Dashboardrechte>();
         }
     
         public System.Guid DB_UID { get; set; }
-        public Nullable<System.Guid> DB_DB_UID { get; set; }
         public Nullable<System.Guid> DB_FT_UID { get; set; }
         public string DB_Link { get; set; }
         public int DB_Sort { get; set; }
@@ -28,5 +28,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_FMS_Dashboard> T_FMS_Dashboard1 { get; set; }
         public virtual T_FMS_Dashboard T_FMS_Dashboard2 { get; set; }
+        public virtual ICollection<T_SYS_Dashboardrechte> T_SYS_Dashboardrechte { get; set; }
     }
 }

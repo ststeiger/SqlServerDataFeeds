@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_UW_Ref_Position
     {
         public System.Guid UWPOS_UID { get; set; }
-        public int UWPOS_MDT_ID { get; set; }
         public System.Guid UWPOS_UWBR_UID { get; set; }
         public Nullable<System.Guid> UWPOS_UWPOS_UID { get; set; }
         public Nullable<int> UWPOS_Code { get; set; }
@@ -29,7 +28,6 @@ namespace SqlServerDataFeed
         public string UWPOS_Lang_EN { get; set; }
         public int UWPOS_Status { get; set; }
         public int UWPOS_Sort { get; set; }
-        public Nullable<int> UWPOS_StylizerFore { get; set; }
         public Nullable<int> UWPOS_StylizerBack { get; set; }
         public Nullable<int> UWPOS_StylizerPattern { get; set; }
         public Nullable<int> UWPOS_StylizerLine { get; set; }
@@ -38,5 +36,6 @@ namespace SqlServerDataFeed
         public string UWPOS_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Kontakte_History
     {
         public System.Guid HIKT_UID { get; set; }
-        public System.Guid HIKT_KT_UID { get; set; }
         public System.Guid HIKT_Entry_UID { get; set; }
         public System.DateTime HIKT_Datum { get; set; }
         public string HIKT_User { get; set; }

@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AKV_UID { get; set; }
-        public int AKV_MDT_ID { get; set; }
         public Nullable<int> AKV_Code { get; set; }
         public string AKV_Kurz_DE { get; set; }
         public string AKV_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string AKV_Lang_EN { get; set; }
         public int AKV_Status { get; set; }
         public int AKV_Sort { get; set; }
-        public Nullable<int> AKV_StylizerFore { get; set; }
         public Nullable<int> AKV_StylizerBack { get; set; }
         public Nullable<int> AKV_StylizerPattern { get; set; }
         public Nullable<int> AKV_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Anlage> T_AP_Anlage { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

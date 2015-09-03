@@ -17,6 +17,7 @@ namespace SqlServerDataFeed
         public T_AP_Ref_DokumentKategorie()
         {
             this.T_AP_Dokumente = new HashSet<T_AP_Dokumente>();
+            this.T_ZO_SYS_DokumentKategorie_Benutzergruppe = new HashSet<T_ZO_SYS_DokumentKategorie_Benutzergruppe>();
         }
     
         public System.Guid DKAT_UID { get; set; }
@@ -32,16 +33,18 @@ namespace SqlServerDataFeed
         public string DKAT_Lang_EN { get; set; }
         public int DKAT_Status { get; set; }
         public int DKAT_Sort { get; set; }
-        public Nullable<int> DKAT_StylizerFore { get; set; }
         public Nullable<int> DKAT_StylizerBack { get; set; }
         public Nullable<int> DKAT_StylizerPattern { get; set; }
         public Nullable<int> DKAT_StylizerLine { get; set; }
         public bool DKAT_IsDefault { get; set; }
         public Nullable<System.DateTime> DKAT_DatumMut { get; set; }
         public string DKAT_DatumUser { get; set; }
-        public Nullable<System.Guid> DKAT_OBJT_UID { get; set; }
+        public Nullable<bool> DKAT_IsLogo { get; set; }
+        public Nullable<bool> DKAT_IsRechnung { get; set; }
     
         public virtual ICollection<T_AP_Dokumente> T_AP_Dokumente { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual T_OV_Ref_ObjektTyp T_OV_Ref_ObjektTyp { get; set; }
+        public virtual ICollection<T_ZO_SYS_DokumentKategorie_Benutzergruppe> T_ZO_SYS_DokumentKategorie_Benutzergruppe { get; set; }
     }
 }

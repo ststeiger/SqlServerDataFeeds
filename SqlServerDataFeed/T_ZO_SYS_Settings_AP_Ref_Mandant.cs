@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_SYS_Settings_AP_Ref_Mandant
     {
         public System.Guid ZO_SETMDT_UID { get; set; }
-        public Nullable<System.Guid> ZO_SETMDT_SET_UID { get; set; }
-        public int ZO_SETMDT_MDT_ID { get; set; }
         public string ZO_SETMDT_Wert { get; set; }
         public int ZO_SETMDT_Status { get; set; }
     

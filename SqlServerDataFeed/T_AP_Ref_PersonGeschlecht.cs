@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_PersonGeschlecht
     {
         public System.Guid PG_UID { get; set; }
-        public int PG_MDT_ID { get; set; }
         public Nullable<int> PG_Code { get; set; }
         public string PG_Kurz_DE { get; set; }
         public string PG_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string PG_Lang_EN { get; set; }
         public int PG_Status { get; set; }
         public int PG_Sort { get; set; }
-        public Nullable<int> PG_StylizerFore { get; set; }
         public Nullable<int> PG_StylizerBack { get; set; }
         public Nullable<int> PG_StylizerPattern { get; set; }
         public Nullable<int> PG_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string PG_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

@@ -32,7 +32,6 @@ namespace SqlServerDataFeed
         public string BT_Lang_EN { get; set; }
         public int BT_Status { get; set; }
         public int BT_Sort { get; set; }
-        public Nullable<int> BT_StylizerFore { get; set; }
         public Nullable<int> BT_StylizerBack { get; set; }
         public Nullable<int> BT_StylizerPattern { get; set; }
         public Nullable<int> BT_StylizerLine { get; set; }
@@ -40,6 +39,7 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> BT_DatumMut { get; set; }
         public string BT_DatumUser { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_AP_Aussenobjekt_AP_Belegung> T_ZO_AP_Aussenobjekt_AP_Belegung { get; set; }
         public virtual ICollection<T_ZO_AP_Parkplatz_AP_Belegung> T_ZO_AP_Parkplatz_AP_Belegung { get; set; }
     }

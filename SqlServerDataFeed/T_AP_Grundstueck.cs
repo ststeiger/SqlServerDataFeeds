@@ -16,14 +16,15 @@ namespace SqlServerDataFeed
     {
         public T_AP_Grundstueck()
         {
+            this.T_AP_Aussenobjekt = new HashSet<T_AP_Aussenobjekt>();
             this.T_AP_Grundstueck_History = new HashSet<T_AP_Grundstueck_History>();
+            this.T_AP_Parkplatz = new HashSet<T_AP_Parkplatz>();
+            this.T_SYS_Grundstueckrechte = new HashSet<T_SYS_Grundstueckrechte>();
             this.T_ZO_AP_Grundstueck_DWG = new HashSet<T_ZO_AP_Grundstueck_DWG>();
             this.T_ZO_AP_Grundstueck_Flaeche = new HashSet<T_ZO_AP_Grundstueck_Flaeche>();
         }
     
         public System.Guid GRU_UID { get; set; }
-        public int GRU_MDT_ID { get; set; }
-        public System.Guid GRU_SO_UID { get; set; }
         public string GRU_ApertureKey { get; set; }
         public string GRU_Nr { get; set; }
         public string GRU_Bezeichnung { get; set; }
@@ -34,9 +35,12 @@ namespace SqlServerDataFeed
         public System.DateTime GRU_DatumBis { get; set; }
         public int GRU_Status { get; set; }
     
+        public virtual ICollection<T_AP_Aussenobjekt> T_AP_Aussenobjekt { get; set; }
         public virtual ICollection<T_AP_Grundstueck_History> T_AP_Grundstueck_History { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual T_AP_Standort T_AP_Standort { get; set; }
+        public virtual ICollection<T_AP_Parkplatz> T_AP_Parkplatz { get; set; }
+        public virtual ICollection<T_SYS_Grundstueckrechte> T_SYS_Grundstueckrechte { get; set; }
         public virtual ICollection<T_ZO_AP_Grundstueck_DWG> T_ZO_AP_Grundstueck_DWG { get; set; }
         public virtual ICollection<T_ZO_AP_Grundstueck_Flaeche> T_ZO_AP_Grundstueck_Flaeche { get; set; }
     }

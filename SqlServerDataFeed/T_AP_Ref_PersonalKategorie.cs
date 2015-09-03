@@ -21,7 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid PK_UID { get; set; }
-        public Nullable<int> PK_MDT_ID { get; set; }
         public Nullable<int> PK_Code { get; set; }
         public string PK_Kurz_DE { get; set; }
         public string PK_Kurz_FR { get; set; }
@@ -33,7 +32,6 @@ namespace SqlServerDataFeed
         public string PK_Lang_EN { get; set; }
         public int PK_Status { get; set; }
         public int PK_Sort { get; set; }
-        public Nullable<int> PK_StylizerFore { get; set; }
         public Nullable<int> PK_StylizerBack { get; set; }
         public Nullable<int> PK_StylizerPattern { get; set; }
         public Nullable<int> PK_StylizerLine { get; set; }
@@ -44,6 +42,7 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Kontakte> T_AP_Kontakte { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_AP_Kontakte_AP_Ref_PersonalKategorie> T_ZO_AP_Kontakte_AP_Ref_PersonalKategorie { get; set; }
     }
 }

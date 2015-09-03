@@ -30,7 +30,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid OBJT_UID { get; set; }
-        public int OBJT_MDT_ID { get; set; }
         public string OBJT_Code { get; set; }
         public string OBJT_Kurz_DE { get; set; }
         public string OBJT_Kurz_FR { get; set; }
@@ -42,7 +41,6 @@ namespace SqlServerDataFeed
         public string OBJT_Lang_EN { get; set; }
         public int OBJT_Status { get; set; }
         public int OBJT_Sort { get; set; }
-        public Nullable<int> OBJT_StylizerFore { get; set; }
         public Nullable<int> OBJT_StylizerBack { get; set; }
         public Nullable<int> OBJT_StylizerPattern { get; set; }
         public Nullable<int> OBJT_StylizerLine { get; set; }
@@ -61,6 +59,7 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_AP_Ref_DokumentKategorie> T_AP_Ref_DokumentKategorie { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual ICollection<T_OV_Ref_Attribute_BO> T_OV_Ref_Attribute_BO { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_SYS_Form_Feld_Recht> T_SYS_Form_Feld_Recht { get; set; }
         public virtual ICollection<T_SYS_Form_Register_Recht> T_SYS_Form_Register_Recht { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }

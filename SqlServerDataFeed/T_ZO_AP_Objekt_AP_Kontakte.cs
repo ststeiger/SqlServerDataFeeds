@@ -16,8 +16,6 @@ namespace SqlServerDataFeed
     {
         public System.Guid ZO_OBJKT_UID { get; set; }
         public Nullable<System.Guid> ZO_OBJKT_OBJ_UID { get; set; }
-        public Nullable<System.Guid> ZO_OBJKT_KT_UID { get; set; }
-        public Nullable<System.Guid> ZO_OBJKT_KF_UID { get; set; }
         public int ZO_OBJKT_Status { get; set; }
     
         public virtual T_AP_Kontakte T_AP_Kontakte { get; set; }

@@ -1,4 +1,8 @@
-
+//------------------------------------------------------------------------------
+// <copyright file="WebDataService.svc.cs" company="Microsoft">
+//     Copyright (c) Microsoft Corporation.  All rights reserved.
+// </copyright>
+//------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.Data.Services;
@@ -6,7 +10,6 @@ using System.Data.Services.Common;
 using System.Linq;
 using System.ServiceModel.Web;
 using System.Web;
-
 
 using System.ServiceModel;
 
@@ -22,57 +25,58 @@ namespace SqlServerDataFeed
     public class ExcelDataFeed : DataService<COR_Basic_DemoEntities>
     {
 
+       
+        //public static string GetConnectionString()
+        //{
+        //    System.Data.SqlClient.SqlConnectionStringBuilder csb = new System.Data.SqlClient.SqlConnectionStringBuilder();
+        //    csb.DataSource = Environment.MachineName;
+        //    csb.InitialCatalog = "COR_Basic_Demo";
+        //    // csb.InitialCatalog = "COR_Basic_Swisscom";
+        //    csb.IntegratedSecurity = true;
+        //    csb.ApplicationName = "SqlServerDataFeed";
+        //    csb.ConnectTimeout = 5;
 
-        public static string GetConnectionString()
-        {
-            System.Data.SqlClient.SqlConnectionStringBuilder csb = new System.Data.SqlClient.SqlConnectionStringBuilder();
-            csb.DataSource = Environment.MachineName;
-            csb.InitialCatalog = "COR_Basic_Demo";
-            csb.InitialCatalog = "COR_Basic_Swisscom";
-            csb.IntegratedSecurity = true;
-            csb.ApplicationName = "SqlServerDataFeed";
+        //    if (!csb.IntegratedSecurity)
+        //    {
+        //        csb.UserID = "";
+        //        csb.Password = "";
+        //    }
 
-            if (!csb.IntegratedSecurity)
-            {
-                csb.UserID = "";
-                csb.Password = "";
-            }
-
-            return csb.ConnectionString;
-        } // End Function GetConnectionString 
-
-
-        public static string GetEntityConnectionString()
-        {
-            System.Data.SqlClient.SqlConnectionStringBuilder csb = new System.Data.SqlClient.SqlConnectionStringBuilder(GetConnectionString());
-            System.Data.EntityClient.EntityConnectionStringBuilder ecb = new System.Data.EntityClient.EntityConnectionStringBuilder();
-
-            // http://itstu.blogspot.ch/2008/07/to-load-specified-metadata-resource.html
-            // The standard metadata string looks like this:
-            // metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl
-            // However, in some (including mine) Entity Framework get confused and does not know which dll to look in. 
-            // Therefore, change the metadata string to:
-            // metadata=res://nameOfDll/Model.csdl|res://nameOfDll/Model.ssdl|res://nameOfDll/Model.msl
-
-            string ass = System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            ecb.Metadata = @"res://*/COR_Basic_Demo.csdl|res://*/COR_Basic_Demo.ssdl|res://*/COR_Basic_Demo.msl".Replace("*", ass);
-
-            ecb.Provider = "System.Data.SqlClient";
-            ecb.ProviderConnectionString = csb.ConnectionString;
-
-            return ecb.ConnectionString;
-        } // End Function GetEntityConnectionString 
+        //    return csb.ConnectionString;
+        //} // End Function GetConnectionString 
 
 
-        protected override COR_Basic_DemoEntities CreateDataSource()
-        {
-            COR_Basic_DemoEntities ctx = new COR_Basic_DemoEntities(GetEntityConnectionString());
-            // COR_Basic_DemoEntities ctx = new COR_Basic_DemoEntities();
-            // ctx.Database.Connection.ConnectionString = GetConnectionString();
+        //public static string GetEntityConnectionString()
+        //{
+        //    System.Data.SqlClient.SqlConnectionStringBuilder csb = new System.Data.SqlClient.SqlConnectionStringBuilder(GetConnectionString());
+        //    System.Data.EntityClient.EntityConnectionStringBuilder ecb = new System.Data.EntityClient.EntityConnectionStringBuilder();
 
-            return ctx;
-        } // End Method CreateDataSource 
+        //    // http://itstu.blogspot.ch/2008/07/to-load-specified-metadata-resource.html
+        //    // The standard metadata string looks like this:
+        //    // metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl
+        //    // However, in some (including mine) Entity Framework get confused and does not know which dll to look in. 
+        //    // Therefore, change the metadata string to:
+        //    // metadata=res://nameOfDll/Model.csdl|res://nameOfDll/Model.ssdl|res://nameOfDll/Model.msl
 
+        //    string ass = System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        //    ecb.Metadata = @"res://*/COR_Basic_Demo.csdl|res://*/COR_Basic_Demo.ssdl|res://*/COR_Basic_Demo.msl".Replace("*", ass);
+
+        //    ecb.Provider = "System.Data.SqlClient";
+        //    ecb.ProviderConnectionString = csb.ConnectionString;
+
+        //    return ecb.ConnectionString;
+        //} // End Function GetEntityConnectionString 
+
+
+        //protected override COR_Basic_DemoEntities CreateDataSource()
+        //{
+        //    COR_Basic_DemoEntities ctx = new COR_Basic_DemoEntities(GetEntityConnectionString());
+        //    // COR_Basic_DemoEntities ctx = new COR_Basic_DemoEntities();
+        //    // ctx.Database.Connection.ConnectionString = GetConnectionString();
+
+        //    return ctx;
+        //} // End Method CreateDataSource 
+        
 
         // This method is called only once to initialize service-wide policies.
         public static void InitializeService(DataServiceConfiguration config)

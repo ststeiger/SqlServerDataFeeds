@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Kommunikation_History
     {
         public System.Guid HIKM_UID { get; set; }
-        public System.Guid HIKM_KM_UID { get; set; }
         public System.Guid HIKM_Entry_UID { get; set; }
         public System.DateTime HIKM_Datum { get; set; }
         public string HIKM_User { get; set; }

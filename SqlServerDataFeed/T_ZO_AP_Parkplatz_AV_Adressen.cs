@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Parkplatz_AV_Adressen
     {
         public System.Guid ZO_PPADR_UID { get; set; }
-        public System.Guid ZO_PPADR_PP_UID { get; set; }
-        public System.Guid ZO_PPADR_ADR_UID { get; set; }
         public System.DateTime ZO_PPADR_DatumVon { get; set; }
         public System.DateTime ZO_PPADR_DatumBis { get; set; }
         public int ZO_PPADR_Status { get; set; }

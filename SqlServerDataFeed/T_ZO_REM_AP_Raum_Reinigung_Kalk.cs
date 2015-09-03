@@ -15,11 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_REM_AP_Raum_Reinigung_Kalk
     {
         public System.Guid ZO_RMREM_UID { get; set; }
-        public System.Guid ZO_RMREM_RM_UID { get; set; }
-        public System.Guid ZO_RMREM_REMAG_UID { get; set; }
-        public Nullable<System.Guid> ZO_RMREM_REMIN_UID { get; set; }
-        public Nullable<System.Guid> ZO_RMREM_REMAT_UID { get; set; }
-        public Nullable<System.Guid> ZO_RMREM_REMAL_UID { get; set; }
         public Nullable<double> ZO_RMREM_REMAL_Eingabe { get; set; }
         public Nullable<System.DateTime> ZO_RMREM_GueltigVon { get; set; }
         public Nullable<System.DateTime> ZO_RMREM_GueltigBis { get; set; }

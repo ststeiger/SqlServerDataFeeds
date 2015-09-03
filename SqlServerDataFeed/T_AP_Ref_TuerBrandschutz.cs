@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TBS_UID { get; set; }
-        public int TBS_MDT_ID { get; set; }
         public Nullable<int> TBS_Code { get; set; }
         public string TBS_Kurz_DE { get; set; }
         public string TBS_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string TBS_Lang_EN { get; set; }
         public int TBS_Status { get; set; }
         public int TBS_Sort { get; set; }
-        public Nullable<int> TBS_StylizerFore { get; set; }
         public Nullable<int> TBS_StylizerBack { get; set; }
         public Nullable<int> TBS_StylizerPattern { get; set; }
         public Nullable<int> TBS_StylizerLine { get; set; }
@@ -41,6 +39,7 @@ namespace SqlServerDataFeed
         public string TBS_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AP_Tuer> T_AP_Tuer { get; set; }
     }
 }

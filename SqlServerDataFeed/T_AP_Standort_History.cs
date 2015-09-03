@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Standort_History
     {
         public System.Guid HISO_UID { get; set; }
-        public System.Guid HISO_SO_UID { get; set; }
         public System.Guid HISO_Entry_UID { get; set; }
         public System.DateTime HISO_Datum { get; set; }
         public string HISO_User { get; set; }

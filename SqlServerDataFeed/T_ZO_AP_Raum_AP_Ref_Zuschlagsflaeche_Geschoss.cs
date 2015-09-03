@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Raum_AP_Ref_Zuschlagsflaeche_Geschoss
     {
         public System.Guid ZO_RMZF_UID { get; set; }
-        public System.Guid ZO_RMZF_RM_UID { get; set; }
-        public System.Guid ZO_RMZF_RM_UID_ZF { get; set; }
         public System.DateTime ZO_RMZF_DatumVon { get; set; }
         public System.DateTime ZO_RMZF_DatumBis { get; set; }
         public int ZO_RMZF_Status { get; set; }

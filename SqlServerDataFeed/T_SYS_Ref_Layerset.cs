@@ -17,12 +17,13 @@ namespace SqlServerDataFeed
         public T_SYS_Ref_Layerset()
         {
             this.T_SYS_Layersetrechte = new HashSet<T_SYS_Layersetrechte>();
+            this.T_ZO_OV_Ref_ObjektDefect = new HashSet<T_ZO_OV_Ref_ObjektDefect>();
+            this.T_ZO_OV_Ref_ObjektPolygon = new HashSet<T_ZO_OV_Ref_ObjektPolygon>();
             this.T_ZO_OV_Ref_ObjektSymbol_T_SYS_Ref_Layerset = new HashSet<T_ZO_OV_Ref_ObjektSymbol_T_SYS_Ref_Layerset>();
             this.T_ZO_OV_Ref_ObjektText = new HashSet<T_ZO_OV_Ref_ObjektText>();
         }
     
         public System.Guid LY_UID { get; set; }
-        public int LY_MDT_ID { get; set; }
         public string LY_Code { get; set; }
         public string LY_Kurz_DE { get; set; }
         public string LY_Kurz_FR { get; set; }
@@ -34,7 +35,6 @@ namespace SqlServerDataFeed
         public string LY_Lang_EN { get; set; }
         public int LY_Status { get; set; }
         public int LY_Sort { get; set; }
-        public Nullable<int> LY_StylizerFore { get; set; }
         public Nullable<int> LY_StylizerBack { get; set; }
         public Nullable<int> LY_StylizerPattern { get; set; }
         public Nullable<int> LY_StylizerLine { get; set; }
@@ -51,7 +51,10 @@ namespace SqlServerDataFeed
         public string LY_Stylizer { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_SYS_Layersetrechte> T_SYS_Layersetrechte { get; set; }
+        public virtual ICollection<T_ZO_OV_Ref_ObjektDefect> T_ZO_OV_Ref_ObjektDefect { get; set; }
+        public virtual ICollection<T_ZO_OV_Ref_ObjektPolygon> T_ZO_OV_Ref_ObjektPolygon { get; set; }
         public virtual ICollection<T_ZO_OV_Ref_ObjektSymbol_T_SYS_Ref_Layerset> T_ZO_OV_Ref_ObjektSymbol_T_SYS_Ref_Layerset { get; set; }
         public virtual ICollection<T_ZO_OV_Ref_ObjektText> T_ZO_OV_Ref_ObjektText { get; set; }
     }

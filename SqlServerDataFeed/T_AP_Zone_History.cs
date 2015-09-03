@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Zone_History
     {
         public System.Guid HIZN_UID { get; set; }
-        public System.Guid HIZN_ZN_UID { get; set; }
         public System.Guid HIZN_Entry_UID { get; set; }
         public System.DateTime HIZN_Datum { get; set; }
         public string HIZN_User { get; set; }

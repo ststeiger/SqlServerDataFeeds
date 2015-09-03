@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid GST_UID { get; set; }
-        public int GST_MDT_ID { get; set; }
         public string GST_Code { get; set; }
         public string GST_Kurz_DE { get; set; }
         public string GST_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string GST_Lang_EN { get; set; }
         public int GST_Status { get; set; }
         public int GST_Sort { get; set; }
-        public Nullable<int> GST_StylizerFore { get; set; }
         public Nullable<int> GST_StylizerBack { get; set; }
         public Nullable<int> GST_StylizerPattern { get; set; }
         public Nullable<int> GST_StylizerLine { get; set; }
@@ -44,5 +42,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Geschoss> T_AP_Geschoss { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

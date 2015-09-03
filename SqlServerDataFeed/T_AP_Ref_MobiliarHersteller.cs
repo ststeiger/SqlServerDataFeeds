@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid MH_UID { get; set; }
-        public int MH_MDT_ID { get; set; }
         public Nullable<int> MH_Code { get; set; }
         public string MH_Kurz_DE { get; set; }
         public string MH_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string MH_Lang_EN { get; set; }
         public int MH_Status { get; set; }
         public int MH_Sort { get; set; }
-        public Nullable<int> MH_StylizerFore { get; set; }
         public Nullable<int> MH_StylizerBack { get; set; }
         public Nullable<int> MH_StylizerPattern { get; set; }
         public Nullable<int> MH_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual ICollection<T_AP_Ref_MobiliarBibliothek> T_AP_Ref_MobiliarBibliothek { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

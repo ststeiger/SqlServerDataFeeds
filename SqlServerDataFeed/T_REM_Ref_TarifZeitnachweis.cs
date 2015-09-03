@@ -32,11 +32,11 @@ namespace SqlServerDataFeed
         public int REMTZ_Status { get; set; }
         public int REMTZ_Sort { get; set; }
         public bool REMTZ_IsDefault { get; set; }
-        public Nullable<int> REMTZ_StylizerBack { get; set; }
         public Nullable<int> REMTZ_StylizerFore { get; set; }
         public Nullable<int> REMTZ_StylizerPattern { get; set; }
         public Nullable<int> REMTZ_StylizerLine { get; set; }
     
         public virtual ICollection<T_REM_Ref_Arbeitsgang> T_REM_Ref_Arbeitsgang { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

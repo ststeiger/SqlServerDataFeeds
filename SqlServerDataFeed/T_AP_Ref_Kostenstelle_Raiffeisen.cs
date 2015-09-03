@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_Kostenstelle_Raiffeisen
     {
         public System.Guid KST_UID { get; set; }
-        public System.Guid KST_KST_UID { get; set; }
         public string KST_Leiter_Name { get; set; }
         public string KST_Leiter_Vorname { get; set; }
         public Nullable<System.DateTime> KST_Eroeffnung { get; set; }

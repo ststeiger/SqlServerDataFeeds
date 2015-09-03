@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid FKAT_UID { get; set; }
-        public int FKAT_MDT_ID { get; set; }
         public Nullable<int> FKAT_Code { get; set; }
         public string FKAT_Kurz_DE { get; set; }
         public string FKAT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string FKAT_Lang_EN { get; set; }
         public int FKAT_Status { get; set; }
         public int FKAT_Sort { get; set; }
-        public Nullable<int> FKAT_StylizerFore { get; set; }
         public Nullable<int> FKAT_StylizerBack { get; set; }
         public Nullable<int> FKAT_StylizerPattern { get; set; }
         public Nullable<int> FKAT_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Fotos> T_AP_Fotos { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

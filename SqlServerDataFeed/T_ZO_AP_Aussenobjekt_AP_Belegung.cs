@@ -15,11 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Aussenobjekt_AP_Belegung
     {
         public System.Guid ZO_AOBEL_UID { get; set; }
-        public System.Guid ZO_AOBEL_BT_UID { get; set; }
-        public System.Guid ZO_AOBEL_AO_UID { get; set; }
-        public Nullable<System.Guid> ZO_AOBEL_VTR_UID { get; set; }
-        public Nullable<System.Guid> ZO_AOBEL_KT_UID { get; set; }
-        public Nullable<System.Guid> ZO_AOBEL_ADR_UID { get; set; }
         public double ZO_AOBEL_Mietansatz { get; set; }
         public string ZO_AOBEL_Schild { get; set; }
         public System.DateTime ZO_AOBEL_DatumVon { get; set; }

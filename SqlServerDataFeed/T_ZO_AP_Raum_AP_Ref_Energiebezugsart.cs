@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Raum_AP_Ref_Energiebezugsart
     {
         public System.Guid ZO_RMEBA_UID { get; set; }
-        public System.Guid ZO_RMEBA_RM_UID { get; set; }
-        public System.Guid ZO_RMEBA_EBA_UID { get; set; }
         public System.DateTime ZO_RMEBA_DatumVon { get; set; }
         public System.DateTime ZO_RMEBA_DatumBis { get; set; }
         public int ZO_RMEBA_Status { get; set; }

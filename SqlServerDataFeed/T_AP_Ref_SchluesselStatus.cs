@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid SLS_UID { get; set; }
-        public int SLS_MDT_ID { get; set; }
         public Nullable<int> SLS_Code { get; set; }
         public string SLS_Kurz_DE { get; set; }
         public string SLS_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string SLS_Lang_EN { get; set; }
         public int SLS_Status { get; set; }
         public int SLS_Sort { get; set; }
-        public Nullable<int> SLS_StylizerFore { get; set; }
         public Nullable<int> SLS_StylizerBack { get; set; }
         public Nullable<int> SLS_StylizerPattern { get; set; }
         public Nullable<int> SLS_StylizerLine { get; set; }
@@ -41,6 +39,7 @@ namespace SqlServerDataFeed
         public string SLS_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AP_Schluessel> T_AP_Schluessel { get; set; }
     }
 }

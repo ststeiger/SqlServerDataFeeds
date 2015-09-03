@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_ParkplatzSchutz
     {
         public System.Guid PS_UID { get; set; }
-        public int PS_MDT_ID { get; set; }
         public Nullable<int> PS_Code { get; set; }
         public string PS_Kurz_DE { get; set; }
         public string PS_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string PS_Lang_EN { get; set; }
         public int PS_Status { get; set; }
         public int PS_Sort { get; set; }
-        public Nullable<int> PS_StylizerFore { get; set; }
         public Nullable<int> PS_StylizerBack { get; set; }
         public Nullable<int> PS_StylizerPattern { get; set; }
         public Nullable<int> PS_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string PS_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

@@ -17,10 +17,8 @@ namespace SqlServerDataFeed
         public System.Guid LYR_UID { get; set; }
         public int LYR_GRANTEE_ID { get; set; }
         public string LYR_GRANTEE { get; set; }
-        public Nullable<System.Guid> LYR_LY_UID { get; set; }
         public bool LYR_IsRead { get; set; }
         public int LYR_Status { get; set; }
-        public int LYR_MDT_ID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual T_SYS_Ref_Layerset T_SYS_Ref_Layerset { get; set; }

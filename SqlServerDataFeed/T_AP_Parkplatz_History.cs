@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Parkplatz_History
     {
         public System.Guid HIPP_UID { get; set; }
-        public System.Guid HIPP_PP_UID { get; set; }
         public System.Guid HIPP_Entry_UID { get; set; }
         public System.DateTime HIPP_Datum { get; set; }
         public string HIPP_User { get; set; }

@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_SYS_Ref_ZeitEinheiten
     {
         public System.Guid ZE_UID { get; set; }
-        public int ZE_MDT_ID { get; set; }
         public Nullable<int> ZE_Code { get; set; }
         public string ZE_Kurz_DE { get; set; }
         public string ZE_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string ZE_Lang_EN { get; set; }
         public int ZE_Status { get; set; }
         public int ZE_Sort { get; set; }
-        public Nullable<int> ZE_StylizerFore { get; set; }
         public Nullable<int> ZE_StylizerBack { get; set; }
         public Nullable<int> ZE_StylizerPattern { get; set; }
         public Nullable<int> ZE_StylizerLine { get; set; }
@@ -36,5 +34,6 @@ namespace SqlServerDataFeed
         public string ZE_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

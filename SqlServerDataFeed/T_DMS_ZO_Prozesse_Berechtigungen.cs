@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_DMS_ZO_Prozesse_Berechtigungen
     {
         public System.Guid ZO_UID { get; set; }
-        public Nullable<System.Guid> ZO_PROC_UID { get; set; }
-        public int ZO_BG_ID { get; set; }
         public int ZO_Status { get; set; }
     
         public virtual T_Benutzergruppen T_Benutzergruppen { get; set; }

@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_EmailAttachment
     {
         public System.Guid EA_UID { get; set; }
-        public System.Guid EA_EMAIL_UID { get; set; }
         public byte[] EA_File { get; set; }
         public string EA_DateiEndung { get; set; }
         public string EA_DateiTyp { get; set; }

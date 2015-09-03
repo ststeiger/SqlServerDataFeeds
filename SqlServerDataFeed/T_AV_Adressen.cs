@@ -24,6 +24,7 @@ namespace SqlServerDataFeed
             this.T_AP_Mobiliar = new HashSet<T_AP_Mobiliar>();
             this.T_AP_Schluessel = new HashSet<T_AP_Schluessel>();
             this.T_AP_Sicherheit = new HashSet<T_AP_Sicherheit>();
+            this.T_AP_Trakt = new HashSet<T_AP_Trakt>();
             this.T_AP_Zaehler = new HashSet<T_AP_Zaehler>();
             this.T_AV_AdresseKontaktpersonen = new HashSet<T_AV_AdresseKontaktpersonen>();
             this.T_AV_Adressen_History = new HashSet<T_AV_Adressen_History>();
@@ -34,13 +35,13 @@ namespace SqlServerDataFeed
             this.T_UPS_Rechnungskontrolle = new HashSet<T_UPS_Rechnungskontrolle>();
             this.T_VM_Vertraege = new HashSet<T_VM_Vertraege>();
             this.T_ZO_AP_Aussenobjekt_AP_Belegung = new HashSet<T_ZO_AP_Aussenobjekt_AP_Belegung>();
+            this.T_ZO_AP_Objekt_T_AV_Adressen = new HashSet<T_ZO_AP_Objekt_T_AV_Adressen>();
             this.T_ZO_AP_Parkplatz_AP_Belegung = new HashSet<T_ZO_AP_Parkplatz_AP_Belegung>();
             this.T_ZO_AP_Parkplatz_AV_Adressen = new HashSet<T_ZO_AP_Parkplatz_AV_Adressen>();
             this.T_ZO_AV_Adresse_AV_Ref_AdresseRollen = new HashSet<T_ZO_AV_Adresse_AV_Ref_AdresseRollen>();
         }
     
         public System.Guid ADR_UID { get; set; }
-        public int ADR_MDT_ID { get; set; }
         public Nullable<System.Guid> ADR_AA_UID { get; set; }
         public Nullable<System.Guid> ADR_LD_UID { get; set; }
         public string ADR_Nr { get; set; }
@@ -50,7 +51,6 @@ namespace SqlServerDataFeed
         public string ADR_PLZ { get; set; }
         public string ADR_Ort { get; set; }
         public string ADR_Land { get; set; }
-        public Nullable<System.Guid> ADR_RG_UID { get; set; }
         public string ADR_Tel { get; set; }
         public string ADR_Tel2 { get; set; }
         public string ADR_Mobile { get; set; }
@@ -62,12 +62,11 @@ namespace SqlServerDataFeed
         public string ADR_MWSt { get; set; }
         public Nullable<System.DateTime> ADR_DatumVon { get; set; }
         public Nullable<System.DateTime> ADR_DatumBis { get; set; }
-        public Nullable<int> ADR_StylizerFore { get; set; }
         public Nullable<int> ADR_StylizerBack { get; set; }
         public Nullable<int> ADR_StylizerPattern { get; set; }
         public Nullable<int> ADR_StylizerLine { get; set; }
         public string ADR_Suchbegriff { get; set; }
-        public Nullable<System.Guid> ADR_ARE_UID { get; set; }
+        public Nullable<bool> ADR_IsInterface { get; set; }
     
         public virtual ICollection<T_AP_Anlage> T_AP_Anlage { get; set; }
         public virtual ICollection<T_AP_Aussenobjekt> T_AP_Aussenobjekt { get; set; }
@@ -79,10 +78,12 @@ namespace SqlServerDataFeed
         public virtual T_AP_Ref_Region T_AP_Ref_Region { get; set; }
         public virtual ICollection<T_AP_Schluessel> T_AP_Schluessel { get; set; }
         public virtual ICollection<T_AP_Sicherheit> T_AP_Sicherheit { get; set; }
+        public virtual ICollection<T_AP_Trakt> T_AP_Trakt { get; set; }
         public virtual ICollection<T_AP_Zaehler> T_AP_Zaehler { get; set; }
         public virtual ICollection<T_AV_AdresseKontaktpersonen> T_AV_AdresseKontaktpersonen { get; set; }
         public virtual ICollection<T_AV_Adressen_History> T_AV_Adressen_History { get; set; }
         public virtual T_AV_Ref_Region T_AV_Ref_Region { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung1 { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
@@ -90,6 +91,7 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_UPS_Rechnungskontrolle> T_UPS_Rechnungskontrolle { get; set; }
         public virtual ICollection<T_VM_Vertraege> T_VM_Vertraege { get; set; }
         public virtual ICollection<T_ZO_AP_Aussenobjekt_AP_Belegung> T_ZO_AP_Aussenobjekt_AP_Belegung { get; set; }
+        public virtual ICollection<T_ZO_AP_Objekt_T_AV_Adressen> T_ZO_AP_Objekt_T_AV_Adressen { get; set; }
         public virtual ICollection<T_ZO_AP_Parkplatz_AP_Belegung> T_ZO_AP_Parkplatz_AP_Belegung { get; set; }
         public virtual ICollection<T_ZO_AP_Parkplatz_AV_Adressen> T_ZO_AP_Parkplatz_AV_Adressen { get; set; }
         public virtual ICollection<T_ZO_AV_Adresse_AV_Ref_AdresseRollen> T_ZO_AV_Adresse_AV_Ref_AdresseRollen { get; set; }

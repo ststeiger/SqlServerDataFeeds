@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_SYS_Settings_Benutzer
     {
         public System.Guid ZO_SETBE_UID { get; set; }
-        public Nullable<System.Guid> ZO_SETBE_SET_UID { get; set; }
-        public Nullable<int> ZO_SETBE_BE_ID { get; set; }
         public int ZO_SETBE_Status { get; set; }
         public string ZO_SETBE_Value { get; set; }
     

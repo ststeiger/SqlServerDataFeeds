@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Gebaeude_Reichle
     {
         public System.Guid GB_UID { get; set; }
-        public System.Guid GB_GB_UID { get; set; }
-        public Nullable<System.Guid> GB_STR_UID { get; set; }
         public string GB_Hausnummer { get; set; }
         public string GB_Suffix { get; set; }
         public int GB_Status { get; set; }

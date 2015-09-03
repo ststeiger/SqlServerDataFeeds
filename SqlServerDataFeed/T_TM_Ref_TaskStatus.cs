@@ -21,7 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TSTA_UID { get; set; }
-        public int TSTA_MDT_ID { get; set; }
         public Nullable<int> TSTA_Code { get; set; }
         public string TSTA_Kurz_DE { get; set; }
         public string TSTA_Kurz_FR { get; set; }
@@ -33,7 +32,6 @@ namespace SqlServerDataFeed
         public string TSTA_Lang_EN { get; set; }
         public int TSTA_Status { get; set; }
         public int TSTA_Sort { get; set; }
-        public Nullable<int> TSTA_StylizerFore { get; set; }
         public Nullable<int> TSTA_StylizerBack { get; set; }
         public Nullable<int> TSTA_StylizerPattern { get; set; }
         public Nullable<int> TSTA_StylizerLine { get; set; }
@@ -44,6 +42,7 @@ namespace SqlServerDataFeed
         public Nullable<bool> TSTA_IsDone { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
         public virtual ICollection<T_ZO_TM_TSTA_TSK> T_ZO_TM_TSTA_TSK { get; set; }
     }

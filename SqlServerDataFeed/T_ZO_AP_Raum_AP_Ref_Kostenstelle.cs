@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Raum_AP_Ref_Kostenstelle
     {
         public System.Guid ZO_RMKST_UID { get; set; }
-        public System.Guid ZO_RMKST_RM_UID { get; set; }
-        public System.Guid ZO_RMKST_KST_UID { get; set; }
         public System.DateTime ZO_RMKST_DatumVon { get; set; }
         public System.DateTime ZO_RMKST_DatumBis { get; set; }
         public int ZO_RMKST_Status { get; set; }

@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Parkplatz_Reservation
     {
         public System.Guid ZO_PPRES_UID { get; set; }
-        public System.Guid ZO_PPRES_PP_UID { get; set; }
-        public int ZO_PPRES_BE_ID { get; set; }
         public System.DateTime ZO_PPRES_DatumVon { get; set; }
         public System.DateTime ZO_PPRES_DatumBis { get; set; }
         public System.DateTime ZO_PPRES_Created { get; set; }

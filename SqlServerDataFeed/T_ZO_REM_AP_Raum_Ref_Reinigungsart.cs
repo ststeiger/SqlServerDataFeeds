@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_REM_AP_Raum_Ref_Reinigungsart
     {
         public System.Guid ZO_RMREMRA_UID { get; set; }
-        public System.Guid ZO_RMREMRA_RM_UID { get; set; }
-        public System.Guid ZO_RMREMRA_REMRA_UID { get; set; }
         public double ZO_RMREMRA_Faktor { get; set; }
         public System.DateTime ZO_RMREMRA_GueltigVon { get; set; }
         public System.DateTime ZO_RMREMRA_GueltigBis { get; set; }

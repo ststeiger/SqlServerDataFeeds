@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ST_UID { get; set; }
-        public int ST_MDT_ID { get; set; }
         public string ST_Code { get; set; }
         public string ST_Kurz_DE { get; set; }
         public string ST_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string ST_Lang_EN { get; set; }
         public int ST_Status { get; set; }
         public int ST_Sort { get; set; }
-        public Nullable<int> ST_StylizerFore { get; set; }
         public Nullable<int> ST_StylizerBack { get; set; }
         public Nullable<int> ST_StylizerPattern { get; set; }
         public Nullable<int> ST_StylizerLine { get; set; }
@@ -41,6 +39,7 @@ namespace SqlServerDataFeed
         public string ST_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_AP_Tuer_Schliessung> T_ZO_AP_Tuer_Schliessung { get; set; }
     }
 }

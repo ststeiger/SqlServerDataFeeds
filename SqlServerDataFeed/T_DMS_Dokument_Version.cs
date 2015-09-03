@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_DMS_Dokument_Version
     {
         public System.Guid DV_UID { get; set; }
-        public Nullable<System.Guid> DV_DOC_UID { get; set; }
         public string DV_Datei { get; set; }
         public int DV_Version { get; set; }
         public Nullable<System.DateTime> DV_VersionDatum { get; set; }

@@ -22,7 +22,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid HS_UID { get; set; }
-        public int HS_MDT_ID { get; set; }
         public Nullable<int> HS_Code { get; set; }
         public string HS_Kurz_DE { get; set; }
         public string HS_Kurz_FR { get; set; }
@@ -34,7 +33,6 @@ namespace SqlServerDataFeed
         public string HS_Lang_EN { get; set; }
         public int HS_Status { get; set; }
         public int HS_Sort { get; set; }
-        public Nullable<int> HS_StylizerFore { get; set; }
         public Nullable<int> HS_StylizerBack { get; set; }
         public Nullable<int> HS_StylizerPattern { get; set; }
         public Nullable<int> HS_StylizerLine { get; set; }
@@ -47,5 +45,6 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_AP_Parkplatz> T_AP_Parkplatz { get; set; }
         public virtual ICollection<T_AP_Raum> T_AP_Raum { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

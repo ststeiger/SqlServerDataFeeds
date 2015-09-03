@@ -22,8 +22,9 @@ namespace SqlServerDataFeed
         public int DL_Sort { get; set; }
         public bool DL_IsDefault { get; set; }
         public string DL_ObjektID { get; set; }
-        public Nullable<int> DL_StylizerBack { get; set; }
         public Nullable<int> DL_StylizerFore { get; set; }
         public Nullable<int> DL_StylizerPattern { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

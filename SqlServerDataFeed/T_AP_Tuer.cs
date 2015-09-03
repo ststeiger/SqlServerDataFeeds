@@ -18,6 +18,7 @@ namespace SqlServerDataFeed
         {
             this.T_AP_Tuer_History = new HashSet<T_AP_Tuer_History>();
             this.T_AP_Zylinder = new HashSet<T_AP_Zylinder>();
+            this.T_SYS_Tuerrechte = new HashSet<T_SYS_Tuerrechte>();
             this.T_TM_Tasks_Planung = new HashSet<T_TM_Tasks_Planung>();
             this.T_TM_Tasks = new HashSet<T_TM_Tasks>();
             this.T_ZO_AP_Tuer_Schliessung = new HashSet<T_ZO_AP_Tuer_Schliessung>();
@@ -25,13 +26,7 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TR_UID { get; set; }
-        public int TR_MDT_ID { get; set; }
         public string TR_ApertureKey { get; set; }
-        public Nullable<System.Guid> TR_RM_UID { get; set; }
-        public Nullable<System.Guid> TR_TF_UID { get; set; }
-        public Nullable<System.Guid> TR_TM_UID { get; set; }
-        public Nullable<System.Guid> TR_TBS_UID { get; set; }
-        public Nullable<System.Guid> TR_TT_UID { get; set; }
         public string TR_Nr { get; set; }
         public double TR_Glasanteil { get; set; }
         public double TR_Breite { get; set; }
@@ -52,6 +47,7 @@ namespace SqlServerDataFeed
         public virtual T_AP_Ref_TuerTyp T_AP_Ref_TuerTyp { get; set; }
         public virtual ICollection<T_AP_Tuer_History> T_AP_Tuer_History { get; set; }
         public virtual ICollection<T_AP_Zylinder> T_AP_Zylinder { get; set; }
+        public virtual ICollection<T_SYS_Tuerrechte> T_SYS_Tuerrechte { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
         public virtual ICollection<T_ZO_AP_Tuer_Schliessung> T_ZO_AP_Tuer_Schliessung { get; set; }

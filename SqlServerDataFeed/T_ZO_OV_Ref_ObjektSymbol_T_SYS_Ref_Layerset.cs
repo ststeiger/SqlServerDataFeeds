@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_OV_Ref_ObjektSymbol_T_SYS_Ref_Layerset
     {
         public System.Guid ZO_OBJSLY_UID { get; set; }
-        public Nullable<System.Guid> ZO_OBJSLY_OBJS_UID { get; set; }
-        public System.Guid ZO_OBJSLY_LY_UID { get; set; }
         public int ZO_OBJSLY_Status { get; set; }
     
         public virtual T_SYS_Ref_Layerset T_SYS_Ref_Layerset { get; set; }

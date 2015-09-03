@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_MM_Bestand_Umzug
     {
         public System.Guid ZO_BUMM_UID { get; set; }
-        public Nullable<System.Guid> ZO_BUMM_MMU_UID { get; set; }
-        public Nullable<System.Guid> ZO_BUMM_MMUB_UID { get; set; }
         public int ZO_BUMM_Status { get; set; }
         public bool ZO_BUMM_IsMove { get; set; }
         public bool ZO_BUMM_IsDismantle { get; set; }

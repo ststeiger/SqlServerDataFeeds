@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Raum_History
     {
         public System.Guid HIRM_UID { get; set; }
-        public System.Guid HIRM_RM_UID { get; set; }
         public System.Guid HIRM_Entry_UID { get; set; }
         public System.DateTime HIRM_Datum { get; set; }
         public string HIRM_User { get; set; }

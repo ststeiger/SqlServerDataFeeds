@@ -17,6 +17,7 @@ namespace SqlServerDataFeed
         public T_AP_Aussenobjekt()
         {
             this.T_AP_Aussenobjekt_History = new HashSet<T_AP_Aussenobjekt_History>();
+            this.T_SYS_Aussenobjektrechte = new HashSet<T_SYS_Aussenobjektrechte>();
             this.T_TM_Tasks_Planung = new HashSet<T_TM_Tasks_Planung>();
             this.T_TM_Tasks = new HashSet<T_TM_Tasks>();
             this.T_ZO_AP_Aussenobjekt_AP_Belegung = new HashSet<T_ZO_AP_Aussenobjekt_AP_Belegung>();
@@ -30,14 +31,7 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AO_UID { get; set; }
-        public int AO_MDT_ID { get; set; }
         public string AO_ApertureKey { get; set; }
-        public Nullable<System.Guid> AO_SO_UID { get; set; }
-        public Nullable<System.Guid> AO_AOKAT_UID { get; set; }
-        public Nullable<System.Guid> AO_AAKT_UID { get; set; }
-        public Nullable<System.Guid> AO_AAKM_UID { get; set; }
-        public Nullable<System.Guid> AO_AAKS_UID { get; set; }
-        public Nullable<System.Guid> AO_ABFT_UID { get; set; }
         public string AO_Nr { get; set; }
         public string AO_Bezeichnung { get; set; }
         public int AO_Beflaggung_Anzahl { get; set; }
@@ -51,12 +45,9 @@ namespace SqlServerDataFeed
         public int AO_Status { get; set; }
         public string AO_PLZ { get; set; }
         public string AO_Ort { get; set; }
-        public Nullable<System.Guid> AO_HS_UID { get; set; }
-        public Nullable<System.Guid> AO_NA_UID { get; set; }
-        public Nullable<System.Guid> AO_BB_UID { get; set; }
-        public Nullable<System.Guid> AO_ADR_UID { get; set; }
     
         public virtual ICollection<T_AP_Aussenobjekt_History> T_AP_Aussenobjekt_History { get; set; }
+        public virtual T_AP_Grundstueck T_AP_Grundstueck { get; set; }
         public virtual T_AP_Ref_AussenobjektAnschlagkastenMaterial T_AP_Ref_AussenobjektAnschlagkastenMaterial { get; set; }
         public virtual T_AP_Ref_AussenobjektAnschlagkastenSchliessung T_AP_Ref_AussenobjektAnschlagkastenSchliessung { get; set; }
         public virtual T_AP_Ref_AussenobjektAnschlagkastenTyp T_AP_Ref_AussenobjektAnschlagkastenTyp { get; set; }
@@ -68,6 +59,7 @@ namespace SqlServerDataFeed
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual T_AP_Standort T_AP_Standort { get; set; }
         public virtual T_AV_Adressen T_AV_Adressen { get; set; }
+        public virtual ICollection<T_SYS_Aussenobjektrechte> T_SYS_Aussenobjektrechte { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
         public virtual ICollection<T_ZO_AP_Aussenobjekt_AP_Belegung> T_ZO_AP_Aussenobjekt_AP_Belegung { get; set; }

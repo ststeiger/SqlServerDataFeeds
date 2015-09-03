@@ -23,7 +23,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ZYP_UID { get; set; }
-        public int ZYP_MDT_ID { get; set; }
         public Nullable<int> ZYP_Code { get; set; }
         public string ZYP_Kurz_DE { get; set; }
         public string ZYP_Kurz_FR { get; set; }
@@ -35,7 +34,6 @@ namespace SqlServerDataFeed
         public string ZYP_Lang_EN { get; set; }
         public int ZYP_Status { get; set; }
         public int ZYP_Sort { get; set; }
-        public Nullable<int> ZYP_StylizerFore { get; set; }
         public Nullable<int> ZYP_StylizerBack { get; set; }
         public Nullable<int> ZYP_StylizerPattern { get; set; }
         public Nullable<int> ZYP_StylizerLine { get; set; }
@@ -44,6 +42,7 @@ namespace SqlServerDataFeed
         public string ZYP_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung1 { get; set; }
         public virtual ICollection<T_VM_Vertraege> T_VM_Vertraege { get; set; }

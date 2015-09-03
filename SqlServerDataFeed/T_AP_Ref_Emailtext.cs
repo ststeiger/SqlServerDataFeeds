@@ -15,12 +15,10 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_Emailtext
     {
         public System.Guid ET_UID { get; set; }
-        public Nullable<System.Guid> ET_ETC_UID { get; set; }
         public string ET_Code { get; set; }
         public int ET_Status { get; set; }
         public int ET_Sort { get; set; }
         public bool ET_IsDefault { get; set; }
-        public Nullable<int> ET_StylizerBack { get; set; }
         public Nullable<int> ET_StylizerFore { get; set; }
         public Nullable<int> ET_StylizerPattern { get; set; }
         public int ET_MDT_ID { get; set; }
@@ -35,5 +33,6 @@ namespace SqlServerDataFeed
         public Nullable<int> ET_StylizerLine { get; set; }
     
         public virtual T_AP_Ref_EmailtextKategorie T_AP_Ref_EmailtextKategorie { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

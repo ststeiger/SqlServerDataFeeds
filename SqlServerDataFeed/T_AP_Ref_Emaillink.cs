@@ -19,7 +19,6 @@ namespace SqlServerDataFeed
         public int EL_Status { get; set; }
         public int EL_Sort { get; set; }
         public bool EL_IsDefault { get; set; }
-        public Nullable<int> EL_StylizerBack { get; set; }
         public Nullable<int> EL_StylizerFore { get; set; }
         public Nullable<int> EL_StylizerPattern { get; set; }
         public int EL_MDT_ID { get; set; }
@@ -32,5 +31,7 @@ namespace SqlServerDataFeed
         public string EL_Lang_it { get; set; }
         public string EL_Lang_en { get; set; }
         public Nullable<int> EL_StylizerLine { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

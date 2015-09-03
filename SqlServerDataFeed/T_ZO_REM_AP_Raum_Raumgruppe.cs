@@ -15,9 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_REM_AP_Raum_Raumgruppe
     {
         public System.Guid ZO_RMRG_UID { get; set; }
-        public Nullable<System.Guid> ZO_RMRG_BB_UID { get; set; }
-        public Nullable<System.Guid> ZO_RMRG_NA_UID { get; set; }
-        public Nullable<System.Guid> ZO_RMRG_RP_UID { get; set; }
         public string ZO_RMRG_Name { get; set; }
         public string ZO_RMRG_Raumgruppe { get; set; }
         public System.DateTime ZO_RMRG_GueltigVon { get; set; }

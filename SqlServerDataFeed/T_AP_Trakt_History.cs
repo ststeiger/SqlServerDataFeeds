@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Trakt_History
     {
         public System.Guid HITK_UID { get; set; }
-        public System.Guid HITK_TK_UID { get; set; }
         public System.Guid HITK_Entry_UID { get; set; }
         public System.DateTime HITK_Datum { get; set; }
         public string HITK_User { get; set; }

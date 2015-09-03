@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid EMAIL_UID { get; set; }
-        public Nullable<System.Guid> EMAIL_ETC_UID { get; set; }
         public string EMAIL_Text { get; set; }
         public string EMAIL_Titel { get; set; }
         public string EMAIL_From { get; set; }

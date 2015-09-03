@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Schluessel_Protokoll
     {
         public System.Guid SLP_UID { get; set; }
-        public Nullable<System.Guid> SLP_SL_UID { get; set; }
         public System.DateTime SLP_Datum { get; set; }
         public string SLP_Aktion_DE { get; set; }
         public string SLP_Aktion_FR { get; set; }

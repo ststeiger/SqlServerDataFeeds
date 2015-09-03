@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Aussenobjekt_History
     {
         public System.Guid HIAO_UID { get; set; }
-        public System.Guid HIAO_AO_UID { get; set; }
         public System.Guid HIAO_Entry_UID { get; set; }
         public System.DateTime HIAO_Datum { get; set; }
         public string HIAO_User { get; set; }

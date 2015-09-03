@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ABT_UID { get; set; }
-        public int ABT_MDT_ID { get; set; }
         public Nullable<int> ABT_Code { get; set; }
         public string ABT_Kurz_DE { get; set; }
         public string ABT_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string ABT_Lang_EN { get; set; }
         public int ABT_Status { get; set; }
         public int ABT_Sort { get; set; }
-        public Nullable<int> ABT_StylizerFore { get; set; }
         public Nullable<int> ABT_StylizerBack { get; set; }
         public Nullable<int> ABT_StylizerPattern { get; set; }
         public Nullable<int> ABT_StylizerLine { get; set; }
@@ -41,6 +39,7 @@ namespace SqlServerDataFeed
         public string ABT_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_AP_Aussenobjekt_AP_Ref_AussenobjektAusbauten> T_ZO_AP_Aussenobjekt_AP_Ref_AussenobjektAusbauten { get; set; }
     }
 }

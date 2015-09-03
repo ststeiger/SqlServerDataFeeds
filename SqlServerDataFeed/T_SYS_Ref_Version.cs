@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_SYS_Ref_Version
     {
         public System.Guid VER_UID { get; set; }
-        public int VER_MDT_ID { get; set; }
-        public int VER_BE_ID { get; set; }
         public string VER_Label { get; set; }
         public System.DateTime VER_Date { get; set; }
         public int VER_Status { get; set; }

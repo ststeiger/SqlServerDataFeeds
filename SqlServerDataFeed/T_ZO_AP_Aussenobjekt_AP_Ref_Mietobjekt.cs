@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Aussenobjekt_AP_Ref_Mietobjekt
     {
         public System.Guid ZO_AOMIO_UID { get; set; }
-        public System.Guid ZO_AOMIO_AO_UID { get; set; }
-        public System.Guid ZO_AOMIO_MIO_UID { get; set; }
         public System.DateTime ZO_AOMIO_DatumVon { get; set; }
         public System.DateTime ZO_AOMIO_DatumBis { get; set; }
         public int ZO_AOMIO_Status { get; set; }

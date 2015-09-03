@@ -33,11 +33,11 @@ namespace SqlServerDataFeed
         public int REMRN_Status { get; set; }
         public int REMRN_Sort { get; set; }
         public bool REMRN_IsDefault { get; set; }
-        public Nullable<int> REMRN_StylizerBack { get; set; }
         public Nullable<int> REMRN_StylizerFore { get; set; }
         public Nullable<int> REMRN_StylizerPattern { get; set; }
         public Nullable<int> REMRN_StylizerLine { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Ausstattung_Kalk> T_ZO_REM_AP_Raum_Ausstattung_Kalk { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Ausstattung> T_ZO_REM_AP_Raum_Ausstattung { get; set; }
     }

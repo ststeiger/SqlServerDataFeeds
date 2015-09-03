@@ -16,7 +16,6 @@ namespace SqlServerDataFeed
     {
         public System.Guid ZO_OBJVTR_UID { get; set; }
         public Nullable<System.Guid> ZO_OBJVTR_OBJ_UID { get; set; }
-        public Nullable<System.Guid> ZO_OBJVTR_VTR_UID { get; set; }
         public string ZO_OBJVTR_Bemerkung { get; set; }
         public int ZO_OBJVTR_Status { get; set; }
     

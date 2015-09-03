@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Raum_AP_Ref_Anmietvertraege
     {
         public System.Guid ZO_RMANVTR_UID { get; set; }
-        public System.Guid ZO_RMANVTR_RM_UID { get; set; }
-        public System.Guid ZO_RMANVTR_VTR_UID { get; set; }
         public System.DateTime ZO_RMANVTR_DatumVon { get; set; }
         public System.DateTime ZO_RMANVTR_DatumBis { get; set; }
         public int ZO_RMANVTR_Status { get; set; }

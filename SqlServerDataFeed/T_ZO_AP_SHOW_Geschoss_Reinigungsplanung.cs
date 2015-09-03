@@ -16,7 +16,6 @@ namespace SqlServerDataFeed
     {
         public System.Guid ZO_GSSRSP_GS_UID { get; set; }
         public string ZO_GSSRSP_DWG { get; set; }
-        public int ZO_GSSRSP_REMSP_Nr { get; set; }
     
         public virtual T_AP_Geschoss T_AP_Geschoss { get; set; }
         public virtual T_ZO_REM_AP_Standort_Planung T_ZO_REM_AP_Standort_Planung { get; set; }

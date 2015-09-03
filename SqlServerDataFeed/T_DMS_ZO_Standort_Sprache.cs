@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_DMS_ZO_Standort_Sprache
     {
         public System.Guid ZO_STAND_Sprache_UID { get; set; }
-        public int ZO_STAND_Sprache_BG_ID { get; set; }
         public string ZO_STAND_Sprache { get; set; }
         public string ZO_STAND_Sprache_Bez { get; set; }
         public int ZO_Status { get; set; }

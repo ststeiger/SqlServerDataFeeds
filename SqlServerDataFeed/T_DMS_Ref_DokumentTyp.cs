@@ -32,7 +32,6 @@ namespace SqlServerDataFeed
         public string DT_Lang_EN { get; set; }
         public int DT_Status { get; set; }
         public int DT_Sort { get; set; }
-        public Nullable<int> DT_StylizerFore { get; set; }
         public Nullable<int> DT_StylizerBack { get; set; }
         public Nullable<int> DT_StylizerPattern { get; set; }
         public Nullable<int> DT_StylizerLine { get; set; }
@@ -41,6 +40,7 @@ namespace SqlServerDataFeed
         public string DT_DatumUser { get; set; }
     
         public virtual ICollection<T_DMS_Dokument> T_DMS_Dokument { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_DMS_SYS_MetaStruktur> T_DMS_SYS_MetaStruktur { get; set; }
     }
 }

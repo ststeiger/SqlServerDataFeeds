@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Aussenobjekt_AP_Ref_AussenobjektAusbauten
     {
         public System.Guid ZO_AOABT_UID { get; set; }
-        public System.Guid ZO_AOABT_AO_UID { get; set; }
-        public System.Guid ZO_AOABT_ABT_UID { get; set; }
         public int ZO_AOABT_Menge { get; set; }
         public int ZO_AOABT_Status { get; set; }
     

@@ -21,9 +21,7 @@ namespace SqlServerDataFeed
         }
     
         public int ZO_RMRSP_Nr { get; set; }
-        public System.Guid ZO_RMRSP_SO_UID { get; set; }
         public System.Guid ZO_RMRSP_REMRA_UID { get; set; }
-        public Nullable<System.Guid> ZO_RMRSP_KT_UID { get; set; }
         public Nullable<bool> ZO_RMRSP_Fremdfirma { get; set; }
         public string ZO_RMRSP_Name { get; set; }
         public string ZO_RMRSP_Farbe { get; set; }

@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_VM_Vertraege_History
     {
         public System.Guid HIVTR_UID { get; set; }
-        public System.Guid HIVTR_VTR_UID { get; set; }
         public System.Guid HIVTR_Entry_UID { get; set; }
         public System.DateTime HIVTR_Datum { get; set; }
         public string HIVTR_User { get; set; }

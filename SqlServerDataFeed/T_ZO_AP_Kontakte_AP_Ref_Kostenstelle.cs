@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Kontakte_AP_Ref_Kostenstelle
     {
         public System.Guid ZO_KTKST_UID { get; set; }
-        public System.Guid ZO_KTKST_KT_UID { get; set; }
-        public System.Guid ZO_KTKST_KST_UID { get; set; }
         public System.DateTime ZO_KTKST_DatumVon { get; set; }
         public System.DateTime ZO_KTKST_DatumBis { get; set; }
         public int ZO_KTKST_Status { get; set; }

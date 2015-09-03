@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Ref_ParkplatzKategorie
     {
         public System.Guid PK_UID { get; set; }
-        public int PK_MDT_ID { get; set; }
         public Nullable<int> PK_Code { get; set; }
         public string PK_Kurz_DE { get; set; }
         public string PK_Kurz_FR { get; set; }
@@ -27,7 +26,6 @@ namespace SqlServerDataFeed
         public string PK_Lang_EN { get; set; }
         public int PK_Status { get; set; }
         public int PK_Sort { get; set; }
-        public Nullable<int> PK_StylizerFore { get; set; }
         public Nullable<int> PK_StylizerBack { get; set; }
         public Nullable<int> PK_StylizerPattern { get; set; }
         public Nullable<int> PK_StylizerLine { get; set; }
@@ -39,5 +37,6 @@ namespace SqlServerDataFeed
         public Nullable<bool> PK_canBook { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

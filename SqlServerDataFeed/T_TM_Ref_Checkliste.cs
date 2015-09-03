@@ -28,7 +28,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid TCL_UID { get; set; }
-        public int TCL_MDT_ID { get; set; }
         public Nullable<int> TCL_Code { get; set; }
         public string TCL_Kurz_DE { get; set; }
         public string TCL_Kurz_FR { get; set; }
@@ -40,21 +39,19 @@ namespace SqlServerDataFeed
         public string TCL_Lang_EN { get; set; }
         public int TCL_Status { get; set; }
         public int TCL_Sort { get; set; }
-        public Nullable<int> TCL_StylizerFore { get; set; }
         public Nullable<int> TCL_StylizerBack { get; set; }
         public Nullable<int> TCL_StylizerPattern { get; set; }
         public Nullable<int> TCL_StylizerLine { get; set; }
         public bool TCL_IsDefault { get; set; }
         public Nullable<System.DateTime> TCL_DatumMut { get; set; }
         public string TCL_DatumUser { get; set; }
-        public Nullable<System.Guid> TCL_TART_UID { get; set; }
         public Nullable<bool> TCL_showMaintenance { get; set; }
         public Nullable<bool> TCL_showJob { get; set; }
         public Nullable<bool> TCL_showNumber { get; set; }
         public Nullable<bool> TCL_isNew { get; set; }
-        public Nullable<System.Guid> TCL_TKAT_UID { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste_Absatz> T_TM_Ref_Checkliste_Absatz { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste_Checkpoints> T_TM_Ref_Checkliste_Checkpoints { get; set; }
         public virtual ICollection<T_TM_Ref_Checkliste_Details> T_TM_Ref_Checkliste_Details { get; set; }

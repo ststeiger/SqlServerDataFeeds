@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Schluessel_History
     {
         public System.Guid HISL_UID { get; set; }
-        public System.Guid HISL_SL_UID { get; set; }
         public System.Guid HISL_Entry_UID { get; set; }
         public System.DateTime HISL_Datum { get; set; }
         public string HISL_User { get; set; }

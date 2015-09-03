@@ -26,12 +26,13 @@ namespace SqlServerDataFeed
         public string MD3_Lang_EN { get; set; }
         public int MD3_Status { get; set; }
         public int MD3_Sort { get; set; }
-        public Nullable<int> MD3_StylizerFore { get; set; }
         public Nullable<int> MD3_StylizerBack { get; set; }
         public Nullable<int> MD3_StylizerPattern { get; set; }
         public Nullable<int> MD3_StylizerLine { get; set; }
         public bool MD3_IsDefault { get; set; }
         public Nullable<System.DateTime> MD3_DatumMut { get; set; }
         public string MD3_DatumUser { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

@@ -19,6 +19,7 @@ namespace SqlServerDataFeed
             this.T_AP_Anlage = new HashSet<T_AP_Anlage>();
             this.T_AP_Arbeitsplatz = new HashSet<T_AP_Arbeitsplatz>();
             this.T_AP_Dose = new HashSet<T_AP_Dose>();
+            this.T_AP_Fahrzeug = new HashSet<T_AP_Fahrzeug>();
             this.T_AP_Informatik = new HashSet<T_AP_Informatik>();
             this.T_AP_Kommunikation = new HashSet<T_AP_Kommunikation>();
             this.T_AP_Kunst = new HashSet<T_AP_Kunst>();
@@ -29,6 +30,7 @@ namespace SqlServerDataFeed
             this.T_AP_Sicherheit = new HashSet<T_AP_Sicherheit>();
             this.T_AP_Tuer = new HashSet<T_AP_Tuer>();
             this.T_AP_Zaehler = new HashSet<T_AP_Zaehler>();
+            this.T_SYS_Raumrechte = new HashSet<T_SYS_Raumrechte>();
             this.T_TM_Tasks_Planung = new HashSet<T_TM_Tasks_Planung>();
             this.T_TM_Tasks = new HashSet<T_TM_Tasks>();
             this.T_UM_Umzug = new HashSet<T_UM_Umzug>();
@@ -49,6 +51,8 @@ namespace SqlServerDataFeed
             this.T_ZO_AP_Raum_Flaeche = new HashSet<T_ZO_AP_Raum_Flaeche>();
             this.T_ZO_AP_Raum_OBJT_Kategorie = new HashSet<T_ZO_AP_Raum_OBJT_Kategorie>();
             this.T_ZO_AP_Raum_Reservation = new HashSet<T_ZO_AP_Raum_Reservation>();
+            this.T_ZO_IGM_Offerte_Raum = new HashSet<T_ZO_IGM_Offerte_Raum>();
+            this.T_ZO_IGM_Tour_Raum = new HashSet<T_ZO_IGM_Tour_Raum>();
             this.T_ZO_REM_AP_Planung_Ref_Raum = new HashSet<T_ZO_REM_AP_Planung_Ref_Raum>();
             this.T_ZO_REM_AP_Raum_Ausstattung_Kalk = new HashSet<T_ZO_REM_AP_Raum_Ausstattung_Kalk>();
             this.T_ZO_REM_AP_Raum_Ausstattung = new HashSet<T_ZO_REM_AP_Raum_Ausstattung>();
@@ -61,15 +65,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid RM_UID { get; set; }
-        public int RM_MDT_ID { get; set; }
-        public Nullable<System.Guid> RM_VAR_UID { get; set; }
-        public System.Guid RM_GS_UID { get; set; }
-        public Nullable<System.Guid> RM_BB_UID { get; set; }
-        public Nullable<System.Guid> RM_NA_UID_gebaut { get; set; }
-        public Nullable<System.Guid> RM_RT_UID { get; set; }
-        public Nullable<System.Guid> RM_RP_UID { get; set; }
-        public Nullable<System.Guid> RM_FM_UID { get; set; }
-        public Nullable<System.Guid> RM_HS_UID { get; set; }
         public string RM_ApertureKey { get; set; }
         public string RM_Nr { get; set; }
         public string RM_Bezeichnung { get; set; }
@@ -87,7 +82,6 @@ namespace SqlServerDataFeed
         public Nullable<System.DateTime> RM_MutDate { get; set; }
         public string RM_MutUser { get; set; }
         public string RM_HoeheInfo { get; set; }
-        public Nullable<System.Guid> RM_TK_UID { get; set; }
         public bool RM_IsVermietbar { get; set; }
         public string C_PolygonID { get; set; }
         public string C_LiegenschaftsNr { get; set; }
@@ -103,21 +97,30 @@ namespace SqlServerDataFeed
         public Nullable<decimal> RM_Price { get; set; }
         public string RM_Leistungsverzeichnis { get; set; }
         public string RM_Leistungsverzeichnis_Kalk { get; set; }
-        public Nullable<System.Guid> RM_RDK_UID { get; set; }
-        public Nullable<System.Guid> RM_RWO_UID { get; set; }
-        public Nullable<System.Guid> RM_RSZ_UID { get; set; }
         public bool RM_IsHohlboden { get; set; }
         public string RM_BodenbelagDetail { get; set; }
-        public Nullable<System.Guid> RM_Parent_UID { get; set; }
         public Nullable<int> RM_MaxAnzAP { get; set; }
         public Nullable<System.Guid> RM_RM_UID { get; set; }
-        public Nullable<System.Guid> RM_ZF_UID { get; set; }
         public Nullable<bool> RM_ZF_PP { get; set; }
         public string RM_ZF_Rank { get; set; }
+        public Nullable<decimal> RM_UR_RaumzuschlagK1 { get; set; }
+        public Nullable<decimal> RM_UR_RaumzuschlagK2 { get; set; }
+        public Nullable<decimal> RM_SI_RaumzuschlagK1 { get; set; }
+        public Nullable<decimal> RM_SI_RaumzuschlagK2 { get; set; }
+        public Nullable<decimal> RM_GL_RaumzuschlagK1 { get; set; }
+        public Nullable<decimal> RM_AnteilTagesdienst { get; set; }
+        public Nullable<bool> RM_Tagesdienst { get; set; }
+        public Nullable<bool> RM_Innenreinigung { get; set; }
+        public Nullable<bool> RM_Glasreinigung { get; set; }
+        public string RM_IdentifikationAO { get; set; }
+        public string RM_Raumattribut { get; set; }
+        public string RM_Funktion { get; set; }
+        public string RM_FGN_FSN { get; set; }
     
         public virtual ICollection<T_AP_Anlage> T_AP_Anlage { get; set; }
         public virtual ICollection<T_AP_Arbeitsplatz> T_AP_Arbeitsplatz { get; set; }
         public virtual ICollection<T_AP_Dose> T_AP_Dose { get; set; }
+        public virtual ICollection<T_AP_Fahrzeug> T_AP_Fahrzeug { get; set; }
         public virtual T_AP_Geschoss T_AP_Geschoss { get; set; }
         public virtual ICollection<T_AP_Informatik> T_AP_Informatik { get; set; }
         public virtual ICollection<T_AP_Kommunikation> T_AP_Kommunikation { get; set; }
@@ -132,6 +135,7 @@ namespace SqlServerDataFeed
         public virtual T_AP_Ref_Haus T_AP_Ref_Haus { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
         public virtual T_AP_Ref_Nutzungsart T_AP_Ref_Nutzungsart { get; set; }
+        public virtual T_AP_Ref_Nutzungsart T_AP_Ref_Nutzungsart1 { get; set; }
         public virtual T_AP_Ref_RaumDeckenkonstruktion T_AP_Ref_RaumDeckenkonstruktion { get; set; }
         public virtual T_AP_Ref_RaumSicherheitszone T_AP_Ref_RaumSicherheitszone { get; set; }
         public virtual T_AP_Ref_RaumTrakt T_AP_Ref_RaumTrakt { get; set; }
@@ -139,10 +143,13 @@ namespace SqlServerDataFeed
         public virtual T_AP_Ref_Reinigungsprio T_AP_Ref_Reinigungsprio { get; set; }
         public virtual T_AP_Trakt T_AP_Trakt { get; set; }
         public virtual T_AP_Ref_ZuschlagsflaechenTyp T_AP_Ref_ZuschlagsflaechenTyp { get; set; }
+        public virtual T_IGM_Ref_GlasreinigungServiceLevel T_IGM_Ref_GlasreinigungServiceLevel { get; set; }
+        public virtual T_IGM_Ref_InnenreinigungServiceLevel T_IGM_Ref_InnenreinigungServiceLevel { get; set; }
         public virtual T_VAR_Variante T_VAR_Variante { get; set; }
         public virtual ICollection<T_AP_Sicherheit> T_AP_Sicherheit { get; set; }
         public virtual ICollection<T_AP_Tuer> T_AP_Tuer { get; set; }
         public virtual ICollection<T_AP_Zaehler> T_AP_Zaehler { get; set; }
+        public virtual ICollection<T_SYS_Raumrechte> T_SYS_Raumrechte { get; set; }
         public virtual ICollection<T_TM_Tasks_Planung> T_TM_Tasks_Planung { get; set; }
         public virtual ICollection<T_TM_Tasks> T_TM_Tasks { get; set; }
         public virtual ICollection<T_UM_Umzug> T_UM_Umzug { get; set; }
@@ -163,6 +170,8 @@ namespace SqlServerDataFeed
         public virtual ICollection<T_ZO_AP_Raum_Flaeche> T_ZO_AP_Raum_Flaeche { get; set; }
         public virtual ICollection<T_ZO_AP_Raum_OBJT_Kategorie> T_ZO_AP_Raum_OBJT_Kategorie { get; set; }
         public virtual ICollection<T_ZO_AP_Raum_Reservation> T_ZO_AP_Raum_Reservation { get; set; }
+        public virtual ICollection<T_ZO_IGM_Offerte_Raum> T_ZO_IGM_Offerte_Raum { get; set; }
+        public virtual ICollection<T_ZO_IGM_Tour_Raum> T_ZO_IGM_Tour_Raum { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Planung_Ref_Raum> T_ZO_REM_AP_Planung_Ref_Raum { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Ausstattung_Kalk> T_ZO_REM_AP_Raum_Ausstattung_Kalk { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Ausstattung> T_ZO_REM_AP_Raum_Ausstattung { get; set; }

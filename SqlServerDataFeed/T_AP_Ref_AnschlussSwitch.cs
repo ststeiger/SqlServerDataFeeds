@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ASWI_UID { get; set; }
-        public int ASWI_MDT_ID { get; set; }
         public Nullable<int> ASWI_Code { get; set; }
         public string ASWI_Kurz_DE { get; set; }
         public string ASWI_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string ASWI_Lang_EN { get; set; }
         public int ASWI_Status { get; set; }
         public int ASWI_Sort { get; set; }
-        public Nullable<int> ASWI_StylizerFore { get; set; }
         public Nullable<int> ASWI_StylizerBack { get; set; }
         public Nullable<int> ASWI_StylizerPattern { get; set; }
         public Nullable<int> ASWI_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Anschluss> T_AP_Anschluss { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

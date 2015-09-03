@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid RDK_UID { get; set; }
-        public int RDK_MDT_ID { get; set; }
         public Nullable<int> RDK_Code { get; set; }
         public string RDK_Kurz_DE { get; set; }
         public string RDK_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string RDK_Lang_EN { get; set; }
         public int RDK_Status { get; set; }
         public int RDK_Sort { get; set; }
-        public Nullable<int> RDK_StylizerFore { get; set; }
         public Nullable<int> RDK_StylizerBack { get; set; }
         public Nullable<int> RDK_StylizerPattern { get; set; }
         public Nullable<int> RDK_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Raum> T_AP_Raum { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

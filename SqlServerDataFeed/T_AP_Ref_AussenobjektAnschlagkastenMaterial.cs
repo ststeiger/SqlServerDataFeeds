@@ -20,7 +20,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AAKM_UID { get; set; }
-        public int AAKM_MDT_ID { get; set; }
         public Nullable<int> AAKM_Code { get; set; }
         public string AAKM_Kurz_DE { get; set; }
         public string AAKM_Kurz_FR { get; set; }
@@ -32,7 +31,6 @@ namespace SqlServerDataFeed
         public string AAKM_Lang_EN { get; set; }
         public int AAKM_Status { get; set; }
         public int AAKM_Sort { get; set; }
-        public Nullable<int> AAKM_StylizerFore { get; set; }
         public Nullable<int> AAKM_StylizerBack { get; set; }
         public Nullable<int> AAKM_StylizerPattern { get; set; }
         public Nullable<int> AAKM_StylizerLine { get; set; }
@@ -42,5 +40,6 @@ namespace SqlServerDataFeed
     
         public virtual ICollection<T_AP_Aussenobjekt> T_AP_Aussenobjekt { get; set; }
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

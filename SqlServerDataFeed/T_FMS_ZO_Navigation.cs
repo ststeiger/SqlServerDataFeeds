@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_FMS_ZO_Navigation
     {
         public System.Guid NA_UID { get; set; }
-        public System.Guid NA_NA_UID { get; set; }
-        public int NA_BE_ID { get; set; }
         public int NA_Sort { get; set; }
     
         public virtual T_Benutzer T_Benutzer { get; set; }

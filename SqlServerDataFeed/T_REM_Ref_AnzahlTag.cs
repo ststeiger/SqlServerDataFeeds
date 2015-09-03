@@ -34,11 +34,11 @@ namespace SqlServerDataFeed
         public int REMAT_Status { get; set; }
         public int REMAT_Sort { get; set; }
         public bool REMAT_IsDefault { get; set; }
-        public Nullable<int> REMAT_StylizerBack { get; set; }
         public Nullable<int> REMAT_StylizerFore { get; set; }
         public Nullable<int> REMAT_StylizerPattern { get; set; }
         public Nullable<int> REMAT_StylizerLine { get; set; }
     
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_REM_Ref_Vorlagen> T_REM_Ref_Vorlagen { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Reinigung_Kalk> T_ZO_REM_AP_Raum_Reinigung_Kalk { get; set; }
         public virtual ICollection<T_ZO_REM_AP_Raum_Reinigung> T_ZO_REM_AP_Raum_Reinigung { get; set; }

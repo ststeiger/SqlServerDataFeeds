@@ -15,7 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_AP_Gebaeude_SwissLife
     {
         public System.Guid GB_UID { get; set; }
-        public System.Guid GB_GB_UID { get; set; }
         public string GB_Generalagentur { get; set; }
         public int GB_Status { get; set; }
     

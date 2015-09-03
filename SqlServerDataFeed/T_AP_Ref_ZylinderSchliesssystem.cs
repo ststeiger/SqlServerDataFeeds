@@ -21,7 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid ZSYS_UID { get; set; }
-        public int ZSYS_MDT_ID { get; set; }
         public Nullable<int> ZSYS_Code { get; set; }
         public string ZSYS_Kurz_DE { get; set; }
         public string ZSYS_Kurz_FR { get; set; }
@@ -33,7 +32,6 @@ namespace SqlServerDataFeed
         public string ZSYS_Lang_EN { get; set; }
         public int ZSYS_Status { get; set; }
         public int ZSYS_Sort { get; set; }
-        public Nullable<int> ZSYS_StylizerFore { get; set; }
         public Nullable<int> ZSYS_StylizerBack { get; set; }
         public Nullable<int> ZSYS_StylizerPattern { get; set; }
         public Nullable<int> ZSYS_StylizerLine { get; set; }
@@ -42,6 +40,7 @@ namespace SqlServerDataFeed
         public string ZSYS_DatumUser { get; set; }
     
         public virtual T_AP_Ref_Mandant T_AP_Ref_Mandant { get; set; }
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
         public virtual ICollection<T_AP_Zylinder> T_AP_Zylinder { get; set; }
         public virtual ICollection<T_AP_Schluesselgruppe> T_AP_Schluesselgruppe { get; set; }
     }

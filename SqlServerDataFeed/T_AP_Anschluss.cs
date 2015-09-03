@@ -21,13 +21,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid AN_UID { get; set; }
-        public int AN_MDT_ID { get; set; }
-        public Nullable<System.Guid> AN_DO_UID { get; set; }
-        public Nullable<System.Guid> AN_ANKAT_UID { get; set; }
-        public Nullable<System.Guid> AN_ANT_UID { get; set; }
-        public Nullable<System.Guid> AN_AKBT_UID { get; set; }
-        public Nullable<System.Guid> AN_ASWI_UID { get; set; }
-        public Nullable<System.Guid> AN_AVER_UID { get; set; }
         public string AN_Bezeichnung { get; set; }
         public string AN_Anschluss { get; set; }
         public bool AN_IsBelegt { get; set; }

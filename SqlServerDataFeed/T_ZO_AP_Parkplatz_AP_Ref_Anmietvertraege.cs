@@ -15,8 +15,6 @@ namespace SqlServerDataFeed
     public partial class T_ZO_AP_Parkplatz_AP_Ref_Anmietvertraege
     {
         public System.Guid ZO_PPANVTR_UID { get; set; }
-        public System.Guid ZO_PPANVTR_PP_UID { get; set; }
-        public System.Guid ZO_PPANVTR_VTR_UID { get; set; }
         public System.DateTime ZO_PPANVTR_DatumVon { get; set; }
         public System.DateTime ZO_PPANVTR_DatumBis { get; set; }
         public int ZO_PPANVTR_Status { get; set; }

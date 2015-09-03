@@ -26,12 +26,13 @@ namespace SqlServerDataFeed
         public string SYS_FZ_Lang_EN { get; set; }
         public int SYS_FZ_Status { get; set; }
         public int SYS_FZ_Sort { get; set; }
-        public Nullable<int> SYS_FZ_StylizerFore { get; set; }
         public Nullable<int> SYS_FZ_StylizerBack { get; set; }
         public Nullable<int> SYS_FZ_StylizerPattern { get; set; }
         public Nullable<int> SYS_FZ_StylizerLine { get; set; }
         public bool SYS_FZ_IsDefault { get; set; }
         public Nullable<System.DateTime> SYS_FZ_DatumMut { get; set; }
         public string SYS_FZ_DatumUser { get; set; }
+    
+        public virtual T_SYS_ApertureColorToHex T_SYS_ApertureColorToHex { get; set; }
     }
 }

@@ -22,8 +22,6 @@ namespace SqlServerDataFeed
         }
     
         public System.Guid REG_UID { get; set; }
-        public Nullable<System.Guid> REG_REG_UID { get; set; }
-        public Nullable<System.Guid> REG_MOD_UID { get; set; }
         public string REG_Code { get; set; }
         public string REG_LANG_DE { get; set; }
         public string REG_LANG_EN { get; set; }
